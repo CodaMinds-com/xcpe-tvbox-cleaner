@@ -115,4 +115,4 @@ Tested on the Android 15 emulator with planted XCPE packages: scan, removal, res
 
 ## License
 
-MIT. Made by [CodaMinds](https://codaminds.com). No warranty: read "What it cannot do" before relying on it.
+MIT. Made by [CodaMinds](https://codaminds.com). Source and releases: https://github.com/CodaMinds-com/xcpe-tvbox-cleaner No warranty: read "What it cannot do" before relying on it.

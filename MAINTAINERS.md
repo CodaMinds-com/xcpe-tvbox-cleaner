@@ -10,6 +10,9 @@ scripts the app was derived from are not published here.
 
 ## Download
 
+- Source and releases: https://github.com/CodaMinds-com/xcpe-tvbox-cleaner (release v1.0.0 carries the APK and its
+  SHA-256 as a second channel outside Cloudflare)
+
 - XCPE Cleaner app (Android TV, sideload): https://codaminds.com/xcpe.apk + https://codaminds.com/xcpe.apk.sha256
   (Cloudflare R2 via the CodaMinds site; edge cache 4 h, purge after replacing; same signing key for every update)
 
