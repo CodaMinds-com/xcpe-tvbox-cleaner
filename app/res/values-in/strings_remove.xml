@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bahasa Indonesia. Teks penghapus: baris status langsung (rm_status_*) dan ringkasan log (rm_log_*). "ADB", "su", "root" dipertahankan. -->
+<resources>
+    <!-- Live status while removing -->
+    <string name="rm_status_connecting">Menghubungkan ke layanan debugging TV box ini...</string>
+    <!-- 1 = the reason, a plain-language sentence from the debugging client -->
+    <string name="rm_status_adb_failed">Tidak bisa memakai koneksi debugging: %1$s</string>
+    <!-- 1 = app name, 2 = this one's number, 3 = total -->
+    <string name="rm_status_removing">Menghapus %1$s (%2$d dari %3$d)...</string>
+    <string name="rm_status_play_protect">Menyalakan kembali Google Play Protect...</string>
+    <string name="rm_status_done">Selesai.</string>
+    <string name="rm_status_guided">Ikuti langkah di layar untuk menghapus setiap aplikasi secara manual.</string>
+    <string name="rm_status_deep_no_root">Pembersihan mendalam tidak mungkin tanpa root.</string>
+    <string name="rm_status_deep_looking">Mencari salinan cadangan di firmware...</string>
+    <string name="rm_status_deep_none">Tidak ada salinan cadangan yang ditemukan di firmware.</string>
+    <!-- 1 = partition such as /oem or /system -->
+    <string name="rm_status_deep_unlocking">Membuka kunci %1$s untuk ditulisi...</string>
+    <!-- 1 = file or folder path -->
+    <string name="rm_status_deep_deleting">Menghapus %1$s...</string>
+    <string name="rm_status_deep_done">Pembersihan mendalam selesai.</string>
+    <string name="rm_status_deep_partial">Pembersihan mendalam berakhir; beberapa salinan tidak bisa dihapus.</string>
+
+    <!-- Log: which way the removal went -->
+    <string name="rm_log_nothing_to_remove">Tidak ada yang perlu dihapus; hanya memeriksa perlindungan.</string>
+    <!-- 1 = comma-separated app names -->
+    <string name="rm_log_to_remove">Akan dihapus: %1$s</string>
+    <!-- 1 = host, 2 = port -->
+    <string name="rm_log_path_adb">Cara: ADB (%1$s:%2$d)</string>
+    <string name="rm_log_path_root">Cara: ROOT (su)</string>
+    <string name="rm_log_path_guided">Cara: TERPANDU - tidak ada koneksi debugging dan tidak ada root, jadi langkah berikut dilakukan secara manual:</string>
+    <string name="rm_log_path_deep">Cara: pembersihan mendalam ROOT (su)</string>
+    <!-- 1 = the reason -->
+    <string name="rm_log_adb_failed">Koneksi debugging gagal: %1$s</string>
+    <!-- 1 = host, 2 = port -->
+    <string name="rm_log_port_closed">Port debugging %1$s:%2$d tertutup.</string>
+    <string name="rm_log_no_root">Tidak ada root (su) di TV box ini.</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_unexpected">Masalah tak terduga: %1$s</string>
+    <string name="rm_log_stopped">Dihentikan oleh Anda. Tidak ada lagi yang diubah.</string>
+    <string name="rm_log_busy">Pembersihan lain masih berjalan di TV box ini. Coba lagi sebentar.</string>
+    <string name="rm_log_grant_ok">aplikasi ini sekarang bisa mematikan dan menyalakan debugging sendiri</string>
+    <string name="rm_log_grant_ineffective">pemberian izin tidak berpengaruh; debugging tetap seperti yang Anda setel</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_grant_failed">pemberian izin gagal: %1$s</string>
+    <string name="rm_log_door_opened">Debugging dinyalakan untuk pembersihan ini.</string>
+    <string name="rm_log_door_failed">Tidak bisa menyalakan debugging untuk pembersihan ini.</string>
+
+    <!-- Log: result for one app -->
+    <string name="rm_log_result_unknown">tidak bisa memeriksa hasilnya (tidak ada jawaban dari pengelola paket); dianggap masih aktif</string>
+    <string name="rm_log_disabled">DINONAKTIFKAN (tidak bisa di-uninstal; sudah dinonaktifkan dan tidak bisa berjalan)</string>
+    <string name="rm_log_failed">GAGAL - masih aktif. TV box ini perlu firmware baru atau diganti.</string>
+    <string name="rm_log_removed_fw_unknown">DIHAPUS untuk TV box ini (tidak bisa memeriksa apakah salinan firmware masih ada; anggap masih ada)</string>
+    <string name="rm_log_removed_fw">DIHAPUS untuk TV box ini (salinan tidak aktif tetap ada di firmware yang hanya-baca)</string>
+    <string name="rm_log_removed">DIHAPUS sepenuhnya</string>
+
+    <!-- Log: protections -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">Aksesibilitas</string>
+    <!-- 1 and 2 = the two setting values read back -->
+    <string name="rm_log_pp_on">Verifikasi aplikasi Play Protect: NYALA (consent=%1$s enable=%2$s)</string>
+    <string name="rm_log_pp_failed">Play Protect: tidak bisa mengubah setelannya (consent=%1$s enable=%2$s). Nyalakan di Play Store > Play Protect > setelan.</string>
+    <!-- 1 = accessibility service id -->
+    <string name="rm_log_acc_removed">layanan aksesibilitas XCPE dihapus: %1$s</string>
+
+    <!-- Log: overall result -->
+    <!-- 1 = space-separated app names -->
+    <string name="rm_log_result_partial">HASIL PEMBERSIHAN: SEBAGIAN - tidak bisa dihapus: %1$s. Ganti TV box ini atau minta firmware bersih ke penjual.</string>
+    <string name="rm_log_result_done">HASIL PEMBERSIHAN: SELESAI - dihapus/dinonaktifkan: %1$s</string>
+    <string name="rm_log_result_next">BERIKUTNYA: mulai ulang TV box, lalu pindai lagi. Jika ada aplikasi yang kembali setelah dimulai ulang, firmware menginstalnya kembali: ganti TV box.</string>
+    <string name="rm_log_result_nothing">HASIL PEMBERSIHAN: tidak ada yang perlu dihapus.</string>
+
+    <!-- Log: steps to do by hand (no debugging connection, no root) -->
+    <!-- 1 = app name -->
+    <string name="rm_log_guided_step">Setelan > Aplikasi > %1$s > Uninstal (atau \'Uninstal update\', lalu \'Nonaktifkan\'), lalu Paksa berhenti</string>
+    <string name="rm_log_guided_pp">Play Protect: buka Play Store > profil Anda > Play Protect > setelan (roda gigi) > nyalakan \'Pindai aplikasi dengan Play Protect\'</string>
+    <!-- 1 = comma-separated accessibility service ids -->
+    <string name="rm_log_guided_acc">Setelan > Aksesibilitas: matikan %1$s</string>
+    <string name="rm_log_guided_nothing">Tidak ada yang perlu dilakukan secara manual.</string>
+
+    <!-- Log: deep clean (root only) -->
+    <string name="rm_log_deep_no_root">Pembersihan mendalam butuh root (su) dan TV box ini tidak punya. Salinan cadangan di firmware tetap tidak aktif selama aplikasinya dihapus atau dinonaktifkan.</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_deep_root_check_failed">Tidak bisa memeriksa root: %1$s</string>
+    <!-- 1 = file path -->
+    <string name="rm_log_deep_shared_perm_file">%1$s juga memberi hak ke aplikasi lain; dibiarkan</string>
+    <!-- 1 = file path, 2 = package name -->
+    <string name="rm_log_deep_unverified">%1$s: tidak bisa membaca aplikasi apa yang ada di dalamnya, jadi dibiarkan.</string>
+    <string name="rm_log_deep_not_xcpe">%1$s berisi aplikasi %2$s, yang bukan bagian dari XCPE; dibiarkan.</string>
+    <string name="rm_log_deep_skipped_unusual">dilewati (jalur tidak biasa): %1$s</string>
+    <string name="rm_log_deep_skipped_outside">dilewati (di luar direktori firmware): %1$s</string>
+    <string name="rm_log_deep_nothing">Tidak ada yang mirip XCPE ditemukan di direktori firmware.</string>
+    <!-- 1 = comma-separated paths -->
+    <string name="rm_log_deep_targets">Salinan firmware yang akan dihapus: %1$s</string>
+    <!-- 1 = partition such as /oem -->
+    <string name="rm_log_deep_write_protected">%1$s: firmware TV box ini dilindungi dari penulisan; salinan cadangan tetap tidak aktif</string>
+    <!-- 1 = file or folder path -->
+    <string name="rm_log_deep_deleted">dihapus %1$s</string>
+    <string name="rm_log_deep_still_there_ro">%1$s masih ada: firmware TV box ini dilindungi dari penulisan; salinan cadangan tetap tidak aktif</string>
+    <string name="rm_log_deep_still_there">%1$s masih ada (tidak bisa dihapus)</string>
+    <!-- 1 = count -->
+    <string name="rm_log_deep_result_done">HASIL PEMBERSIHAN MENDALAM: SELESAI - %1$d item firmware dihapus</string>
+    <!-- 1 = comma-separated paths -->
+    <string name="rm_log_deep_result_partial">HASIL PEMBERSIHAN MENDALAM: SEBAGIAN - masih ada di firmware: %1$s</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_deep_unexpected">Masalah tak terduga saat pembersihan mendalam: %1$s</string>
+</resources>

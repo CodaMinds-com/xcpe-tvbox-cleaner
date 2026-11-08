@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bahasa Melayu (Malaysia). Teks pembuang: baris status langsung (rm_status_*) dan ringkasan log (rm_log_*). "ADB", "su", "root" dikekalkan. -->
+<resources>
+    <!-- Live status while removing -->
+    <string name="rm_status_connecting">Menyambung ke perkhidmatan penyahpepijatan kotak ini...</string>
+    <!-- 1 = the reason, a plain-language sentence from the debugging client -->
+    <string name="rm_status_adb_failed">Tidak dapat menggunakan sambungan penyahpepijatan: %1$s</string>
+    <!-- 1 = app name, 2 = this one's number, 3 = total -->
+    <string name="rm_status_removing">Membuang %1$s (%2$d daripada %3$d)...</string>
+    <string name="rm_status_play_protect">Menghidupkan semula Google Play Protect...</string>
+    <string name="rm_status_done">Selesai.</string>
+    <string name="rm_status_guided">Ikut langkah pada skrin untuk membuang setiap apl secara manual.</string>
+    <string name="rm_status_deep_no_root">Pembersihan mendalam tidak boleh dilakukan tanpa root.</string>
+    <string name="rm_status_deep_looking">Mencari salinan simpanan dalam firmware...</string>
+    <string name="rm_status_deep_none">Tiada salinan simpanan ditemui dalam firmware.</string>
+    <!-- 1 = partition such as /oem or /system -->
+    <string name="rm_status_deep_unlocking">Membuka kunci %1$s untuk penulisan...</string>
+    <!-- 1 = file or folder path -->
+    <string name="rm_status_deep_deleting">Memadam %1$s...</string>
+    <string name="rm_status_deep_done">Pembersihan mendalam selesai.</string>
+    <string name="rm_status_deep_partial">Pembersihan mendalam tamat; sesetengah salinan tidak dapat dipadam.</string>
+
+    <!-- Log: which way the removal went -->
+    <string name="rm_log_nothing_to_remove">Tiada apa-apa untuk dibuang; menyemak perlindungan sahaja.</string>
+    <!-- 1 = comma-separated app names -->
+    <string name="rm_log_to_remove">Untuk dibuang: %1$s</string>
+    <!-- 1 = host, 2 = port -->
+    <string name="rm_log_path_adb">Cara: ADB (%1$s:%2$d)</string>
+    <string name="rm_log_path_root">Cara: ROOT (su)</string>
+    <string name="rm_log_path_guided">Cara: BERPANDU - tiada sambungan penyahpepijatan dan tiada root, jadi langkah ini dilakukan secara manual:</string>
+    <string name="rm_log_path_deep">Cara: pembersihan mendalam ROOT (su)</string>
+    <!-- 1 = the reason -->
+    <string name="rm_log_adb_failed">Sambungan penyahpepijatan gagal: %1$s</string>
+    <!-- 1 = host, 2 = port -->
+    <string name="rm_log_port_closed">Port penyahpepijatan %1$s:%2$d tertutup.</string>
+    <string name="rm_log_no_root">Tiada root (su) pada kotak ini.</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_unexpected">Masalah tidak dijangka: %1$s</string>
+    <string name="rm_log_stopped">Dihentikan oleh anda. Tiada apa-apa lagi yang diubah.</string>
+    <string name="rm_log_busy">Satu lagi pembersihan masih berjalan pada kotak ini. Cuba lagi sebentar nanti.</string>
+    <string name="rm_log_grant_ok">apl ini kini boleh mematikan dan menghidupkan penyahpepijatan sendiri</string>
+    <string name="rm_log_grant_ineffective">pemberian kebenaran tidak berkesan; penyahpepijatan kekal seperti yang anda tetapkan</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_grant_failed">pemberian kebenaran gagal: %1$s</string>
+    <string name="rm_log_door_opened">Penyahpepijatan dihidupkan untuk pembersihan ini.</string>
+    <string name="rm_log_door_failed">Tidak dapat menghidupkan penyahpepijatan untuk pembersihan ini.</string>
+
+    <!-- Log: result for one app -->
+    <string name="rm_log_result_unknown">tidak dapat menyemak keputusan (tiada jawapan daripada pengurus pakej); dianggap masih aktif</string>
+    <string name="rm_log_disabled">DIMATIKAN (tidak dapat dinyahpasang; ia dimatikan dan tidak boleh berjalan)</string>
+    <string name="rm_log_failed">GAGAL - masih aktif. Kotak ini memerlukan firmware baharu atau penggantian.</string>
+    <string name="rm_log_removed_fw_unknown">DIBUANG untuk kotak ini (tidak dapat menyemak sama ada salinan firmware masih ada; anggap ia ada)</string>
+    <string name="rm_log_removed_fw">DIBUANG untuk kotak ini (salinan tidak aktif kekal dalam firmware baca sahaja)</string>
+    <string name="rm_log_removed">DIBUANG sepenuhnya</string>
+
+    <!-- Log: protections -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">Kebolehaksesan</string>
+    <!-- 1 and 2 = the two setting values read back -->
+    <string name="rm_log_pp_on">Pengesahan apl Play Protect: HIDUP (consent=%1$s enable=%2$s)</string>
+    <string name="rm_log_pp_failed">Play Protect: tidak dapat mengubah tetapan (consent=%1$s enable=%2$s). Hidupkannya dalam Gedung Play > Play Protect > tetapan.</string>
+    <!-- 1 = accessibility service id -->
+    <string name="rm_log_acc_removed">perkhidmatan kebolehaksesan XCPE dibuang: %1$s</string>
+
+    <!-- Log: overall result -->
+    <!-- 1 = space-separated app names -->
+    <string name="rm_log_result_partial">KEPUTUSAN PEMBERSIHAN: SEPARA - tidak dapat dibuang: %1$s. Gantikan kotak ini atau minta firmware bersih daripada penjual.</string>
+    <string name="rm_log_result_done">KEPUTUSAN PEMBERSIHAN: SELESAI - dibuang/dimatikan: %1$s</string>
+    <string name="rm_log_result_next">SETERUSNYA: mulakan semula kotak ini, kemudian imbas semula. Jika sesuatu apl kembali selepas mula semula, firmware memasangnya semula: gantikan kotak ini.</string>
+    <string name="rm_log_result_nothing">KEPUTUSAN PEMBERSIHAN: tiada apa-apa perlu dibuang.</string>
+
+    <!-- Log: steps to do by hand (no debugging connection, no root) -->
+    <!-- 1 = app name -->
+    <string name="rm_log_guided_step">Tetapan > Apl > %1$s > Nyahpasang (atau \'Nyahpasang kemas kini\', kemudian \'Lumpuhkan\'), kemudian Paksa berhenti</string>
+    <string name="rm_log_guided_pp">Play Protect: buka Gedung Play > profil anda > Play Protect > tetapan (gear) > hidupkan \'Imbas apl dengan Play Protect\'</string>
+    <!-- 1 = comma-separated accessibility service ids -->
+    <string name="rm_log_guided_acc">Tetapan > Kebolehaksesan: matikan %1$s</string>
+    <string name="rm_log_guided_nothing">Tiada apa-apa perlu dilakukan secara manual.</string>
+
+    <!-- Log: deep clean (root only) -->
+    <string name="rm_log_deep_no_root">Pembersihan mendalam memerlukan root (su) dan kotak ini tiada root. Salinan simpanan dalam firmware kekal tidak aktif selagi apl itu dibuang atau dimatikan.</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_deep_root_check_failed">Tidak dapat menyemak root: %1$s</string>
+    <!-- 1 = file path -->
+    <string name="rm_log_deep_shared_perm_file">%1$s juga memberi hak kepada apl lain; dibiarkan</string>
+    <!-- 1 = file path, 2 = package name -->
+    <string name="rm_log_deep_unverified">%1$s: tidak dapat membaca apl apa yang ada di dalamnya, jadi dibiarkan.</string>
+    <string name="rm_log_deep_not_xcpe">%1$s mengandungi apl %2$s, yang bukan sebahagian daripada XCPE; dibiarkan.</string>
+    <string name="rm_log_deep_skipped_unusual">dilangkau (laluan luar biasa): %1$s</string>
+    <string name="rm_log_deep_skipped_outside">dilangkau (di luar direktori firmware): %1$s</string>
+    <string name="rm_log_deep_nothing">Tiada apa-apa seperti XCPE ditemui dalam direktori firmware.</string>
+    <!-- 1 = comma-separated paths -->
+    <string name="rm_log_deep_targets">Salinan firmware untuk dipadam: %1$s</string>
+    <!-- 1 = partition such as /oem -->
+    <string name="rm_log_deep_write_protected">%1$s: firmware kotak ini dilindungi daripada penulisan; salinan simpanan kekal tidak aktif</string>
+    <!-- 1 = file or folder path -->
+    <string name="rm_log_deep_deleted">dipadam %1$s</string>
+    <string name="rm_log_deep_still_there_ro">%1$s masih ada: firmware kotak ini dilindungi daripada penulisan; salinan simpanan kekal tidak aktif</string>
+    <string name="rm_log_deep_still_there">%1$s masih ada (tidak dapat dipadam)</string>
+    <!-- 1 = count -->
+    <string name="rm_log_deep_result_done">KEPUTUSAN PEMBERSIHAN MENDALAM: SELESAI - %1$d item firmware dipadam</string>
+    <!-- 1 = comma-separated paths -->
+    <string name="rm_log_deep_result_partial">KEPUTUSAN PEMBERSIHAN MENDALAM: SEPARA - masih dalam firmware: %1$s</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_deep_unexpected">Masalah tidak dijangka semasa pembersihan mendalam: %1$s</string>
+</resources>

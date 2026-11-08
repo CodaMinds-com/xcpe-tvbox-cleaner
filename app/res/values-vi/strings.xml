@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tiếng Việt. Tên menu theo Android: Cài đặt, Ứng dụng, Tùy chọn cho nhà phát triển, Gỡ lỗi qua USB, Buộc dừng, Gỡ cài đặt, Tắt, Hỗ trợ tiếp cận, Cửa hàng Play. -->
+<resources>
+    <string name="app_name">XCPE Cleaner</string>
+    <string name="title">XCPE Cleaner</string>
+    <string name="subtitle">Tìm cửa hậu XCPE trên TV box này và gỡ bỏ nó. Không có gì rời khỏi thiết bị này.</string>
+
+    <!-- Buttons -->
+    <string name="btn_scan">Quét</string>
+    <string name="btn_remove">Gỡ bỏ mối đe dọa</string>
+    <string name="btn_devopts">Mở Tùy chọn cho nhà phát triển</string>
+    <string name="btn_deepclean">Dọn sâu (root)</string>
+    <string name="btn_help">Cách hoạt động</string>
+    <string name="btn_details_show">Hiện chi tiết</string>
+    <string name="btn_details_hide">Ẩn chi tiết</string>
+    <string name="report_frame_desc">Báo cáo kiểm tra. Nhấn xuống và lên để cuộn.</string>
+
+    <!-- Formatting pieces -->
+    <string name="app_label_fmt">\'%1$s\' (%2$s)</string>
+    <string name="name_quoted">\'%s\'</string>
+    <string name="list_separator">", "</string>
+    <string name="bullet_line">  - %s</string>
+    <string name="join_sentences">%1$s %2$s</string>
+    <string name="progress_line">- %s</string>
+    <string name="progress_block">%1$s\n%2$s</string>
+    <string name="progress_step_start">%s\u2026</string>
+    <string name="progress_step_done">%s\u2026 xong</string>
+    <string name="progress_scan_header">Đang kiểm tra:</string>
+
+    <!-- Start screen -->
+    <string name="status_idle">Nhấn Quét để kiểm tra TV box này.</string>
+    <string name="report_intro">Quét sẽ xem những gì:\n\n  - tám ứng dụng được biết là một phần của XCPE\n  - ứng dụng giả làm một phần của Android\n  - các kênh dữ liệu ẩn mà XCPE dùng\n  - bản sao dự phòng cất trong firmware của TV box\n  - Google Play Protect có bị tắt hay không\n  - XCPE có tự gắn vào Hỗ trợ tiếp cận hay không\n\nViệc kiểm tra mất vài giây và không thay đổi gì cả.\nKhông có gì được gửi đi đâu.\n\nSau khi kiểm tra, TV box này cho bạn biết một trong ba điều:\n  Sạch, Đáng ngờ, hoặc Bị nhiễm.\nNếu không sạch, hãy nhấn Gỡ bỏ mối đe dọa.</string>
+    <string name="last_check_none">Lần kiểm tra gần nhất: chưa có</string>
+    <!-- 1 = date and time, 2 = result words, 3 = who checked -->
+    <string name="last_check_fmt">Lần kiểm tra gần nhất: %1$s · %2$s (%3$s)</string>
+    <string name="src_manual">do bạn kiểm tra</string>
+    <string name="src_auto">tự động kiểm tra sau khi khởi động lại</string>
+    <string name="check_clean">Sạch</string>
+    <string name="check_suspicious">Đáng ngờ</string>
+    <string name="check_infected">Bị nhiễm</string>
+    <string name="check_removed_again">XCPE quay lại và đã bị gỡ bỏ lần nữa</string>
+    <string name="check_failed">XCPE quay lại và không gỡ bỏ được</string>
+    <string name="check_debug_opened">gỡ lỗi đã được bật để gỡ bỏ</string>
+    <string name="check_debug_open_failed">không bật được gỡ lỗi</string>
+    <string name="check_debug_closed">gỡ lỗi đã được tắt lại</string>
+    <string name="check_debug_close_failed">gỡ lỗi vẫn đang bật</string>
+    <string name="check_summary_join">%1$s; %2$s</string>
+
+    <!-- Scan -->
+    <string name="status_scanning">Đang kiểm tra TV box này… mất vài giây.</string>
+    <string name="status_scan_failed">Không hoàn tất được việc kiểm tra. Nhấn Quét để thử lại.</string>
+    <plurals name="status_infected">
+        <item quantity="other">Bị nhiễm: %d phần của XCPE đang hoạt động trên TV box này. Nhấn Gỡ bỏ mối đe dọa.</item>
+    </plurals>
+    <string name="status_suspicious">Đáng ngờ: không có ứng dụng XCPE nào đã xác nhận đang chạy, nhưng TV box này có dấu hiệu cảnh báo. Nhấn Gỡ bỏ mối đe dọa để sửa những gì sửa được, hoặc nhấn xuống để đọc báo cáo.</string>
+    <string name="status_clean">Sạch: không tìm thấy gì của XCPE trên TV box này. Bạn có thể tiếp tục dùng.</string>
+
+    <!-- Remove: the one question -->
+    <string name="dlg_review_title">Xem lại trước khi gỡ bỏ</string>
+    <plurals name="dlg_review_msg_confirmed">
+        <item quantity="other">%1$d phần XCPE đã xác nhận sẽ được gỡ bỏ. Bên dưới là các ứng dụng khác đáng xem. Chỉ được đánh dấu sẵn khi có bằng chứng ngoài cái tên; nhấn OK trên một dòng để thay đổi.</item>
+    </plurals>
+    <string name="dlg_review_msg_only">Không có ứng dụng XCPE nào đã xác nhận đang chạy. Bên dưới là các ứng dụng đáng xem. Chỉ được đánh dấu sẵn khi có bằng chứng ngoài cái tên; nhấn OK trên một dòng để thay đổi.</string>
+    <string name="dlg_review_remove">Gỡ bỏ mục đã chọn</string>
+    <string name="status_review_kept">Không gỡ bỏ gì thêm. TV box không thay đổi.</string>
+    <string name="scan_reason_vendor_warning">Có thể là một phần của cửa hàng hoặc dịch vụ TV riêng của TV box. Gỡ bỏ nó có thể làm hỏng dịch vụ đó.</string>
+    <string name="dlg_suspects_title">Gỡ bỏ luôn các ứng dụng bị nghi ngờ?</string>
+    <string name="dlg_suspects_msg">Ngoài các phần XCPE đã xác nhận, TV box này còn có những ứng dụng thường đi kèm với nó:\n\n%s\n\nMột TV box không bao giờ cần đến chúng.</string>
+    <string name="dlg_suspects_yes">Có, gỡ bỏ luôn</string>
+    <string name="dlg_suspects_no">Không, chỉ những phần đã xác nhận</string>
+    <string name="dlg_suspects_only_title">Gỡ bỏ các ứng dụng đáng ngờ?</string>
+    <string name="dlg_suspects_only_msg">Không có ứng dụng XCPE nào đã xác nhận đang chạy, nhưng những ứng dụng này thường đi kèm với nó:\n\n%s\n\nMột TV box không bao giờ cần đến chúng.</string>
+    <string name="dlg_remove">Gỡ bỏ</string>
+    <string name="dlg_keep">Giữ lại</string>
+    <string name="status_kept">Không có gì thay đổi. Nhấn Quét bất cứ lúc nào để kiểm tra lại.</string>
+
+    <!-- Remove: while it runs -->
+    <string name="status_removing">Đang gỡ bỏ… hãy để TV box bật. Nếu TV hỏi về gỡ lỗi, hãy đánh dấu \'Luôn cho phép\' rồi nhấn Cho phép.</string>
+    <string name="report_remove_live">Điều đang diễn ra:</string>
+    <string name="report_remove_log">Chi tiết:</string>
+    <string name="report_remove_crashed">Trình gỡ bỏ dừng lại vì lỗi: %s</string>
+
+    <!-- Remove: outcome -->
+    <string name="outcome_removed">Đã gỡ bỏ: %s</string>
+    <string name="outcome_disabled">Đã tắt (không gỡ bỏ hoàn toàn được, không thể chạy): %s</string>
+    <string name="outcome_failed">Vẫn hoạt động (không gỡ bỏ được): %s</string>
+    <string name="outcome_firmware_remain">Một bản sao dự phòng vẫn nằm trong firmware của TV box này. Nó không thể chạy khi ứng dụng ở trên đã bị gỡ bỏ hoặc tắt. Chỉ dọn sâu bằng root hoặc firmware mới từ nhà sản xuất mới xóa được nó.</string>
+    <string name="outcome_pp_on">Google Play Protect: đã bật lại.</string>
+    <string name="outcome_pp_off">Google Play Protect: vẫn tắt. Mở ứng dụng Google Play, nhấn vào ảnh hồ sơ của bạn, chọn Play Protect, nhấn biểu tượng bánh răng rồi bật \'Quét ứng dụng bằng Play Protect\'.</string>
+    <string name="outcome_pp_fine">Google Play Protect: đã bật sẵn.</string>
+    <string name="status_outcome_done">Xong: các phần XCPE đã được gỡ bỏ. Khởi động lại TV box, rồi nhấn Quét lần nữa để chắc chắn chúng không quay lại.</string>
+    <string name="status_outcome_partial">Một số phần không gỡ bỏ được. Nhấn xuống để đọc chi tiết. Nếu chúng vẫn còn sau khi khởi động lại, hãy thay TV box này.</string>
+    <string name="status_outcome_nothing">Không có gì cần gỡ bỏ. Nhấn Quét bất cứ lúc nào để kiểm tra lại.</string>
+    <string name="status_outcome_pp_only">Xong: Google Play Protect đã được bật lại. Nhấn Quét để kiểm tra lại.</string>
+    <string name="status_outcome_none">Lần này không có gì thay đổi. Nhấn Mở Tùy chọn cho nhà phát triển để ứng dụng có thể tự gỡ bỏ, rồi nhấn Gỡ bỏ mối đe dọa lần nữa.</string>
+
+    <!-- Restart -->
+    <string name="dlg_restart_title">Khởi động lại TV box ngay bây giờ?</string>
+    <string name="dlg_restart_msg_adb">Khởi động lại sẽ hoàn tất việc dọn dẹp. Màn hình sẽ tối khoảng một phút. Sau đó ứng dụng này tự kiểm tra lại TV box và báo cho bạn nếu có gì quay lại.</string>
+    <string name="dlg_restart_msg_manual">Khởi động lại sẽ hoàn tất việc dọn dẹp. Rút dây nguồn của TV box, chờ mười giây rồi cắm lại. Sau đó mở ứng dụng này và nhấn Quét.</string>
+    <string name="dlg_restart_now">Khởi động lại ngay</string>
+    <string name="dlg_restart_later">Để sau</string>
+    <string name="dlg_ok">OK</string>
+    <string name="btn_debugoff">Tắt gỡ lỗi</string>
+    <string name="dlg_debugoff_title">Tắt gỡ lỗi?</string>
+    <string name="dlg_debugoff_msg">Gỡ lỗi là thứ cho phép ứng dụng này dọn dẹp TV box và kiểm tra nó sau mỗi lần khởi động lại. Nếu bạn tắt nó, ứng dụng sẽ thử trước xem nó có thể tự bật lại gỡ lỗi cho những lần kiểm tra đó hay không. Việc này mất tối đa một phút; TV box vẫn dùng được bình thường.</string>
+    <string name="dlg_debugoff_yes">Thử rồi tắt</string>
+    <string name="status_debug_kept">Gỡ lỗi vẫn bật để ứng dụng này có thể kiểm tra TV box sau mỗi lần khởi động lại. Nếu bạn muốn tắt, hãy nhấn \'Tắt gỡ lỗi\'.</string>
+    <string name="status_debug_probe">Đang thử xem TV box này có thể tự bật lại gỡ lỗi hay không…</string>
+    <string name="status_debug_probe_ok">Gỡ lỗi đã tắt. Để tự động kiểm tra, ứng dụng bật nó trong chốc lát rồi tắt lại.</string>
+    <string name="status_debug_probe_failed">TV box này không thể tự bật lại gỡ lỗi, nên gỡ lỗi vẫn bật. Nếu chế độ tự động ngừng hoạt động, hãy khởi động lại TV box.</string>
+    <string name="status_debug_reclosed">Gỡ lỗi đã được mở cho lần dọn dẹp này và nay đã tắt lại.</string>
+    <string name="status_auto_report">Đây là báo cáo của lần tự động kiểm tra sau lần khởi động lại gần nhất. Nhấn Quét để kiểm tra mới.</string>
+    <string name="status_clean_dormant">Sạch: không có gì của XCPE đang chạy. Những phần còn sót đã bị tắt vẫn nằm trong firmware; chúng vô hại khi đang tắt.</string>
+    <string name="status_outcome_done_mixed">Xong: các phần XCPE đã được gỡ bỏ hoặc tắt. Khởi động lại TV box, rồi nhấn Quét lần nữa để chắc chắn chúng không quay lại.</string>
+    <string name="dlg_stop_title">Dừng dọn dẹp?</string>
+    <string name="dlg_stop_msg">Ứng dụng vẫn đang xử lý TV box. Dừng bây giờ sẽ để nguyên những gì chưa được gỡ bỏ; bạn có thể nhấn Gỡ bỏ mối đe dọa lần nữa sau.</string>
+    <string name="dlg_stop_yes">Dừng</string>
+    <string name="status_stopping">Đang dừng…</string>
+    <string name="result_infected">KẾT QUẢ: BỊ NHIỄM - cửa hậu XCPE đang hoạt động trên TV box này: %1$s</string>
+    <string name="result_suspicious">KẾT QUẢ: ĐÁNG NGỜ - không có ứng dụng XCPE nào đã xác nhận đang hoạt động, nhưng hãy xem các cảnh báo ở trên</string>
+    <string name="result_clean">KẾT QUẢ: SẠCH - không tìm thấy gì của XCPE</string>
+    <string name="adb_status_connecting">Đang kết nối với dịch vụ gỡ lỗi của TV box…</string>
+    <string name="adb_status_look_at_tv">Hãy nhìn lên TV: đánh dấu \'Luôn cho phép từ máy tính này\' rồi nhấn Cho phép.</string>
+    <string name="adb_status_connected">Đã kết nối: TV box chấp nhận lệnh từ ứng dụng này.</string>
+    <string name="adb_err_denied">TV box không cho phép ứng dụng này (đã nhấn Từ chối, hoặc câu hỏi đã hết thời gian). Hãy thử lại, và khi TV hỏi, đánh dấu \'Luôn cho phép\' rồi nhấn Cho phép.</string>
+    <string name="adb_err_pairing_only">TV box này chỉ cung cấp ghép nối Gỡ lỗi qua Wi-Fi, mà ứng dụng này không dùng được. Hãy làm theo các bước hướng dẫn thay thế.</string>
+    <string name="adb_err_not_allowed">Ứng dụng này chưa được cho phép trên dịch vụ gỡ lỗi của TV box. Nhấn Gỡ bỏ mối đe dọa một lần; sau đó TV sẽ hỏi bạn có cho phép không.</string>
+    <string name="adb_err_lost">Kết nối với dịch vụ gỡ lỗi của TV box đã bị mất. Hãy thử lại.</string>
+    <string name="adb_err_no_answer">Dịch vụ gỡ lỗi của TV box không trả lời kịp. Hãy thử lại sau giây lát.</string>
+    <string name="adb_err_generic">Sự cố kết nối gỡ lỗi: %1$s</string>
+    <string name="status_debug_opening">Đang mở cửa gỡ lỗi để khởi động lại\u2026</string>
+    <string name="status_debug_opening_clean">Đang mở cửa gỡ lỗi cho lần dọn dẹp này…</string>
+    <string name="status_rebooting">Đang khởi động lại… màn hình sẽ tối khoảng một phút. Nếu không, hãy rút dây nguồn, chờ mười giây rồi cắm lại.</string>
+    <string name="status_reboot_failed">TV box không tự khởi động lại. Rút dây nguồn, chờ mười giây rồi cắm lại. Sau đó mở ứng dụng này và nhấn Quét.</string>
+
+    <!-- Guided removal -->
+    <string name="dlg_guided_title">Gỡ bỏ thủ công, từng bước một</string>
+    <string name="dlg_guided_msg">TV box này không cho ứng dụng tự gỡ bỏ, nên chúng ta sẽ cùng làm. Ứng dụng sẽ mở trang cài đặt của từng ứng dụng xấu cho bạn, lần lượt từng cái (còn %d), và cho biết cần nhấn nút nào trước mỗi trang. Nhấn Quay lại trên điều khiển khi bạn xong một trang.</string>
+    <string name="dlg_guided_start">Bắt đầu</string>
+    <string name="dlg_guided_later">Để sau</string>
+    <string name="status_guided_later">Chưa bắt đầu gỡ bỏ. Nhấn Gỡ bỏ mối đe dọa khi bạn sẵn sàng, hoặc Mở Tùy chọn cho nhà phát triển để ứng dụng tự làm.</string>
+    <!-- 1 = step, 2 = total, 3 = app name -->
+    <string name="guide_step_uninstall">Bước %1$d trên %2$d: một câu hỏi về việc gỡ bỏ %3$s sẽ hiện ra. Nhấn OK hoặc Gỡ cài đặt.</string>
+    <string name="dlg_guide_step_title">Bước %1$d trên %2$d: %3$s</string>
+    <string name="dlg_guide_step_msg">Ở trang tiếp theo, nhấn Gỡ cài đặt.\n\nNếu không có nút Gỡ cài đặt: nhấn Gỡ cài đặt bản cập nhật nếu thấy, rồi nhấn Tắt, rồi Buộc dừng.\n\nKhi xong, nhấn Quay lại trên điều khiển để trở về đây.</string>
+    <string name="dlg_guide_open">Mở trang</string>
+    <string name="dlg_guide_skip">Bỏ qua ứng dụng này</string>
+    <string name="guide_step_appinfo">Bước %1$d trên %2$d: ở trang của %3$s, nhấn Gỡ cài đặt. Nếu không có: Gỡ cài đặt bản cập nhật, rồi Tắt, rồi Buộc dừng. Nhấn Quay lại khi xong.</string>
+    <string name="status_guided_checking">Đang kiểm tra những gì đã thay đổi…</string>
+    <string name="status_guide_cannot_open">Không mở được trang cài đặt của %s trên TV box này. Chuyển sang mục tiếp theo.</string>
+    <string name="guide_still_active_title">%s vẫn đang hoạt động</string>
+    <string name="guide_still_active_msg">Nó chưa biến mất. Bạn có thể mở lại trang của nó, bỏ qua ứng dụng này, hoặc dừng ở đây.</string>
+    <string name="guide_try_again">Thử lại</string>
+    <string name="guide_skip">Bỏ qua</string>
+    <string name="guide_stop">Dừng</string>
+    <string name="guide_pp_title">Bật lại Google Play Protect</string>
+    <string name="guide_pp_msg">XCPE đã tắt tính năng kiểm tra ứng dụng của Google. Ở trang tiếp theo, bật \'Quét ứng dụng bằng Play Protect\', rồi nhấn Quay lại.</string>
+    <string name="guide_pp_fallback">TV box này không có trang trực tiếp cho việc đó. Mở ứng dụng Google Play, nhấn vào ảnh hồ sơ ở góc trên bên phải, chọn Play Protect, nhấn biểu tượng bánh răng rồi bật \'Quét ứng dụng bằng Play Protect\'.</string>
+    <string name="status_guide_pp">Bật \'Quét ứng dụng bằng Play Protect\' ở trang tiếp theo, rồi nhấn Quay lại.</string>
+    <string name="dlg_guide_skip_step">Bỏ qua bước này</string>
+    <string name="guide_acc_title">Tắt dịch vụ Hỗ trợ tiếp cận của XCPE</string>
+    <string name="guide_acc_msg">XCPE đã tự gắn vào cài đặt Hỗ trợ tiếp cận của TV box này. Ở trang tiếp theo, tìm %s và tắt nó, rồi nhấn Quay lại.</string>
+    <string name="status_guide_acc">Tắt %s ở trang tiếp theo, rồi nhấn Quay lại.</string>
+    <string name="guided_tail_acc">Hỗ trợ tiếp cận: %s vẫn đang bật; hãy tắt nó trong Cài đặt, Hỗ trợ tiếp cận.</string>
+    <!-- 1 = handled, 2 = still active, 3 = what to do next -->
+    <string name="status_guided_done">Đã làm thủ công xong: %1$d đã gỡ bỏ hoặc tắt, %2$d vẫn hoạt động. %3$s</string>
+    <string name="guided_tail_restart">Bây giờ hãy khởi động lại TV box (rút rồi cắm lại dây nguồn), mở ứng dụng này và nhấn Quét lần nữa.</string>
+    <string name="guided_tail_replace">Nếu chúng vẫn hoạt động sau khi khởi động lại, TV box này không thể làm sạch được: hãy thay nó.</string>
+
+    <!-- Developer options -->
+    <string name="status_devopts_hint">Ở trang tiếp theo, bật \'Gỡ lỗi qua USB\'. Trên một số TV box, nó có tên \'Gỡ lỗi qua mạng\', \'Gỡ lỗi ADB\' hoặc \'ADB qua mạng\'; hãy bật cả mục đó. Nếu có câu hỏi hiện ra, đánh dấu \'Luôn cho phép\' rồi nhấn Cho phép. Sau đó nhấn Quay lại.</string>
+    <string name="status_devopts_hidden">Tùy chọn cho nhà phát triển đang bị ẩn trên TV box này. Ở trang tiếp theo, tìm \'Số bản dựng\' (hoặc \'Bản dựng\') và nhấn OK vào đó bảy lần. Sau đó nhấn Quay lại và nhấn Mở Tùy chọn cho nhà phát triển lần nữa.</string>
+    <string name="status_devopts_missing">TV box này không cho ứng dụng mở phần cài đặt của nó. Hãy tự mở Cài đặt: Tùy chọn thiết bị, Giới thiệu, nhấn \'Bản dựng\' bảy lần, rồi Tùy chọn cho nhà phát triển, bật Gỡ lỗi qua USB.</string>
+    <string name="status_port_open">Tốt: cửa gỡ lỗi đang mở. Nhấn Gỡ bỏ mối đe dọa và ứng dụng sẽ tự gỡ bỏ mọi thứ.</string>
+    <string name="status_port_closed_usb_only">Gỡ lỗi qua USB đang bật, nhưng cửa mạng vẫn đóng. Hãy tìm trong Tùy chọn cho nhà phát triển mục \'Gỡ lỗi qua mạng\', \'ADB qua mạng\' hoặc \'Gỡ lỗi không dây\' và bật cả mục đó. Nếu TV box này không có mục nào như vậy, Gỡ bỏ mối đe dọa sẽ hướng dẫn bạn từng bước.</string>
+    <string name="status_port_closed_after">Cửa gỡ lỗi vẫn đóng. Hãy thử Mở Tùy chọn cho nhà phát triển lần nữa, hoặc nhấn Gỡ bỏ mối đe dọa và ứng dụng sẽ hướng dẫn bạn từng bước.</string>
+
+    <!-- Deep clean -->
+    <string name="dlg_deep_title">Dọn sâu firmware?</string>
+    <string name="dlg_deep_msg">Việc này xóa các bản sao dự phòng của cửa hậu cất trong firmware của TV box này. Nó chỉ hoạt động trên TV box có quyền root và chỉ đụng đến các tệp thuộc về XCPE.</string>
+    <string name="dlg_deep_yes">Xóa bản sao dự phòng</string>
+    <string name="dlg_cancel">Hủy</string>
+    <string name="status_deep_running">Đang dọn sâu… hãy để TV box bật.</string>
+    <string name="status_deep_done">Dọn sâu đã xong. Nhấn xuống để đọc những gì đã diễn ra, rồi nhấn Quét để kiểm tra lại.</string>
+    <string name="report_deep_header">Dọn sâu:</string>
+
+    <!-- How it works -->
+    <string name="help_title">Cách ứng dụng này hoạt động. Nhấn xuống để đọc, lên để quay về.</string>
+    <string name="help_text">XCPE LÀ GÌ\nXCPE là một cửa hậu được cài sẵn trong firmware của nhiều TV box Android giá rẻ (MECOOL, Videostrong và các TV box bán dưới tên khác). Nó cho phép người lạ chạy mọi thứ trên TV box của bạn: nhấp quảng cáo giả, lưu lượng ngầm đi qua kết nối internet của bạn, và bất cứ thứ gì khác họ gửi đến.\n\nQUÉT LÀM GÌ\nQuét xem các ứng dụng trên TV box này, Google Play Protect và cài đặt Hỗ trợ tiếp cận, rồi so sánh với danh sách các phần của XCPE đã được công bố. Nó không thay đổi gì và không gửi gì đi đâu.\n\nGỠ BỎ MỐI ĐE DỌA LÀM GÌ\nNó gỡ bỏ các ứng dụng XCPE khỏi TV box này và bật lại Google Play Protect. Nếu một ứng dụng không gỡ bỏ được, nó sẽ bị tắt để không thể chạy. Ứng dụng này thử tự làm trước; cách này hoạt động khi cửa gỡ lỗi của TV box đang mở (Tùy chọn cho nhà phát triển). Nếu không, nó mở đúng trang cài đặt cho bạn và cho biết cần nhấn nút nào.\n\nNHỮNG GÌ CÒN LẠI\nNhiều TV box giữ một bản sao dự phòng của cửa hậu trong phần firmware chỉ đọc. Ứng dụng này không xóa được bản sao đó nếu không có quyền root, nhưng bản sao đó không thể chạy khi ứng dụng kia đã bị gỡ bỏ hoặc tắt. Nếu XCPE quay lại sau khi khởi động lại, ứng dụng này sẽ nhận ra, gỡ bỏ nó lần nữa và báo cho bạn.\n\nLỜI KHUYÊN THẬT LÒNG CỦA CHÚNG TÔI\nMột TV box xuất xưởng kèm cửa hậu chưa bao giờ thuộc về riêng bạn. Nếu có thể, hãy thay bằng thiết bị của một thương hiệu quen thuộc (Google TV Streamer, Apple TV, Fire TV, Nvidia Shield). Nếu vẫn giữ nó, đừng đăng nhập ngân hàng hay email trên đó.\n\nĐỔI MẬT KHẨU CỦA BẠN\nNếu bạn từng gõ mật khẩu trên TV box này, hãy đổi từ một thiết bị khác: tài khoản Google, Netflix, Wi-Fi và bất cứ thứ gì khác bạn đã dùng ở đây.\n\nSAU KHI DỌN DẸP\nKhởi động lại TV box, mở ứng dụng này và nhấn Quét một lần nữa. Ứng dụng cũng tự kiểm tra sau mỗi lần khởi động lại và hiện kết quả dưới mục \'Lần kiểm tra gần nhất\'.\n\nNhấn Quét để xem lại kết quả kiểm tra.</string>
+
+    <!-- Notifications from the check after a restart -->
+    <string name="notif_channel">Kiểm tra sau khi khởi động lại</string>
+    <string name="notif_channel_desc">Báo cho bạn khi XCPE quay lại sau khi khởi động lại.</string>
+    <string name="notif_removed_again_title">XCPE quay lại sau khi khởi động lại và đã bị gỡ bỏ lần nữa</string>
+    <string name="notif_removed_again_text">Mở XCPE Cleaner để xem chi tiết. Nếu việc này cứ lặp lại, hãy thay TV box.</string>
+    <string name="notif_failed_title">XCPE quay lại và không gỡ bỏ được: hãy thay TV box này</string>
+    <string name="notif_failed_text">Mở XCPE Cleaner và nhấn Gỡ bỏ mối đe dọa để thử lại.</string>
+    <string name="notif_failed_text_port_closed">Ứng dụng không tự gỡ bỏ được vì cửa gỡ lỗi đang đóng. Mở XCPE Cleaner và nhấn Gỡ bỏ mối đe dọa.</string>
+    <string name="notif_suspicious_title">TV box này có dấu hiệu cảnh báo</string>
+    <string name="notif_suspicious_text">Mở XCPE Cleaner và nhấn Quét để đọc chi tiết.</string>
+    <string name="report_auto_remove_header">Tự động gỡ bỏ sau khi khởi động lại:</string>
+</resources>

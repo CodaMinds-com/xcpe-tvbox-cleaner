@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Deutsch. Jede Zeile, die eine Person sieht. Geschrieben für jemanden, der das Wort „Paket" nie gehört hat: sagen, was passiert, dann, was zu tun ist. -->
+<resources>
+    <string name="app_name">XCPE Cleaner</string>
+    <string name="title">XCPE Cleaner</string>
+    <string name="subtitle">Findet die XCPE-Hintertür auf dieser Box und entfernt sie. Nichts verlässt dieses Gerät.</string>
+
+    <!-- Tasten -->
+    <string name="btn_scan">Prüfen</string>
+    <string name="btn_remove">Bedrohungen entfernen</string>
+    <string name="btn_devopts">Entwickleroptionen öffnen</string>
+    <string name="btn_deepclean">Tiefenreinigung (Root)</string>
+    <string name="btn_help">So funktioniert es</string>
+    <string name="btn_details_show">Details anzeigen</string>
+    <string name="btn_details_hide">Details ausblenden</string>
+    <string name="report_frame_desc">Prüfbericht. Mit den Pfeiltasten nach unten und oben blättern.</string>
+
+    <!-- Formatbausteine -->
+    <string name="app_label_fmt">„%1$s“ (%2$s)</string>
+    <string name="name_quoted">„%s“</string>
+    <string name="list_separator">", "</string>
+    <string name="bullet_line">  - %s</string>
+    <string name="join_sentences">%1$s %2$s</string>
+    <string name="progress_line">- %s</string>
+    <string name="progress_block">%1$s\n%2$s</string>
+    <string name="progress_step_start">%s…</string>
+    <string name="progress_step_done">%s… fertig</string>
+    <string name="progress_scan_header">Wird geprüft:</string>
+
+    <!-- Startbildschirm -->
+    <string name="status_idle">Drücken Sie auf Prüfen, um diese Box zu untersuchen.</string>
+    <string name="report_intro">Was die Prüfung untersucht:\n\n  - die acht Apps, die bekanntermaßen zu XCPE gehören\n  - Apps, die sich als Teil von Android ausgeben\n  - die versteckten Datenkanäle, die XCPE nutzt\n  - Ersatzkopien in der Firmware der Box\n  - ob Google Play Protect ausgeschaltet wurde\n  - ob XCPE sich in den Bedienungshilfen eingenistet hat\n\nDie Prüfung dauert ein paar Sekunden und ändert nichts.\nEs wird nichts irgendwohin gesendet.\n\nNach der Prüfung sagt Ihnen diese Box eines von drei Dingen:\n  Sauber, Verdächtig oder Infiziert.\nIst sie nicht sauber, drücken Sie auf Bedrohungen entfernen.</string>
+    <string name="last_check_none">Letzte Prüfung: nie</string>
+    <!-- 1 = Datum und Uhrzeit, 2 = Ergebnis, 3 = wer geprüft hat -->
+    <string name="last_check_fmt">Letzte Prüfung: %1$s · %2$s (%3$s)</string>
+    <string name="src_manual">von Ihnen geprüft</string>
+    <string name="src_auto">automatische Prüfung nach einem Neustart</string>
+    <string name="check_clean">Sauber</string>
+    <string name="check_suspicious">Verdächtig</string>
+    <string name="check_infected">Infiziert</string>
+    <string name="check_removed_again">XCPE kam zurück und wurde erneut entfernt</string>
+    <string name="check_failed">XCPE kam zurück und konnte nicht entfernt werden</string>
+    <string name="check_debug_opened">Debugging wurde für die Entfernung eingeschaltet</string>
+    <string name="check_debug_open_failed">Debugging konnte nicht eingeschaltet werden</string>
+    <string name="check_debug_closed">Debugging wieder ausgeschaltet</string>
+    <string name="check_debug_close_failed">Debugging ist noch an</string>
+    <string name="check_summary_join">%1$s; %2$s</string>
+
+    <!-- Prüfung -->
+    <string name="status_scanning">Diese Box wird geprüft… das dauert ein paar Sekunden.</string>
+    <string name="status_scan_failed">Die Prüfung konnte nicht abgeschlossen werden. Drücken Sie auf Prüfen, um es noch einmal zu versuchen.</string>
+    <plurals name="status_infected">
+        <item quantity="one">Infiziert: %d Teil von XCPE ist auf dieser Box aktiv. Drücken Sie auf Bedrohungen entfernen.</item>
+        <item quantity="other">Infiziert: %d Teile von XCPE sind auf dieser Box aktiv. Drücken Sie auf Bedrohungen entfernen.</item>
+    </plurals>
+    <string name="status_suspicious">Verdächtig: Keine bestätigte XCPE-App läuft, aber diese Box zeigt Warnzeichen. Drücken Sie auf Bedrohungen entfernen, um zu beheben, was sich beheben lässt, oder drücken Sie den Pfeil nach unten, um den Bericht zu lesen.</string>
+    <string name="status_clean">Sauber: Auf dieser Box wurde nichts von XCPE gefunden. Sie können sie weiter benutzen.</string>
+
+    <!-- Entfernen: die eine Frage -->
+    <string name="dlg_review_title">Vor dem Entfernen prüfen</string>
+    <plurals name="dlg_review_msg_confirmed">
+        <item quantity="one">%1$d bestätigter XCPE-Teil wird entfernt. Darunter stehen weitere Apps, die einen Blick wert sind. Nur dort vorab angehakt, wo es über den Namen hinaus Hinweise gibt; drücken Sie auf einer Zeile OK, um das zu ändern.</item>
+        <item quantity="other">%1$d bestätigte XCPE-Teile werden entfernt. Darunter stehen weitere Apps, die einen Blick wert sind. Nur dort vorab angehakt, wo es über den Namen hinaus Hinweise gibt; drücken Sie auf einer Zeile OK, um das zu ändern.</item>
+    </plurals>
+    <string name="dlg_review_msg_only">Keine bestätigte XCPE-App läuft. Darunter stehen Apps, die einen Blick wert sind. Nur dort vorab angehakt, wo es über den Namen hinaus Hinweise gibt; drücken Sie auf einer Zeile OK, um das zu ändern.</string>
+    <string name="dlg_review_remove">Ausgewählte entfernen</string>
+    <string name="status_review_kept">Sonst wurde nichts entfernt. Die Box ist unverändert.</string>
+    <string name="scan_reason_vendor_warning">Gehört möglicherweise zum eigenen Store oder TV-Dienst der Box. Das Entfernen kann diesen Dienst unbrauchbar machen.</string>
+    <string name="dlg_suspects_title">Auch die verdächtigen Apps entfernen?</string>
+    <string name="dlg_suspects_msg">Neben den bestätigten XCPE-Teilen hat diese Box Apps, die üblicherweise mit dabei sind:\n\n%s\n\nEine TV-Box braucht sie nie.</string>
+    <string name="dlg_suspects_yes">Ja, auch diese entfernen</string>
+    <string name="dlg_suspects_no">Nein, nur die bestätigten</string>
+    <string name="dlg_suspects_only_title">Die verdächtigen Apps entfernen?</string>
+    <string name="dlg_suspects_only_msg">Keine bestätigte XCPE-App läuft, aber diese Apps sind üblicherweise mit dabei:\n\n%s\n\nEine TV-Box braucht sie nie.</string>
+    <string name="dlg_remove">Entfernen</string>
+    <string name="dlg_keep">Behalten</string>
+    <string name="status_kept">Es wurde nichts geändert. Drücken Sie jederzeit auf Prüfen, um erneut zu prüfen.</string>
+
+    <!-- Entfernen: während es läuft -->
+    <string name="status_removing">Wird entfernt… lassen Sie die Box eingeschaltet. Wenn der Fernseher eine Frage zum Debugging stellt, haken Sie „Immer zulassen“ an und drücken Sie auf Zulassen.</string>
+    <string name="report_remove_live">Was gerade passiert:</string>
+    <string name="report_remove_log">Details:</string>
+    <string name="report_remove_crashed">Die Entfernung ist mit einem Fehler abgebrochen: %s</string>
+
+    <!-- Entfernen: Ergebnis -->
+    <string name="outcome_removed">Entfernt: %s</string>
+    <string name="outcome_disabled">Ausgeschaltet (konnte nicht ganz entfernt werden, kann nicht laufen): %s</string>
+    <string name="outcome_failed">Noch aktiv (konnte nicht entfernt werden): %s</string>
+    <string name="outcome_firmware_remain">Eine Ersatzkopie bleibt in der Firmware dieser Box. Sie kann nicht laufen, solange die App oben entfernt oder ausgeschaltet ist. Nur eine Tiefenreinigung mit Root oder neue Firmware vom Hersteller kann sie löschen.</string>
+    <string name="outcome_pp_on">Google Play Protect: wieder eingeschaltet.</string>
+    <string name="outcome_pp_off">Google Play Protect: noch aus. Öffnen Sie die Google Play App, drücken Sie auf Ihr Profilbild, wählen Sie Play Protect, drücken Sie auf das Zahnrad und schalten Sie „Apps mit Play Protect scannen“ ein.</string>
+    <string name="outcome_pp_fine">Google Play Protect: war schon an.</string>
+    <string name="status_outcome_done">Fertig: Die XCPE-Teile wurden entfernt. Starten Sie die Box neu und drücken Sie dann noch einmal auf Prüfen, um sicherzugehen, dass sie weg bleiben.</string>
+    <string name="status_outcome_partial">Einige Teile konnten nicht entfernt werden. Drücken Sie den Pfeil nach unten, um die Details zu lesen. Sind sie nach einem Neustart noch da, ersetzen Sie diese Box.</string>
+    <string name="status_outcome_nothing">Es musste nichts entfernt werden. Drücken Sie jederzeit auf Prüfen, um erneut zu prüfen.</string>
+    <string name="status_outcome_pp_only">Fertig: Google Play Protect ist wieder eingeschaltet. Drücken Sie auf Prüfen, um erneut zu prüfen.</string>
+    <string name="status_outcome_none">Diesmal wurde nichts geändert. Drücken Sie auf Entwickleroptionen öffnen, damit die App selbst entfernen kann, und drücken Sie dann noch einmal auf Bedrohungen entfernen.</string>
+
+    <!-- Neustart -->
+    <string name="dlg_restart_title">Die Box jetzt neu starten?</string>
+    <string name="dlg_restart_msg_adb">Ein Neustart schließt die Reinigung ab. Der Bildschirm bleibt etwa eine Minute lang dunkel. Danach prüft diese App die Box von selbst noch einmal und sagt Ihnen, ob etwas zurückgekommen ist.</string>
+    <string name="dlg_restart_msg_manual">Ein Neustart schließt die Reinigung ab. Ziehen Sie das Stromkabel der Box, warten Sie zehn Sekunden und stecken Sie es wieder ein. Öffnen Sie dann diese App und drücken Sie auf Prüfen.</string>
+    <string name="dlg_restart_now">Jetzt neu starten</string>
+    <string name="dlg_restart_later">Später</string>
+    <string name="dlg_ok">OK</string>
+    <string name="btn_debugoff">Debugging ausschalten</string>
+    <string name="dlg_debugoff_title">Debugging ausschalten?</string>
+    <string name="dlg_debugoff_msg">Nur mit Debugging kann diese App die Box reinigen und sie nach jedem Neustart prüfen. Wenn Sie es ausschalten, testet die App zuerst, ob sie es für diese Prüfungen von selbst wieder einschalten kann. Das dauert bis zu einer Minute; die Box bleibt benutzbar.</string>
+    <string name="dlg_debugoff_yes">Testen und ausschalten</string>
+    <string name="status_debug_kept">Debugging bleibt an, damit diese App die Box nach jedem Neustart prüfen kann. Wenn Sie es lieber aus haben möchten, drücken Sie auf „Debugging ausschalten“.</string>
+    <string name="status_debug_probe">Es wird getestet, ob diese Box das Debugging von selbst wieder einschalten kann…</string>
+    <string name="status_debug_probe_ok">Debugging ist aus. Für ihre automatischen Prüfungen schaltet die App es kurz ein und wieder aus.</string>
+    <string name="status_debug_probe_failed">Diese Box kann das Debugging nicht von selbst wieder einschalten, deshalb bleibt es an. Wenn der automatische Modus nicht mehr funktioniert, starten Sie die Box neu.</string>
+    <string name="status_debug_reclosed">Das Debugging wurde für diese Reinigung geöffnet und ist wieder ausgeschaltet.</string>
+    <string name="status_auto_report">Dies ist der Bericht der automatischen Prüfung nach dem letzten Neustart. Drücken Sie auf Prüfen für eine neue Prüfung.</string>
+    <string name="status_clean_dormant">Sauber: Nichts von XCPE läuft. Ausgeschaltete Reste bleiben in der Firmware; solange sie aus sind, sind sie harmlos.</string>
+    <string name="status_outcome_done_mixed">Fertig: Die XCPE-Teile wurden entfernt oder ausgeschaltet. Starten Sie die Box neu und drücken Sie dann noch einmal auf Prüfen, um sicherzugehen, dass sie weg bleiben.</string>
+    <string name="dlg_stop_title">Reinigung stoppen?</string>
+    <string name="dlg_stop_msg">Die App arbeitet noch an der Box. Wenn Sie jetzt stoppen, bleibt alles, was noch nicht entfernt wurde, wie es ist; Sie können später noch einmal auf Bedrohungen entfernen drücken.</string>
+    <string name="dlg_stop_yes">Stoppen</string>
+    <string name="status_stopping">Wird gestoppt…</string>
+    <string name="result_infected">ERGEBNIS: INFIZIERT - die XCPE-Hintertür ist auf dieser Box aktiv: %1$s</string>
+    <string name="result_suspicious">ERGEBNIS: VERDÄCHTIG - keine bestätigte XCPE-App ist aktiv, aber beachten Sie die Warnungen oben</string>
+    <string name="result_clean">ERGEBNIS: SAUBER - nichts von XCPE gefunden</string>
+    <string name="adb_status_connecting">Verbindung zum Debugging-Dienst der Box wird hergestellt…</string>
+    <string name="adb_status_look_at_tv">Schauen Sie auf den Fernseher: Haken Sie „Von diesem Computer immer zulassen“ an und drücken Sie auf Zulassen.</string>
+    <string name="adb_status_connected">Verbunden: Die Box nimmt Befehle von dieser App an.</string>
+    <string name="adb_err_denied">Die Box hat diese App nicht zugelassen (Ablehnen wurde gedrückt, oder die Frage ist abgelaufen). Versuchen Sie es noch einmal, und wenn der Fernseher fragt, haken Sie „Immer zulassen“ an und drücken Sie auf Zulassen.</string>
+    <string name="adb_err_pairing_only">Diese Box bietet nur die Kopplung über „Debugging über WLAN“ an, die diese App nicht nutzen kann. Folgen Sie stattdessen den geführten Schritten.</string>
+    <string name="adb_err_not_allowed">Diese App ist auf dem Debugging-Dienst der Box noch nicht zugelassen. Drücken Sie einmal auf Bedrohungen entfernen; der Fernseher fragt Sie dann um Erlaubnis.</string>
+    <string name="adb_err_lost">Die Verbindung zum Debugging-Dienst der Box ist abgebrochen. Versuchen Sie es noch einmal.</string>
+    <string name="adb_err_no_answer">Der Debugging-Dienst der Box hat nicht rechtzeitig geantwortet. Versuchen Sie es gleich noch einmal.</string>
+    <string name="adb_err_generic">Problem mit der Debugging-Verbindung: %1$s</string>
+    <string name="status_debug_opening">Debugging-Zugang für den Neustart wird geöffnet…</string>
+    <string name="status_debug_opening_clean">Debugging-Zugang für diese Reinigung wird geöffnet…</string>
+    <string name="status_rebooting">Neustart… der Bildschirm bleibt etwa eine Minute lang dunkel. Falls nicht, ziehen Sie das Stromkabel, warten Sie zehn Sekunden und stecken Sie es wieder ein.</string>
+    <string name="status_reboot_failed">Die Box ist nicht von selbst neu gestartet. Ziehen Sie das Stromkabel, warten Sie zehn Sekunden und stecken Sie es wieder ein. Öffnen Sie dann diese App und drücken Sie auf Prüfen.</string>
+
+    <!-- Geführte Entfernung (die Box lässt die App nichts selbst entfernen) -->
+    <string name="dlg_guided_title">Von Hand entfernen, Schritt für Schritt</string>
+    <string name="dlg_guided_msg">Diese Box lässt die App nichts selbst entfernen, also machen wir es gemeinsam. Die App öffnet für Sie die Einstellungsseite jeder schädlichen App, eine nach der anderen (noch %d), und sagt Ihnen vor jeder Seite, welche Taste Sie drücken müssen. Drücken Sie auf der Fernbedienung auf Zurück, wenn Sie mit einer Seite fertig sind.</string>
+    <string name="dlg_guided_start">Starten</string>
+    <string name="dlg_guided_later">Nicht jetzt</string>
+    <string name="status_guided_later">Die Entfernung wurde nicht gestartet. Drücken Sie auf Bedrohungen entfernen, wenn Sie bereit sind, oder auf Entwickleroptionen öffnen, damit die App es selbst erledigen kann.</string>
+    <!-- 1 = Schritt, 2 = gesamt, 3 = App-Name -->
+    <string name="guide_step_uninstall">Schritt %1$d von %2$d: Eine Frage zum Entfernen von %3$s erscheint. Drücken Sie auf OK oder Deinstallieren.</string>
+    <string name="dlg_guide_step_title">Schritt %1$d von %2$d: %3$s</string>
+    <string name="dlg_guide_step_msg">Drücken Sie auf der nächsten Seite auf Deinstallieren.\n\nGibt es keine Taste Deinstallieren: Drücken Sie auf Updates deinstallieren, falls vorhanden, dann auf Deaktivieren, dann auf Beenden erzwingen.\n\nWenn Sie fertig sind, drücken Sie auf der Fernbedienung auf Zurück, um hierher zurückzukommen.</string>
+    <string name="dlg_guide_open">Seite öffnen</string>
+    <string name="dlg_guide_skip">Diese App überspringen</string>
+    <string name="guide_step_appinfo">Schritt %1$d von %2$d: Drücken Sie auf der Seite von %3$s auf Deinstallieren. Gibt es das nicht: Updates deinstallieren, dann Deaktivieren, dann Beenden erzwingen. Drücken Sie danach auf Zurück.</string>
+    <string name="status_guided_checking">Es wird geprüft, was sich geändert hat…</string>
+    <string name="status_guide_cannot_open">Die Einstellungsseite für %s ließ sich auf dieser Box nicht öffnen. Weiter geht es.</string>
+    <string name="guide_still_active_title">%s ist noch aktiv</string>
+    <string name="guide_still_active_msg">Sie ist nicht verschwunden. Sie können die Seite noch einmal öffnen, diese App überspringen oder hier aufhören.</string>
+    <string name="guide_try_again">Noch einmal</string>
+    <string name="guide_skip">Überspringen</string>
+    <string name="guide_stop">Aufhören</string>
+    <string name="guide_pp_title">Google Play Protect wieder einschalten</string>
+    <string name="guide_pp_msg">XCPE hat die App-Prüfung von Google ausgeschaltet. Schalten Sie auf der nächsten Seite „Apps mit Play Protect scannen“ ein und drücken Sie dann auf Zurück.</string>
+    <string name="guide_pp_fallback">Diese Box hat dafür keine direkte Seite. Öffnen Sie die Google Play App, drücken Sie oben rechts auf Ihr Profilbild, wählen Sie Play Protect, drücken Sie auf das Zahnrad und schalten Sie „Apps mit Play Protect scannen“ ein.</string>
+    <string name="status_guide_pp">Schalten Sie auf der nächsten Seite „Apps mit Play Protect scannen“ ein und drücken Sie dann auf Zurück.</string>
+    <string name="dlg_guide_skip_step">Diesen Schritt überspringen</string>
+    <string name="guide_acc_title">XCPE aus den Bedienungshilfen entfernen</string>
+    <string name="guide_acc_msg">XCPE hat sich in den Bedienungshilfen dieser Box eingenistet. Suchen Sie auf der nächsten Seite %s, schalten Sie es aus und drücken Sie dann auf Zurück.</string>
+    <string name="status_guide_acc">Schalten Sie %s auf der nächsten Seite aus und drücken Sie dann auf Zurück.</string>
+    <string name="guided_tail_acc">Bedienungshilfen: %s ist noch eingeschaltet; schalten Sie es unter Einstellungen, Bedienungshilfen aus.</string>
+    <!-- 1 = erledigt, 2 = noch aktiv, 3 = was als Nächstes zu tun ist -->
+    <string name="status_guided_done">Von Hand erledigt: %1$d entfernt oder ausgeschaltet, %2$d noch aktiv. %3$s</string>
+    <string name="guided_tail_restart">Starten Sie jetzt die Box neu (Stromkabel ziehen und wieder einstecken), öffnen Sie diese App und drücken Sie noch einmal auf Prüfen.</string>
+    <string name="guided_tail_replace">Sind sie nach einem Neustart noch aktiv, lässt sich diese Box nicht reinigen: Ersetzen Sie sie.</string>
+
+    <!-- Entwickleroptionen -->
+    <string name="status_devopts_hint">Schalten Sie auf der nächsten Seite „USB-Debugging“ ein. Auf manchen Boxen heißt es „Netzwerk-Debugging“, „ADB-Debugging“ oder „ADB über Netzwerk“; schalten Sie das ebenfalls ein. Erscheint eine Frage, haken Sie „Immer zulassen“ an und drücken Sie auf Zulassen. Drücken Sie dann auf Zurück.</string>
+    <string name="status_devopts_hidden">Die Entwickleroptionen sind auf dieser Box versteckt. Suchen Sie auf der nächsten Seite „Build-Nummer“ (oder „Build“) und drücken Sie darauf sieben Mal auf OK. Drücken Sie dann auf Zurück und noch einmal auf Entwickleroptionen öffnen.</string>
+    <string name="status_devopts_missing">Diese Box lässt die App ihre Einstellungen nicht öffnen. Öffnen Sie die Einstellungen selbst: Geräteeinstellungen, Info, sieben Mal auf „Build“ drücken, dann Entwickleroptionen, USB-Debugging einschalten.</string>
+    <string name="status_port_open">Gut: Der Debugging-Zugang ist offen. Drücken Sie auf Bedrohungen entfernen, und die App entfernt alles selbst.</string>
+    <string name="status_port_closed_usb_only">USB-Debugging ist an, aber der Netzwerk-Zugang ist noch geschlossen. Suchen Sie in den Entwickleroptionen nach „Netzwerk-Debugging“, „ADB über Netzwerk“ oder „Debugging über WLAN“ und schalten Sie das ebenfalls ein. Hat diese Box nichts davon, führt Sie Bedrohungen entfernen stattdessen Schritt für Schritt.</string>
+    <string name="status_port_closed_after">Der Debugging-Zugang ist noch geschlossen. Versuchen Sie Entwickleroptionen öffnen noch einmal, oder drücken Sie auf Bedrohungen entfernen, und die App führt Sie stattdessen Schritt für Schritt.</string>
+
+    <!-- Tiefenreinigung -->
+    <string name="dlg_deep_title">Firmware tief reinigen?</string>
+    <string name="dlg_deep_msg">Das löscht die Ersatzkopien der Hintertür in der Firmware dieser Box. Es funktioniert nur auf Boxen mit Root-Zugriff und rührt nur Dateien an, die zu XCPE gehören.</string>
+    <string name="dlg_deep_yes">Ersatzkopien löschen</string>
+    <string name="dlg_cancel">Abbrechen</string>
+    <string name="status_deep_running">Tiefenreinigung läuft… lassen Sie die Box eingeschaltet.</string>
+    <string name="status_deep_done">Tiefenreinigung abgeschlossen. Drücken Sie den Pfeil nach unten, um zu lesen, was passiert ist, und dann auf Prüfen, um erneut zu prüfen.</string>
+    <string name="report_deep_header">Tiefenreinigung:</string>
+
+    <!-- So funktioniert es -->
+    <string name="help_title">So funktioniert diese App. Pfeil nach unten zum Lesen, Pfeil nach oben zum Zurückkehren.</string>
+    <string name="help_text">WAS XCPE IST\nXCPE ist eine Hintertür, die in die Firmware vieler billiger Android-TV-Boxen eingebaut ist (MECOOL, Videostrong und Boxen, die unter anderen Namen verkauft werden). Sie lässt Fremde Dinge auf Ihrer Box ausführen: gefälschte Werbeklicks, versteckten Datenverkehr über Ihren Internetanschluss und was immer sie ihr sonst schicken.\n\nWAS PRÜFEN MACHT\nPrüfen sieht sich die Apps auf dieser Box, Google Play Protect und die Bedienungshilfen an und vergleicht sie mit der veröffentlichten Liste der XCPE-Teile. Es ändert nichts und sendet nichts irgendwohin.\n\nWAS BEDROHUNGEN ENTFERNEN MACHT\nEs entfernt die XCPE-Apps für diese Box und schaltet Google Play Protect wieder ein. Lässt sich eine App nicht entfernen, wird sie ausgeschaltet, damit sie nicht laufen kann. Die App versucht das zuerst selbst; das klappt, wenn der Debugging-Zugang der Box offen ist (Entwickleroptionen). Andernfalls öffnet sie die passenden Einstellungsseiten für Sie und sagt Ihnen, welche Taste Sie drücken müssen.\n\nWAS BLEIBT\nViele Boxen bewahren eine Ersatzkopie der Hintertür in einem schreibgeschützten Teil der Firmware auf. Die App kann diese Kopie ohne Root-Zugriff nicht löschen, aber die Kopie kann nicht laufen, solange die App entfernt oder ausgeschaltet ist. Kommt XCPE nach einem Neustart zurück, bemerkt diese App das, entfernt es erneut und sagt es Ihnen.\n\nUNSER EHRLICHER RAT\nEine Box, die mit einer Hintertür ausgeliefert wurde, hat nie Ihnen allein gehört. Wenn Sie können, ersetzen Sie sie durch eine Box einer bekannten Marke (Google TV Streamer, Apple TV, Fire TV, Nvidia Shield). Wenn Sie sie behalten, melden Sie sich darauf nicht bei Ihrer Bank oder Ihren E-Mails an.\n\nÄNDERN SIE IHRE PASSWÖRTER\nWenn Sie jemals ein Passwort auf dieser Box eingegeben haben, ändern Sie es von einem anderen Gerät aus: Google-Konto, Netflix, WLAN und alles andere, was Sie hier benutzt haben.\n\nNACH DER REINIGUNG\nStarten Sie die Box neu, öffnen Sie diese App und drücken Sie noch einmal auf Prüfen. Die App prüft außerdem nach jedem Neustart von selbst und zeigt das Ergebnis unter „Letzte Prüfung“.\n\nDrücken Sie auf Prüfen, um das Prüfergebnis wieder zu sehen.</string>
+
+    <!-- Benachrichtigungen der Prüfung nach einem Neustart -->
+    <string name="notif_channel">Prüfung nach Neustart</string>
+    <string name="notif_channel_desc">Sagt Ihnen, wenn XCPE nach einem Neustart zurückgekommen ist.</string>
+    <string name="notif_removed_again_title">XCPE kam nach dem Neustart zurück und wurde erneut entfernt</string>
+    <string name="notif_removed_again_text">Öffnen Sie XCPE Cleaner, um die Details zu sehen. Passiert das immer wieder, ersetzen Sie die Box.</string>
+    <string name="notif_failed_title">XCPE kam zurück und konnte nicht entfernt werden: Ersetzen Sie diese Box</string>
+    <string name="notif_failed_text">Öffnen Sie XCPE Cleaner und drücken Sie auf Bedrohungen entfernen, um es noch einmal zu versuchen.</string>
+    <string name="notif_failed_text_port_closed">Die App konnte es nicht selbst entfernen, weil der Debugging-Zugang geschlossen ist. Öffnen Sie XCPE Cleaner und drücken Sie auf Bedrohungen entfernen.</string>
+    <string name="notif_suspicious_title">Diese Box zeigt Warnzeichen</string>
+    <string name="notif_suspicious_text">Öffnen Sie XCPE Cleaner und drücken Sie auf Prüfen, um die Details zu lesen.</string>
+    <string name="report_auto_remove_header">Automatische Entfernung nach dem Neustart:</string>
+</resources>

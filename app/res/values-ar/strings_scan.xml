@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- العربية: نصوص تقرير الفحص. السلاسل بين علامتي اقتباس مزدوجتين تحتفظ بالمسافات المزدوجة لمحاذاة الأعمدة. -->
+<resources>
+    <!-- أسماء الأقسام لقائمة الخطوات المباشرة -->
+    <string name="scan_sec_device">جارٍ فحص هذا الجهاز</string>
+    <string name="scan_sec_known">جارٍ فحص التطبيقات المعروفة</string>
+    <string name="scan_sec_fake_system">جارٍ فحص التطبيقات ذات أسماء النظام</string>
+    <string name="scan_sec_content">جارٍ النظر داخل التطبيقات المثبّتة</string>
+    <string name="scan_err_content">تعذّر النظر داخل التطبيقات المثبّتة</string>
+    <string name="scan_content_match">%1$s يحتوي على %2$s، وهو مكوّن معروف من XCPE</string>
+    <string name="scan_content_none">لا يحتوي أي تطبيق مثبّت على مكوّن معروف من XCPE</string>
+    <string name="scan_reason_ioc">الاسم يطابق القائمة المنشورة لأدوات XCPE المساعدة</string>
+    <string name="scan_reason_provider">يعرض قناة بيانات XCPE</string>
+    <string name="scan_reason_content">يحتوي على %1$s، وهو مكوّن معروف من XCPE</string>
+    <string name="scan_reason_fake_name">يستخدم اسم نظام لكنه ثُبّت لاحقًا</string>
+    <string name="scan_reason_installed_by">%1$s؛ ثبّته %2$s</string>
+    <string name="scan_sec_providers">جارٍ فحص قنوات البيانات</string>
+    <string name="scan_sec_firmware">جارٍ فحص البرنامج الثابت بحثًا عن نسخ احتياطية</string>
+    <string name="scan_sec_play_protect">جارٍ فحص Google Play Protect</string>
+    <string name="scan_sec_accessibility">جارٍ فحص إعدادات إمكانية الوصول</string>
+    <string name="scan_sec_user_apps">جارٍ سرد التطبيقات التي ثبّتها المستخدم</string>
+
+    <!-- تعذّر تشغيل قسم واحد (يستمر الفحص) -->
+    <string name="scan_err_no_context">تعذّر فحص أي شيء في هذا الجهاز (سياق التطبيق مفقود)</string>
+    <string name="scan_err_finish">تعذّر إكمال الفحص</string>
+    <string name="scan_err_device">تعذّر فحص العلامة التجارية لهذا الجهاز وطرازه</string>
+    <string name="scan_err_app_list">تعذّر فحص القائمة الكاملة للتطبيقات المثبّتة</string>
+    <string name="scan_err_known">تعذّر فحص أسماء تطبيقات XCPE المعروفة</string>
+    <string name="scan_err_fake_system">تعذّر فحص التطبيقات المختبئة خلف أسماء النظام</string>
+    <string name="scan_err_providers">تعذّر فحص قنوات بيانات XCPE (موفّرو المحتوى)</string>
+    <string name="scan_err_oem">تعذّر فحص مجلد /oem بحثًا عن نسخة احتياطية</string>
+    <string name="scan_err_priv_app">تعذّر فحص مجلدات تطبيقات النظام</string>
+    <string name="scan_err_perm_files">تعذّر فحص ملفات منح الأذونات</string>
+    <string name="scan_err_props">تعذّر فحص خصائص برامج تثبيت XCPE</string>
+    <string name="scan_err_play_protect">تعذّر فحص إعداد Play Protect</string>
+    <string name="scan_err_accessibility">تعذّر فحص خدمات إمكانية الوصول</string>
+    <string name="scan_err_user_apps">تعذّر فحص قائمة التطبيقات التي ثبّتها المستخدم</string>
+
+    <!-- 1. هذا الجهاز -->
+    <string name="scan_device_line">"العلامة التجارية: %1$s   الصانع: %2$s   الطراز: %3$s   الجهاز: %4$s\nAndroid %5$s (API %6$d)  تصحيح الأمان %7$s\nالإصدار: %8$s"</string>
+    <string name="scan_unknown">غير معروف</string>
+    <string name="scan_device_unavailable">تفاصيل الجهاز غير متاحة</string>
+    <string name="scan_device_mecool_brand_title">العلامة التجارية أو الصانع هو MECOOL / Videostrong (الشركة التي تقف وراء XCPE)</string>
+    <string name="scan_device_mecool_brand_detail">"العلامة التجارية: %1$s   الصانع: %2$s"</string>
+    <string name="scan_device_mecool_prop_title">يعرّف هذا الجهاز نفسه بأنه جهاز MECOOL ‏(ro.mecool.device=true)</string>
+    <string name="scan_device_mecool_prop_detail">يقرأ الباب الخلفي هذه الخاصية لاختيار خادم التحكم الخاص به.</string>
+    <string name="scan_device_model_listed_title">اسم الطراز «%1$s» مدرج في القائمة المنشورة للطرازات المتأثرة (ليس دليلًا بحد ذاته)</string>
+    <string name="scan_device_model_listed_detail">شوهدت أجهزة بهذا الاسم في حملة XCPE. تبيّن الفحوصات أدناه ما إذا كان هذا الجهاز مصابًا.</string>
+    <string name="scan_device_model_ok">اسم الطراز غير مدرج في القائمة المنشورة للطرازات المتأثرة</string>
+
+    <!-- 2. التطبيقات المعروفة -->
+    <string name="scan_pkg_confirmed_active">"%1$s مثبّت ونشط  &lt;-- جزء من الباب الخلفي XCPE"</string>
+    <string name="scan_pkg_confirmed_dormant_firmware">%1$s موجود في البرنامج الثابت لكنه موقوف في هذا الجهاز (خامل، غير ضار ما دام موقوفًا)</string>
+    <string name="scan_pkg_confirmed_dormant_present">%1$s موجود لكنه موقوف (خامل، غير ضار ما دام موقوفًا)</string>
+    <string name="scan_pkg_confirmed_none">لا يوجد أي اسم نشط من أسماء تطبيقات XCPE المؤكّدة البالغ عددها %1$d</string>
+    <string name="scan_pkg_suspect_active">%1$s مثبّت (أداة Videostrong / شركائها، مشتبه بها)</string>
+    <string name="scan_pkg_suspect_dormant_firmware">%1$s (أداة مشتبه بها) موجود في البرنامج الثابت لكنه موقوف في هذا الجهاز (خامل، غير ضار ما دام موقوفًا)</string>
+    <string name="scan_pkg_suspect_dormant_present">%1$s (أداة مشتبه بها) موجود لكنه موقوف (خامل، غير ضار ما دام موقوفًا)</string>
+
+    <!-- 3. التطبيقات المختبئة خلف أسماء النظام -->
+    <string name="scan_fake_active">%1$s تطبيق ثبّته المستخدم ويختبئ خلف اسم نظام (هذا ما تفعله برامج تثبيت XCPE)</string>
+    <string name="scan_fake_dormant">%1$s يستخدم اسم نظام لكنه موقوف (خامل، غير ضار ما دام موقوفًا)</string>
+    <string name="scan_fake_none">لا يختبئ أي تطبيق ثبّته المستخدم خلف اسم com.android.*</string>
+
+    <!-- 4. قنوات البيانات -->
+    <string name="scan_provider_none">لا يعرض أي تطبيق قنوات بيانات XCPE</string>
+    <string name="scan_provider_active">%1$s يعرض قناة بيانات XCPE ‏(%2$s)</string>
+    <string name="scan_provider_active_detail">تتشارك تطبيقات XCPE إعداداتها عبر هذه القناة.</string>
+    <string name="scan_provider_dormant">%1$s يحمل قناة بيانات XCPE ‏(%2$s) لكنه موقوف (خامل)</string>
+
+    <!-- 5أ. النسخ الاحتياطية في /oem -->
+    <string name="scan_oem_no_folder">لا يوجد في هذا الجهاز مجلد /oem (لا مكان لنسخة احتياطية)</string>
+    <string name="scan_oem_copy_title">يحتوي /oem على نسخة احتياطية من الباب الخلفي</string>
+    <string name="scan_oem_copy_detail">لا يمكن حذفها إلا ببرنامج ثابت جديد أو بصلاحية root. تبقى غير ضارة ما دام التطبيق نفسه مُزالًا أو موقوفًا.</string>
+    <string name="scan_oem_apks_ok">%1$d ملف (ملفات) APK في /oem، لا شيء منها باسم يشبه XCPE</string>
+    <string name="scan_oem_not_visible_title">مجلد /oem غير مرئي للتطبيقات في هذا الجهاز، لذا لا يمكن استبعاد وجود نسخة احتياطية فيه</string>
+    <string name="scan_oem_not_visible_detail">غير قابل للقراءة: %1$s</string>
+    <string name="scan_oem_none">لا توجد ملفات APK مرئية في /oem</string>
+
+    <!-- 5ب. مجلدات تطبيقات النظام -->
+    <string name="scan_privapp_hit_title">مجلد تطبيق نظام باسم يشبه XCPE: ‏%1$s</string>
+    <string name="scan_privapp_hit_detail">هذا جزء من البرنامج الثابت. لا يمكن حذفه إلا ببرنامج ثابت جديد أو بصلاحية root؛ إيقاف التطبيق يبقيه غير ضار.</string>
+    <string name="scan_privapp_none">لا توجد مجلدات تشبه XCPE في أدلة تطبيقات النظام</string>
+    <string name="scan_not_visible_detail">غير مرئي للتطبيقات: %1$s</string>
+
+    <!-- 5ج. ملفات منح الأذونات -->
+    <string name="scan_perm_hit_title">"ملف منح أذونات لتطبيق XCPE: ‏%1$s  (يذكر %2$s)"</string>
+    <string name="scan_perm_hit_detail">يمنح البرنامج الثابت الباب الخلفي حقوقًا مسبقًا. إزالة التطبيق أو إيقافه يجعل هذا الملف بلا أثر.</string>
+    <string name="scan_perm_none">لا يمنح أي ملف منح أذونات حقوقًا لتطبيق XCPE</string>
+
+    <!-- 5د. خصائص برامج التثبيت -->
+    <string name="scan_prop_set">الخاصية %1$s=%2$s مضبوطة (تستخدمها برامج تثبيت XCPE لعام 2026)</string>
+    <string name="scan_prop_none">لا توجد أي خاصية مضبوطة من خصائص برامج تثبيت XCPE</string>
+
+    <!-- 6. Play Protect -->
+    <string name="scan_pp_off_title">فحص التطبيقات في Play Protect متوقف (هذا بالضبط ما يفعله XCPE)</string>
+    <string name="scan_pp_off_detail">package_verifier_user_consent=-1. «إزالة التهديدات» تعيد تشغيله؛ يمكنك أيضًا فعل ذلك من متجر Play > Play Protect.</string>
+    <string name="scan_pp_disabled_title">فحص التطبيقات في Play Protect معطّل (package_verifier_enable=0)</string>
+    <string name="scan_pp_disabled_detail">«إزالة التهديدات» تعيد تشغيله؛ يمكنك أيضًا فعل ذلك من متجر Play > Play Protect.</string>
+    <string name="scan_pp_ok">فحص التطبيقات في Play Protect ليس متوقفًا</string>
+
+    <!-- 7. إمكانية الوصول -->
+    <string name="scan_acc_none">لا توجد خدمات إمكانية وصول مفعّلة</string>
+    <string name="scan_acc_bad_title">خدمة إمكانية وصول تخصّ XCPE: ‏%1$s</string>
+    <string name="scan_acc_bad_detail">يستخدمها XCPE لمراقبة ما تضغطه على جهاز التحكم عن بُعد. تتوقف عند إزالة التطبيق.</string>
+    <string name="scan_acc_other">خدمة إمكانية وصول مفعّلة: %1$s (ليست من XCPE)</string>
+
+    <!-- 10. قائمة مرجعية -->
+    <string name="scan_user_apps">%1$d تطبيق (تطبيقات) ثبّتها المستخدم في هذا الجهاز (للمرجع)</string>
+    <string name="scan_user_app_off">"%1$s  (موقوف)"</string>
+    <string name="scan_more">... (و%1$d أخرى)</string>
+
+    <!-- أسطر التفاصيل تحت التطبيق المكتشف -->
+    <string name="scan_detail_version">الإصدار: %1$s (%2$d)</string>
+    <string name="scan_detail_apk">apk: %1$s</string>
+    <string name="scan_detail_installer">ثبّته: %1$s</string>
+    <string name="scan_detail_installer_none">ثبّته: لا شيء مسجّل (ثُبّت يدويًا أو جزء من البرنامج الثابت)</string>
+    <string name="scan_detail_times">"أول تثبيت: %1$s   آخر تحديث: %2$s"</string>
+    <string name="scan_detail_type_updated_system">النوع: تطبيق من البرنامج الثابت مع تحديث فوقه: إلغاء التثبيت يزيل التحديث، ونسخة البرنامج الثابت لا يمكن إلا إيقافها</string>
+    <string name="scan_detail_type_system">النوع: تطبيق من البرنامج الثابت (نظام): بدون root يمكن إيقافه فقط، لا حذفه</string>
+    <string name="scan_detail_type_user">النوع: تطبيق ثبّته المستخدم: يمكن إلغاء تثبيته</string>
+    <string name="scan_detail_state_off">الحالة: موقوف</string>
+    <string name="scan_detail_state_off_by_user">الحالة: أوقفه المستخدم</string>
+    <string name="scan_detail_unavailable">(التفاصيل غير متاحة: %1$s)</string>
+</resources>

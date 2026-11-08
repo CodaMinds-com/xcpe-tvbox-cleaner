@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Español (neutral). Textos de la eliminación (escalera de eliminación, limpieza profunda). Dos tipos:
+    rm_status_*  líneas de estado en vivo mientras se ejecuta la eliminación (Remover.Listener)
+    rm_log_*     las líneas de resumen en lenguaje llano de Outcome.log (la transcripción de comandos sigue en inglés)
+  Se conservan %1$s / %2$d, nombres de paquete, "XCPE", "Play Protect", "ADB", "su", "root".
+  Las rutas "Ajustes > Aplicaciones > ..." usan los nombres que Android muestra en español.
+-->
+<resources>
+    <!-- Estado en vivo durante la eliminación -->
+    <string name="rm_status_connecting">Conectando con el servicio de depuración de este dispositivo...</string>
+    <!-- 1 = el motivo, una frase en lenguaje llano del cliente de depuración -->
+    <string name="rm_status_adb_failed">No se pudo usar la conexión de depuración: %1$s</string>
+    <!-- 1 = nombre de la aplicación, 2 = número de esta, 3 = total -->
+    <string name="rm_status_removing">Eliminando %1$s (%2$d de %3$d)...</string>
+    <string name="rm_status_play_protect">Activando Google Play Protect de nuevo...</string>
+    <string name="rm_status_done">Listo.</string>
+    <string name="rm_status_guided">Sigue los pasos en pantalla para eliminar cada aplicación a mano.</string>
+    <string name="rm_status_deep_no_root">La limpieza profunda no es posible sin root.</string>
+    <string name="rm_status_deep_looking">Buscando copias de reserva en el firmware...</string>
+    <string name="rm_status_deep_none">No se encontró ninguna copia de reserva en el firmware.</string>
+    <!-- 1 = partición como /oem o /system -->
+    <string name="rm_status_deep_unlocking">Desbloqueando %1$s para escritura...</string>
+    <!-- 1 = ruta de archivo o carpeta -->
+    <string name="rm_status_deep_deleting">Borrando %1$s...</string>
+    <string name="rm_status_deep_done">Limpieza profunda terminada.</string>
+    <string name="rm_status_deep_partial">Limpieza profunda terminada; algunas copias no se pudieron borrar.</string>
+
+    <!-- Registro: por qué vía fue la eliminación -->
+    <string name="rm_log_nothing_to_remove">Nada que eliminar; solo se comprueban las protecciones.</string>
+    <!-- 1 = nombres de aplicaciones separados por comas -->
+    <string name="rm_log_to_remove">Para eliminar: %1$s</string>
+    <!-- 1 = host, 2 = puerto -->
+    <string name="rm_log_path_adb">Vía: ADB (%1$s:%2$d)</string>
+    <string name="rm_log_path_root">Vía: ROOT (su)</string>
+    <string name="rm_log_path_guided">Vía: GUIADA - sin conexión de depuración y sin root, así que estos pasos se hacen a mano:</string>
+    <string name="rm_log_path_deep">Vía: limpieza profunda ROOT (su)</string>
+    <!-- 1 = el motivo -->
+    <string name="rm_log_adb_failed">La conexión de depuración falló: %1$s</string>
+    <!-- 1 = host, 2 = puerto -->
+    <string name="rm_log_port_closed">El puerto de depuración %1$s:%2$d está cerrado.</string>
+    <string name="rm_log_no_root">No hay root (su) en este dispositivo.</string>
+    <!-- 1 = el error -->
+    <string name="rm_log_unexpected">Problema inesperado: %1$s</string>
+    <string name="rm_log_stopped">Detenido por ti. No se cambió nada más.</string>
+    <string name="rm_log_busy">Otra limpieza sigue en marcha en este dispositivo. Inténtalo de nuevo en un momento.</string>
+    <string name="rm_log_grant_ok">la aplicación ya puede desactivar y activar la depuración por sí sola</string>
+    <string name="rm_log_grant_ineffective">el permiso no surtió efecto; la depuración queda como la dejaste</string>
+    <!-- 1 = el error -->
+    <string name="rm_log_grant_failed">el permiso falló: %1$s</string>
+    <string name="rm_log_door_opened">Depuración activada para esta limpieza.</string>
+    <string name="rm_log_door_failed">No se pudo activar la depuración para esta limpieza.</string>
+
+    <!-- Registro: resultado para una aplicación -->
+    <string name="rm_log_result_unknown">no se pudo comprobar el resultado (sin respuesta del gestor de paquetes); se trata como aún activa</string>
+    <string name="rm_log_disabled">DESACTIVADA (no se pudo desinstalar; está desactivada y no puede ejecutarse)</string>
+    <string name="rm_log_failed">FALLÓ - sigue activa. Este dispositivo necesita un firmware nuevo o ser sustituido.</string>
+    <string name="rm_log_removed_fw_unknown">ELIMINADA de este dispositivo (no se pudo comprobar si queda una copia en el firmware; da por hecho que sí)</string>
+    <string name="rm_log_removed_fw">ELIMINADA de este dispositivo (queda una copia inactiva en el firmware de solo lectura)</string>
+    <string name="rm_log_removed">ELIMINADA por completo</string>
+
+    <!-- Registro: protecciones -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">Accesibilidad</string>
+    <!-- 1 y 2 = los dos valores de ajuste leídos -->
+    <string name="rm_log_pp_on">Verificación de aplicaciones de Play Protect: ACTIVADA (consent=%1$s enable=%2$s)</string>
+    <string name="rm_log_pp_failed">Play Protect: no se pudo cambiar el ajuste (consent=%1$s enable=%2$s). Actívalo en Play Store > Play Protect > ajustes.</string>
+    <!-- 1 = id del servicio de accesibilidad -->
+    <string name="rm_log_acc_removed">gancho de accesibilidad eliminado: %1$s</string>
+
+    <!-- Registro: resultado general -->
+    <!-- 1 = nombres de aplicaciones separados por espacios -->
+    <string name="rm_log_result_partial">RESULTADO DE LA LIMPIEZA: PARCIAL - no se pudo eliminar: %1$s. Sustituye este dispositivo o pide al vendedor un firmware limpio.</string>
+    <string name="rm_log_result_done">RESULTADO DE LA LIMPIEZA: LISTO - eliminadas/desactivadas: %1$s</string>
+    <string name="rm_log_result_next">SIGUIENTE: reinicia el dispositivo y analízalo de nuevo. Si una aplicación vuelve tras el reinicio, el firmware la reinstala: sustituye el dispositivo.</string>
+    <string name="rm_log_result_nothing">RESULTADO DE LA LIMPIEZA: no hacía falta eliminar nada.</string>
+
+    <!-- Registro: pasos a mano (sin conexión de depuración, sin root) -->
+    <!-- 1 = nombre de la aplicación -->
+    <string name="rm_log_guided_step">Ajustes > Aplicaciones > %1$s > Desinstalar (o \'Desinstalar actualizaciones\' y luego \'Inhabilitar\'), luego Forzar detención</string>
+    <string name="rm_log_guided_pp">Play Protect: abre Play Store > tu perfil > Play Protect > ajustes (rueda dentada) > activa \'Analizar aplicaciones con Play Protect\'</string>
+    <!-- 1 = ids de servicios de accesibilidad separados por comas -->
+    <string name="rm_log_guided_acc">Ajustes > Accesibilidad: desactiva %1$s</string>
+    <string name="rm_log_guided_nothing">Nada que hacer a mano.</string>
+
+    <!-- Registro: limpieza profunda (solo root) -->
+    <string name="rm_log_deep_no_root">La limpieza profunda necesita root (su) y este dispositivo no lo tiene. Una copia de reserva en el firmware queda sin efecto mientras la aplicación esté eliminada o desactivada.</string>
+    <!-- 1 = el error -->
+    <string name="rm_log_deep_root_check_failed">No se pudo comprobar si hay root: %1$s</string>
+    <!-- 1 = ruta del archivo -->
+    <string name="rm_log_deep_shared_perm_file">%1$s también concede permisos a otras aplicaciones; se deja como está</string>
+    <!-- 1 = ruta del archivo, 2 = nombre del paquete -->
+    <string name="rm_log_deep_unverified">%1$s: no se pudo leer qué aplicación contiene, así que se deja como está.</string>
+    <string name="rm_log_deep_not_xcpe">%1$s contiene la aplicación %2$s, que no forma parte de XCPE; se deja como está.</string>
+    <string name="rm_log_deep_skipped_unusual">omitido (ruta inusual): %1$s</string>
+    <string name="rm_log_deep_skipped_outside">omitido (fuera de los directorios del firmware): %1$s</string>
+    <string name="rm_log_deep_nothing">No se encontró nada parecido a XCPE en los directorios del firmware.</string>
+    <!-- 1 = rutas separadas por comas -->
+    <string name="rm_log_deep_targets">Copias del firmware para borrar: %1$s</string>
+    <!-- 1 = partición como /oem -->
+    <string name="rm_log_deep_write_protected">%1$s: el firmware de este dispositivo está protegido contra escritura; la copia de reserva queda sin efecto</string>
+    <!-- 1 = ruta de archivo o carpeta -->
+    <string name="rm_log_deep_deleted">borrado %1$s</string>
+    <string name="rm_log_deep_still_there_ro">%1$s sigue ahí: el firmware de este dispositivo está protegido contra escritura; la copia de reserva queda sin efecto</string>
+    <string name="rm_log_deep_still_there">%1$s sigue ahí (no se pudo borrar)</string>
+    <!-- 1 = cantidad -->
+    <string name="rm_log_deep_result_done">RESULTADO DE LA LIMPIEZA PROFUNDA: LISTO - %1$d elemento(s) del firmware borrado(s)</string>
+    <!-- 1 = rutas separadas por comas -->
+    <string name="rm_log_deep_result_partial">RESULTADO DE LA LIMPIEZA PROFUNDA: PARCIAL - aún en el firmware: %1$s</string>
+    <!-- 1 = el error -->
+    <string name="rm_log_deep_unexpected">Problema inesperado durante la limpieza profunda: %1$s</string>
+</resources>

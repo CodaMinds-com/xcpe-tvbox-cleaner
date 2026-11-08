@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 繁體中文（台灣）。寫給沒有技術背景、坐在沙發上看電視的人：先說發生了什麼，再說下一步該怎麼做。 -->
+<resources>
+    <string name="app_name">XCPE 清理工具</string>
+    <string name="title">XCPE 清理工具</string>
+    <string name="subtitle">找出並清除這台電視盒上的 XCPE 後門。不會對外傳送任何資料。</string>
+
+    <!-- 按鈕 -->
+    <string name="btn_scan">掃描</string>
+    <string name="btn_remove">清除威脅</string>
+    <string name="btn_devopts">開啟開發人員選項</string>
+    <string name="btn_deepclean">深度清理（root）</string>
+    <string name="btn_help">運作方式</string>
+    <string name="btn_details_show">顯示詳細資料</string>
+    <string name="btn_details_hide">隱藏詳細資料</string>
+    <string name="report_frame_desc">檢查報告。按上下鍵捲動。</string>
+
+    <!-- 格式片段（沒有文字，但譯者可以調整引號、分隔符號和順序） -->
+    <string name="app_label_fmt">「%1$s」（%2$s）</string>
+    <string name="name_quoted">「%s」</string>
+    <string name="list_separator">、</string>
+    <string name="bullet_line">  - %s</string>
+    <string name="join_sentences">%1$s%2$s</string>
+    <string name="progress_line">- %s</string>
+    <string name="progress_block">%1$s\n%2$s</string>
+    <string name="progress_step_start">%s…</string>
+    <string name="progress_step_done">%s…完成</string>
+    <string name="progress_scan_header">正在檢查：</string>
+
+    <!-- 開始畫面 -->
+    <string name="status_idle">按「掃描」來檢查這台電視盒。</string>
+    <string name="report_intro">掃描會查看：\n\n  - 已知屬於 XCPE 的 8 個應用程式\n  - 冒充 Android 系統元件的應用程式\n  - XCPE 使用的隱藏資料通道\n  - 存放在電視盒韌體裡的備用副本\n  - Google Play Protect 是否被關閉\n  - XCPE 是否接入了協助工具\n\n檢查只需幾秒鐘，不會更動任何東西。\n不會對外傳送任何資料。\n\n檢查結束後，這台電視盒會顯示三種結果之一：\n  乾淨、可疑或已感染。\n如果不是「乾淨」，請按「清除威脅」。</string>
+    <string name="last_check_none">上次檢查：從未</string>
+    <!-- 1 = 日期和時間，2 = 結果文字，3 = 由誰檢查 -->
+    <string name="last_check_fmt">上次檢查：%1$s · %2$s（%3$s）</string>
+    <string name="src_manual">由您手動檢查</string>
+    <string name="src_auto">重新啟動後自動檢查</string>
+    <string name="check_clean">乾淨</string>
+    <string name="check_suspicious">可疑</string>
+    <string name="check_infected">已感染</string>
+    <string name="check_removed_again">XCPE 又出現了，已再次清除</string>
+    <string name="check_failed">XCPE 又出現了，且無法清除</string>
+    <string name="check_debug_opened">為了清除，偵錯被暫時開啟</string>
+    <string name="check_debug_open_failed">無法開啟偵錯</string>
+    <string name="check_debug_closed">偵錯已重新關閉</string>
+    <string name="check_debug_close_failed">偵錯仍處於開啟狀態</string>
+    <string name="check_summary_join">%1$s；%2$s</string>
+
+    <!-- 掃描 -->
+    <string name="status_scanning">正在檢查這台電視盒……需要幾秒鐘。</string>
+    <string name="status_scan_failed">檢查未能完成。請按「掃描」再試一次。</string>
+    <plurals name="status_infected">
+        <item quantity="one">已感染：這台電視盒上有 %d 個 XCPE 元件正在執行。請按「清除威脅」。</item>
+        <item quantity="other">已感染：這台電視盒上有 %d 個 XCPE 元件正在執行。請按「清除威脅」。</item>
+    </plurals>
+    <string name="status_suspicious">可疑：沒有發現正在執行的已確認 XCPE 應用程式，但這台電視盒有一些警示跡象。按「清除威脅」可處理能處理的部分，或按下鍵閱讀報告。</string>
+    <string name="status_clean">乾淨：這台電視盒上沒有發現任何 XCPE 的元件。您可以繼續使用。</string>
+
+    <!-- 清除：唯一的一個問題 -->
+    <string name="dlg_review_title">清除前先確認</string>
+    <plurals name="dlg_review_msg_confirmed">
+        <item quantity="other">將清除 %1$d 個已確認的 XCPE 元件。下面是其他值得留意的應用程式。只有在名稱之外還有其他證據時才預設勾選；在某一列上按「確定」可以更改。</item>
+    </plurals>
+    <string name="dlg_review_msg_only">沒有正在執行的已確認 XCPE 應用程式。下面是值得留意的應用程式。只有在名稱之外還有其他證據時才預設勾選；在某一列上按「確定」可以更改。</string>
+    <string name="dlg_review_remove">清除所選</string>
+    <string name="status_review_kept">沒有清除其他內容。電視盒沒有更動。</string>
+    <string name="scan_reason_vendor_warning">可能是電視盒內建的應用程式商店或電視服務的一部分。清除它可能會讓該服務無法使用。</string>
+    <string name="dlg_suspects_title">也一併清除可疑的應用程式嗎？</string>
+    <string name="dlg_suspects_msg">除了已確認的 XCPE 元件，這台電視盒上還有一些通常與它一起出現的應用程式：\n\n%s\n\n電視盒完全用不到它們。</string>
+    <string name="dlg_suspects_yes">是，一併清除</string>
+    <string name="dlg_suspects_no">否，只清除已確認的</string>
+    <string name="dlg_suspects_only_title">要清除這些可疑的應用程式嗎？</string>
+    <string name="dlg_suspects_only_msg">沒有發現正在執行的已確認 XCPE 應用程式，但下面這些應用程式通常與它一起出現：\n\n%s\n\n電視盒完全用不到它們。</string>
+    <string name="dlg_remove">清除</string>
+    <string name="dlg_keep">保留</string>
+    <string name="status_kept">沒有做任何更動。您可以隨時按「掃描」再次檢查。</string>
+
+    <!-- 清除：進行中 -->
+    <string name="status_removing">正在清除……請保持電視盒開機。如果電視上跳出關於偵錯的詢問，請勾選「一律允許」，然後按「允許」。</string>
+    <string name="report_remove_live">正在進行：</string>
+    <string name="report_remove_log">詳細資料：</string>
+    <string name="report_remove_crashed">清除程式因發生錯誤而停止：%s</string>
+
+    <!-- 清除：結果 -->
+    <string name="outcome_removed">已清除：%s</string>
+    <string name="outcome_disabled">已停用（無法完全清除，但已無法執行）：%s</string>
+    <string name="outcome_failed">仍在執行（無法清除）：%s</string>
+    <string name="outcome_firmware_remain">這台電視盒的韌體裡還留有一份備用副本。只要上面的應用程式已被清除或停用，它就無法執行。只有 root 深度清理或製造商提供的新韌體才能刪除它。</string>
+    <string name="outcome_pp_on">Google Play Protect：已重新開啟。</string>
+    <string name="outcome_pp_off">Google Play Protect：仍處於關閉狀態。請開啟 Google Play 應用程式，按您的個人資料相片，選擇「Play Protect」（Play 安全防護），按齒輪圖示，然後開啟「使用 Play 安全防護掃描應用程式」。</string>
+    <string name="outcome_pp_fine">Google Play Protect：本來就是開啟的。</string>
+    <string name="status_outcome_done">完成：XCPE 元件已清除。請重新啟動電視盒，然後再按一次「掃描」，確認它們沒有再出現。</string>
+    <string name="status_outcome_partial">有些元件無法清除。按下鍵閱讀詳細資料。如果重新啟動後它們仍然存在，請更換這台電視盒。</string>
+    <string name="status_outcome_nothing">沒有需要清除的內容。您可以隨時按「掃描」再次檢查。</string>
+    <string name="status_outcome_pp_only">完成：Google Play Protect 已重新開啟。按「掃描」再次檢查。</string>
+    <string name="status_outcome_none">這次沒有做任何更動。請按「開啟開發人員選項」，讓本應用程式能夠自行清除，然後再按一次「清除威脅」。</string>
+
+    <!-- 重新啟動 -->
+    <string name="dlg_restart_title">現在重新啟動電視盒嗎？</string>
+    <string name="dlg_restart_msg_adb">重新啟動後清理才算完成。螢幕會變黑大約一分鐘。之後本應用程式會自動再次檢查這台電視盒，如果有東西回來了會告訴您。</string>
+    <string name="dlg_restart_msg_manual">重新啟動後清理才算完成。請拔掉電視盒的電源線，等十秒鐘再插回去。然後開啟本應用程式並按「掃描」。</string>
+    <string name="dlg_restart_now">立即重新啟動</string>
+    <string name="dlg_restart_later">稍後</string>
+    <string name="dlg_ok">確定</string>
+    <string name="btn_debugoff">關閉偵錯</string>
+    <string name="dlg_debugoff_title">關閉偵錯嗎？</string>
+    <string name="dlg_debugoff_msg">有了偵錯，本應用程式才能清理這台電視盒，並在每次重新啟動後檢查它。如果您關閉偵錯，本應用程式會先測試它能否為這些檢查自行重新開啟偵錯。這最多需要一分鐘，期間電視盒可以照常使用。</string>
+    <string name="dlg_debugoff_yes">測試並關閉</string>
+    <string name="status_debug_kept">偵錯保持開啟，這樣本應用程式才能在每次重新啟動後檢查這台電視盒。如果您希望關閉它，請按「關閉偵錯」。</string>
+    <string name="status_debug_probe">正在測試這台電視盒能否自行重新開啟偵錯…</string>
+    <string name="status_debug_probe_ok">偵錯已關閉。進行自動檢查時，本應用程式會短暫開啟偵錯，然後再關閉。</string>
+    <string name="status_debug_probe_failed">這台電視盒無法自行重新開啟偵錯，所以偵錯保持開啟。如果自動模式不再運作，請重新啟動電視盒。</string>
+    <string name="status_debug_reclosed">為了這次清理，偵錯被暫時開啟，現在已重新關閉。</string>
+    <string name="status_auto_report">這是上次重新啟動後自動檢查的報告。請按「掃描」重新檢查。</string>
+    <string name="status_clean_dormant">乾淨：沒有正在執行的 XCPE 元件。韌體裡還留有已停用的殘餘；只要處於停用狀態，它們就沒有危害。</string>
+    <string name="status_outcome_done_mixed">完成：XCPE 元件已清除或停用。請重新啟動電視盒，然後再按一次「掃描」，確認它們沒有再出現。</string>
+    <string name="dlg_stop_title">停止清理嗎？</string>
+    <string name="dlg_stop_msg">本應用程式還在處理這台電視盒。現在停止的話，尚未清除的部分會保持原樣；您稍後可以再按一次「清除威脅」。</string>
+    <string name="dlg_stop_yes">停止</string>
+    <string name="status_stopping">正在停止…</string>
+    <string name="result_infected">結果：已感染 - XCPE 後門正在這台電視盒上執行：%1$s</string>
+    <string name="result_suspicious">結果：可疑 - 沒有正在執行的已確認 XCPE 應用程式，但請查看上方的警示</string>
+    <string name="result_clean">結果：乾淨 - 沒有發現任何 XCPE 的元件</string>
+    <string name="adb_status_connecting">正在連線到電視盒的偵錯服務…</string>
+    <string name="adb_status_look_at_tv">請看電視：勾選「一律允許透過這部電腦進行偵錯」，然後按「允許」。</string>
+    <string name="adb_status_connected">已連線：電視盒接受本應用程式的指令。</string>
+    <string name="adb_err_denied">電視盒沒有允許本應用程式（按了「拒絕」，或詢問逾時了）。請再試一次，當電視跳出詢問時勾選「一律允許」，然後按「允許」。</string>
+    <string name="adb_err_pairing_only">這台電視盒只提供「無線偵錯」配對，本應用程式無法使用。請改為依照引導步驟操作。</string>
+    <string name="adb_err_not_allowed">本應用程式還沒有獲得這台電視盒偵錯服務的允許。請按一次「清除威脅」，電視隨後會詢問您是否允許。</string>
+    <string name="adb_err_lost">與電視盒偵錯服務的連線已中斷。請再試一次。</string>
+    <string name="adb_err_no_answer">電視盒的偵錯服務沒有及時回應。請稍後再試。</string>
+    <string name="adb_err_generic">偵錯連線發生問題：%1$s</string>
+    <string name="status_debug_opening">正在為重新啟動開啟偵錯通道…</string>
+    <string name="status_debug_opening_clean">正在為這次清理開啟偵錯通道…</string>
+    <string name="status_rebooting">正在重新啟動……螢幕會變黑大約一分鐘。如果沒有，請拔掉電源線，等十秒鐘再插回去。</string>
+    <string name="status_reboot_failed">電視盒沒有自動重新啟動。請拔掉電源線，等十秒鐘再插回去。然後開啟本應用程式並按「掃描」。</string>
+
+    <!-- 引導式清除（電視盒不允許本應用程式自行清除） -->
+    <string name="dlg_guided_title">手動逐步清除</string>
+    <string name="dlg_guided_msg">這台電視盒不允許本應用程式自行清除，所以我們一起來完成。本應用程式會逐一為您開啟每個有害應用程式的設定頁面（還剩 %d 個），並在每個頁面開啟前告訴您該按哪個按鈕。處理完一個頁面後，請按遙控器上的返回鍵。</string>
+    <string name="dlg_guided_start">開始</string>
+    <string name="dlg_guided_later">暫時不要</string>
+    <string name="status_guided_later">清除尚未開始。準備好後請按「清除威脅」，或按「開啟開發人員選項」讓本應用程式自行清除。</string>
+    <!-- 1 = 第幾步，2 = 總步數，3 = 應用程式名稱 -->
+    <string name="guide_step_uninstall">第 %1$d 步，共 %2$d 步：畫面會詢問是否移除 %3$s。請按「確定」或「解除安裝」。</string>
+    <string name="dlg_guide_step_title">第 %1$d 步，共 %2$d 步：%3$s</string>
+    <string name="dlg_guide_step_msg">在下一個頁面按「解除安裝」。\n\n如果沒有「解除安裝」按鈕：看到「解除安裝更新」就先按它，然後按「停用」，再按「強制停止」。\n\n完成後，按遙控器上的返回鍵回到這裡。</string>
+    <string name="dlg_guide_open">開啟頁面</string>
+    <string name="dlg_guide_skip">略過這個應用程式</string>
+    <string name="guide_step_appinfo">第 %1$d 步，共 %2$d 步：在 %3$s 的頁面上按「解除安裝」。如果沒有：先按「解除安裝更新」，再按「停用」，然後按「強制停止」。完成後按返回鍵。</string>
+    <string name="status_guided_checking">正在檢查有什麼變化……</string>
+    <string name="status_guide_cannot_open">這台電視盒上無法開啟 %s 的設定頁面。繼續下一個。</string>
+    <string name="guide_still_active_title">%s 仍在執行</string>
+    <string name="guide_still_active_msg">它還沒有消失。您可以再次開啟它的頁面、略過這個應用程式，或在此停止。</string>
+    <string name="guide_try_again">再試一次</string>
+    <string name="guide_skip">略過</string>
+    <string name="guide_stop">停止</string>
+    <string name="guide_pp_title">重新開啟 Google Play Protect</string>
+    <string name="guide_pp_msg">XCPE 關閉了 Google 的應用程式檢查。在下一個頁面開啟「使用 Play 安全防護掃描應用程式」，然後按返回鍵。</string>
+    <string name="guide_pp_fallback">這台電視盒沒有直接開啟該頁面的方式。請開啟 Google Play 應用程式，按右上角您的個人資料相片，選擇「Play Protect」（Play 安全防護），按齒輪圖示，然後開啟「使用 Play 安全防護掃描應用程式」。</string>
+    <string name="status_guide_pp">在下一個頁面開啟「使用 Play 安全防護掃描應用程式」，然後按返回鍵。</string>
+    <string name="dlg_guide_skip_step">略過這一步</string>
+    <string name="guide_acc_title">關閉 XCPE 接入的協助工具服務</string>
+    <string name="guide_acc_msg">XCPE 把自己接入了這台電視盒的協助工具設定。在下一個頁面找到 %s 並將它關閉，然後按返回鍵。</string>
+    <string name="status_guide_acc">在下一個頁面關閉 %s，然後按返回鍵。</string>
+    <string name="guided_tail_acc">協助工具：%s 仍處於開啟狀態；請在「設定」>「協助工具」中將它關閉。</string>
+    <!-- 1 = 已處理，2 = 仍在執行，3 = 下一步該做什麼 -->
+    <string name="status_guided_done">手動處理完成：%1$d 個已清除或停用，%2$d 個仍在執行。%3$s</string>
+    <string name="guided_tail_restart">現在請重新啟動電視盒（拔掉電源線再插回去），然後開啟本應用程式並再按一次「掃描」。</string>
+    <string name="guided_tail_replace">如果重新啟動後它們仍在執行，這台電視盒就無法清理乾淨：請更換。</string>
+
+    <!-- 開發人員選項 -->
+    <string name="status_devopts_hint">在下一個頁面開啟「USB 偵錯」。有些電視盒上叫「網路偵錯」、「ADB 偵錯」或「網路 ADB」；如果有，也一併開啟。如果跳出詢問，請勾選「一律允許」，然後按「允許」。最後按返回鍵。</string>
+    <string name="status_devopts_hidden">這台電視盒隱藏了開發人員選項。在下一個頁面找到「版本號碼」（或「版本」），在上面連按七次「確定」。然後按返回鍵，再按一次「開啟開發人員選項」。</string>
+    <string name="status_devopts_missing">這台電視盒不允許本應用程式開啟它的設定。請自己開啟「設定」：裝置偏好設定 > 關於，在「版本」上連按七次，然後進入「開發人員選項」，開啟「USB 偵錯」。</string>
+    <string name="status_port_open">很好：偵錯通道已開啟。按「清除威脅」，本應用程式會自行清除所有內容。</string>
+    <string name="status_port_closed_usb_only">USB 偵錯已開啟，但網路通道仍然關閉。請在開發人員選項中尋找「網路偵錯」、「網路 ADB」或「無線偵錯」，並一併開啟。如果這台電視盒沒有這些選項，「清除威脅」會改為逐步引導您手動操作。</string>
+    <string name="status_port_closed_after">偵錯通道仍然關閉。請再試一次「開啟開發人員選項」，或按「清除威脅」，本應用程式會改為逐步引導您手動操作。</string>
+
+    <!-- 深度清理 -->
+    <string name="dlg_deep_title">要深度清理韌體嗎？</string>
+    <string name="dlg_deep_msg">這會刪除存放在這台電視盒韌體裡的後門備用副本。只在有 root 權限的電視盒上有效，而且只會處理屬於 XCPE 的檔案。</string>
+    <string name="dlg_deep_yes">刪除備用副本</string>
+    <string name="dlg_cancel">取消</string>
+    <string name="status_deep_running">正在深度清理……請保持電視盒開機。</string>
+    <string name="status_deep_done">深度清理已完成。按下鍵查看發生了什麼，然後按「掃描」再次檢查。</string>
+    <string name="report_deep_header">深度清理：</string>
+
+    <!-- 運作方式 -->
+    <string name="help_title">本應用程式的運作方式。按下鍵閱讀，按上鍵返回。</string>
+    <string name="help_text">XCPE 是什麼\nXCPE 是內建在許多廉價 Android 電視盒（MECOOL、Videostrong 以及以其他名稱販售的電視盒）韌體裡的後門。它讓陌生人可以在您的電視盒上執行程式：偽造廣告點擊、透過您的網路連線偷偷傳輸流量，以及他們送來的任何其他東西。\n\n「掃描」做什麼\n掃描會查看這台電視盒上的應用程式、Google Play Protect 和協助工具設定，並與已公布的 XCPE 元件清單比對。它不會更動任何東西，也不會對外傳送任何資料。\n\n「清除威脅」做什麼\n它會清除這台電視盒上的 XCPE 應用程式，並重新開啟 Google Play Protect。如果某個應用程式無法清除，就會將它停用，使它無法執行。本應用程式會先嘗試自行完成；這需要電視盒的偵錯通道已開啟（開發人員選項）。否則，它會為您開啟相應的設定頁面，並告訴您該按哪個按鈕。\n\n會留下什麼\n許多電視盒會在韌體的唯讀區域保留一份後門的備用副本。沒有 root 權限，本應用程式無法刪除這份副本，但只要應用程式已被清除或停用，這份副本就無法執行。如果 XCPE 在重新啟動後又出現，本應用程式會發現並再次清除，並通知您。\n\n我們的誠懇建議\n出廠就帶有後門的電視盒從來都不完全屬於您。如果可以，請換成知名品牌的電視盒（Google TV Streamer、Apple TV、Fire TV、Nvidia Shield）。如果繼續使用，請不要在上面登入網路銀行或電子郵件。\n\n更改您的密碼\n如果您曾在這台電視盒上輸入過密碼，請用另一台裝置更改：Google 帳戶、Netflix、Wi-Fi 以及您在這裡用過的其他帳戶。\n\n清理之後\n重新啟動電視盒，開啟本應用程式，再按一次「掃描」。本應用程式也會在每次重新啟動後自動檢查，並在「上次檢查」下顯示結果。\n\n按「掃描」可再次查看檢查結果。</string>
+
+    <!-- 重新啟動後檢查的通知 -->
+    <string name="notif_channel">重新啟動後的檢查</string>
+    <string name="notif_channel_desc">在 XCPE 於重新啟動後再次出現時通知您。</string>
+    <string name="notif_removed_again_title">XCPE 在重新啟動後又出現了，已再次清除</string>
+    <string name="notif_removed_again_text">開啟 XCPE 清理工具查看詳細資料。如果反覆出現，請更換電視盒。</string>
+    <string name="notif_failed_title">XCPE 又出現了且無法清除：請更換這台電視盒</string>
+    <string name="notif_failed_text">開啟 XCPE 清理工具並按「清除威脅」再試一次。</string>
+    <string name="notif_failed_text_port_closed">因為偵錯通道已關閉，本應用程式無法自行清除。請開啟 XCPE 清理工具並按「清除威脅」。</string>
+    <string name="notif_suspicious_title">這台電視盒有警示跡象</string>
+    <string name="notif_suspicious_text">開啟 XCPE 清理工具並按「掃描」閱讀詳細資料。</string>
+    <string name="report_auto_remove_header">重新啟動後的自動清除：</string>
+</resources>

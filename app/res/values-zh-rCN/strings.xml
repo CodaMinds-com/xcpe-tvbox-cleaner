@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 简体中文。面向没有技术背景、坐在沙发上看电视的人：先说发生了什么，再说下一步该怎么做。 -->
+<resources>
+    <string name="app_name">XCPE 清理工具</string>
+    <string name="title">XCPE 清理工具</string>
+    <string name="subtitle">查找并清除这台盒子上的 XCPE 后门。不会向外发送任何数据。</string>
+
+    <!-- 按钮 -->
+    <string name="btn_scan">扫描</string>
+    <string name="btn_remove">清除威胁</string>
+    <string name="btn_devopts">打开开发者选项</string>
+    <string name="btn_deepclean">深度清理（root）</string>
+    <string name="btn_help">工作原理</string>
+    <string name="btn_details_show">显示详情</string>
+    <string name="btn_details_hide">隐藏详情</string>
+    <string name="report_frame_desc">检查报告。按上下键滚动。</string>
+
+    <!-- 格式片段（没有文字，但译者可以调整引号、分隔符和顺序） -->
+    <string name="app_label_fmt">“%1$s”（%2$s）</string>
+    <string name="name_quoted">“%s”</string>
+    <string name="list_separator">、</string>
+    <string name="bullet_line">  - %s</string>
+    <string name="join_sentences">%1$s%2$s</string>
+    <string name="progress_line">- %s</string>
+    <string name="progress_block">%1$s\n%2$s</string>
+    <string name="progress_step_start">%s…</string>
+    <string name="progress_step_done">%s…完成</string>
+    <string name="progress_scan_header">正在检查：</string>
+
+    <!-- 开始界面 -->
+    <string name="status_idle">按“扫描”来检查这台盒子。</string>
+    <string name="report_intro">扫描会查看：\n\n  - 已知属于 XCPE 的 8 个应用\n  - 冒充 Android 系统组件的应用\n  - XCPE 使用的隐藏数据通道\n  - 存放在盒子固件里的备用副本\n  - Google Play Protect 是否被关闭\n  - XCPE 是否接入了无障碍功能\n\n检查只需几秒钟，不会改动任何东西。\n不会向外发送任何数据。\n\n检查结束后，这台盒子会显示三种结果之一：\n  干净、可疑或已感染。\n如果不是“干净”，请按“清除威胁”。</string>
+    <string name="last_check_none">上次检查：从未</string>
+    <!-- 1 = 日期和时间，2 = 结果文字，3 = 由谁检查 -->
+    <string name="last_check_fmt">上次检查：%1$s · %2$s（%3$s）</string>
+    <string name="src_manual">由您手动检查</string>
+    <string name="src_auto">重启后自动检查</string>
+    <string name="check_clean">干净</string>
+    <string name="check_suspicious">可疑</string>
+    <string name="check_infected">已感染</string>
+    <string name="check_removed_again">XCPE 又出现了，已再次清除</string>
+    <string name="check_failed">XCPE 又出现了，且无法清除</string>
+    <string name="check_debug_opened">为了清除，调试被临时开启</string>
+    <string name="check_debug_open_failed">无法开启调试</string>
+    <string name="check_debug_closed">调试已重新关闭</string>
+    <string name="check_debug_close_failed">调试仍处于开启状态</string>
+    <string name="check_summary_join">%1$s；%2$s</string>
+
+    <!-- 扫描 -->
+    <string name="status_scanning">正在检查这台盒子……需要几秒钟。</string>
+    <string name="status_scan_failed">检查未能完成。请按“扫描”重试。</string>
+    <plurals name="status_infected">
+        <item quantity="one">已感染：这台盒子上有 %d 个 XCPE 组件正在运行。请按“清除威胁”。</item>
+        <item quantity="other">已感染：这台盒子上有 %d 个 XCPE 组件正在运行。请按“清除威胁”。</item>
+    </plurals>
+    <string name="status_suspicious">可疑：没有发现正在运行的已确认 XCPE 应用，但这台盒子有一些警示迹象。按“清除威胁”可处理能处理的部分，或按下键阅读报告。</string>
+    <string name="status_clean">干净：这台盒子上没有发现任何 XCPE 的组件。您可以继续使用。</string>
+
+    <!-- 清除：唯一的一个问题 -->
+    <string name="dlg_review_title">清除前先确认</string>
+    <plurals name="dlg_review_msg_confirmed">
+        <item quantity="other">将清除 %1$d 个已确认的 XCPE 组件。下面是其他值得留意的应用。只有在名称之外还有其他证据时才默认勾选；在某一行上按“确定”可以更改。</item>
+    </plurals>
+    <string name="dlg_review_msg_only">没有正在运行的已确认 XCPE 应用。下面是值得留意的应用。只有在名称之外还有其他证据时才默认勾选；在某一行上按“确定”可以更改。</string>
+    <string name="dlg_review_remove">清除所选</string>
+    <string name="status_review_kept">没有清除其他内容。盒子没有改动。</string>
+    <string name="scan_reason_vendor_warning">可能是盒子自带的应用商店或电视服务的一部分。清除它可能会让该服务无法使用。</string>
+    <string name="dlg_suspects_title">也一并清除可疑应用吗？</string>
+    <string name="dlg_suspects_msg">除了已确认的 XCPE 组件，这台盒子上还有一些通常与它一起出现的应用：\n\n%s\n\n电视盒子完全用不到它们。</string>
+    <string name="dlg_suspects_yes">是，一并清除</string>
+    <string name="dlg_suspects_no">否，只清除已确认的</string>
+    <string name="dlg_suspects_only_title">要清除这些可疑应用吗？</string>
+    <string name="dlg_suspects_only_msg">没有发现正在运行的已确认 XCPE 应用，但下面这些应用通常与它一起出现：\n\n%s\n\n电视盒子完全用不到它们。</string>
+    <string name="dlg_remove">清除</string>
+    <string name="dlg_keep">保留</string>
+    <string name="status_kept">没有做任何改动。您可以随时按“扫描”再次检查。</string>
+
+    <!-- 清除：进行中 -->
+    <string name="status_removing">正在清除……请保持盒子开机。如果电视上弹出关于调试的询问，请勾选“一律允许”，然后按“允许”。</string>
+    <string name="report_remove_live">正在进行：</string>
+    <string name="report_remove_log">详细信息：</string>
+    <string name="report_remove_crashed">清除程序因出错而停止：%s</string>
+
+    <!-- 清除：结果 -->
+    <string name="outcome_removed">已清除：%s</string>
+    <string name="outcome_disabled">已停用（无法完全清除，但已无法运行）：%s</string>
+    <string name="outcome_failed">仍在运行（无法清除）：%s</string>
+    <string name="outcome_firmware_remain">这台盒子的固件里还留有一份备用副本。只要上面的应用已被清除或停用，它就无法运行。只有 root 深度清理或厂商提供的新固件才能删除它。</string>
+    <string name="outcome_pp_on">Google Play Protect：已重新开启。</string>
+    <string name="outcome_pp_off">Google Play Protect：仍处于关闭状态。请打开 Google Play 应用，按您的头像，选择“Play Protect”（Play 保护机制），按齿轮图标，然后开启“使用 Play 保护机制扫描应用”。</string>
+    <string name="outcome_pp_fine">Google Play Protect：本来就是开启的。</string>
+    <string name="status_outcome_done">完成：XCPE 组件已清除。请重启盒子，然后再按一次“扫描”，确认它们没有再出现。</string>
+    <string name="status_outcome_partial">有些组件无法清除。按下键阅读详情。如果重启后它们仍然存在，请更换这台盒子。</string>
+    <string name="status_outcome_nothing">没有需要清除的内容。您可以随时按“扫描”再次检查。</string>
+    <string name="status_outcome_pp_only">完成：Google Play Protect 已重新开启。按“扫描”再次检查。</string>
+    <string name="status_outcome_none">这次没有做任何改动。请按“打开开发者选项”，让本应用能够自行清除，然后再按一次“清除威胁”。</string>
+
+    <!-- 重启 -->
+    <string name="dlg_restart_title">现在重启盒子吗？</string>
+    <string name="dlg_restart_msg_adb">重启后清理才算完成。屏幕会黑屏大约一分钟。之后本应用会自动再次检查这台盒子，如果有东西回来了会告诉您。</string>
+    <string name="dlg_restart_msg_manual">重启后清理才算完成。请拔掉盒子的电源线，等十秒钟再插回去。然后打开本应用并按“扫描”。</string>
+    <string name="dlg_restart_now">立即重启</string>
+    <string name="dlg_restart_later">稍后</string>
+    <string name="dlg_ok">确定</string>
+    <string name="btn_debugoff">关闭调试</string>
+    <string name="dlg_debugoff_title">关闭调试吗？</string>
+    <string name="dlg_debugoff_msg">有了调试，本应用才能清理这台盒子，并在每次重启后检查它。如果您关闭调试，本应用会先测试它能否为这些检查自行重新开启调试。这最多需要一分钟，期间盒子可以照常使用。</string>
+    <string name="dlg_debugoff_yes">测试并关闭</string>
+    <string name="status_debug_kept">调试保持开启，这样本应用才能在每次重启后检查这台盒子。如果您希望关闭它，请按“关闭调试”。</string>
+    <string name="status_debug_probe">正在测试这台盒子能否自行重新开启调试…</string>
+    <string name="status_debug_probe_ok">调试已关闭。进行自动检查时，本应用会短暂开启调试，然后再关闭。</string>
+    <string name="status_debug_probe_failed">这台盒子无法自行重新开启调试，所以调试保持开启。如果自动模式不再工作，请重启盒子。</string>
+    <string name="status_debug_reclosed">为了这次清理，调试被临时开启，现在已重新关闭。</string>
+    <string name="status_auto_report">这是上次重启后自动检查的报告。请按“扫描”重新检查。</string>
+    <string name="status_clean_dormant">干净：没有正在运行的 XCPE 组件。固件里还留有已停用的残余；只要处于停用状态，它们就没有危害。</string>
+    <string name="status_outcome_done_mixed">完成：XCPE 组件已清除或停用。请重启盒子，然后再按一次“扫描”，确认它们没有再出现。</string>
+    <string name="dlg_stop_title">停止清理吗？</string>
+    <string name="dlg_stop_msg">本应用还在处理这台盒子。现在停止的话，尚未清除的部分会保持原样；您稍后可以再按一次“清除威胁”。</string>
+    <string name="dlg_stop_yes">停止</string>
+    <string name="status_stopping">正在停止…</string>
+    <string name="result_infected">结果：已感染 - XCPE 后门正在这台盒子上运行：%1$s</string>
+    <string name="result_suspicious">结果：可疑 - 没有正在运行的已确认 XCPE 应用，但请查看上方的警示</string>
+    <string name="result_clean">结果：干净 - 没有发现任何 XCPE 的组件</string>
+    <string name="adb_status_connecting">正在连接盒子的调试服务…</string>
+    <string name="adb_status_look_at_tv">请看电视：勾选“一律允许使用这台计算机进行调试”，然后按“允许”。</string>
+    <string name="adb_status_connected">已连接：盒子接受本应用的指令。</string>
+    <string name="adb_err_denied">盒子没有允许本应用（按了“拒绝”，或询问超时了）。请再试一次，当电视弹出询问时勾选“一律允许”，然后按“允许”。</string>
+    <string name="adb_err_pairing_only">这台盒子只提供“无线调试”配对，本应用无法使用。请改为按照引导步骤操作。</string>
+    <string name="adb_err_not_allowed">本应用还没有获得这台盒子调试服务的允许。请按一次“清除威胁”，电视随后会询问您是否允许。</string>
+    <string name="adb_err_lost">与盒子调试服务的连接已断开。请再试一次。</string>
+    <string name="adb_err_no_answer">盒子的调试服务没有及时回应。请稍后再试。</string>
+    <string name="adb_err_generic">调试连接出现问题：%1$s</string>
+    <string name="status_debug_opening">正在为重启打开调试通道…</string>
+    <string name="status_debug_opening_clean">正在为这次清理打开调试通道…</string>
+    <string name="status_rebooting">正在重启……屏幕会黑屏大约一分钟。如果没有重启，请拔掉电源线，等十秒钟再插回去。</string>
+    <string name="status_reboot_failed">盒子没有自动重启。请拔掉电源线，等十秒钟再插回去。然后打开本应用并按“扫描”。</string>
+
+    <!-- 引导式清除（盒子不允许本应用自行清除） -->
+    <string name="dlg_guided_title">手动逐步清除</string>
+    <string name="dlg_guided_msg">这台盒子不允许本应用自行清除，所以我们一起来完成。本应用会逐个为您打开每个有害应用的设置页面（还剩 %d 个），并在每个页面打开前告诉您该按哪个按钮。处理完一个页面后，请按遥控器上的返回键。</string>
+    <string name="dlg_guided_start">开始</string>
+    <string name="dlg_guided_later">暂不</string>
+    <string name="status_guided_later">清除尚未开始。准备好后请按“清除威胁”，或按“打开开发者选项”让本应用自行清除。</string>
+    <!-- 1 = 第几步，2 = 总步数，3 = 应用名 -->
+    <string name="guide_step_uninstall">第 %1$d 步，共 %2$d 步：屏幕会询问是否移除 %3$s。请按“确定”或“卸载”。</string>
+    <string name="dlg_guide_step_title">第 %1$d 步，共 %2$d 步：%3$s</string>
+    <string name="dlg_guide_step_msg">在下一个页面按“卸载”。\n\n如果没有“卸载”按钮：看到“卸载更新”就先按它，然后按“停用”，再按“强行停止”。\n\n完成后，按遥控器上的返回键回到这里。</string>
+    <string name="dlg_guide_open">打开页面</string>
+    <string name="dlg_guide_skip">跳过这个应用</string>
+    <string name="guide_step_appinfo">第 %1$d 步，共 %2$d 步：在 %3$s 的页面上按“卸载”。如果没有：先按“卸载更新”，再按“停用”，然后按“强行停止”。完成后按返回键。</string>
+    <string name="status_guided_checking">正在检查有什么变化……</string>
+    <string name="status_guide_cannot_open">这台盒子上无法打开 %s 的设置页面。继续下一个。</string>
+    <string name="guide_still_active_title">%s 仍在运行</string>
+    <string name="guide_still_active_msg">它还没有消失。您可以再次打开它的页面、跳过这个应用，或在此停止。</string>
+    <string name="guide_try_again">再试一次</string>
+    <string name="guide_skip">跳过</string>
+    <string name="guide_stop">停止</string>
+    <string name="guide_pp_title">重新开启 Google Play Protect</string>
+    <string name="guide_pp_msg">XCPE 关闭了 Google 的应用检查。在下一个页面开启“使用 Play 保护机制扫描应用”，然后按返回键。</string>
+    <string name="guide_pp_fallback">这台盒子没有直接打开该页面的方式。请打开 Google Play 应用，按右上角您的头像，选择“Play Protect”（Play 保护机制），按齿轮图标，然后开启“使用 Play 保护机制扫描应用”。</string>
+    <string name="status_guide_pp">在下一个页面开启“使用 Play 保护机制扫描应用”，然后按返回键。</string>
+    <string name="dlg_guide_skip_step">跳过这一步</string>
+    <string name="guide_acc_title">关闭 XCPE 接入的无障碍服务</string>
+    <string name="guide_acc_msg">XCPE 把自己接入了这台盒子的无障碍设置。在下一个页面找到 %s 并将其关闭，然后按返回键。</string>
+    <string name="status_guide_acc">在下一个页面关闭 %s，然后按返回键。</string>
+    <string name="guided_tail_acc">无障碍：%s 仍处于开启状态；请在“设置”>“无障碍”中将其关闭。</string>
+    <!-- 1 = 已处理，2 = 仍在运行，3 = 下一步该做什么 -->
+    <string name="status_guided_done">手动处理完成：%1$d 个已清除或停用，%2$d 个仍在运行。%3$s</string>
+    <string name="guided_tail_restart">现在请重启盒子（拔掉电源线再插回去），然后打开本应用并再按一次“扫描”。</string>
+    <string name="guided_tail_replace">如果重启后它们仍在运行，这台盒子就无法清理干净：请更换。</string>
+
+    <!-- 开发者选项 -->
+    <string name="status_devopts_hint">在下一个页面开启“USB 调试”。有些盒子上叫“网络调试”“ADB 调试”或“网络 ADB”；如果有，也一并开启。如果弹出询问，请勾选“一律允许”，然后按“允许”。最后按返回键。</string>
+    <string name="status_devopts_hidden">这台盒子隐藏了开发者选项。在下一个页面找到“版本号”（或“版本”），在上面连按七次“确定”。然后按返回键，再按一次“打开开发者选项”。</string>
+    <string name="status_devopts_missing">这台盒子不允许本应用打开它的设置。请自己打开“设置”：设备偏好设置 > 关于，在“版本”上连按七次，然后进入“开发者选项”，开启“USB 调试”。</string>
+    <string name="status_port_open">很好：调试通道已打开。按“清除威胁”，本应用会自行清除所有内容。</string>
+    <string name="status_port_closed_usb_only">USB 调试已开启，但网络通道仍然关闭。请在开发者选项中查找“网络调试”“网络 ADB”或“无线调试”，并一并开启。如果这台盒子没有这些选项，“清除威胁”会改为逐步引导您手动操作。</string>
+    <string name="status_port_closed_after">调试通道仍然关闭。请再试一次“打开开发者选项”，或按“清除威胁”，本应用会改为逐步引导您手动操作。</string>
+
+    <!-- 深度清理 -->
+    <string name="dlg_deep_title">要深度清理固件吗？</string>
+    <string name="dlg_deep_msg">这会删除存放在这台盒子固件里的后门备用副本。只在有 root 权限的盒子上有效，并且只会处理属于 XCPE 的文件。</string>
+    <string name="dlg_deep_yes">删除备用副本</string>
+    <string name="dlg_cancel">取消</string>
+    <string name="status_deep_running">正在深度清理……请保持盒子开机。</string>
+    <string name="status_deep_done">深度清理已完成。按下键查看发生了什么，然后按“扫描”再次检查。</string>
+    <string name="report_deep_header">深度清理：</string>
+
+    <!-- 工作原理 -->
+    <string name="help_title">本应用的工作原理。按下键阅读，按上键返回。</string>
+    <string name="help_text">XCPE 是什么\nXCPE 是内置在许多廉价 Android 电视盒子（MECOOL、Videostrong 以及以其他名字出售的盒子）固件里的后门。它让陌生人可以在您的盒子上运行程序：伪造广告点击、通过您的网络连接偷偷传输流量，以及他们发来的任何其他东西。\n\n“扫描”做什么\n扫描会查看这台盒子上的应用、Google Play Protect 和无障碍设置，并与已公布的 XCPE 组件清单进行比对。它不会改动任何东西，也不会向外发送任何数据。\n\n“清除威胁”做什么\n它会清除这台盒子上的 XCPE 应用，并重新开启 Google Play Protect。如果某个应用无法清除，就会将其停用，使其无法运行。本应用会先尝试自行完成；这需要盒子的调试通道已打开（开发者选项）。否则，它会为您打开相应的设置页面，并告诉您该按哪个按钮。\n\n会留下什么\n许多盒子会在固件的只读区域保留一份后门的备用副本。没有 root 权限，本应用无法删除这份副本，但只要应用已被清除或停用，这份副本就无法运行。如果 XCPE 在重启后又出现，本应用会发现并再次清除，并通知您。\n\n我们的诚恳建议\n出厂就带有后门的盒子从来都不完全属于您。如果可以，请换成知名品牌的盒子（Google TV Streamer、Apple TV、Fire TV、Nvidia Shield）。如果继续使用，请不要在上面登录网银或邮箱。\n\n修改您的密码\n如果您曾在这台盒子上输入过密码，请用另一台设备修改：Google 账号、Netflix、Wi-Fi 以及您在这里用过的其他账号。\n\n清理之后\n重启盒子，打开本应用，再按一次“扫描”。本应用也会在每次重启后自动检查，并在“上次检查”下显示结果。\n\n按“扫描”可再次查看检查结果。</string>
+
+    <!-- 重启后检查的通知 -->
+    <string name="notif_channel">重启后的检查</string>
+    <string name="notif_channel_desc">在 XCPE 于重启后再次出现时通知您。</string>
+    <string name="notif_removed_again_title">XCPE 在重启后又出现了，已再次清除</string>
+    <string name="notif_removed_again_text">打开 XCPE 清理工具查看详情。如果反复出现，请更换盒子。</string>
+    <string name="notif_failed_title">XCPE 又出现了且无法清除：请更换这台盒子</string>
+    <string name="notif_failed_text">打开 XCPE 清理工具并按“清除威胁”重试。</string>
+    <string name="notif_failed_text_port_closed">因为调试通道已关闭，本应用无法自行清除。请打开 XCPE 清理工具并按“清除威胁”。</string>
+    <string name="notif_suspicious_title">这台盒子有警示迹象</string>
+    <string name="notif_suspicious_text">打开 XCPE 清理工具并按“扫描”阅读详情。</string>
+    <string name="report_auto_remove_header">重启后的自动清除：</string>
+</resources>

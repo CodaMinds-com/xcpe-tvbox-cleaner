@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  削除の文言（日本語）：削除の手順とディープクリーン。2 種類：
+    rm_status_*  削除の実行中に画面へ送られるライブの状況行
+    rm_log_*     結果ログのわかりやすい要約行（コマンドの記録そのものは英語のまま）
+  %1$s / %2$d のプレースホルダ、パッケージ名、"XCPE"、"Play Protect"、"ADB"、"su"、"root" はそのまま残す。
+  「設定 > アプリ > ...」の経路は、この言語で Android が表示する名前を使う。
+-->
+<resources>
+    <!-- 削除中のライブ状況 -->
+    <string name="rm_status_connecting">このボックスのデバッグサービスに接続しています...</string>
+    <!-- 1 = 理由、デバッグクライアントからのわかりやすい一文 -->
+    <string name="rm_status_adb_failed">デバッグ接続を使えませんでした：%1$s</string>
+    <!-- 1 = アプリ名、2 = 今の番号、3 = 合計 -->
+    <string name="rm_status_removing">%1$s を削除しています（%2$d/%3$d）...</string>
+    <string name="rm_status_play_protect">Google Play Protect を再びオンにしています...</string>
+    <string name="rm_status_done">完了。</string>
+    <string name="rm_status_guided">画面の手順に従って、各アプリを手動で削除してください。</string>
+    <string name="rm_status_deep_no_root">root がないとディープクリーンはできません。</string>
+    <string name="rm_status_deep_looking">ファームウェア内の予備のコピーを探しています...</string>
+    <string name="rm_status_deep_none">ファームウェアに予備のコピーは見つかりませんでした。</string>
+    <!-- 1 = /oem や /system などのパーティション -->
+    <string name="rm_status_deep_unlocking">%1$s を書き込み可能にしています...</string>
+    <!-- 1 = ファイルまたはフォルダのパス -->
+    <string name="rm_status_deep_deleting">%1$s を削除しています...</string>
+    <string name="rm_status_deep_done">ディープクリーン完了。</string>
+    <string name="rm_status_deep_partial">ディープクリーンが終了しました。一部のコピーは削除できませんでした。</string>
+
+    <!-- ログ：削除がどの経路で進んだか -->
+    <string name="rm_log_nothing_to_remove">削除するものはありません。保護設定のみ確認します。</string>
+    <!-- 1 = カンマ区切りのアプリ名 -->
+    <string name="rm_log_to_remove">削除対象：%1$s</string>
+    <!-- 1 = ホスト、2 = ポート -->
+    <string name="rm_log_path_adb">方法：ADB（%1$s:%2$d）</string>
+    <string name="rm_log_path_root">方法：ROOT（su）</string>
+    <string name="rm_log_path_guided">方法：手動案内 - デバッグ接続も root もないため、次の手順は手動で行います：</string>
+    <string name="rm_log_path_deep">方法：ROOT（su）ディープクリーン</string>
+    <!-- 1 = 理由 -->
+    <string name="rm_log_adb_failed">デバッグ接続に失敗しました：%1$s</string>
+    <!-- 1 = ホスト、2 = ポート -->
+    <string name="rm_log_port_closed">デバッグポート %1$s:%2$d は閉じています。</string>
+    <string name="rm_log_no_root">このボックスに root（su）はありません。</string>
+    <!-- 1 = エラー -->
+    <string name="rm_log_unexpected">予期しない問題：%1$s</string>
+    <string name="rm_log_stopped">あなたの操作で中止しました。ほかには何も変更していません。</string>
+    <string name="rm_log_busy">このボックスでは別のクリーンアップがまだ実行中です。しばらくしてからもう一度お試しください。</string>
+    <string name="rm_log_grant_ok">アプリがデバッグのオン/オフを自分で切り替えられるようになりました</string>
+    <string name="rm_log_grant_ineffective">権限付与が効いていません。デバッグはあなたが設定したままです</string>
+    <!-- 1 = エラー -->
+    <string name="rm_log_grant_failed">権限付与に失敗しました：%1$s</string>
+    <string name="rm_log_door_opened">このクリーンアップのためにデバッグをオンにしました。</string>
+    <string name="rm_log_door_failed">このクリーンアップのためにデバッグをオンにできませんでした。</string>
+
+    <!-- ログ：アプリ 1 つの結果 -->
+    <string name="rm_log_result_unknown">結果を確認できませんでした（システムのパッケージ管理機能から応答なし）。まだ動作中として扱います</string>
+    <string name="rm_log_disabled">無効化（アンインストールできませんでしたが、無効になっており動作できません）</string>
+    <string name="rm_log_failed">失敗 - まだ動作中です。このボックスには新しいファームウェアか買い替えが必要です。</string>
+    <string name="rm_log_removed_fw_unknown">このボックスから削除（ファームウェアにコピーが残っているか確認できません。残っているものとみなします）</string>
+    <string name="rm_log_removed_fw">このボックスから削除（読み取り専用のファームウェアに休眠状態のコピーが残ります）</string>
+    <string name="rm_log_removed">完全に削除</string>
+
+    <!-- ログ：保護設定 -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">ユーザー補助</string>
+    <!-- 1 と 2 = 読み戻した 2 つの設定値 -->
+    <string name="rm_log_pp_on">Play Protect のアプリ検証：オン（consent=%1$s enable=%2$s）</string>
+    <string name="rm_log_pp_failed">Play Protect：設定を変更できませんでした（consent=%1$s enable=%2$s）。Play ストア > Play Protect（Play プロテクト）> 設定 でオンにしてください。</string>
+    <!-- 1 = ユーザー補助サービス ID -->
+    <string name="rm_log_acc_removed">ユーザー補助への割り込みを解除：%1$s</string>
+
+    <!-- ログ：全体の結果 -->
+    <!-- 1 = スペース区切りのアプリ名 -->
+    <string name="rm_log_result_partial">クリーン結果：一部のみ - 削除できず：%1$s。このボックスを買い替えるか、販売元にクリーンなファームウェアを求めてください。</string>
+    <string name="rm_log_result_done">クリーン結果：完了 - 削除/無効化：%1$s</string>
+    <string name="rm_log_result_next">次に：ボックスを再起動してから、もう一度スキャンしてください。再起動後にアプリが戻ってくる場合、ファームウェアが再インストールしています。ボックスを買い替えてください。</string>
+    <string name="rm_log_result_nothing">クリーン結果：削除が必要なものはありませんでした。</string>
+
+    <!-- ログ：手動で行う手順（デバッグ接続なし、root なし） -->
+    <!-- 1 = アプリ名 -->
+    <string name="rm_log_guided_step">設定 > アプリ > %1$s > アンインストール（または「アップデートのアンインストール」、次に「無効にする」）、その後「強制停止」</string>
+    <string name="rm_log_guided_pp">Play Protect：Play ストア > プロフィール > Play Protect（Play プロテクト）> 設定（歯車）> 「Play プロテクトによるアプリのスキャン」をオンにする</string>
+    <!-- 1 = カンマ区切りのユーザー補助サービス ID -->
+    <string name="rm_log_guided_acc">設定 > ユーザー補助：%1$s をオフにする</string>
+    <string name="rm_log_guided_nothing">手動で行うことはありません。</string>
+
+    <!-- ログ：ディープクリーン（root のみ） -->
+    <string name="rm_log_deep_no_root">ディープクリーンには root（su）が必要ですが、このボックスにはありません。アプリが削除または無効のあいだ、ファームウェア内の予備のコピーは効力を持ちません。</string>
+    <!-- 1 = エラー -->
+    <string name="rm_log_deep_root_check_failed">root を確認できませんでした：%1$s</string>
+    <!-- 1 = ファイルのパス -->
+    <string name="rm_log_deep_shared_perm_file">%1$s は他のアプリにも権限を与えているため、そのままにしました</string>
+    <!-- 1 = ファイルのパス、2 = パッケージ名 -->
+    <string name="rm_log_deep_unverified">%1$s：中にどのアプリが入っているか読み取れなかったため、そのままにしました。</string>
+    <string name="rm_log_deep_not_xcpe">%1$s にはアプリ %2$s が含まれていますが、これは XCPE の一部ではありません。そのままにしました。</string>
+    <string name="rm_log_deep_skipped_unusual">スキップ（通常と異なるパス）：%1$s</string>
+    <string name="rm_log_deep_skipped_outside">スキップ（ファームウェアのディレクトリ外）：%1$s</string>
+    <string name="rm_log_deep_nothing">ファームウェアのディレクトリに XCPE らしいものは見つかりませんでした。</string>
+    <!-- 1 = カンマ区切りのパス -->
+    <string name="rm_log_deep_targets">削除するファームウェアのコピー：%1$s</string>
+    <!-- 1 = /oem などのパーティション -->
+    <string name="rm_log_deep_write_protected">%1$s：このボックスのファームウェアは書き込み禁止です。予備のコピーは効力を持ちません</string>
+    <!-- 1 = ファイルまたはフォルダのパス -->
+    <string name="rm_log_deep_deleted">%1$s を削除しました</string>
+    <string name="rm_log_deep_still_there_ro">%1$s はまだ残っています：このボックスのファームウェアは書き込み禁止です。予備のコピーは効力を持ちません</string>
+    <string name="rm_log_deep_still_there">%1$s はまだ残っています（削除できませんでした）</string>
+    <!-- 1 = 数 -->
+    <string name="rm_log_deep_result_done">ディープクリーン結果：完了 - ファームウェアの項目 %1$d 件を削除</string>
+    <!-- 1 = カンマ区切りのパス -->
+    <string name="rm_log_deep_result_partial">ディープクリーン結果：一部のみ - ファームウェアに残存：%1$s</string>
+    <!-- 1 = エラー -->
+    <string name="rm_log_deep_unexpected">ディープクリーン中に予期しない問題：%1$s</string>
+</resources>

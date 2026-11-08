@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Every line a person sees. Written for someone who has never heard the word "package": say what happens, then what to do. -->
+<resources>
+    <string name="app_name">XCPE Cleaner</string>
+    <string name="title">XCPE Cleaner</string>
+    <string name="subtitle">Finds the XCPE backdoor on this box and removes it. Nothing leaves this device.</string>
+
+    <!-- Buttons -->
+    <string name="btn_scan">Scan</string>
+    <string name="btn_remove">Remove threats</string>
+    <string name="btn_devopts">Open Developer options</string>
+    <string name="btn_deepclean">Deep clean (root)</string>
+    <string name="btn_help">How it works</string>
+    <string name="btn_details_show">Show details</string>
+    <string name="btn_details_hide">Hide details</string>
+    <string name="report_frame_desc">Check report. Press down and up to scroll.</string>
+
+    <!-- Formatting pieces (no words, but translators may change quotes, separators and order) -->
+    <string name="app_label_fmt">\'%1$s\' (%2$s)</string>
+    <string name="name_quoted">\'%s\'</string>
+    <string name="list_separator">", "</string>
+    <string name="bullet_line">  - %s</string>
+    <string name="join_sentences">%1$s %2$s</string>
+    <string name="progress_line">- %s</string>
+    <string name="progress_block">%1$s\n%2$s</string>
+    <string name="progress_step_start">%s\u2026</string>
+    <string name="progress_step_done">%s\u2026 done</string>
+    <string name="progress_scan_header">Checking:</string>
+
+    <!-- Start screen -->
+    <string name="status_idle">Press Scan to check this box.</string>
+    <string name="report_intro">What Scan looks at:\n\n  - the eight apps known to be part of XCPE\n  - apps that pretend to be part of Android\n  - the hidden data channels XCPE uses\n  - spare copies stored in the box\'s firmware\n  - whether Google Play Protect was switched off\n  - whether XCPE hooked itself into Accessibility\n\nThe check takes a few seconds and changes nothing.\nNothing is sent anywhere.\n\nAfter the check, this box tells you one of three things:\n  Clean, Suspicious, or Infected.\nIf it is not clean, press Remove threats.</string>
+    <string name="last_check_none">Last check: never</string>
+    <!-- 1 = date and time, 2 = result words, 3 = who checked -->
+    <string name="last_check_fmt">Last check: %1$s · %2$s (%3$s)</string>
+    <string name="src_manual">checked by you</string>
+    <string name="src_auto">automatic check after a restart</string>
+    <string name="check_clean">Clean</string>
+    <string name="check_suspicious">Suspicious</string>
+    <string name="check_infected">Infected</string>
+    <string name="check_removed_again">XCPE came back and was removed again</string>
+    <string name="check_failed">XCPE came back and could not be removed</string>
+    <string name="check_debug_opened">debugging was switched on for the removal</string>
+    <string name="check_debug_open_failed">debugging could not be switched on</string>
+    <string name="check_debug_closed">debugging switched off again</string>
+    <string name="check_debug_close_failed">debugging is still on</string>
+    <string name="check_summary_join">%1$s; %2$s</string>
+
+    <!-- Scan -->
+    <string name="status_scanning">Checking this box… this takes a few seconds.</string>
+    <string name="status_scan_failed">The check could not finish. Press Scan to try again.</string>
+    <plurals name="status_infected">
+        <item quantity="one">Infected: %d part of XCPE is active on this box. Press Remove threats.</item>
+        <item quantity="other">Infected: %d parts of XCPE are active on this box. Press Remove threats.</item>
+    </plurals>
+    <string name="status_suspicious">Suspicious: no confirmed XCPE app is running, but this box shows warning signs. Press Remove threats to fix what can be fixed, or press down to read the report.</string>
+    <string name="status_clean">Clean: nothing from XCPE was found on this box. You can keep using it.</string>
+
+    <!-- Remove: the one question -->
+    <string name="dlg_review_title">Review before removing</string>
+    <plurals name="dlg_review_msg_confirmed">
+        <item quantity="one">1 confirmed XCPE part will be removed. Below are other apps worth a look. Ticked by default only where there is evidence beyond the name; press OK on a row to change it.</item>
+        <item quantity="other">%1$d confirmed XCPE parts will be removed. Below are other apps worth a look. Ticked by default only where there is evidence beyond the name; press OK on a row to change it.</item>
+    </plurals>
+    <string name="dlg_review_msg_only">No confirmed XCPE app is running. Below are apps worth a look. Ticked by default only where there is evidence beyond the name; press OK on a row to change it.</string>
+    <string name="dlg_review_remove">Remove selected</string>
+    <string name="status_review_kept">Nothing else was removed. The box is unchanged.</string>
+    <string name="scan_reason_vendor_warning">May be part of the box\'s own store or TV service. Removing it can break that service.</string>
+    <string name="dlg_suspects_title">Also remove the suspect apps?</string>
+    <string name="dlg_suspects_msg">Besides the confirmed XCPE parts, this box has apps that usually travel with it:\n\n%s\n\nA TV box never needs them.</string>
+    <string name="dlg_suspects_yes">Yes, remove them too</string>
+    <string name="dlg_suspects_no">No, only the confirmed ones</string>
+    <string name="dlg_suspects_only_title">Remove the suspicious apps?</string>
+    <string name="dlg_suspects_only_msg">No confirmed XCPE app is running, but these apps usually travel with it:\n\n%s\n\nA TV box never needs them.</string>
+    <string name="dlg_remove">Remove them</string>
+    <string name="dlg_keep">Keep them</string>
+    <string name="status_kept">Nothing was changed. Press Scan any time to check again.</string>
+
+    <!-- Remove: while it runs -->
+    <string name="status_removing">Removing… keep the box switched on. If the TV asks a question about debugging, tick \'Always allow\' and press Allow.</string>
+    <string name="report_remove_live">What is happening:</string>
+    <string name="report_remove_log">Details:</string>
+    <string name="report_remove_crashed">The remover stopped with an error: %s</string>
+
+    <!-- Remove: outcome -->
+    <string name="outcome_removed">Removed: %s</string>
+    <string name="outcome_disabled">Switched off (could not be fully removed, cannot run): %s</string>
+    <string name="outcome_failed">Still active (could not be removed): %s</string>
+    <string name="outcome_firmware_remain">A spare copy stays inside this box\'s firmware. It cannot run while the app above is removed or switched off. Only a root deep clean or new firmware from the maker can delete it.</string>
+    <string name="outcome_pp_on">Google Play Protect: switched back on.</string>
+    <string name="outcome_pp_off">Google Play Protect: still off. Open the Google Play app, press your profile picture, choose Play Protect, press the gear and switch on \'Scan apps with Play Protect\'.</string>
+    <string name="outcome_pp_fine">Google Play Protect: was already on.</string>
+    <string name="status_outcome_done">Done: the XCPE parts were removed. Restart the box, then press Scan again to make sure they stay gone.</string>
+    <string name="status_outcome_partial">Some parts could not be removed. Press down to read the details. If they are still there after a restart, replace this box.</string>
+    <string name="status_outcome_nothing">Nothing needed removing. Press Scan any time to check again.</string>
+    <string name="status_outcome_pp_only">Done: Google Play Protect is switched back on. Press Scan to check again.</string>
+    <string name="status_outcome_none">Nothing was changed this time. Press Open Developer options so the app can remove things by itself, then press Remove threats again.</string>
+
+    <!-- Restart -->
+    <string name="dlg_restart_title">Restart the box now?</string>
+    <string name="dlg_restart_msg_adb">A restart finishes the clean-up. The screen goes dark for about a minute. Afterwards this app checks the box again by itself and tells you if anything came back.</string>
+    <string name="dlg_restart_msg_manual">A restart finishes the clean-up. Unplug the box\'s power cord, wait ten seconds and plug it back in. Then open this app and press Scan.</string>
+    <string name="dlg_restart_now">Restart now</string>
+    <string name="dlg_restart_later">Later</string>
+    <string name="dlg_ok">OK</string>
+    <string name="btn_debugoff">Switch debugging off</string>
+    <string name="dlg_debugoff_title">Switch debugging off?</string>
+    <string name="dlg_debugoff_msg">Debugging is what lets this app clean the box and check it after every restart. If you switch it off, the app first tests that it can switch it back on by itself for those checks. This takes up to a minute; the box stays usable.</string>
+    <string name="dlg_debugoff_yes">Test and switch off</string>
+    <string name="status_debug_kept">Debugging stays on so this app can check the box after every restart. If you prefer it off, press \'Switch debugging off\'.</string>
+    <string name="status_debug_probe">Testing that this box can switch debugging back on by itself\u2026</string>
+    <string name="status_debug_probe_ok">Debugging is off. For its automatic checks the app switches it on for a moment and off again.</string>
+    <string name="status_auto_report">This is the report of the automatic check after the last restart. Press Scan for a fresh check.</string>
+    <string name="status_clean_dormant">Clean: nothing from XCPE is running. Switched-off leftovers remain in the firmware; they are harmless while off.</string>
+    <string name="status_outcome_done_mixed">Done: the XCPE parts were removed or switched off. Restart the box, then press Scan again to make sure they stay gone.</string>
+    <string name="dlg_stop_title">Stop the clean-up?</string>
+    <string name="dlg_stop_msg">The app is still working on the box. Stopping now leaves whatever has not been removed yet in place; you can press Remove threats again later.</string>
+    <string name="dlg_stop_yes">Stop</string>
+    <string name="status_stopping">Stopping\u2026</string>
+    <string name="result_infected">RESULT: INFECTED - the XCPE backdoor is active on this box: %1$s</string>
+    <string name="result_suspicious">RESULT: SUSPICIOUS - no confirmed XCPE app is active, but see the warnings above</string>
+    <string name="result_clean">RESULT: CLEAN - nothing from XCPE found</string>
+    <string name="adb_status_connecting">Connecting to the box\'s debugging service\u2026</string>
+    <string name="adb_status_look_at_tv">Look at the TV: tick \'Always allow from this computer\' and press Allow.</string>
+    <string name="adb_status_connected">Connected: the box accepts commands from this app.</string>
+    <string name="adb_err_denied">The box did not allow this app (Deny was pressed, or the question timed out). Try again, and when the TV asks tick \'Always allow\' and press Allow.</string>
+    <string name="adb_err_pairing_only">This box only offers Wireless-debugging pairing, which this app cannot use. Follow the guided steps instead.</string>
+    <string name="adb_err_not_allowed">This app is not yet allowed on the box\'s debugging service. Press Remove threats once; the TV then asks you to allow it.</string>
+    <string name="adb_err_lost">The connection to the box\'s debugging service was lost. Try again.</string>
+    <string name="adb_err_no_answer">The box\'s debugging service did not answer in time. Try again in a moment.</string>
+    <string name="adb_err_generic">Debugging connection problem: %1$s</string>
+    <string name="status_debug_reclosed">Debugging was opened for this clean-up and is switched off again.</string>
+    <string name="status_debug_probe_failed">This box cannot switch debugging back on by itself, so it stays on. If the automatic mode stops working, restart the box.</string>
+    <string name="status_debug_opening">Opening the debugging door for the restart\u2026</string>
+    <string name="status_debug_opening_clean">Opening the debugging door for this clean-up\u2026</string>
+    <string name="status_rebooting">Restarting… the screen will go dark for about a minute. If it does not, unplug the power cord, wait ten seconds and plug it back in.</string>
+    <string name="status_reboot_failed">The box did not restart by itself. Unplug the power cord, wait ten seconds and plug it back in. Then open this app and press Scan.</string>
+
+    <!-- Guided removal (the box does not let the app remove things itself) -->
+    <string name="dlg_guided_title">Remove by hand, step by step</string>
+    <string name="dlg_guided_msg">This box does not let the app remove things by itself, so we do it together. The app opens the settings page of each bad app for you, one at a time (%d to go), and tells you which button to press before each page. Press Back on the remote when you are done with a page.</string>
+    <string name="dlg_guided_start">Start</string>
+    <string name="dlg_guided_later">Not now</string>
+    <string name="status_guided_later">Removal was not started. Press Remove threats when you are ready, or Open Developer options to let the app do it by itself.</string>
+    <!-- 1 = step, 2 = total, 3 = app name -->
+    <string name="guide_step_uninstall">Step %1$d of %2$d: a question about removing %3$s appears. Press OK or Uninstall.</string>
+    <string name="dlg_guide_step_title">Step %1$d of %2$d: %3$s</string>
+    <string name="dlg_guide_step_msg">On the next page press Uninstall.\n\nIf there is no Uninstall button: press Uninstall updates if you see it, then press Disable, then Force stop.\n\nWhen you are done, press Back on the remote to come back here.</string>
+    <string name="dlg_guide_open">Open the page</string>
+    <string name="dlg_guide_skip">Skip this app</string>
+    <string name="guide_step_appinfo">Step %1$d of %2$d: on the page for %3$s press Uninstall. If there is none: Uninstall updates, then Disable, then Force stop. Press Back when done.</string>
+    <string name="status_guided_checking">Checking what changed…</string>
+    <string name="status_guide_cannot_open">The settings page for %s could not be opened on this box. Moving on.</string>
+    <string name="guide_still_active_title">%s is still active</string>
+    <string name="guide_still_active_msg">It did not go away. You can open its page again, skip this app, or stop here.</string>
+    <string name="guide_try_again">Try again</string>
+    <string name="guide_skip">Skip</string>
+    <string name="guide_stop">Stop</string>
+    <string name="guide_pp_title">Switch Google Play Protect back on</string>
+    <string name="guide_pp_msg">XCPE switched off Google\'s app check. On the next page switch on \'Scan apps with Play Protect\', then press Back.</string>
+    <string name="guide_pp_fallback">This box has no direct page for it. Open the Google Play app, press your profile picture at the top right, choose Play Protect, press the gear and switch on \'Scan apps with Play Protect\'.</string>
+    <string name="status_guide_pp">Switch on \'Scan apps with Play Protect\' on the next page, then press Back.</string>
+    <string name="dlg_guide_skip_step">Skip this step</string>
+    <string name="guide_acc_title">Switch off XCPE\'s Accessibility hook</string>
+    <string name="guide_acc_msg">XCPE hooked itself into this box\'s Accessibility settings. On the next page find %s and switch it off, then press Back.</string>
+    <string name="status_guide_acc">Switch off %s on the next page, then press Back.</string>
+    <string name="guided_tail_acc">Accessibility: %s is still switched on; turn it off under Settings, Accessibility.</string>
+    <!-- 1 = handled, 2 = still active, 3 = what to do next -->
+    <string name="status_guided_done">Done by hand: %1$d removed or switched off, %2$d still active. %3$s</string>
+    <string name="guided_tail_restart">Now restart the box (unplug and replug the power cord), open this app and press Scan again.</string>
+    <string name="guided_tail_replace">If they are still active after a restart, this box cannot be cleaned: replace it.</string>
+
+    <!-- Developer options -->
+    <string name="status_devopts_hint">On the next page switch on \'USB debugging\'. On some boxes it is called \'Network debugging\', \'ADB debugging\' or \'ADB over network\'; switch that on too. If a question appears, tick \'Always allow\' and press Allow. Then press Back.</string>
+    <string name="status_devopts_hidden">Developer options are hidden on this box. On the next page find \'Build number\' (or \'Build\') and press OK on it seven times. Then press Back and press Open Developer options again.</string>
+    <string name="status_devopts_missing">This box does not let the app open its settings. Open Settings yourself: Device Preferences, About, press \'Build\' seven times, then Developer options, switch on USB debugging.</string>
+    <string name="status_port_open">Good: the debugging door is open. Press Remove threats and the app removes everything by itself.</string>
+    <string name="status_port_closed_usb_only">USB debugging is on, but the network door is still closed. Look in Developer options for \'Network debugging\', \'ADB over network\' or \'Wireless debugging\' and switch it on too. If this box has none of those, Remove threats will guide you step by step instead.</string>
+    <string name="status_port_closed_after">The debugging door is still closed. Try Open Developer options again, or press Remove threats and the app guides you step by step instead.</string>
+
+    <!-- Deep clean -->
+    <string name="dlg_deep_title">Deep clean the firmware?</string>
+    <string name="dlg_deep_msg">This deletes the spare copies of the backdoor stored in this box\'s firmware. It only works on boxes with root access and only touches files that belong to XCPE.</string>
+    <string name="dlg_deep_yes">Delete spare copies</string>
+    <string name="dlg_cancel">Cancel</string>
+    <string name="status_deep_running">Deep cleaning… keep the box switched on.</string>
+    <string name="status_deep_done">Deep clean finished. Press down to read what happened, then press Scan to check again.</string>
+    <string name="report_deep_header">Deep clean:</string>
+
+    <!-- How it works -->
+    <string name="help_title">How this app works. Press down to read, up to come back.</string>
+    <string name="help_text">WHAT XCPE IS\nXCPE is a backdoor built into the firmware of many cheap Android TV boxes (MECOOL, Videostrong and boxes sold under other names). It lets strangers run things on your box: fake ad clicks, hidden traffic through your internet connection, and whatever else they send it.\n\nWHAT SCAN DOES\nScan looks at the apps on this box, at Google Play Protect and at the Accessibility settings, and compares them with the published list of XCPE parts. It changes nothing and sends nothing anywhere.\n\nWHAT REMOVE THREATS DOES\nIt removes the XCPE apps for this box and switches Google Play Protect back on. If an app cannot be removed, it is switched off so it cannot run. The app first tries to do this by itself; this works when the box\'s debugging door is open (Developer options). Otherwise it opens the right settings pages for you and tells you which button to press.\n\nWHAT STAYS\nMany boxes keep a spare copy of the backdoor in a read-only part of the firmware. The app cannot delete that copy without root access, but the copy cannot run while the app is removed or switched off. If XCPE comes back after a restart, this app notices and removes it again, and tells you.\n\nOUR HONEST ADVICE\nA box that shipped with a backdoor was never yours alone. If you can, replace it with a box from a known brand (Google TV Streamer, Apple TV, Fire TV, Nvidia Shield). If you keep it, do not log in to banking or email on it.\n\nCHANGE YOUR PASSWORDS\nIf you ever typed a password on this box, change it from another device: Google account, Netflix, Wi-Fi and anything else you used here.\n\nAFTER CLEANING\nRestart the box, open this app and press Scan once more. The app also checks by itself after every restart and shows the result under \'Last check\'.\n\nPress Scan to see the check result again.</string>
+
+    <!-- Notifications from the check after a restart -->
+    <string name="notif_channel">Check after restart</string>
+    <string name="notif_channel_desc">Tells you when XCPE came back after a restart.</string>
+    <string name="notif_removed_again_title">XCPE came back after restart and was removed again</string>
+    <string name="notif_removed_again_text">Open XCPE Cleaner to see the details. If this keeps happening, replace the box.</string>
+    <string name="notif_failed_title">XCPE came back and could not be removed: replace this box</string>
+    <string name="notif_failed_text">Open XCPE Cleaner and press Remove threats to try again.</string>
+    <string name="notif_failed_text_port_closed">The app could not remove it by itself because the debugging door is closed. Open XCPE Cleaner and press Remove threats.</string>
+    <string name="notif_suspicious_title">This box shows warning signs</string>
+    <string name="notif_suspicious_text">Open XCPE Cleaner and press Scan to read the details.</string>
+    <string name="report_auto_remove_header">Automatic removal after the restart:</string>
+</resources>

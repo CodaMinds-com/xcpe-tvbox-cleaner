@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Português do Brasil. Cada linha que uma pessoa vê. Escrito para quem nunca ouviu a palavra "pacote": dizer o que acontece e depois o que fazer. -->
+<resources>
+    <string name="app_name">XCPE Cleaner</string>
+    <string name="title">XCPE Cleaner</string>
+    <string name="subtitle">Encontra a porta dos fundos XCPE neste aparelho e a remove. Nada sai deste aparelho.</string>
+
+    <!-- Botões -->
+    <string name="btn_scan">Verificar</string>
+    <string name="btn_remove">Remover ameaças</string>
+    <string name="btn_devopts">Abrir Opções do desenvolvedor</string>
+    <string name="btn_deepclean">Limpeza profunda (root)</string>
+    <string name="btn_help">Como funciona</string>
+    <string name="btn_details_show">Mostrar detalhes</string>
+    <string name="btn_details_hide">Ocultar detalhes</string>
+    <string name="report_frame_desc">Relatório da verificação. Pressione para baixo e para cima para rolar.</string>
+
+    <!-- Peças de formatação -->
+    <string name="app_label_fmt">\'%1$s\' (%2$s)</string>
+    <string name="name_quoted">\'%s\'</string>
+    <string name="list_separator">", "</string>
+    <string name="bullet_line">  - %s</string>
+    <string name="join_sentences">%1$s %2$s</string>
+    <string name="progress_line">- %s</string>
+    <string name="progress_block">%1$s\n%2$s</string>
+    <string name="progress_step_start">%s…</string>
+    <string name="progress_step_done">%s… pronto</string>
+    <string name="progress_scan_header">Verificando:</string>
+
+    <!-- Tela inicial -->
+    <string name="status_idle">Pressione Verificar para examinar este aparelho.</string>
+    <string name="report_intro">O que Verificar examina:\n\n  - os oito apps conhecidos como parte do XCPE\n  - apps que fingem ser parte do Android\n  - os canais de dados ocultos que o XCPE usa\n  - cópias de reserva guardadas no firmware do aparelho\n  - se o Google Play Protect foi desligado\n  - se o XCPE se prendeu à Acessibilidade\n\nA verificação leva alguns segundos e não muda nada.\nNada é enviado a lugar nenhum.\n\nDepois da verificação, este app diz uma de três coisas:\n  Limpo, Suspeito ou Infectado.\nSe não estiver limpo, pressione Remover ameaças.</string>
+    <string name="last_check_none">Última verificação: nunca</string>
+    <!-- 1 = data e hora, 2 = resultado, 3 = quem verificou -->
+    <string name="last_check_fmt">Última verificação: %1$s · %2$s (%3$s)</string>
+    <string name="src_manual">feita por você</string>
+    <string name="src_auto">verificação automática após uma reinicialização</string>
+    <string name="check_clean">Limpo</string>
+    <string name="check_suspicious">Suspeito</string>
+    <string name="check_infected">Infectado</string>
+    <string name="check_removed_again">o XCPE voltou e foi removido de novo</string>
+    <string name="check_failed">o XCPE voltou e não pôde ser removido</string>
+    <string name="check_debug_opened">a depuração foi ligada para a remoção</string>
+    <string name="check_debug_open_failed">não foi possível ligar a depuração</string>
+    <string name="check_debug_closed">a depuração foi desligada de novo</string>
+    <string name="check_debug_close_failed">a depuração ainda está ligada</string>
+    <string name="check_summary_join">%1$s; %2$s</string>
+
+    <!-- Verificação -->
+    <string name="status_scanning">Verificando este aparelho… isso leva alguns segundos.</string>
+    <string name="status_scan_failed">A verificação não pôde terminar. Pressione Verificar para tentar de novo.</string>
+    <plurals name="status_infected">
+        <item quantity="one">Infectado: %d parte do XCPE está ativa neste aparelho. Pressione Remover ameaças.</item>
+        <item quantity="other">Infectado: %d partes do XCPE estão ativas neste aparelho. Pressione Remover ameaças.</item>
+    </plurals>
+    <string name="status_suspicious">Suspeito: nenhum app confirmado do XCPE está em execução, mas este aparelho mostra sinais de alerta. Pressione Remover ameaças para corrigir o que for possível, ou pressione para baixo para ler o relatório.</string>
+    <string name="status_clean">Limpo: nada do XCPE foi encontrado neste aparelho. Você pode continuar usando.</string>
+
+    <!-- Remover: a única pergunta -->
+    <string name="dlg_review_title">Revisar antes de remover</string>
+    <plurals name="dlg_review_msg_confirmed">
+        <item quantity="one">%1$d parte confirmada do XCPE será removida. Abaixo estão outros apps que vale a pena olhar. Marcados de antemão só quando há evidência além do nome; pressione OK em uma linha para mudar.</item>
+        <item quantity="other">%1$d partes confirmadas do XCPE serão removidas. Abaixo estão outros apps que vale a pena olhar. Marcados de antemão só quando há evidência além do nome; pressione OK em uma linha para mudar.</item>
+    </plurals>
+    <string name="dlg_review_msg_only">Nenhum app confirmado do XCPE está em execução. Abaixo estão apps que vale a pena olhar. Marcados de antemão só quando há evidência além do nome; pressione OK em uma linha para mudar.</string>
+    <string name="dlg_review_remove">Remover selecionados</string>
+    <string name="status_review_kept">Nada mais foi removido. O aparelho não mudou.</string>
+    <string name="scan_reason_vendor_warning">Pode fazer parte da loja ou do serviço de TV do próprio aparelho. Removê-lo pode quebrar esse serviço.</string>
+    <string name="dlg_suspects_title">Remover também os apps suspeitos?</string>
+    <string name="dlg_suspects_msg">Além das partes confirmadas do XCPE, este aparelho tem apps que costumam vir junto com ele:\n\n%s\n\nUma TV Box nunca precisa deles.</string>
+    <string name="dlg_suspects_yes">Sim, remover também</string>
+    <string name="dlg_suspects_no">Não, só os confirmados</string>
+    <string name="dlg_suspects_only_title">Remover os apps suspeitos?</string>
+    <string name="dlg_suspects_only_msg">Nenhum app confirmado do XCPE está em execução, mas estes apps costumam vir junto com ele:\n\n%s\n\nUma TV Box nunca precisa deles.</string>
+    <string name="dlg_remove">Remover</string>
+    <string name="dlg_keep">Manter</string>
+    <string name="status_kept">Nada foi alterado. Pressione Verificar a qualquer momento para examinar de novo.</string>
+
+    <!-- Remover: enquanto roda -->
+    <string name="status_removing">Removendo… mantenha o aparelho ligado. Se a TV fizer uma pergunta sobre depuração, marque \'Sempre permitir\' e pressione Permitir.</string>
+    <string name="report_remove_live">O que está acontecendo:</string>
+    <string name="report_remove_log">Detalhes:</string>
+    <string name="report_remove_crashed">A remoção parou com um erro: %s</string>
+
+    <!-- Remover: resultado -->
+    <string name="outcome_removed">Removido: %s</string>
+    <string name="outcome_disabled">Desativado (não pôde ser removido por completo, não consegue rodar): %s</string>
+    <string name="outcome_failed">Ainda ativo (não pôde ser removido): %s</string>
+    <string name="outcome_firmware_remain">Uma cópia de reserva fica dentro do firmware deste aparelho. Ela não consegue rodar enquanto o app acima estiver removido ou desativado. Só uma limpeza profunda com root ou um firmware novo do fabricante podem apagá-la.</string>
+    <string name="outcome_pp_on">Google Play Protect: ligado de novo.</string>
+    <string name="outcome_pp_off">Google Play Protect: ainda desligado. Abra o app Google Play, pressione sua foto de perfil, escolha Play Protect, pressione a engrenagem e ligue \'Verificar apps com o Play Protect\'.</string>
+    <string name="outcome_pp_fine">Google Play Protect: já estava ligado.</string>
+    <string name="status_outcome_done">Pronto: as partes do XCPE foram removidas. Reinicie o aparelho e depois pressione Verificar de novo para ter certeza de que elas não voltaram.</string>
+    <string name="status_outcome_partial">Algumas partes não puderam ser removidas. Pressione para baixo para ler os detalhes. Se elas ainda estiverem lá depois de reiniciar, troque este aparelho.</string>
+    <string name="status_outcome_nothing">Nada precisava ser removido. Pressione Verificar a qualquer momento para examinar de novo.</string>
+    <string name="status_outcome_pp_only">Pronto: o Google Play Protect está ligado de novo. Pressione Verificar para examinar de novo.</string>
+    <string name="status_outcome_none">Nada foi alterado desta vez. Pressione Abrir Opções do desenvolvedor para que o app possa remover as coisas sozinho e depois pressione Remover ameaças de novo.</string>
+
+    <!-- Reiniciar -->
+    <string name="dlg_restart_title">Reiniciar o aparelho agora?</string>
+    <string name="dlg_restart_msg_adb">Reiniciar conclui a limpeza. A tela fica escura por cerca de um minuto. Depois, este app verifica o aparelho de novo sozinho e avisa se algo voltou.</string>
+    <string name="dlg_restart_msg_manual">Reiniciar conclui a limpeza. Tire o cabo de energia do aparelho da tomada, espere dez segundos e ligue de novo. Depois abra este app e pressione Verificar.</string>
+    <string name="dlg_restart_now">Reiniciar agora</string>
+    <string name="dlg_restart_later">Mais tarde</string>
+    <string name="dlg_ok">OK</string>
+    <string name="btn_debugoff">Desligar a depuração</string>
+    <string name="dlg_debugoff_title">Desligar a depuração?</string>
+    <string name="dlg_debugoff_msg">A depuração é o que permite a este app limpar o aparelho e verificá-lo depois de cada reinicialização. Se você desligá-la, o app primeiro testa se consegue ligá-la de novo sozinho para essas verificações. Isso leva até um minuto; o aparelho continua utilizável.</string>
+    <string name="dlg_debugoff_yes">Testar e desligar</string>
+    <string name="status_debug_kept">A depuração continua ligada para que este app possa verificar o aparelho depois de cada reinicialização. Se preferir desligá-la, pressione \'Desligar a depuração\'.</string>
+    <string name="status_debug_probe">Testando se este aparelho consegue ligar a depuração de novo sozinho…</string>
+    <string name="status_debug_probe_ok">A depuração está desligada. Para as verificações automáticas, o app a liga por um instante e desliga de novo.</string>
+    <string name="status_debug_probe_failed">Este aparelho não consegue ligar a depuração de novo sozinho, então ela continua ligada. Se o modo automático parar de funcionar, reinicie o aparelho.</string>
+    <string name="status_debug_reclosed">A depuração foi aberta para esta limpeza e já está desligada de novo.</string>
+    <string name="status_auto_report">Este é o relatório da verificação automática após a última reinicialização. Pressione Verificar para uma verificação nova.</string>
+    <string name="status_clean_dormant">Limpo: nada do XCPE está em execução. Restos desativados continuam no firmware; enquanto estiverem desativados, são inofensivos.</string>
+    <string name="status_outcome_done_mixed">Pronto: as partes do XCPE foram removidas ou desativadas. Reinicie o aparelho e depois pressione Verificar de novo para ter certeza de que elas não voltaram.</string>
+    <string name="dlg_stop_title">Parar a limpeza?</string>
+    <string name="dlg_stop_msg">O app ainda está trabalhando no aparelho. Se parar agora, o que ainda não foi removido fica como está; você pode pressionar Remover ameaças de novo mais tarde.</string>
+    <string name="dlg_stop_yes">Parar</string>
+    <string name="status_stopping">Parando…</string>
+    <string name="result_infected">RESULTADO: INFECTADO - a porta dos fundos XCPE está ativa neste aparelho: %1$s</string>
+    <string name="result_suspicious">RESULTADO: SUSPEITO - nenhum app confirmado do XCPE está ativo, mas veja os avisos acima</string>
+    <string name="result_clean">RESULTADO: LIMPO - nada do XCPE foi encontrado</string>
+    <string name="adb_status_connecting">Conectando ao serviço de depuração do aparelho…</string>
+    <string name="adb_status_look_at_tv">Olhe para a TV: marque \'Sempre permitir a partir deste computador\' e pressione Permitir.</string>
+    <string name="adb_status_connected">Conectado: o aparelho aceita comandos deste app.</string>
+    <string name="adb_err_denied">O aparelho não permitiu este app (Negar foi pressionado ou a pergunta expirou). Tente de novo e, quando a TV perguntar, marque \'Sempre permitir\' e pressione Permitir.</string>
+    <string name="adb_err_pairing_only">Este aparelho só oferece o pareamento da Depuração por Wi-Fi, que este app não consegue usar. Siga os passos guiados em vez disso.</string>
+    <string name="adb_err_not_allowed">Este app ainda não tem permissão no serviço de depuração do aparelho. Pressione Remover ameaças uma vez; a TV então pede para você permitir.</string>
+    <string name="adb_err_lost">A conexão com o serviço de depuração do aparelho foi perdida. Tente de novo.</string>
+    <string name="adb_err_no_answer">O serviço de depuração do aparelho não respondeu a tempo. Tente de novo daqui a pouco.</string>
+    <string name="adb_err_generic">Problema na conexão de depuração: %1$s</string>
+    <string name="status_debug_opening">Abrindo a porta de depuração para reiniciar…</string>
+    <string name="status_debug_opening_clean">Abrindo a porta de depuração para esta limpeza…</string>
+    <string name="status_rebooting">Reiniciando… a tela vai ficar escura por cerca de um minuto. Se isso não acontecer, tire o cabo de energia da tomada, espere dez segundos e ligue de novo.</string>
+    <string name="status_reboot_failed">O aparelho não reiniciou sozinho. Tire o cabo de energia da tomada, espere dez segundos e ligue de novo. Depois abra este app e pressione Verificar.</string>
+
+    <!-- Remoção guiada (o aparelho não deixa o app remover as coisas sozinho) -->
+    <string name="dlg_guided_title">Remover manualmente, passo a passo</string>
+    <string name="dlg_guided_msg">Este aparelho não deixa o app remover as coisas sozinho, então vamos fazer isso juntos. O app abre para você a página de configurações de cada app ruim, um de cada vez (faltam %d), e diz qual botão pressionar antes de cada página. Pressione Voltar no controle remoto quando terminar uma página.</string>
+    <string name="dlg_guided_start">Começar</string>
+    <string name="dlg_guided_later">Agora não</string>
+    <string name="status_guided_later">A remoção não foi iniciada. Pressione Remover ameaças quando quiser, ou Abrir Opções do desenvolvedor para deixar o app fazer isso sozinho.</string>
+    <!-- 1 = passo, 2 = total, 3 = nome do app -->
+    <string name="guide_step_uninstall">Passo %1$d de %2$d: aparece uma pergunta sobre remover %3$s. Pressione OK ou Desinstalar.</string>
+    <string name="dlg_guide_step_title">Passo %1$d de %2$d: %3$s</string>
+    <string name="dlg_guide_step_msg">Na próxima página, pressione Desinstalar.\n\nSe não houver o botão Desinstalar: pressione Desinstalar atualizações se aparecer, depois Desativar e depois Forçar parada.\n\nQuando terminar, pressione Voltar no controle remoto para voltar aqui.</string>
+    <string name="dlg_guide_open">Abrir a página</string>
+    <string name="dlg_guide_skip">Pular este app</string>
+    <string name="guide_step_appinfo">Passo %1$d de %2$d: na página de %3$s, pressione Desinstalar. Se não houver: Desinstalar atualizações, depois Desativar e depois Forçar parada. Pressione Voltar quando terminar.</string>
+    <string name="status_guided_checking">Verificando o que mudou…</string>
+    <string name="status_guide_cannot_open">A página de configurações de %s não pôde ser aberta neste aparelho. Seguindo em frente.</string>
+    <string name="guide_still_active_title">%s ainda está ativo</string>
+    <string name="guide_still_active_msg">Ele não sumiu. Você pode abrir a página dele de novo, pular este app ou parar aqui.</string>
+    <string name="guide_try_again">Tentar de novo</string>
+    <string name="guide_skip">Pular</string>
+    <string name="guide_stop">Parar</string>
+    <string name="guide_pp_title">Ligar o Google Play Protect de novo</string>
+    <string name="guide_pp_msg">O XCPE desligou a verificação de apps do Google. Na próxima página, ligue \'Verificar apps com o Play Protect\' e depois pressione Voltar.</string>
+    <string name="guide_pp_fallback">Este aparelho não tem uma página direta para isso. Abra o app Google Play, pressione sua foto de perfil no canto superior direito, escolha Play Protect, pressione a engrenagem e ligue \'Verificar apps com o Play Protect\'.</string>
+    <string name="status_guide_pp">Ligue \'Verificar apps com o Play Protect\' na próxima página e depois pressione Voltar.</string>
+    <string name="dlg_guide_skip_step">Pular este passo</string>
+    <string name="guide_acc_title">Desligar o gancho do XCPE na Acessibilidade</string>
+    <string name="guide_acc_msg">O XCPE se prendeu às configurações de Acessibilidade deste aparelho. Na próxima página, encontre %s, desligue e depois pressione Voltar.</string>
+    <string name="status_guide_acc">Desligue %s na próxima página e depois pressione Voltar.</string>
+    <string name="guided_tail_acc">Acessibilidade: %s ainda está ligado; desligue em Configurações, Acessibilidade.</string>
+    <!-- 1 = resolvidos, 2 = ainda ativos, 3 = o que fazer agora -->
+    <string name="status_guided_done">Feito manualmente: %1$d removidos ou desativados, %2$d ainda ativos. %3$s</string>
+    <string name="guided_tail_restart">Agora reinicie o aparelho (tire o cabo de energia da tomada e ligue de novo), abra este app e pressione Verificar de novo.</string>
+    <string name="guided_tail_replace">Se eles ainda estiverem ativos depois de reiniciar, este aparelho não pode ser limpo: troque-o.</string>
+
+    <!-- Opções do desenvolvedor -->
+    <string name="status_devopts_hint">Na próxima página, ligue \'Depuração USB\'. Em alguns aparelhos ela se chama \'Depuração de rede\', \'Depuração ADB\' ou \'ADB pela rede\'; ligue essa também. Se aparecer uma pergunta, marque \'Sempre permitir\' e pressione Permitir. Depois pressione Voltar.</string>
+    <string name="status_devopts_hidden">As Opções do desenvolvedor estão ocultas neste aparelho. Na próxima página, encontre \'Número da versão\' (ou \'Versão\') e pressione OK nele sete vezes. Depois pressione Voltar e pressione Abrir Opções do desenvolvedor de novo.</string>
+    <string name="status_devopts_missing">Este aparelho não deixa o app abrir as configurações. Abra as Configurações por conta própria: Preferências do dispositivo, Sobre, pressione \'Versão\' sete vezes, depois Opções do desenvolvedor e ligue Depuração USB.</string>
+    <string name="status_port_open">Ótimo: a porta de depuração está aberta. Pressione Remover ameaças e o app remove tudo sozinho.</string>
+    <string name="status_port_closed_usb_only">A Depuração USB está ligada, mas a porta de rede ainda está fechada. Procure em Opções do desenvolvedor por \'Depuração de rede\', \'ADB pela rede\' ou \'Depuração por Wi-Fi\' e ligue também. Se este aparelho não tiver nenhuma dessas, Remover ameaças vai guiar você passo a passo.</string>
+    <string name="status_port_closed_after">A porta de depuração ainda está fechada. Tente Abrir Opções do desenvolvedor de novo, ou pressione Remover ameaças e o app guia você passo a passo.</string>
+
+    <!-- Limpeza profunda -->
+    <string name="dlg_deep_title">Fazer a limpeza profunda do firmware?</string>
+    <string name="dlg_deep_msg">Isso apaga as cópias de reserva da porta dos fundos guardadas no firmware deste aparelho. Só funciona em aparelhos com acesso root e só mexe em arquivos que pertencem ao XCPE.</string>
+    <string name="dlg_deep_yes">Apagar cópias de reserva</string>
+    <string name="dlg_cancel">Cancelar</string>
+    <string name="status_deep_running">Limpeza profunda em andamento… mantenha o aparelho ligado.</string>
+    <string name="status_deep_done">Limpeza profunda concluída. Pressione para baixo para ler o que aconteceu e depois pressione Verificar para examinar de novo.</string>
+    <string name="report_deep_header">Limpeza profunda:</string>
+
+    <!-- Como funciona -->
+    <string name="help_title">Como este app funciona. Pressione para baixo para ler, para cima para voltar.</string>
+    <string name="help_text">O QUE É O XCPE\nO XCPE é uma porta dos fundos (backdoor) embutida no firmware de muitas TV Box Android baratas (MECOOL, Videostrong e aparelhos vendidos com outros nomes). Ela deixa estranhos rodarem coisas no seu aparelho: cliques falsos em anúncios, tráfego escondido pela sua conexão de internet e o que mais eles mandarem.\n\nO QUE VERIFICAR FAZ\nVerificar examina os apps deste aparelho, o Google Play Protect e as configurações de Acessibilidade, e compara com a lista publicada de partes do XCPE. Não muda nada e não envia nada a lugar nenhum.\n\nO QUE REMOVER AMEAÇAS FAZ\nRemove os apps do XCPE deste aparelho e liga o Google Play Protect de novo. Se um app não puder ser removido, ele é desativado para não conseguir rodar. O app primeiro tenta fazer isso sozinho; isso funciona quando a porta de depuração do aparelho está aberta (Opções do desenvolvedor). Se não, ele abre para você as páginas de configurações certas e diz qual botão pressionar.\n\nO QUE FICA\nMuitos aparelhos guardam uma cópia de reserva da porta dos fundos em uma parte somente leitura do firmware. O app não consegue apagar essa cópia sem acesso root, mas a cópia não consegue rodar enquanto o app do XCPE estiver removido ou desativado. Se o XCPE voltar depois de reiniciar, este app percebe, remove de novo e avisa você.\n\nNOSSO CONSELHO SINCERO\nUm aparelho que veio de fábrica com uma porta dos fundos nunca foi só seu. Se puder, troque por um aparelho de uma marca conhecida (Google TV Streamer, Apple TV, Fire TV, Nvidia Shield). Se ficar com ele, não entre no banco nem no e-mail por ele.\n\nTROQUE SUAS SENHAS\nSe você já digitou uma senha neste aparelho, troque-a a partir de outro dispositivo: conta do Google, Netflix, Wi-Fi e qualquer outra coisa que tenha usado aqui.\n\nDEPOIS DA LIMPEZA\nReinicie o aparelho, abra este app e pressione Verificar mais uma vez. O app também verifica sozinho depois de cada reinicialização e mostra o resultado em \'Última verificação\'.\n\nPressione Verificar para ver o resultado da verificação de novo.</string>
+
+    <!-- Notificações da verificação após reiniciar -->
+    <string name="notif_channel">Verificação após reiniciar</string>
+    <string name="notif_channel_desc">Avisa quando o XCPE voltou depois de reiniciar.</string>
+    <string name="notif_removed_again_title">O XCPE voltou depois de reiniciar e foi removido de novo</string>
+    <string name="notif_removed_again_text">Abra o XCPE Cleaner para ver os detalhes. Se isso continuar acontecendo, troque o aparelho.</string>
+    <string name="notif_failed_title">O XCPE voltou e não pôde ser removido: troque este aparelho</string>
+    <string name="notif_failed_text">Abra o XCPE Cleaner e pressione Remover ameaças para tentar de novo.</string>
+    <string name="notif_failed_text_port_closed">O app não conseguiu remover sozinho porque a porta de depuração está fechada. Abra o XCPE Cleaner e pressione Remover ameaças.</string>
+    <string name="notif_suspicious_title">Este aparelho mostra sinais de alerta</string>
+    <string name="notif_suspicious_text">Abra o XCPE Cleaner e pressione Verificar para ler os detalhes.</string>
+    <string name="report_auto_remove_header">Remoção automática após reiniciar:</string>
+</resources>

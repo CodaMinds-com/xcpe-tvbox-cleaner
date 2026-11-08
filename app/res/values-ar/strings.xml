@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- العربية الفصحى. مكتوبة لشخص بلا خلفية تقنية يقرأ من الأريكة. العناصر النائبة والأسماء اللاتينية تبقى كما هي. -->
+<resources>
+    <string name="app_name">XCPE Cleaner</string>
+    <string name="title">XCPE Cleaner</string>
+    <string name="subtitle">يعثر على الباب الخلفي XCPE في هذا الجهاز ويزيله. لا شيء يغادر هذا الجهاز.</string>
+
+    <!-- الأزرار -->
+    <string name="btn_scan">فحص</string>
+    <string name="btn_remove">إزالة التهديدات</string>
+    <string name="btn_devopts">فتح خيارات المطوّرين</string>
+    <string name="btn_deepclean">تنظيف عميق (root)</string>
+    <string name="btn_help">كيف يعمل</string>
+    <string name="btn_details_show">عرض التفاصيل</string>
+    <string name="btn_details_hide">إخفاء التفاصيل</string>
+    <string name="report_frame_desc">تقرير الفحص. اضغط للأسفل وللأعلى للتمرير.</string>
+
+    <!-- قطع التنسيق -->
+    <string name="app_label_fmt">«%1$s» (%2$s)</string>
+    <string name="name_quoted">«%s»</string>
+    <string name="list_separator">"، "</string>
+    <string name="bullet_line">  - %s</string>
+    <string name="join_sentences">%1$s %2$s</string>
+    <string name="progress_line">- %s</string>
+    <string name="progress_block">%1$s\n%2$s</string>
+    <string name="progress_step_start">%s…</string>
+    <string name="progress_step_done">%s… تم</string>
+    <string name="progress_scan_header">جارٍ الفحص:</string>
+
+    <!-- شاشة البداية -->
+    <string name="status_idle">اضغط «فحص» للتحقق من هذا الجهاز.</string>
+    <string name="report_intro">ما الذي يفحصه «فحص»:\n\n  - التطبيقات الثمانية المعروفة بأنها جزء من XCPE\n  - التطبيقات التي تتظاهر بأنها جزء من Android\n  - قنوات البيانات الخفية التي يستخدمها XCPE\n  - النسخ الاحتياطية المخزّنة في البرنامج الثابت للجهاز\n  - ما إذا كان Google Play Protect قد أُوقف\n  - ما إذا كان XCPE قد ربط نفسه بإمكانية الوصول\n\nيستغرق الفحص بضع ثوانٍ ولا يغيّر شيئًا.\nلا يُرسَل أي شيء إلى أي مكان.\n\nبعد الفحص، يخبرك هذا الجهاز بواحدة من ثلاث نتائج:\n  نظيف، أو مريب، أو مصاب.\nإذا لم يكن نظيفًا، اضغط «إزالة التهديدات».</string>
+    <string name="last_check_none">آخر فحص: لم يُجرَ بعد</string>
+    <string name="last_check_fmt">آخر فحص: %1$s · %2$s (%3$s)</string>
+    <string name="src_manual">فحص أجريته بنفسك</string>
+    <string name="src_auto">فحص تلقائي بعد إعادة التشغيل</string>
+    <string name="check_clean">نظيف</string>
+    <string name="check_suspicious">مريب</string>
+    <string name="check_infected">مصاب</string>
+    <string name="check_removed_again">عاد XCPE وأُزيل مرة أخرى</string>
+    <string name="check_failed">عاد XCPE وتعذّرت إزالته</string>
+    <string name="check_debug_opened">تم تشغيل تصحيح الأخطاء من أجل الإزالة</string>
+    <string name="check_debug_open_failed">تعذّر تشغيل تصحيح الأخطاء</string>
+    <string name="check_debug_closed">تم إيقاف تصحيح الأخطاء مرة أخرى</string>
+    <string name="check_debug_close_failed">تصحيح الأخطاء ما زال قيد التشغيل</string>
+    <string name="check_summary_join">%1$s؛ %2$s</string>
+
+    <!-- الفحص -->
+    <string name="status_scanning">جارٍ فحص هذا الجهاز… يستغرق هذا بضع ثوانٍ.</string>
+    <string name="status_scan_failed">تعذّر إكمال الفحص. اضغط «فحص» للمحاولة مرة أخرى.</string>
+    <plurals name="status_infected">
+        <item quantity="zero">مصاب: لا يوجد أي جزء نشط من XCPE على هذا الجهاز (%d). اضغط «إزالة التهديدات».</item>
+        <item quantity="one">مصاب: جزء واحد (%d) من XCPE نشط على هذا الجهاز. اضغط «إزالة التهديدات».</item>
+        <item quantity="two">مصاب: جزءان (%d) من XCPE نشطان على هذا الجهاز. اضغط «إزالة التهديدات».</item>
+        <item quantity="few">مصاب: %d أجزاء من XCPE نشطة على هذا الجهاز. اضغط «إزالة التهديدات».</item>
+        <item quantity="many">مصاب: %d جزءًا من XCPE نشطة على هذا الجهاز. اضغط «إزالة التهديدات».</item>
+        <item quantity="other">مصاب: %d جزء من XCPE نشطة على هذا الجهاز. اضغط «إزالة التهديدات».</item>
+    </plurals>
+    <string name="status_suspicious">مريب: لا يعمل أي تطبيق مؤكّد من XCPE، لكن هذا الجهاز يُظهر علامات تحذيرية. اضغط «إزالة التهديدات» لإصلاح ما يمكن إصلاحه، أو اضغط للأسفل لقراءة التقرير.</string>
+    <string name="status_clean">نظيف: لم يُعثر على أي شيء من XCPE في هذا الجهاز. يمكنك متابعة استخدامه.</string>
+
+    <!-- الإزالة: السؤال الوحيد -->
+    <string name="dlg_review_title">راجع قبل الإزالة</string>
+    <plurals name="dlg_review_msg_confirmed">
+        <item quantity="zero">لن تتم إزالة أي جزء مؤكّد من XCPE. فيما يلي تطبيقات أخرى تستحق النظر. مُعلَّمة مسبقًا فقط حيث يوجد دليل غير الاسم؛ اضغط «حسنًا» على صف لتغييره.</item>
+        <item quantity="one">ستتم إزالة جزء واحد مؤكّد من XCPE. فيما يلي تطبيقات أخرى تستحق النظر. مُعلَّمة مسبقًا فقط حيث يوجد دليل غير الاسم؛ اضغط «حسنًا» على صف لتغييره.</item>
+        <item quantity="two">ستتم إزالة جزأين مؤكّدين من XCPE. فيما يلي تطبيقات أخرى تستحق النظر. مُعلَّمة مسبقًا فقط حيث يوجد دليل غير الاسم؛ اضغط «حسنًا» على صف لتغييره.</item>
+        <item quantity="few">ستتم إزالة %1$d أجزاء مؤكّدة من XCPE. فيما يلي تطبيقات أخرى تستحق النظر. مُعلَّمة مسبقًا فقط حيث يوجد دليل غير الاسم؛ اضغط «حسنًا» على صف لتغييره.</item>
+        <item quantity="many">ستتم إزالة %1$d جزءًا مؤكّدًا من XCPE. فيما يلي تطبيقات أخرى تستحق النظر. مُعلَّمة مسبقًا فقط حيث يوجد دليل غير الاسم؛ اضغط «حسنًا» على صف لتغييره.</item>
+        <item quantity="other">ستتم إزالة %1$d جزء مؤكّد من XCPE. فيما يلي تطبيقات أخرى تستحق النظر. مُعلَّمة مسبقًا فقط حيث يوجد دليل غير الاسم؛ اضغط «حسنًا» على صف لتغييره.</item>
+    </plurals>
+    <string name="dlg_review_msg_only">لا يعمل أي تطبيق مؤكّد من XCPE. فيما يلي تطبيقات تستحق النظر. مُعلَّمة مسبقًا فقط حيث يوجد دليل غير الاسم؛ اضغط «حسنًا» على صف لتغييره.</string>
+    <string name="dlg_review_remove">إزالة المحدد</string>
+    <string name="status_review_kept">لم تتم إزالة أي شيء آخر. الجهاز لم يتغيّر.</string>
+    <string name="scan_reason_vendor_warning">قد يكون جزءًا من متجر الجهاز نفسه أو خدمة التلفزيون الخاصة به. إزالته قد تعطّل تلك الخدمة.</string>
+    <string name="dlg_suspects_title">هل تريد إزالة التطبيقات المشتبه بها أيضًا؟</string>
+    <string name="dlg_suspects_msg">إلى جانب أجزاء XCPE المؤكّدة، يحتوي هذا الجهاز على تطبيقات تأتي معه عادةً:\n\n%s\n\nجهاز التلفزيون لا يحتاج إليها أبدًا.</string>
+    <string name="dlg_suspects_yes">نعم، أزلها أيضًا</string>
+    <string name="dlg_suspects_no">لا، المؤكّدة فقط</string>
+    <string name="dlg_suspects_only_title">هل تريد إزالة التطبيقات المريبة؟</string>
+    <string name="dlg_suspects_only_msg">لا يعمل أي تطبيق مؤكّد من XCPE، لكن هذه التطبيقات تأتي معه عادةً:\n\n%s\n\nجهاز التلفزيون لا يحتاج إليها أبدًا.</string>
+    <string name="dlg_remove">إزالتها</string>
+    <string name="dlg_keep">الإبقاء عليها</string>
+    <string name="status_kept">لم يتغيّر شيء. اضغط «فحص» في أي وقت للتحقق مرة أخرى.</string>
+
+    <!-- الإزالة: أثناء التنفيذ -->
+    <string name="status_removing">جارٍ الإزالة… أبقِ الجهاز قيد التشغيل. إذا طرح التلفزيون سؤالًا عن تصحيح الأخطاء، فعلّم «السماح دائمًا» واضغط «السماح».</string>
+    <string name="report_remove_live">ما الذي يحدث:</string>
+    <string name="report_remove_log">التفاصيل:</string>
+    <string name="report_remove_crashed">توقفت الإزالة بسبب خطأ: %s</string>
+
+    <!-- الإزالة: النتيجة -->
+    <string name="outcome_removed">تمت الإزالة: %s</string>
+    <string name="outcome_disabled">تم الإيقاف (تعذّرت إزالته بالكامل، ولا يمكنه العمل): %s</string>
+    <string name="outcome_failed">ما زال نشطًا (تعذّرت إزالته): %s</string>
+    <string name="outcome_firmware_remain">تبقى نسخة احتياطية داخل البرنامج الثابت لهذا الجهاز. لا يمكنها العمل ما دام التطبيق أعلاه مُزالًا أو موقوفًا. لا يمكن حذفها إلا بتنظيف عميق بصلاحية root أو ببرنامج ثابت جديد من الشركة المصنّعة.</string>
+    <string name="outcome_pp_on">Google Play Protect: أُعيد تشغيله.</string>
+    <string name="outcome_pp_off">Google Play Protect: ما زال متوقفًا. افتح تطبيق Google Play، واضغط على صورة ملفك الشخصي، واختر Play Protect، واضغط على رمز الترس وشغّل «فحص التطبيقات باستخدام Play Protect».</string>
+    <string name="outcome_pp_fine">Google Play Protect: كان قيد التشغيل بالفعل.</string>
+    <string name="status_outcome_done">تم: أُزيلت أجزاء XCPE. أعد تشغيل الجهاز، ثم اضغط «فحص» مرة أخرى للتأكد من أنها لم تعد.</string>
+    <string name="status_outcome_partial">تعذّرت إزالة بعض الأجزاء. اضغط للأسفل لقراءة التفاصيل. إذا بقيت موجودة بعد إعادة التشغيل، فاستبدل هذا الجهاز.</string>
+    <string name="status_outcome_nothing">لم يكن هناك ما يحتاج إلى إزالة. اضغط «فحص» في أي وقت للتحقق مرة أخرى.</string>
+    <string name="status_outcome_pp_only">تم: أُعيد تشغيل Google Play Protect. اضغط «فحص» للتحقق مرة أخرى.</string>
+    <string name="status_outcome_none">لم يتغيّر شيء هذه المرة. اضغط «فتح خيارات المطوّرين» ليتمكن التطبيق من إزالة الأشياء بنفسه، ثم اضغط «إزالة التهديدات» مرة أخرى.</string>
+
+    <!-- إعادة التشغيل -->
+    <string name="dlg_restart_title">هل تريد إعادة تشغيل الجهاز الآن؟</string>
+    <string name="dlg_restart_msg_adb">إعادة التشغيل تُكمل التنظيف. تصبح الشاشة سوداء لنحو دقيقة. بعد ذلك يفحص هذا التطبيق الجهاز مرة أخرى بنفسه ويخبرك إذا عاد أي شيء.</string>
+    <string name="dlg_restart_msg_manual">إعادة التشغيل تُكمل التنظيف. افصل سلك طاقة الجهاز، وانتظر عشر ثوانٍ، ثم أعد توصيله. ثم افتح هذا التطبيق واضغط «فحص».</string>
+    <string name="dlg_restart_now">إعادة التشغيل الآن</string>
+    <string name="dlg_restart_later">لاحقًا</string>
+    <string name="dlg_ok">حسنًا</string>
+    <string name="btn_debugoff">إيقاف تصحيح الأخطاء</string>
+    <string name="dlg_debugoff_title">هل تريد إيقاف تصحيح الأخطاء؟</string>
+    <string name="dlg_debugoff_msg">تصحيح الأخطاء هو ما يتيح لهذا التطبيق تنظيف الجهاز وفحصه بعد كل إعادة تشغيل. إذا أوقفته، فسيختبر التطبيق أولًا أنه يستطيع تشغيله مجددًا بنفسه من أجل تلك الفحوصات. يستغرق هذا دقيقة على الأكثر، ويبقى الجهاز قابلًا للاستخدام.</string>
+    <string name="dlg_debugoff_yes">اختبار ثم إيقاف</string>
+    <string name="status_debug_kept">يبقى تصحيح الأخطاء قيد التشغيل ليتمكن هذا التطبيق من فحص الجهاز بعد كل إعادة تشغيل. إذا كنت تفضّل إيقافه، فاضغط «إيقاف تصحيح الأخطاء».</string>
+    <string name="status_debug_probe">جارٍ اختبار ما إذا كان هذا الجهاز يستطيع تشغيل تصحيح الأخطاء مجددًا بنفسه…</string>
+    <string name="status_debug_probe_ok">تصحيح الأخطاء متوقف. من أجل فحوصاته التلقائية، يشغّله التطبيق للحظة ثم يوقفه مرة أخرى.</string>
+    <string name="status_debug_probe_failed">لا يستطيع هذا الجهاز تشغيل تصحيح الأخطاء مجددًا بنفسه، لذلك يبقى قيد التشغيل. إذا توقف الوضع التلقائي عن العمل، فأعد تشغيل الجهاز.</string>
+    <string name="status_debug_reclosed">تم تشغيل تصحيح الأخطاء من أجل هذا التنظيف، وقد أُوقف مرة أخرى.</string>
+    <string name="status_auto_report">هذا تقرير الفحص التلقائي بعد آخر إعادة تشغيل. اضغط «فحص» لإجراء فحص جديد.</string>
+    <string name="status_clean_dormant">نظيف: لا شيء من XCPE يعمل. تبقى بقايا موقوفة في البرنامج الثابت؛ وهي غير ضارة ما دامت موقوفة.</string>
+    <string name="status_outcome_done_mixed">تم: أُزيلت أجزاء XCPE أو أُوقفت. أعد تشغيل الجهاز، ثم اضغط «فحص» مرة أخرى للتأكد من أنها لم تعد.</string>
+    <string name="dlg_stop_title">هل تريد إيقاف التنظيف؟</string>
+    <string name="dlg_stop_msg">ما زال التطبيق يعمل على الجهاز. إذا أوقفته الآن، فسيبقى ما لم تتم إزالته بعد كما هو؛ يمكنك الضغط على «إزالة التهديدات» مرة أخرى لاحقًا.</string>
+    <string name="dlg_stop_yes">إيقاف</string>
+    <string name="status_stopping">جارٍ الإيقاف…</string>
+    <string name="result_infected">النتيجة: مصاب - الباب الخلفي XCPE نشط في هذا الجهاز: %1$s</string>
+    <string name="result_suspicious">النتيجة: مريب - لا يوجد تطبيق مؤكّد من XCPE نشط، لكن انظر التحذيرات أعلاه</string>
+    <string name="result_clean">النتيجة: نظيف - لم يُعثر على أي شيء من XCPE</string>
+    <string name="adb_status_connecting">جارٍ الاتصال بخدمة تصحيح الأخطاء في الجهاز…</string>
+    <string name="adb_status_look_at_tv">انظر إلى التلفزيون: علّم «السماح دائمًا من هذا الكمبيوتر» واضغط «السماح».</string>
+    <string name="adb_status_connected">متصل: يقبل الجهاز الأوامر من هذا التطبيق.</string>
+    <string name="adb_err_denied">لم يسمح الجهاز لهذا التطبيق (تم الضغط على «رفض»، أو انتهت مهلة السؤال). حاول مرة أخرى، وعندما يسأل التلفزيون علّم «السماح دائمًا» واضغط «السماح».</string>
+    <string name="adb_err_pairing_only">لا يوفر هذا الجهاز سوى إقران «تصحيح الأخطاء اللاسلكي»، وهو ما لا يستطيع هذا التطبيق استخدامه. اتبع الخطوات الموجَّهة بدلًا من ذلك.</string>
+    <string name="adb_err_not_allowed">لم يُسمح لهذا التطبيق بعد في خدمة تصحيح الأخطاء في الجهاز. اضغط «إزالة التهديدات» مرة واحدة؛ وسيطلب منك التلفزيون بعدها السماح له.</string>
+    <string name="adb_err_lost">انقطع الاتصال بخدمة تصحيح الأخطاء في الجهاز. حاول مرة أخرى.</string>
+    <string name="adb_err_no_answer">لم تجب خدمة تصحيح الأخطاء في الجهاز في الوقت المناسب. حاول مرة أخرى بعد قليل.</string>
+    <string name="adb_err_generic">مشكلة في اتصال تصحيح الأخطاء: %1$s</string>
+    <string name="status_debug_opening">جارٍ فتح باب تصحيح الأخطاء من أجل إعادة التشغيل…</string>
+    <string name="status_debug_opening_clean">جارٍ فتح باب تصحيح الأخطاء من أجل هذا التنظيف…</string>
+    <string name="status_rebooting">جارٍ إعادة التشغيل… ستصبح الشاشة سوداء لنحو دقيقة. إذا لم يحدث ذلك، فافصل سلك الطاقة، وانتظر عشر ثوانٍ، ثم أعد توصيله.</string>
+    <string name="status_reboot_failed">لم يُعد الجهاز تشغيل نفسه. افصل سلك الطاقة، وانتظر عشر ثوانٍ، ثم أعد توصيله. ثم افتح هذا التطبيق واضغط «فحص».</string>
+
+    <!-- الإزالة الموجَّهة (الجهاز لا يسمح للتطبيق بالإزالة بنفسه) -->
+    <string name="dlg_guided_title">الإزالة يدويًا، خطوة بخطوة</string>
+    <string name="dlg_guided_msg">هذا الجهاز لا يسمح للتطبيق بإزالة الأشياء بنفسه، لذا سنقوم بذلك معًا. يفتح التطبيق لك صفحة إعدادات كل تطبيق ضار، واحدًا تلو الآخر (المتبقي: %d)، ويخبرك قبل كل صفحة بالزر الذي يجب الضغط عليه. اضغط «رجوع» على جهاز التحكم عن بُعد عندما تنتهي من الصفحة.</string>
+    <string name="dlg_guided_start">ابدأ</string>
+    <string name="dlg_guided_later">ليس الآن</string>
+    <string name="status_guided_later">لم تبدأ الإزالة. اضغط «إزالة التهديدات» عندما تكون مستعدًا، أو «فتح خيارات المطوّرين» ليقوم التطبيق بذلك بنفسه.</string>
+    <string name="guide_step_uninstall">الخطوة %1$d من %2$d: سيظهر سؤال عن إزالة %3$s. اضغط «حسنًا» أو «إلغاء التثبيت».</string>
+    <string name="dlg_guide_step_title">الخطوة %1$d من %2$d: %3$s</string>
+    <string name="dlg_guide_step_msg">في الصفحة التالية اضغط «إلغاء التثبيت».\n\nإذا لم يكن هناك زر «إلغاء التثبيت»: اضغط «إلغاء تثبيت التحديثات» إن رأيته، ثم «إيقاف»، ثم «فرض الإيقاف».\n\nعندما تنتهي، اضغط «رجوع» على جهاز التحكم عن بُعد للعودة إلى هنا.</string>
+    <string name="dlg_guide_open">فتح الصفحة</string>
+    <string name="dlg_guide_skip">تخطّي هذا التطبيق</string>
+    <string name="guide_step_appinfo">الخطوة %1$d من %2$d: في صفحة %3$s اضغط «إلغاء التثبيت». إذا لم يكن موجودًا: «إلغاء تثبيت التحديثات»، ثم «إيقاف»، ثم «فرض الإيقاف». اضغط «رجوع» عند الانتهاء.</string>
+    <string name="status_guided_checking">جارٍ التحقق مما تغيّر…</string>
+    <string name="status_guide_cannot_open">تعذّر فتح صفحة الإعدادات الخاصة بـ %s على هذا الجهاز. ننتقل إلى التالي.</string>
+    <string name="guide_still_active_title">%s ما زال نشطًا</string>
+    <string name="guide_still_active_msg">لم يختفِ. يمكنك فتح صفحته مرة أخرى، أو تخطّي هذا التطبيق، أو التوقف هنا.</string>
+    <string name="guide_try_again">حاول مرة أخرى</string>
+    <string name="guide_skip">تخطّي</string>
+    <string name="guide_stop">إيقاف</string>
+    <string name="guide_pp_title">إعادة تشغيل Google Play Protect</string>
+    <string name="guide_pp_msg">أوقف XCPE فحص التطبيقات الخاص بـ Google. في الصفحة التالية شغّل «فحص التطبيقات باستخدام Play Protect»، ثم اضغط «رجوع».</string>
+    <string name="guide_pp_fallback">لا توجد في هذا الجهاز صفحة مباشرة لذلك. افتح تطبيق Google Play، واضغط على صورة ملفك الشخصي في الأعلى، واختر Play Protect، واضغط على رمز الترس وشغّل «فحص التطبيقات باستخدام Play Protect».</string>
+    <string name="status_guide_pp">شغّل «فحص التطبيقات باستخدام Play Protect» في الصفحة التالية، ثم اضغط «رجوع».</string>
+    <string name="dlg_guide_skip_step">تخطّي هذه الخطوة</string>
+    <string name="guide_acc_title">إيقاف ارتباط XCPE بإمكانية الوصول</string>
+    <string name="guide_acc_msg">ربط XCPE نفسه بإعدادات إمكانية الوصول في هذا الجهاز. في الصفحة التالية ابحث عن %s وأوقفه، ثم اضغط «رجوع».</string>
+    <string name="status_guide_acc">أوقف %s في الصفحة التالية، ثم اضغط «رجوع».</string>
+    <string name="guided_tail_acc">إمكانية الوصول: %s ما زال قيد التشغيل؛ أوقفه من الإعدادات، إمكانية الوصول.</string>
+    <string name="status_guided_done">تم يدويًا: %1$d أُزيل أو أُوقف، و%2$d ما زال نشطًا. %3$s</string>
+    <string name="guided_tail_restart">الآن أعد تشغيل الجهاز (افصل سلك الطاقة وأعد توصيله)، ثم افتح هذا التطبيق واضغط «فحص» مرة أخرى.</string>
+    <string name="guided_tail_replace">إذا بقيت نشطة بعد إعادة التشغيل، فلا يمكن تنظيف هذا الجهاز: استبدله.</string>
+
+    <!-- خيارات المطوّرين -->
+    <string name="status_devopts_hint">في الصفحة التالية شغّل «تصحيح أخطاء USB». في بعض الأجهزة يُسمّى «تصحيح الأخطاء عبر الشبكة» أو «تصحيح أخطاء ADB» أو «ADB عبر الشبكة»؛ شغّل ذلك أيضًا. إذا ظهر سؤال، فعلّم «السماح دائمًا» واضغط «السماح». ثم اضغط «رجوع».</string>
+    <string name="status_devopts_hidden">خيارات المطوّرين مخفية في هذا الجهاز. في الصفحة التالية ابحث عن «رقم الإصدار» (أو «الإصدار») واضغط «حسنًا» عليه سبع مرات. ثم اضغط «رجوع» واضغط «فتح خيارات المطوّرين» مرة أخرى.</string>
+    <string name="status_devopts_missing">هذا الجهاز لا يسمح للتطبيق بفتح إعداداته. افتح «الإعدادات» بنفسك: إعدادات الجهاز، لمحة، اضغط «الإصدار» سبع مرات، ثم خيارات المطوّرين، وشغّل تصحيح أخطاء USB.</string>
+    <string name="status_port_open">جيد: باب تصحيح الأخطاء مفتوح. اضغط «إزالة التهديدات» وسيزيل التطبيق كل شيء بنفسه.</string>
+    <string name="status_port_closed_usb_only">تصحيح أخطاء USB قيد التشغيل، لكن باب الشبكة ما زال مغلقًا. ابحث في خيارات المطوّرين عن «تصحيح الأخطاء عبر الشبكة» أو «ADB عبر الشبكة» أو «تصحيح الأخطاء اللاسلكي» وشغّله أيضًا. إذا لم يكن في هذا الجهاز أي منها، فسيرشدك «إزالة التهديدات» خطوة بخطوة بدلًا من ذلك.</string>
+    <string name="status_port_closed_after">باب تصحيح الأخطاء ما زال مغلقًا. جرّب «فتح خيارات المطوّرين» مرة أخرى، أو اضغط «إزالة التهديدات» وسيرشدك التطبيق خطوة بخطوة بدلًا من ذلك.</string>
+
+    <!-- التنظيف العميق -->
+    <string name="dlg_deep_title">هل تريد تنظيف البرنامج الثابت تنظيفًا عميقًا؟</string>
+    <string name="dlg_deep_msg">يحذف هذا النسخ الاحتياطية من الباب الخلفي المخزّنة في البرنامج الثابت لهذا الجهاز. لا يعمل إلا في الأجهزة التي لديها صلاحية root، ولا يمسّ إلا الملفات التي تخصّ XCPE.</string>
+    <string name="dlg_deep_yes">حذف النسخ الاحتياطية</string>
+    <string name="dlg_cancel">إلغاء</string>
+    <string name="status_deep_running">جارٍ التنظيف العميق… أبقِ الجهاز قيد التشغيل.</string>
+    <string name="status_deep_done">انتهى التنظيف العميق. اضغط للأسفل لقراءة ما حدث، ثم اضغط «فحص» للتحقق مرة أخرى.</string>
+    <string name="report_deep_header">التنظيف العميق:</string>
+
+    <!-- كيف يعمل -->
+    <string name="help_title">كيف يعمل هذا التطبيق. اضغط للأسفل للقراءة، وللأعلى للعودة.</string>
+    <string name="help_text">ما هو XCPE\nXCPE باب خلفي مدمج في البرنامج الثابت لكثير من أجهزة Android TV الرخيصة (MECOOL وVideostrong وأجهزة تُباع بأسماء أخرى). يسمح لغرباء بتشغيل أشياء على جهازك: نقرات إعلانية مزيفة، وحركة مرور خفية عبر اتصالك بالإنترنت، وأي شيء آخر يرسلونه إليه.\n\nماذا يفعل «فحص»\nيفحص «فحص» التطبيقات الموجودة في هذا الجهاز، وGoogle Play Protect، وإعدادات إمكانية الوصول، ويقارنها بالقائمة المنشورة لأجزاء XCPE. لا يغيّر شيئًا ولا يرسل شيئًا إلى أي مكان.\n\nماذا تفعل «إزالة التهديدات»\nتزيل تطبيقات XCPE من هذا الجهاز وتعيد تشغيل Google Play Protect. إذا تعذّرت إزالة تطبيق، يتم إيقافه حتى لا يتمكن من العمل. يحاول التطبيق أولًا القيام بذلك بنفسه؛ وينجح ذلك عندما يكون باب تصحيح الأخطاء في الجهاز مفتوحًا (خيارات المطوّرين). وإلا فإنه يفتح لك صفحات الإعدادات المناسبة ويخبرك بالزر الذي يجب الضغط عليه.\n\nما الذي يبقى\nتحتفظ أجهزة كثيرة بنسخة احتياطية من الباب الخلفي في جزء للقراءة فقط من البرنامج الثابت. لا يستطيع التطبيق حذف تلك النسخة بدون صلاحية root، لكنها لا تستطيع العمل ما دام التطبيق مُزالًا أو موقوفًا. إذا عاد XCPE بعد إعادة التشغيل، يلاحظ هذا التطبيق ذلك ويزيله مرة أخرى ويخبرك.\n\nنصيحتنا الصادقة\nالجهاز الذي بيع ومعه باب خلفي لم يكن ملكك وحدك قط. إن استطعت، فاستبدله بجهاز من علامة تجارية معروفة (Google TV Streamer أو Apple TV أو Fire TV أو Nvidia Shield). وإن احتفظت به، فلا تسجّل الدخول إلى حسابك المصرفي أو بريدك الإلكتروني عليه.\n\nغيّر كلمات المرور\nإذا سبق أن كتبت كلمة مرور على هذا الجهاز، فغيّرها من جهاز آخر: حساب Google وNetflix وشبكة Wi-Fi وأي شيء آخر استخدمته هنا.\n\nبعد التنظيف\nأعد تشغيل الجهاز، وافتح هذا التطبيق، واضغط «فحص» مرة أخرى. يفحص التطبيق أيضًا بنفسه بعد كل إعادة تشغيل ويعرض النتيجة تحت «آخر فحص».\n\nاضغط «فحص» لرؤية نتيجة الفحص مرة أخرى.</string>
+
+    <!-- إشعارات الفحص بعد إعادة التشغيل -->
+    <string name="notif_channel">الفحص بعد إعادة التشغيل</string>
+    <string name="notif_channel_desc">يخبرك عندما يعود XCPE بعد إعادة التشغيل.</string>
+    <string name="notif_removed_again_title">عاد XCPE بعد إعادة التشغيل وأُزيل مرة أخرى</string>
+    <string name="notif_removed_again_text">افتح XCPE Cleaner لرؤية التفاصيل. إذا استمر حدوث ذلك، فاستبدل الجهاز.</string>
+    <string name="notif_failed_title">عاد XCPE وتعذّرت إزالته: استبدل هذا الجهاز</string>
+    <string name="notif_failed_text">افتح XCPE Cleaner واضغط «إزالة التهديدات» للمحاولة مرة أخرى.</string>
+    <string name="notif_failed_text_port_closed">لم يتمكن التطبيق من إزالته بنفسه لأن باب تصحيح الأخطاء مغلق. افتح XCPE Cleaner واضغط «إزالة التهديدات».</string>
+    <string name="notif_suspicious_title">هذا الجهاز يُظهر علامات تحذيرية</string>
+    <string name="notif_suspicious_text">افتح XCPE Cleaner واضغط «فحص» لقراءة التفاصيل.</string>
+    <string name="report_auto_remove_header">الإزالة التلقائية بعد إعادة التشغيل:</string>
+</resources>

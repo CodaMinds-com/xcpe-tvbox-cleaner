@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bahasa Indonesia. Nama menu mengikuti Android: Setelan, Aplikasi, Opsi developer, Debugging USB, Paksa berhenti, Uninstal, Nonaktifkan, Aksesibilitas, Play Store. -->
+<resources>
+    <string name="app_name">XCPE Cleaner</string>
+    <string name="title">XCPE Cleaner</string>
+    <string name="subtitle">Menemukan pintu belakang XCPE di TV box ini dan menghapusnya. Tidak ada yang keluar dari perangkat ini.</string>
+
+    <!-- Buttons -->
+    <string name="btn_scan">Pindai</string>
+    <string name="btn_remove">Hapus ancaman</string>
+    <string name="btn_devopts">Buka Opsi developer</string>
+    <string name="btn_deepclean">Pembersihan mendalam (root)</string>
+    <string name="btn_help">Cara kerjanya</string>
+    <string name="btn_details_show">Tampilkan detail</string>
+    <string name="btn_details_hide">Sembunyikan detail</string>
+    <string name="report_frame_desc">Laporan pemeriksaan. Tekan bawah dan atas untuk menggulir.</string>
+
+    <!-- Formatting pieces -->
+    <string name="app_label_fmt">\'%1$s\' (%2$s)</string>
+    <string name="name_quoted">\'%s\'</string>
+    <string name="list_separator">", "</string>
+    <string name="bullet_line">  - %s</string>
+    <string name="join_sentences">%1$s %2$s</string>
+    <string name="progress_line">- %s</string>
+    <string name="progress_block">%1$s\n%2$s</string>
+    <string name="progress_step_start">%s…</string>
+    <string name="progress_step_done">%s… selesai</string>
+    <string name="progress_scan_header">Memeriksa:</string>
+
+    <!-- Start screen -->
+    <string name="status_idle">Tekan Pindai untuk memeriksa TV box ini.</string>
+    <string name="report_intro">Yang diperiksa oleh Pindai:\n\n  - delapan aplikasi yang diketahui sebagai bagian dari XCPE\n  - aplikasi yang berpura-pura menjadi bagian dari Android\n  - saluran data tersembunyi yang dipakai XCPE\n  - salinan cadangan yang tersimpan di firmware TV box\n  - apakah Google Play Protect sudah dimatikan\n  - apakah XCPE menanamkan diri di Aksesibilitas\n\nPemeriksaan memakan waktu beberapa detik dan tidak mengubah apa pun.\nTidak ada yang dikirim ke mana pun.\n\nSetelah pemeriksaan, TV box ini memberi tahu salah satu dari tiga hal:\n  Bersih, Mencurigakan, atau Terinfeksi.\nJika tidak bersih, tekan Hapus ancaman.</string>
+    <string name="last_check_none">Pemeriksaan terakhir: belum pernah</string>
+    <!-- 1 = date and time, 2 = result words, 3 = who checked -->
+    <string name="last_check_fmt">Pemeriksaan terakhir: %1$s · %2$s (%3$s)</string>
+    <string name="src_manual">diperiksa oleh Anda</string>
+    <string name="src_auto">pemeriksaan otomatis setelah dimulai ulang</string>
+    <string name="check_clean">Bersih</string>
+    <string name="check_suspicious">Mencurigakan</string>
+    <string name="check_infected">Terinfeksi</string>
+    <string name="check_removed_again">XCPE kembali dan dihapus lagi</string>
+    <string name="check_failed">XCPE kembali dan tidak bisa dihapus</string>
+    <string name="check_debug_opened">debugging dinyalakan untuk penghapusan</string>
+    <string name="check_debug_open_failed">debugging tidak bisa dinyalakan</string>
+    <string name="check_debug_closed">debugging dimatikan lagi</string>
+    <string name="check_debug_close_failed">debugging masih menyala</string>
+    <string name="check_summary_join">%1$s; %2$s</string>
+
+    <!-- Scan -->
+    <string name="status_scanning">Memeriksa TV box ini… perlu beberapa detik.</string>
+    <string name="status_scan_failed">Pemeriksaan tidak bisa selesai. Tekan Pindai untuk mencoba lagi.</string>
+    <plurals name="status_infected">
+        <item quantity="other">Terinfeksi: %d bagian XCPE aktif di TV box ini. Tekan Hapus ancaman.</item>
+    </plurals>
+    <string name="status_suspicious">Mencurigakan: tidak ada aplikasi XCPE yang terkonfirmasi sedang berjalan, tetapi TV box ini menunjukkan tanda-tanda peringatan. Tekan Hapus ancaman untuk memperbaiki yang bisa diperbaiki, atau tekan bawah untuk membaca laporan.</string>
+    <string name="status_clean">Bersih: tidak ada apa pun dari XCPE yang ditemukan di TV box ini. Anda bisa terus memakainya.</string>
+
+    <!-- Remove: the one question -->
+    <string name="dlg_review_title">Tinjau sebelum menghapus</string>
+    <plurals name="dlg_review_msg_confirmed">
+        <item quantity="other">%1$d bagian XCPE yang terkonfirmasi akan dihapus. Di bawah ini aplikasi lain yang patut dilihat. Dicentang secara default hanya jika ada bukti selain namanya; tekan Oke pada sebuah baris untuk mengubahnya.</item>
+    </plurals>
+    <string name="dlg_review_msg_only">Tidak ada aplikasi XCPE yang terkonfirmasi sedang berjalan. Di bawah ini aplikasi yang patut dilihat. Dicentang secara default hanya jika ada bukti selain namanya; tekan Oke pada sebuah baris untuk mengubahnya.</string>
+    <string name="dlg_review_remove">Hapus yang dipilih</string>
+    <string name="status_review_kept">Tidak ada lagi yang dihapus. TV box tidak berubah.</string>
+    <string name="scan_reason_vendor_warning">Mungkin bagian dari toko atau layanan TV bawaan TV box. Menghapusnya bisa merusak layanan itu.</string>
+    <string name="dlg_suspects_title">Hapus juga aplikasi yang dicurigai?</string>
+    <string name="dlg_suspects_msg">Selain bagian XCPE yang terkonfirmasi, TV box ini punya aplikasi yang biasanya ikut bersamanya:\n\n%s\n\nTV box tidak pernah membutuhkannya.</string>
+    <string name="dlg_suspects_yes">Ya, hapus juga</string>
+    <string name="dlg_suspects_no">Tidak, hanya yang terkonfirmasi</string>
+    <string name="dlg_suspects_only_title">Hapus aplikasi yang mencurigakan?</string>
+    <string name="dlg_suspects_only_msg">Tidak ada aplikasi XCPE yang terkonfirmasi sedang berjalan, tetapi aplikasi ini biasanya ikut bersamanya:\n\n%s\n\nTV box tidak pernah membutuhkannya.</string>
+    <string name="dlg_remove">Hapus</string>
+    <string name="dlg_keep">Biarkan</string>
+    <string name="status_kept">Tidak ada yang diubah. Tekan Pindai kapan saja untuk memeriksa lagi.</string>
+
+    <!-- Remove: while it runs -->
+    <string name="status_removing">Menghapus… biarkan TV box tetap menyala. Jika TV menanyakan sesuatu tentang debugging, centang \'Selalu izinkan\' lalu tekan Izinkan.</string>
+    <string name="report_remove_live">Yang sedang terjadi:</string>
+    <string name="report_remove_log">Detail:</string>
+    <string name="report_remove_crashed">Penghapus berhenti karena error: %s</string>
+
+    <!-- Remove: outcome -->
+    <string name="outcome_removed">Dihapus: %s</string>
+    <string name="outcome_disabled">Dinonaktifkan (tidak bisa dihapus sepenuhnya, tidak bisa berjalan): %s</string>
+    <string name="outcome_failed">Masih aktif (tidak bisa dihapus): %s</string>
+    <string name="outcome_firmware_remain">Satu salinan cadangan tetap ada di dalam firmware TV box ini. Salinan itu tidak bisa berjalan selama aplikasi di atas dihapus atau dinonaktifkan. Hanya pembersihan mendalam dengan root atau firmware baru dari pembuatnya yang bisa menghapusnya.</string>
+    <string name="outcome_pp_on">Google Play Protect: dinyalakan kembali.</string>
+    <string name="outcome_pp_off">Google Play Protect: masih mati. Buka aplikasi Google Play, tekan foto profil Anda, pilih Play Protect, tekan ikon roda gigi lalu nyalakan \'Pindai aplikasi dengan Play Protect\'.</string>
+    <string name="outcome_pp_fine">Google Play Protect: sudah menyala.</string>
+    <string name="status_outcome_done">Selesai: bagian-bagian XCPE sudah dihapus. Mulai ulang TV box, lalu tekan Pindai lagi untuk memastikan semuanya tidak kembali.</string>
+    <string name="status_outcome_partial">Beberapa bagian tidak bisa dihapus. Tekan bawah untuk membaca detailnya. Jika masih ada setelah dimulai ulang, ganti TV box ini.</string>
+    <string name="status_outcome_nothing">Tidak ada yang perlu dihapus. Tekan Pindai kapan saja untuk memeriksa lagi.</string>
+    <string name="status_outcome_pp_only">Selesai: Google Play Protect dinyalakan kembali. Tekan Pindai untuk memeriksa lagi.</string>
+    <string name="status_outcome_none">Tidak ada yang diubah kali ini. Tekan Buka Opsi developer supaya aplikasi bisa menghapus sendiri, lalu tekan Hapus ancaman lagi.</string>
+
+    <!-- Restart -->
+    <string name="dlg_restart_title">Mulai ulang TV box sekarang?</string>
+    <string name="dlg_restart_msg_adb">Memulai ulang menyelesaikan pembersihan. Layar akan gelap sekitar satu menit. Setelah itu aplikasi ini memeriksa TV box lagi dengan sendirinya dan memberi tahu jika ada yang kembali.</string>
+    <string name="dlg_restart_msg_manual">Memulai ulang menyelesaikan pembersihan. Cabut kabel listrik TV box, tunggu sepuluh detik, lalu pasang kembali. Kemudian buka aplikasi ini dan tekan Pindai.</string>
+    <string name="dlg_restart_now">Mulai ulang sekarang</string>
+    <string name="dlg_restart_later">Nanti</string>
+    <string name="dlg_ok">Oke</string>
+    <string name="btn_debugoff">Matikan debugging</string>
+    <string name="dlg_debugoff_title">Matikan debugging?</string>
+    <string name="dlg_debugoff_msg">Debugging-lah yang memungkinkan aplikasi ini membersihkan TV box dan memeriksanya setiap kali dimulai ulang. Jika Anda mematikannya, aplikasi akan menguji dulu apakah ia bisa menyalakannya kembali dengan sendirinya untuk pemeriksaan itu. Ini memakan waktu paling lama satu menit; TV box tetap bisa dipakai.</string>
+    <string name="dlg_debugoff_yes">Uji lalu matikan</string>
+    <string name="status_debug_kept">Debugging tetap menyala supaya aplikasi ini bisa memeriksa TV box setiap kali dimulai ulang. Jika Anda lebih suka mematikannya, tekan \'Matikan debugging\'.</string>
+    <string name="status_debug_probe">Menguji apakah TV box ini bisa menyalakan kembali debugging dengan sendirinya…</string>
+    <string name="status_debug_probe_ok">Debugging mati. Untuk pemeriksaan otomatis, aplikasi menyalakannya sebentar lalu mematikannya lagi.</string>
+    <string name="status_debug_probe_failed">TV box ini tidak bisa menyalakan kembali debugging dengan sendirinya, jadi debugging tetap menyala. Jika mode otomatis berhenti bekerja, mulai ulang TV box.</string>
+    <string name="status_debug_reclosed">Debugging dibuka untuk pembersihan ini dan sekarang dimatikan lagi.</string>
+    <string name="status_auto_report">Ini laporan pemeriksaan otomatis setelah TV box terakhir dimulai ulang. Tekan Pindai untuk pemeriksaan baru.</string>
+    <string name="status_clean_dormant">Bersih: tidak ada apa pun dari XCPE yang berjalan. Sisa-sisa yang sudah dinonaktifkan masih ada di firmware; selama nonaktif, sisa itu tidak berbahaya.</string>
+    <string name="status_outcome_done_mixed">Selesai: bagian-bagian XCPE sudah dihapus atau dinonaktifkan. Mulai ulang TV box, lalu tekan Pindai lagi untuk memastikan semuanya tidak kembali.</string>
+    <string name="dlg_stop_title">Hentikan pembersihan?</string>
+    <string name="dlg_stop_msg">Aplikasi masih bekerja pada TV box. Jika dihentikan sekarang, apa pun yang belum dihapus dibiarkan apa adanya; Anda bisa menekan Hapus ancaman lagi nanti.</string>
+    <string name="dlg_stop_yes">Hentikan</string>
+    <string name="status_stopping">Menghentikan…</string>
+    <string name="result_infected">HASIL: TERINFEKSI - pintu belakang XCPE aktif di TV box ini: %1$s</string>
+    <string name="result_suspicious">HASIL: MENCURIGAKAN - tidak ada aplikasi XCPE terkonfirmasi yang aktif, tetapi lihat peringatan di atas</string>
+    <string name="result_clean">HASIL: BERSIH - tidak ada apa pun dari XCPE yang ditemukan</string>
+    <string name="adb_status_connecting">Menghubungkan ke layanan debugging TV box…</string>
+    <string name="adb_status_look_at_tv">Lihat TV: centang \'Selalu izinkan dari komputer ini\' lalu tekan Izinkan.</string>
+    <string name="adb_status_connected">Terhubung: TV box menerima perintah dari aplikasi ini.</string>
+    <string name="adb_err_denied">TV box tidak mengizinkan aplikasi ini (Tolak ditekan, atau pertanyaannya kehabisan waktu). Coba lagi, dan saat TV bertanya, centang \'Selalu izinkan\' lalu tekan Izinkan.</string>
+    <string name="adb_err_pairing_only">TV box ini hanya menawarkan penyandingan Debugging nirkabel, yang tidak bisa dipakai aplikasi ini. Ikuti langkah terpandu saja.</string>
+    <string name="adb_err_not_allowed">Aplikasi ini belum diizinkan di layanan debugging TV box. Tekan Hapus ancaman sekali; TV lalu akan meminta Anda mengizinkannya.</string>
+    <string name="adb_err_lost">Koneksi ke layanan debugging TV box terputus. Coba lagi.</string>
+    <string name="adb_err_no_answer">Layanan debugging TV box tidak menjawab tepat waktu. Coba lagi sebentar.</string>
+    <string name="adb_err_generic">Masalah koneksi debugging: %1$s</string>
+    <string name="status_debug_opening">Membuka pintu debugging untuk memulai ulang…</string>
+    <string name="status_debug_opening_clean">Membuka pintu debugging untuk pembersihan ini…</string>
+    <string name="status_rebooting">Memulai ulang… layar akan gelap sekitar satu menit. Jika tidak, cabut kabel listrik, tunggu sepuluh detik, lalu pasang kembali.</string>
+    <string name="status_reboot_failed">TV box tidak memulai ulang dengan sendirinya. Cabut kabel listrik, tunggu sepuluh detik, lalu pasang kembali. Kemudian buka aplikasi ini dan tekan Pindai.</string>
+
+    <!-- Guided removal -->
+    <string name="dlg_guided_title">Hapus secara manual, langkah demi langkah</string>
+    <string name="dlg_guided_msg">TV box ini tidak mengizinkan aplikasi menghapus sendiri, jadi kita lakukan bersama. Aplikasi ini membuka halaman setelan setiap aplikasi jahat untuk Anda, satu per satu (%d lagi), dan memberi tahu tombol mana yang harus ditekan sebelum setiap halaman. Tekan Kembali di remote jika sudah selesai dengan satu halaman.</string>
+    <string name="dlg_guided_start">Mulai</string>
+    <string name="dlg_guided_later">Nanti saja</string>
+    <string name="status_guided_later">Penghapusan belum dimulai. Tekan Hapus ancaman jika Anda sudah siap, atau Buka Opsi developer supaya aplikasi bisa melakukannya sendiri.</string>
+    <!-- 1 = step, 2 = total, 3 = app name -->
+    <string name="guide_step_uninstall">Langkah %1$d dari %2$d: muncul pertanyaan tentang menghapus %3$s. Tekan Oke atau Uninstal.</string>
+    <string name="dlg_guide_step_title">Langkah %1$d dari %2$d: %3$s</string>
+    <string name="dlg_guide_step_msg">Di halaman berikutnya tekan Uninstal.\n\nJika tidak ada tombol Uninstal: tekan Uninstal update jika ada, lalu tekan Nonaktifkan, lalu Paksa berhenti.\n\nJika sudah selesai, tekan Kembali di remote untuk kembali ke sini.</string>
+    <string name="dlg_guide_open">Buka halamannya</string>
+    <string name="dlg_guide_skip">Lewati aplikasi ini</string>
+    <string name="guide_step_appinfo">Langkah %1$d dari %2$d: di halaman %3$s tekan Uninstal. Jika tidak ada: Uninstal update, lalu Nonaktifkan, lalu Paksa berhenti. Tekan Kembali jika sudah selesai.</string>
+    <string name="status_guided_checking">Memeriksa apa yang berubah…</string>
+    <string name="status_guide_cannot_open">Halaman setelan untuk %s tidak bisa dibuka di TV box ini. Lanjut ke berikutnya.</string>
+    <string name="guide_still_active_title">%s masih aktif</string>
+    <string name="guide_still_active_msg">Aplikasi itu belum hilang. Anda bisa membuka halamannya lagi, melewati aplikasi ini, atau berhenti di sini.</string>
+    <string name="guide_try_again">Coba lagi</string>
+    <string name="guide_skip">Lewati</string>
+    <string name="guide_stop">Berhenti</string>
+    <string name="guide_pp_title">Nyalakan kembali Google Play Protect</string>
+    <string name="guide_pp_msg">XCPE mematikan pemeriksaan aplikasi dari Google. Di halaman berikutnya nyalakan \'Pindai aplikasi dengan Play Protect\', lalu tekan Kembali.</string>
+    <string name="guide_pp_fallback">TV box ini tidak punya halaman langsung untuk itu. Buka aplikasi Google Play, tekan foto profil Anda di kanan atas, pilih Play Protect, tekan ikon roda gigi lalu nyalakan \'Pindai aplikasi dengan Play Protect\'.</string>
+    <string name="status_guide_pp">Nyalakan \'Pindai aplikasi dengan Play Protect\' di halaman berikutnya, lalu tekan Kembali.</string>
+    <string name="dlg_guide_skip_step">Lewati langkah ini</string>
+    <string name="guide_acc_title">Matikan layanan Aksesibilitas milik XCPE</string>
+    <string name="guide_acc_msg">XCPE menanamkan diri di setelan Aksesibilitas TV box ini. Di halaman berikutnya cari %s dan matikan, lalu tekan Kembali.</string>
+    <string name="status_guide_acc">Matikan %s di halaman berikutnya, lalu tekan Kembali.</string>
+    <string name="guided_tail_acc">Aksesibilitas: %s masih menyala; matikan di Setelan, Aksesibilitas.</string>
+    <!-- 1 = handled, 2 = still active, 3 = what to do next -->
+    <string name="status_guided_done">Selesai secara manual: %1$d dihapus atau dinonaktifkan, %2$d masih aktif. %3$s</string>
+    <string name="guided_tail_restart">Sekarang mulai ulang TV box (cabut dan pasang kembali kabel listriknya), buka aplikasi ini, lalu tekan Pindai lagi.</string>
+    <string name="guided_tail_replace">Jika masih aktif setelah dimulai ulang, TV box ini tidak bisa dibersihkan: ganti saja.</string>
+
+    <!-- Developer options -->
+    <string name="status_devopts_hint">Di halaman berikutnya nyalakan \'Debugging USB\'. Di beberapa TV box namanya \'Debugging jaringan\', \'Debugging ADB\' atau \'ADB melalui jaringan\'; nyalakan itu juga. Jika muncul pertanyaan, centang \'Selalu izinkan\' lalu tekan Izinkan. Kemudian tekan Kembali.</string>
+    <string name="status_devopts_hidden">Opsi developer tersembunyi di TV box ini. Di halaman berikutnya cari \'Nomor build\' (atau \'Build\') dan tekan Oke di situ tujuh kali. Lalu tekan Kembali dan tekan Buka Opsi developer lagi.</string>
+    <string name="status_devopts_missing">TV box ini tidak mengizinkan aplikasi membuka setelannya. Buka Setelan sendiri: Preferensi Perangkat, Tentang, tekan \'Build\' tujuh kali, lalu Opsi developer, nyalakan Debugging USB.</string>
+    <string name="status_port_open">Bagus: pintu debugging terbuka. Tekan Hapus ancaman dan aplikasi akan menghapus semuanya sendiri.</string>
+    <string name="status_port_closed_usb_only">Debugging USB menyala, tetapi pintu jaringan masih tertutup. Cari di Opsi developer \'Debugging jaringan\', \'ADB melalui jaringan\' atau \'Debugging nirkabel\' dan nyalakan juga. Jika TV box ini tidak punya satu pun, Hapus ancaman akan memandu Anda langkah demi langkah.</string>
+    <string name="status_port_closed_after">Pintu debugging masih tertutup. Coba Buka Opsi developer lagi, atau tekan Hapus ancaman dan aplikasi memandu Anda langkah demi langkah.</string>
+
+    <!-- Deep clean -->
+    <string name="dlg_deep_title">Bersihkan firmware secara mendalam?</string>
+    <string name="dlg_deep_msg">Ini menghapus salinan cadangan pintu belakang yang tersimpan di firmware TV box ini. Hanya berfungsi di TV box yang punya akses root dan hanya menyentuh file milik XCPE.</string>
+    <string name="dlg_deep_yes">Hapus salinan cadangan</string>
+    <string name="dlg_cancel">Batal</string>
+    <string name="status_deep_running">Pembersihan mendalam berjalan… biarkan TV box tetap menyala.</string>
+    <string name="status_deep_done">Pembersihan mendalam selesai. Tekan bawah untuk membaca apa yang terjadi, lalu tekan Pindai untuk memeriksa lagi.</string>
+    <string name="report_deep_header">Pembersihan mendalam:</string>
+
+    <!-- How it works -->
+    <string name="help_title">Cara kerja aplikasi ini. Tekan bawah untuk membaca, atas untuk kembali.</string>
+    <string name="help_text">APA ITU XCPE\nXCPE adalah pintu belakang (backdoor) yang tertanam di firmware banyak TV box Android murah (MECOOL, Videostrong, dan TV box yang dijual dengan nama lain). Pintu belakang ini membiarkan orang asing menjalankan sesuatu di TV box Anda: klik iklan palsu, lalu lintas tersembunyi lewat koneksi internet Anda, dan apa pun lainnya yang mereka kirimkan.\n\nAPA YANG DILAKUKAN PINDAI\nPindai melihat aplikasi di TV box ini, Google Play Protect, dan setelan Aksesibilitas, lalu membandingkannya dengan daftar bagian XCPE yang sudah dipublikasikan. Tidak mengubah apa pun dan tidak mengirim apa pun ke mana pun.\n\nAPA YANG DILAKUKAN HAPUS ANCAMAN\nMenghapus aplikasi XCPE untuk TV box ini dan menyalakan kembali Google Play Protect. Jika sebuah aplikasi tidak bisa dihapus, aplikasi itu dinonaktifkan supaya tidak bisa berjalan. Aplikasi ini mencoba melakukannya sendiri dulu; ini berhasil jika pintu debugging TV box terbuka (Opsi developer). Jika tidak, aplikasi ini membuka halaman setelan yang tepat untuk Anda dan memberi tahu tombol mana yang harus ditekan.\n\nAPA YANG TERSISA\nBanyak TV box menyimpan salinan cadangan pintu belakang di bagian firmware yang hanya-baca. Aplikasi ini tidak bisa menghapus salinan itu tanpa akses root, tetapi salinan itu tidak bisa berjalan selama aplikasinya dihapus atau dinonaktifkan. Jika XCPE kembali setelah dimulai ulang, aplikasi ini menyadarinya, menghapusnya lagi, dan memberi tahu Anda.\n\nSARAN JUJUR KAMI\nTV box yang dijual dengan pintu belakang tidak pernah sepenuhnya milik Anda. Jika bisa, ganti dengan perangkat dari merek yang dikenal (Google TV Streamer, Apple TV, Fire TV, Nvidia Shield). Jika tetap dipakai, jangan login ke perbankan atau email di perangkat ini.\n\nGANTI SANDI ANDA\nJika Anda pernah mengetik sandi di TV box ini, ganti dari perangkat lain: akun Google, Netflix, Wi-Fi, dan apa pun lainnya yang Anda pakai di sini.\n\nSETELAH PEMBERSIHAN\nMulai ulang TV box, buka aplikasi ini, lalu tekan Pindai sekali lagi. Aplikasi ini juga memeriksa sendiri setelah setiap kali dimulai ulang dan menampilkan hasilnya di bawah \'Pemeriksaan terakhir\'.\n\nTekan Pindai untuk melihat hasil pemeriksaan lagi.</string>
+
+    <!-- Notifications from the check after a restart -->
+    <string name="notif_channel">Pemeriksaan setelah dimulai ulang</string>
+    <string name="notif_channel_desc">Memberi tahu Anda jika XCPE kembali setelah dimulai ulang.</string>
+    <string name="notif_removed_again_title">XCPE kembali setelah dimulai ulang dan dihapus lagi</string>
+    <string name="notif_removed_again_text">Buka XCPE Cleaner untuk melihat detailnya. Jika terus terjadi, ganti TV box ini.</string>
+    <string name="notif_failed_title">XCPE kembali dan tidak bisa dihapus: ganti TV box ini</string>
+    <string name="notif_failed_text">Buka XCPE Cleaner dan tekan Hapus ancaman untuk mencoba lagi.</string>
+    <string name="notif_failed_text_port_closed">Aplikasi tidak bisa menghapusnya sendiri karena pintu debugging tertutup. Buka XCPE Cleaner dan tekan Hapus ancaman.</string>
+    <string name="notif_suspicious_title">TV box ini menunjukkan tanda-tanda peringatan</string>
+    <string name="notif_suspicious_text">Buka XCPE Cleaner dan tekan Pindai untuk membaca detailnya.</string>
+    <string name="report_auto_remove_header">Penghapusan otomatis setelah dimulai ulang:</string>
+</resources>

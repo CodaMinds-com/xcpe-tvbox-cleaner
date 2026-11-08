@@ -1,0 +1,12 @@
+# never commit signing material or build output
+app/keystore/
+*.jks
+*.keystore
+password.txt
+app/build*/
+app/test/fakes/
+*.apk
+*.zip
+.DS_Store
+reports/
+platform-tools/

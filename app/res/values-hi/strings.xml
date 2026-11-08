@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- हिन्दी। ऐसे व्यक्ति के लिए लिखा गया है जिसे तकनीकी जानकारी नहीं है और जो सोफ़े से टीवी पर पढ़ रहा है। -->
+<resources>
+    <string name="app_name">XCPE Cleaner</string>
+    <string name="title">XCPE Cleaner</string>
+    <string name="subtitle">इस बॉक्स में XCPE बैकडोर ढूंढता है और उसे हटाता है। इस डिवाइस से कुछ भी बाहर नहीं जाता।</string>
+
+    <!-- बटन -->
+    <string name="btn_scan">स्कैन करें</string>
+    <string name="btn_remove">खतरे हटाएं</string>
+    <string name="btn_devopts">डेवलपर के लिए सेटिंग और टूल खोलें</string>
+    <string name="btn_deepclean">डीप क्लीन (root)</string>
+    <string name="btn_help">यह कैसे काम करता है</string>
+    <string name="btn_details_show">जानकारी दिखाएं</string>
+    <string name="btn_details_hide">जानकारी छिपाएं</string>
+    <string name="report_frame_desc">जांच की रिपोर्ट। स्क्रोल करने के लिए नीचे और ऊपर दबाएं।</string>
+
+    <!-- फ़ॉर्मैटिंग के हिस्से -->
+    <string name="app_label_fmt">‘%1$s’ (%2$s)</string>
+    <string name="name_quoted">‘%s’</string>
+    <string name="list_separator">", "</string>
+    <string name="bullet_line">  - %s</string>
+    <string name="join_sentences">%1$s %2$s</string>
+    <string name="progress_line">- %s</string>
+    <string name="progress_block">%1$s\n%2$s</string>
+    <string name="progress_step_start">%s…</string>
+    <string name="progress_step_done">%s… हो गया</string>
+    <string name="progress_scan_header">जांच हो रही है:</string>
+
+    <!-- शुरुआती स्क्रीन -->
+    <string name="status_idle">इस बॉक्स की जांच करने के लिए ‘स्कैन करें’ दबाएं।</string>
+    <string name="report_intro">स्कैन क्या-क्या देखता है:\n\n  - वे आठ ऐप्लिकेशन जो XCPE का हिस्सा माने जाते हैं\n  - ऐसे ऐप्लिकेशन जो खुद को Android का हिस्सा बताते हैं\n  - XCPE के छिपे हुए डेटा चैनल\n  - बॉक्स के फ़र्मवेयर में रखी अतिरिक्त कॉपियां\n  - क्या Google Play Protect बंद कर दिया गया था\n  - क्या XCPE ने खुद को सुलभता में जोड़ लिया था\n\nजांच में कुछ सेकंड लगते हैं और इससे कुछ नहीं बदलता।\nकुछ भी कहीं नहीं भेजा जाता।\n\nजांच के बाद यह बॉक्स आपको तीन में से एक बात बताता है:\n  साफ़, संदिग्ध या संक्रमित।\nअगर यह साफ़ नहीं है, तो ‘खतरे हटाएं’ दबाएं।</string>
+    <string name="last_check_none">पिछली जांच: कभी नहीं</string>
+    <string name="last_check_fmt">पिछली जांच: %1$s · %2$s (%3$s)</string>
+    <string name="src_manual">आपने जांच की</string>
+    <string name="src_auto">रीस्टार्ट के बाद अपने-आप हुई जांच</string>
+    <string name="check_clean">साफ़</string>
+    <string name="check_suspicious">संदिग्ध</string>
+    <string name="check_infected">संक्रमित</string>
+    <string name="check_removed_again">XCPE वापस आ गया था और उसे फिर से हटा दिया गया</string>
+    <string name="check_failed">XCPE वापस आ गया और उसे हटाया नहीं जा सका</string>
+    <string name="check_debug_opened">हटाने के लिए डीबगिंग चालू की गई थी</string>
+    <string name="check_debug_open_failed">डीबगिंग चालू नहीं की जा सकी</string>
+    <string name="check_debug_closed">डीबगिंग फिर से बंद कर दी गई</string>
+    <string name="check_debug_close_failed">डीबगिंग अब भी चालू है</string>
+    <string name="check_summary_join">%1$s; %2$s</string>
+
+    <!-- स्कैन -->
+    <string name="status_scanning">इस बॉक्स की जांच हो रही है… इसमें कुछ सेकंड लगते हैं।</string>
+    <string name="status_scan_failed">जांच पूरी नहीं हो सकी। फिर से कोशिश करने के लिए ‘स्कैन करें’ दबाएं।</string>
+    <plurals name="status_infected">
+        <item quantity="one">संक्रमित: इस बॉक्स में XCPE का %d हिस्सा सक्रिय है। ‘खतरे हटाएं’ दबाएं।</item>
+        <item quantity="other">संक्रमित: इस बॉक्स में XCPE के %d हिस्से सक्रिय हैं। ‘खतरे हटाएं’ दबाएं।</item>
+    </plurals>
+    <string name="status_suspicious">संदिग्ध: XCPE का कोई पक्का ऐप्लिकेशन नहीं चल रहा है, लेकिन इस बॉक्स में चेतावनी के संकेत दिख रहे हैं। जो ठीक हो सकता है उसे ठीक करने के लिए ‘खतरे हटाएं’ दबाएं, या रिपोर्ट पढ़ने के लिए नीचे दबाएं।</string>
+    <string name="status_clean">साफ़: इस बॉक्स में XCPE का कुछ भी नहीं मिला। आप इसे इस्तेमाल करते रह सकते हैं।</string>
+
+    <!-- हटाना: एक सवाल -->
+    <string name="dlg_review_title">हटाने से पहले देख लें</string>
+    <plurals name="dlg_review_msg_confirmed">
+        <item quantity="one">XCPE का %1$d पक्का हिस्सा हटाया जाएगा। नीचे दूसरे ऐप्लिकेशन हैं जिन पर नज़र डालनी चाहिए। पहले से सही का निशान सिर्फ़ वहीं है जहां नाम के अलावा भी सबूत है; बदलने के लिए किसी पंक्ति पर ‘ठीक है’ दबाएं।</item>
+        <item quantity="other">XCPE के %1$d पक्के हिस्से हटाए जाएंगे। नीचे दूसरे ऐप्लिकेशन हैं जिन पर नज़र डालनी चाहिए। पहले से सही का निशान सिर्फ़ वहीं है जहां नाम के अलावा भी सबूत है; बदलने के लिए किसी पंक्ति पर ‘ठीक है’ दबाएं।</item>
+    </plurals>
+    <string name="dlg_review_msg_only">XCPE का कोई पक्का ऐप्लिकेशन नहीं चल रहा है। नीचे वे ऐप्लिकेशन हैं जिन पर नज़र डालनी चाहिए। पहले से सही का निशान सिर्फ़ वहीं है जहां नाम के अलावा भी सबूत है; बदलने के लिए किसी पंक्ति पर ‘ठीक है’ दबाएं।</string>
+    <string name="dlg_review_remove">चुने हुए हटाएं</string>
+    <string name="status_review_kept">और कुछ नहीं हटाया गया। बॉक्स में कोई बदलाव नहीं हुआ।</string>
+    <string name="scan_reason_vendor_warning">यह बॉक्स के अपने स्टोर या टीवी सेवा का हिस्सा हो सकता है। इसे हटाने से वह सेवा खराब हो सकती है।</string>
+    <string name="dlg_suspects_title">संदिग्ध ऐप्लिकेशन भी हटाएं?</string>
+    <string name="dlg_suspects_msg">XCPE के पक्के हिस्सों के अलावा, इस बॉक्स में ऐसे ऐप्लिकेशन हैं जो आम तौर पर उसके साथ आते हैं:\n\n%s\n\nटीवी बॉक्स को इनकी कभी ज़रूरत नहीं होती।</string>
+    <string name="dlg_suspects_yes">हां, इन्हें भी हटाएं</string>
+    <string name="dlg_suspects_no">नहीं, सिर्फ़ पक्के वाले</string>
+    <string name="dlg_suspects_only_title">संदिग्ध ऐप्लिकेशन हटाएं?</string>
+    <string name="dlg_suspects_only_msg">XCPE का कोई पक्का ऐप्लिकेशन नहीं चल रहा है, लेकिन ये ऐप्लिकेशन आम तौर पर उसके साथ आते हैं:\n\n%s\n\nटीवी बॉक्स को इनकी कभी ज़रूरत नहीं होती।</string>
+    <string name="dlg_remove">इन्हें हटाएं</string>
+    <string name="dlg_keep">इन्हें रहने दें</string>
+    <string name="status_kept">कुछ नहीं बदला गया। फिर से जांच करने के लिए कभी भी ‘स्कैन करें’ दबाएं।</string>
+
+    <!-- हटाना: चलते समय -->
+    <string name="status_removing">हटाया जा रहा है… बॉक्स को चालू रखें। अगर टीवी डीबगिंग के बारे में कोई सवाल पूछे, तो ‘हमेशा अनुमति दें’ पर सही का निशान लगाएं और ‘अनुमति दें’ दबाएं।</string>
+    <string name="report_remove_live">क्या हो रहा है:</string>
+    <string name="report_remove_log">जानकारी:</string>
+    <string name="report_remove_crashed">हटाने की प्रक्रिया एक गड़बड़ी के साथ रुक गई: %s</string>
+
+    <!-- हटाना: नतीजा -->
+    <string name="outcome_removed">हटाया गया: %s</string>
+    <string name="outcome_disabled">बंद किया गया (पूरी तरह हटाया नहीं जा सका, चल नहीं सकता): %s</string>
+    <string name="outcome_failed">अब भी सक्रिय (हटाया नहीं जा सका): %s</string>
+    <string name="outcome_firmware_remain">इस बॉक्स के फ़र्मवेयर में एक अतिरिक्त कॉपी बची रहती है। जब तक ऊपर दिया ऐप्लिकेशन हटा हुआ या बंद है, वह चल नहीं सकती। उसे सिर्फ़ root वाला डीप क्लीन या निर्माता का नया फ़र्मवेयर ही मिटा सकता है।</string>
+    <string name="outcome_pp_on">Google Play Protect: फिर से चालू कर दिया गया।</string>
+    <string name="outcome_pp_off">Google Play Protect: अब भी बंद है। Google Play ऐप्लिकेशन खोलें, अपनी प्रोफ़ाइल फ़ोटो दबाएं, Play Protect चुनें, गियर दबाएं और ‘Play Protect की मदद से ऐप्लिकेशन स्कैन करें’ चालू करें।</string>
+    <string name="outcome_pp_fine">Google Play Protect: पहले से चालू था।</string>
+    <string name="status_outcome_done">हो गया: XCPE के हिस्से हटा दिए गए। बॉक्स रीस्टार्ट करें, फिर यह पक्का करने के लिए कि वे वापस नहीं आए, ‘स्कैन करें’ फिर से दबाएं।</string>
+    <string name="status_outcome_partial">कुछ हिस्से हटाए नहीं जा सके। जानकारी पढ़ने के लिए नीचे दबाएं। अगर रीस्टार्ट के बाद भी वे मौजूद हैं, तो यह बॉक्स बदल दें।</string>
+    <string name="status_outcome_nothing">हटाने के लिए कुछ नहीं था। फिर से जांच करने के लिए कभी भी ‘स्कैन करें’ दबाएं।</string>
+    <string name="status_outcome_pp_only">हो गया: Google Play Protect फिर से चालू है। फिर से जांच करने के लिए ‘स्कैन करें’ दबाएं।</string>
+    <string name="status_outcome_none">इस बार कुछ नहीं बदला गया। ‘डेवलपर के लिए सेटिंग और टूल खोलें’ दबाएं ताकि ऐप्लिकेशन खुद चीज़ें हटा सके, फिर ‘खतरे हटाएं’ दोबारा दबाएं।</string>
+
+    <!-- रीस्टार्ट -->
+    <string name="dlg_restart_title">बॉक्स अभी रीस्टार्ट करें?</string>
+    <string name="dlg_restart_msg_adb">रीस्टार्ट से सफ़ाई पूरी होती है। स्क्रीन करीब एक मिनट के लिए काली हो जाती है। उसके बाद यह ऐप्लिकेशन खुद बॉक्स की फिर से जांच करता है और अगर कुछ वापस आया हो तो आपको बताता है।</string>
+    <string name="dlg_restart_msg_manual">रीस्टार्ट से सफ़ाई पूरी होती है। बॉक्स की बिजली की तार निकालें, दस सेकंड रुकें और उसे वापस लगा दें। फिर यह ऐप्लिकेशन खोलें और ‘स्कैन करें’ दबाएं।</string>
+    <string name="dlg_restart_now">अभी रीस्टार्ट करें</string>
+    <string name="dlg_restart_later">बाद में</string>
+    <string name="dlg_ok">ठीक है</string>
+    <string name="btn_debugoff">डीबगिंग बंद करें</string>
+    <string name="dlg_debugoff_title">डीबगिंग बंद करें?</string>
+    <string name="dlg_debugoff_msg">डीबगिंग की वजह से ही यह ऐप्लिकेशन बॉक्स की सफ़ाई कर पाता है और हर रीस्टार्ट के बाद उसकी जांच कर पाता है। अगर आप इसे बंद करते हैं, तो ऐप्लिकेशन पहले यह परखता है कि वह उन जांचों के लिए इसे खुद फिर से चालू कर सकता है या नहीं। इसमें ज़्यादा से ज़्यादा एक मिनट लगता है; बॉक्स इस दौरान इस्तेमाल किया जा सकता है।</string>
+    <string name="dlg_debugoff_yes">परखें और बंद करें</string>
+    <string name="status_debug_kept">डीबगिंग चालू रहती है ताकि यह ऐप्लिकेशन हर रीस्टार्ट के बाद बॉक्स की जांच कर सके। अगर आप इसे बंद रखना चाहते हैं, तो ‘डीबगिंग बंद करें’ दबाएं।</string>
+    <string name="status_debug_probe">परखा जा रहा है कि यह बॉक्स खुद डीबगिंग फिर से चालू कर सकता है या नहीं…</string>
+    <string name="status_debug_probe_ok">डीबगिंग बंद है। अपने-आप होने वाली जांचों के लिए ऐप्लिकेशन इसे कुछ पल के लिए चालू करता है और फिर बंद कर देता है।</string>
+    <string name="status_debug_probe_failed">यह बॉक्स खुद डीबगिंग फिर से चालू नहीं कर सकता, इसलिए यह चालू रहती है। अगर अपने-आप वाला मोड काम करना बंद कर दे, तो बॉक्स रीस्टार्ट करें।</string>
+    <string name="status_debug_reclosed">इस सफ़ाई के लिए डीबगिंग खोली गई थी और अब फिर से बंद कर दी गई है।</string>
+    <string name="status_auto_report">यह पिछले रीस्टार्ट के बाद अपने-आप हुई जांच की रिपोर्ट है। नई जांच के लिए ‘स्कैन करें’ दबाएं।</string>
+    <string name="status_clean_dormant">साफ़: XCPE का कुछ भी नहीं चल रहा है। बंद किए गए बचे-खुचे हिस्से फ़र्मवेयर में रह जाते हैं; जब तक वे बंद हैं, उनसे कोई नुकसान नहीं है।</string>
+    <string name="status_outcome_done_mixed">हो गया: XCPE के हिस्से हटा दिए गए या बंद कर दिए गए। बॉक्स रीस्टार्ट करें, फिर यह पक्का करने के लिए कि वे वापस नहीं आए, ‘स्कैन करें’ फिर से दबाएं।</string>
+    <string name="dlg_stop_title">सफ़ाई रोकें?</string>
+    <string name="dlg_stop_msg">ऐप्लिकेशन अभी भी बॉक्स पर काम कर रहा है। अभी रोकने पर जो अब तक नहीं हटा है, वह वैसा ही रह जाएगा; आप बाद में ‘खतरे हटाएं’ फिर से दबा सकते हैं।</string>
+    <string name="dlg_stop_yes">रोकें</string>
+    <string name="status_stopping">रोका जा रहा है…</string>
+    <string name="result_infected">नतीजा: संक्रमित - XCPE बैकडोर इस बॉक्स में सक्रिय है: %1$s</string>
+    <string name="result_suspicious">नतीजा: संदिग्ध - XCPE का कोई पक्का ऐप्लिकेशन सक्रिय नहीं है, लेकिन ऊपर दी गई चेतावनियां देखें</string>
+    <string name="result_clean">नतीजा: साफ़ - XCPE का कुछ भी नहीं मिला</string>
+    <string name="adb_status_connecting">बॉक्स की डीबगिंग सेवा से जुड़ा जा रहा है…</string>
+    <string name="adb_status_look_at_tv">टीवी देखें: ‘इस कंप्यूटर से हमेशा अनुमति दें’ पर सही का निशान लगाएं और ‘अनुमति दें’ दबाएं।</string>
+    <string name="adb_status_connected">जुड़ गया: बॉक्स इस ऐप्लिकेशन के निर्देश स्वीकार कर रहा है।</string>
+    <string name="adb_err_denied">बॉक्स ने इस ऐप्लिकेशन को अनुमति नहीं दी (‘अस्वीकार करें’ दबाया गया, या सवाल का समय खत्म हो गया)। फिर से कोशिश करें, और जब टीवी पूछे तो ‘हमेशा अनुमति दें’ पर सही का निशान लगाएं और ‘अनुमति दें’ दबाएं।</string>
+    <string name="adb_err_pairing_only">यह बॉक्स सिर्फ़ ‘वायरलेस डीबगिंग’ की पेयरिंग देता है, जिसे यह ऐप्लिकेशन इस्तेमाल नहीं कर सकता। इसके बजाय बताए गए कदमों का पालन करें।</string>
+    <string name="adb_err_not_allowed">इस ऐप्लिकेशन को अभी बॉक्स की डीबगिंग सेवा में अनुमति नहीं मिली है। ‘खतरे हटाएं’ एक बार दबाएं; फिर टीवी आपसे इसे अनुमति देने के लिए पूछेगा।</string>
+    <string name="adb_err_lost">बॉक्स की डीबगिंग सेवा से कनेक्शन टूट गया। फिर से कोशिश करें।</string>
+    <string name="adb_err_no_answer">बॉक्स की डीबगिंग सेवा ने समय पर जवाब नहीं दिया। थोड़ी देर बाद फिर से कोशिश करें।</string>
+    <string name="adb_err_generic">डीबगिंग कनेक्शन में समस्या: %1$s</string>
+    <string name="status_debug_opening">रीस्टार्ट के लिए डीबगिंग का दरवाज़ा खोला जा रहा है…</string>
+    <string name="status_debug_opening_clean">इस सफ़ाई के लिए डीबगिंग का दरवाज़ा खोला जा रहा है…</string>
+    <string name="status_rebooting">रीस्टार्ट हो रहा है… स्क्रीन करीब एक मिनट के लिए काली हो जाएगी। अगर ऐसा न हो, तो बिजली की तार निकालें, दस सेकंड रुकें और उसे वापस लगा दें।</string>
+    <string name="status_reboot_failed">बॉक्स खुद रीस्टार्ट नहीं हुआ। बिजली की तार निकालें, दस सेकंड रुकें और उसे वापस लगा दें। फिर यह ऐप्लिकेशन खोलें और ‘स्कैन करें’ दबाएं।</string>
+
+    <!-- हाथ से हटाना (बॉक्स ऐप्लिकेशन को खुद चीज़ें हटाने नहीं देता) -->
+    <string name="dlg_guided_title">हाथ से हटाएं, एक-एक कदम</string>
+    <string name="dlg_guided_msg">यह बॉक्स ऐप्लिकेशन को खुद चीज़ें हटाने नहीं देता, इसलिए हम इसे साथ मिलकर करेंगे। ऐप्लिकेशन आपके लिए हर खराब ऐप्लिकेशन का सेटिंग पेज एक-एक करके खोलता है (%d बाकी) और हर पेज से पहले बताता है कि कौन सा बटन दबाना है। एक पेज का काम पूरा होने पर रिमोट पर ‘वापस जाएं’ दबाएं।</string>
+    <string name="dlg_guided_start">शुरू करें</string>
+    <string name="dlg_guided_later">अभी नहीं</string>
+    <string name="status_guided_later">हटाना शुरू नहीं किया गया। तैयार होने पर ‘खतरे हटाएं’ दबाएं, या ‘डेवलपर के लिए सेटिंग और टूल खोलें’ दबाएं ताकि ऐप्लिकेशन यह काम खुद कर सके।</string>
+    <string name="guide_step_uninstall">कदम %1$d / %2$d: %3$s को हटाने के बारे में एक सवाल आएगा। ‘ठीक है’ या ‘अनइंस्टॉल करें’ दबाएं।</string>
+    <string name="dlg_guide_step_title">कदम %1$d / %2$d: %3$s</string>
+    <string name="dlg_guide_step_msg">अगले पेज पर ‘अनइंस्टॉल करें’ दबाएं।\n\nअगर ‘अनइंस्टॉल करें’ बटन न हो: अगर ‘अपडेट अनइंस्टॉल करें’ दिखे तो उसे दबाएं, फिर ‘बंद करें’, फिर ‘ज़बरदस्ती बंद करें’।\n\nकाम पूरा होने पर यहां लौटने के लिए रिमोट पर ‘वापस जाएं’ दबाएं।</string>
+    <string name="dlg_guide_open">पेज खोलें</string>
+    <string name="dlg_guide_skip">इस ऐप्लिकेशन को छोड़ें</string>
+    <string name="guide_step_appinfo">कदम %1$d / %2$d: %3$s के पेज पर ‘अनइंस्टॉल करें’ दबाएं। अगर वह न हो: ‘अपडेट अनइंस्टॉल करें’, फिर ‘बंद करें’, फिर ‘ज़बरदस्ती बंद करें’। काम पूरा होने पर ‘वापस जाएं’ दबाएं।</string>
+    <string name="status_guided_checking">देखा जा रहा है कि क्या बदला…</string>
+    <string name="status_guide_cannot_open">इस बॉक्स पर %s का सेटिंग पेज नहीं खोला जा सका। आगे बढ़ रहे हैं।</string>
+    <string name="guide_still_active_title">%s अब भी सक्रिय है</string>
+    <string name="guide_still_active_msg">यह हटा नहीं। आप इसका पेज फिर से खोल सकते हैं, इस ऐप्लिकेशन को छोड़ सकते हैं, या यहीं रुक सकते हैं।</string>
+    <string name="guide_try_again">फिर से कोशिश करें</string>
+    <string name="guide_skip">छोड़ें</string>
+    <string name="guide_stop">रुकें</string>
+    <string name="guide_pp_title">Google Play Protect फिर से चालू करें</string>
+    <string name="guide_pp_msg">XCPE ने Google की ऐप्लिकेशन जांच बंद कर दी थी। अगले पेज पर ‘Play Protect की मदद से ऐप्लिकेशन स्कैन करें’ चालू करें, फिर ‘वापस जाएं’ दबाएं।</string>
+    <string name="guide_pp_fallback">इस बॉक्स में इसके लिए कोई सीधा पेज नहीं है। Google Play ऐप्लिकेशन खोलें, ऊपर दाईं ओर अपनी प्रोफ़ाइल फ़ोटो दबाएं, Play Protect चुनें, गियर दबाएं और ‘Play Protect की मदद से ऐप्लिकेशन स्कैन करें’ चालू करें।</string>
+    <string name="status_guide_pp">अगले पेज पर ‘Play Protect की मदद से ऐप्लिकेशन स्कैन करें’ चालू करें, फिर ‘वापस जाएं’ दबाएं।</string>
+    <string name="dlg_guide_skip_step">यह कदम छोड़ें</string>
+    <string name="guide_acc_title">सुलभता में XCPE की पकड़ बंद करें</string>
+    <string name="guide_acc_msg">XCPE ने खुद को इस बॉक्स की सुलभता सेटिंग में जोड़ लिया था। अगले पेज पर %s ढूंढें और उसे बंद करें, फिर ‘वापस जाएं’ दबाएं।</string>
+    <string name="status_guide_acc">अगले पेज पर %s बंद करें, फिर ‘वापस जाएं’ दबाएं।</string>
+    <string name="guided_tail_acc">सुलभता: %s अब भी चालू है; इसे सेटिंग, सुलभता में जाकर बंद करें।</string>
+    <string name="status_guided_done">हाथ से पूरा किया: %1$d हटाए या बंद किए गए, %2$d अब भी सक्रिय। %3$s</string>
+    <string name="guided_tail_restart">अब बॉक्स रीस्टार्ट करें (बिजली की तार निकालकर वापस लगाएं), यह ऐप्लिकेशन खोलें और ‘स्कैन करें’ फिर से दबाएं।</string>
+    <string name="guided_tail_replace">अगर रीस्टार्ट के बाद भी वे सक्रिय हैं, तो यह बॉक्स साफ़ नहीं किया जा सकता: इसे बदल दें।</string>
+
+    <!-- डेवलपर के लिए सेटिंग और टूल -->
+    <string name="status_devopts_hint">अगले पेज पर ‘यूएसबी डीबगिंग’ चालू करें। कुछ बॉक्स में इसे ‘नेटवर्क डीबगिंग’, ‘ADB डीबगिंग’ या ‘नेटवर्क पर ADB’ कहा जाता है; उसे भी चालू करें। अगर कोई सवाल आए, तो ‘हमेशा अनुमति दें’ पर सही का निशान लगाएं और ‘अनुमति दें’ दबाएं। फिर ‘वापस जाएं’ दबाएं।</string>
+    <string name="status_devopts_hidden">इस बॉक्स में ‘डेवलपर के लिए सेटिंग और टूल’ छिपा हुआ है। अगले पेज पर ‘बिल्ड नंबर’ (या ‘बिल्ड’) ढूंढें और उस पर सात बार ‘ठीक है’ दबाएं। फिर ‘वापस जाएं’ दबाएं और ‘डेवलपर के लिए सेटिंग और टूल खोलें’ फिर से दबाएं।</string>
+    <string name="status_devopts_missing">यह बॉक्स ऐप्लिकेशन को अपनी सेटिंग खोलने नहीं देता। ‘सेटिंग’ खुद खोलें: डिवाइस की प्राथमिकताएं, डिवाइस के बारे में जानकारी, ‘बिल्ड’ सात बार दबाएं, फिर डेवलपर के लिए सेटिंग और टूल, और यूएसबी डीबगिंग चालू करें।</string>
+    <string name="status_port_open">बढ़िया: डीबगिंग का दरवाज़ा खुला है। ‘खतरे हटाएं’ दबाएं और ऐप्लिकेशन सब कुछ खुद हटा देगा।</string>
+    <string name="status_port_closed_usb_only">यूएसबी डीबगिंग चालू है, लेकिन नेटवर्क का दरवाज़ा अब भी बंद है। ‘डेवलपर के लिए सेटिंग और टूल’ में ‘नेटवर्क डीबगिंग’, ‘नेटवर्क पर ADB’ या ‘वायरलेस डीबगिंग’ ढूंढें और उसे भी चालू करें। अगर इस बॉक्स में इनमें से कुछ नहीं है, तो ‘खतरे हटाएं’ आपको एक-एक कदम करके रास्ता दिखाएगा।</string>
+    <string name="status_port_closed_after">डीबगिंग का दरवाज़ा अब भी बंद है। ‘डेवलपर के लिए सेटिंग और टूल खोलें’ फिर से आज़माएं, या ‘खतरे हटाएं’ दबाएं और ऐप्लिकेशन आपको एक-एक कदम करके रास्ता दिखाएगा।</string>
+
+    <!-- डीप क्लीन -->
+    <string name="dlg_deep_title">फ़र्मवेयर का डीप क्लीन करें?</string>
+    <string name="dlg_deep_msg">यह इस बॉक्स के फ़र्मवेयर में रखी बैकडोर की अतिरिक्त कॉपियां मिटाता है। यह सिर्फ़ root ऐक्सेस वाले बॉक्स पर काम करता है और सिर्फ़ XCPE की फ़ाइलों को छूता है।</string>
+    <string name="dlg_deep_yes">अतिरिक्त कॉपियां मिटाएं</string>
+    <string name="dlg_cancel">रद्द करें</string>
+    <string name="status_deep_running">डीप क्लीन हो रहा है… बॉक्स को चालू रखें।</string>
+    <string name="status_deep_done">डीप क्लीन पूरा हुआ। क्या हुआ यह पढ़ने के लिए नीचे दबाएं, फिर दोबारा जांच के लिए ‘स्कैन करें’ दबाएं।</string>
+    <string name="report_deep_header">डीप क्लीन:</string>
+
+    <!-- यह कैसे काम करता है -->
+    <string name="help_title">यह ऐप्लिकेशन कैसे काम करता है। पढ़ने के लिए नीचे दबाएं, वापस आने के लिए ऊपर।</string>
+    <string name="help_text">XCPE क्या है\nXCPE एक बैकडोर है जो कई सस्ते Android टीवी बॉक्स (MECOOL, Videostrong और दूसरे नामों से बिकने वाले बॉक्स) के फ़र्मवेयर में बना होता है। यह अनजान लोगों को आपके बॉक्स पर चीज़ें चलाने देता है: नकली विज्ञापन क्लिक, आपके इंटरनेट कनेक्शन से छिपा हुआ ट्रैफ़िक, और जो कुछ भी वे इसे भेजें।\n\nस्कैन क्या करता है\nस्कैन इस बॉक्स के ऐप्लिकेशन, Google Play Protect और सुलभता सेटिंग को देखता है और उनकी तुलना XCPE के हिस्सों की प्रकाशित सूची से करता है। यह कुछ नहीं बदलता और कुछ भी कहीं नहीं भेजता।\n\nखतरे हटाएं क्या करता है\nयह इस बॉक्स से XCPE के ऐप्लिकेशन हटाता है और Google Play Protect फिर से चालू करता है। अगर कोई ऐप्लिकेशन हटाया नहीं जा सकता, तो उसे बंद कर दिया जाता है ताकि वह चल न सके। ऐप्लिकेशन पहले यह काम खुद करने की कोशिश करता है; यह तब काम करता है जब बॉक्स का डीबगिंग का दरवाज़ा खुला हो (डेवलपर के लिए सेटिंग और टूल)। वरना यह आपके लिए सही सेटिंग पेज खोलता है और बताता है कि कौन सा बटन दबाना है।\n\nक्या बचा रहता है\nकई बॉक्स फ़र्मवेयर के सिर्फ़-पढ़ने वाले हिस्से में बैकडोर की एक अतिरिक्त कॉपी रखते हैं। ऐप्लिकेशन बिना root ऐक्सेस के उस कॉपी को नहीं मिटा सकता, लेकिन जब तक ऐप्लिकेशन हटा हुआ या बंद है, वह कॉपी चल नहीं सकती। अगर रीस्टार्ट के बाद XCPE वापस आता है, तो यह ऐप्लिकेशन उसे पकड़ लेता है, फिर से हटा देता है और आपको बताता है।\n\nहमारी सच्ची सलाह\nजो बॉक्स बैकडोर के साथ बिका था, वह कभी सिर्फ़ आपका नहीं था। अगर हो सके, तो इसे किसी जाने-माने ब्रांड के बॉक्स से बदल दें (Google TV Streamer, Apple TV, Fire TV, Nvidia Shield)। अगर इसे रखते हैं, तो इस पर बैंकिंग या ईमेल में लॉग इन न करें।\n\nअपने पासवर्ड बदलें\nअगर आपने कभी इस बॉक्स पर कोई पासवर्ड टाइप किया है, तो उसे किसी दूसरे डिवाइस से बदलें: Google खाता, Netflix, Wi-Fi और जो कुछ भी आपने यहां इस्तेमाल किया हो।\n\nसफ़ाई के बाद\nबॉक्स रीस्टार्ट करें, यह ऐप्लिकेशन खोलें और ‘स्कैन करें’ एक बार फिर दबाएं। ऐप्लिकेशन हर रीस्टार्ट के बाद खुद भी जांच करता है और नतीजा ‘पिछली जांच’ के नीचे दिखाता है।\n\nजांच का नतीजा फिर से देखने के लिए ‘स्कैन करें’ दबाएं।</string>
+
+    <!-- रीस्टार्ट के बाद की जांच की सूचनाएं -->
+    <string name="notif_channel">रीस्टार्ट के बाद की जांच</string>
+    <string name="notif_channel_desc">बताता है कि रीस्टार्ट के बाद XCPE कब वापस आया।</string>
+    <string name="notif_removed_again_title">रीस्टार्ट के बाद XCPE वापस आया और उसे फिर से हटा दिया गया</string>
+    <string name="notif_removed_again_text">जानकारी देखने के लिए XCPE Cleaner खोलें। अगर ऐसा बार-बार होता है, तो बॉक्स बदल दें।</string>
+    <string name="notif_failed_title">XCPE वापस आ गया और हटाया नहीं जा सका: यह बॉक्स बदल दें</string>
+    <string name="notif_failed_text">XCPE Cleaner खोलें और फिर से कोशिश करने के लिए ‘खतरे हटाएं’ दबाएं।</string>
+    <string name="notif_failed_text_port_closed">ऐप्लिकेशन इसे खुद नहीं हटा सका क्योंकि डीबगिंग का दरवाज़ा बंद है। XCPE Cleaner खोलें और ‘खतरे हटाएं’ दबाएं।</string>
+    <string name="notif_suspicious_title">इस बॉक्स में चेतावनी के संकेत दिख रहे हैं</string>
+    <string name="notif_suspicious_text">XCPE Cleaner खोलें और जानकारी पढ़ने के लिए ‘स्कैन करें’ दबाएं।</string>
+    <string name="report_auto_remove_header">रीस्टार्ट के बाद अपने-आप हटाना:</string>
+</resources>

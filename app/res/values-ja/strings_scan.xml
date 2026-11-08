@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  スキャンの文言（日本語）：確認レポートの見出しと文章、および実行中に表示されるセクション名。
+  %1$s / %2$d のプレースホルダ、パッケージ名、"XCPE"、"Play Protect"、"MECOOL"、"Videostrong"、
+  /oem のようなフォルダ名、package_verifier_user_consent のような設定名はそのまま残す。
+  二重引用符で囲まれた値は、レポートの桁揃えのために二重スペースを意図的に残している。
+-->
+<resources>
+    <!-- 実行中のステップ一覧に出るセクション名 -->
+    <string name="scan_sec_device">この機器を確認中</string>
+    <string name="scan_sec_known">既知のアプリを確認中</string>
+    <string name="scan_sec_fake_system">システムの名前を使うアプリを確認中</string>
+    <string name="scan_sec_content">インストール済みアプリの中身を確認中</string>
+    <string name="scan_err_content">インストール済みアプリの中身を確認できませんでした</string>
+    <string name="scan_content_match">%1$s には既知の XCPE 構成要素 %2$s が含まれています</string>
+    <string name="scan_content_none">既知の XCPE 構成要素を含むインストール済みアプリはありません</string>
+    <string name="scan_reason_ioc">名前が公開されている XCPE 補助ツールのリストと一致します</string>
+    <string name="scan_reason_provider">XCPE のデータチャネルを公開しています</string>
+    <string name="scan_reason_content">既知の XCPE 構成要素 %1$s を含んでいます</string>
+    <string name="scan_reason_fake_name">システムの名前を使っていますが、あとからインストールされています</string>
+    <string name="scan_reason_installed_by">%1$s。インストール元：%2$s</string>
+    <string name="scan_sec_providers">データチャネルを確認中</string>
+    <string name="scan_sec_firmware">ファームウェア内の予備のコピーを確認中</string>
+    <string name="scan_sec_play_protect">Google Play Protect を確認中</string>
+    <string name="scan_sec_accessibility">ユーザー補助の設定を確認中</string>
+    <string name="scan_sec_user_apps">ユーザーがインストールしたアプリを一覧にしています</string>
+
+    <!-- あるセクションを実行できなかった（スキャンは続行） -->
+    <string name="scan_err_no_context">このボックスで何も確認できませんでした（アプリのコンテキストがありません）</string>
+    <string name="scan_err_finish">スキャンを完了できませんでした</string>
+    <string name="scan_err_device">このボックスのブランドとモデルを確認できませんでした</string>
+    <string name="scan_err_app_list">インストール済みアプリの全リストを確認できませんでした</string>
+    <string name="scan_err_known">既知の XCPE アプリ名を確認できませんでした</string>
+    <string name="scan_err_fake_system">システムの名前に隠れているアプリを確認できませんでした</string>
+    <string name="scan_err_providers">XCPE のデータチャネル（コンテンツプロバイダ）を確認できませんでした</string>
+    <string name="scan_err_oem">/oem フォルダに予備のコピーがないか確認できませんでした</string>
+    <string name="scan_err_priv_app">システムアプリのフォルダを確認できませんでした</string>
+    <string name="scan_err_perm_files">権限付与ファイルを確認できませんでした</string>
+    <string name="scan_err_props">XCPE ドロッパーのプロパティを確認できませんでした</string>
+    <string name="scan_err_play_protect">Play Protect の設定を確認できませんでした</string>
+    <string name="scan_err_accessibility">ユーザー補助サービスを確認できませんでした</string>
+    <string name="scan_err_user_apps">ユーザーがインストールしたアプリのリストを確認できませんでした</string>
+
+    <!-- 1. このボックス。1 = ブランド、2 = メーカー、3 = モデル、4 = デバイスコード、5 = Android バージョン、6 = API レベル、7 = セキュリティパッチ日付、8 = ビルドフィンガープリント -->
+    <string name="scan_device_line">"ブランド：%1$s   メーカー：%2$s   モデル：%3$s   デバイス：%4$s\nAndroid %5$s（API %6$d）  セキュリティパッチ %7$s\nビルド：%8$s"</string>
+    <string name="scan_unknown">不明</string>
+    <string name="scan_device_unavailable">機器の詳細を取得できません</string>
+    <string name="scan_device_mecool_brand_title">ブランドまたはメーカーが MECOOL / Videostrong（XCPE の背後にいる会社）です</string>
+    <!-- 1 = ブランド、2 = メーカー -->
+    <string name="scan_device_mecool_brand_detail">"ブランド：%1$s   メーカー：%2$s"</string>
+    <string name="scan_device_mecool_prop_title">このボックスは自分を MECOOL 機器だと名乗っています（ro.mecool.device=true）</string>
+    <string name="scan_device_mecool_prop_detail">バックドアはこのプロパティを読んで、制御サーバーを選びます。</string>
+    <!-- 1 = モデル名 -->
+    <string name="scan_device_model_listed_title">モデル名「%1$s」は公開されている影響を受けるモデルのリストに載っています（それだけでは証拠になりません）</string>
+    <string name="scan_device_model_listed_detail">この名前のボックスは XCPE の活動で確認されています。この 1 台が感染しているかどうかは、以下の確認でわかります。</string>
+    <string name="scan_device_model_ok">モデル名は公開されている影響を受けるモデルのリストにありません</string>
+
+    <!-- 2. 既知のアプリ。1 = アプリ（パッケージ）名 -->
+    <string name="scan_pkg_confirmed_active">"%1$s がインストールされ有効です  &lt;-- XCPE バックドアの一部"</string>
+    <string name="scan_pkg_confirmed_dormant_firmware">%1$s はファームウェアにありますが、このボックスでは無効です（休眠状態、オフのあいだは無害）</string>
+    <string name="scan_pkg_confirmed_dormant_present">%1$s は存在しますが無効です（休眠状態、オフのあいだは無害）</string>
+    <!-- 1 = 確認済みリストにある名前の数 -->
+    <string name="scan_pkg_confirmed_none">確認済みの XCPE アプリ名 %1$d 件のうち、有効なものはありません</string>
+    <string name="scan_pkg_suspect_active">%1$s がインストールされています（Videostrong / アフィリエイトツール、疑わしい）</string>
+    <string name="scan_pkg_suspect_dormant_firmware">%1$s（疑わしいツール）はファームウェアにありますが、このボックスでは無効です（休眠状態、オフのあいだは無害）</string>
+    <string name="scan_pkg_suspect_dormant_present">%1$s（疑わしいツール）は存在しますが無効です（休眠状態、オフのあいだは無害）</string>
+
+    <!-- 3. システムの名前に隠れているアプリ。1 = アプリ名 -->
+    <string name="scan_fake_active">%1$s はユーザーがインストールしたアプリなのに、システムの名前に隠れています（XCPE ドロッパーの手口）</string>
+    <string name="scan_fake_dormant">%1$s はシステムの名前を使っていますが無効です（休眠状態、オフのあいだは無害）</string>
+    <string name="scan_fake_none">com.android.* の名前に隠れているユーザーインストールのアプリはありません</string>
+
+    <!-- 4. データチャネル（コンテンツプロバイダ）。1 = アプリ名、2 = チャネル（authority）名 -->
+    <string name="scan_provider_none">XCPE のデータチャネルを公開しているアプリはありません</string>
+    <string name="scan_provider_active">%1$s が XCPE のデータチャネル（%2$s）を公開しています</string>
+    <string name="scan_provider_active_detail">XCPE のアプリはこのチャネルを通じて設定を共有します。</string>
+    <string name="scan_provider_dormant">%1$s は XCPE のデータチャネル（%2$s）を持っていますが無効です（休眠状態）</string>
+
+    <!-- 5a. /oem 内の予備のコピー -->
+    <string name="scan_oem_no_folder">このボックスには /oem フォルダがありません（予備のコピーを置く場所がありません）</string>
+    <string name="scan_oem_copy_title">/oem にバックドアの予備のコピーがあります</string>
+    <string name="scan_oem_copy_detail">削除できるのは新しいファームウェアか root だけです。アプリ本体が削除または無効のあいだは無害のままです。</string>
+    <!-- 1 = APK ファイルの数 -->
+    <string name="scan_oem_apks_ok">/oem に APK ファイルが %1$d 個ありますが、XCPE らしい名前のものはありません</string>
+    <string name="scan_oem_not_visible_title">このボックスではアプリから /oem フォルダが見えないため、そこに予備のコピーがないとは言い切れません</string>
+    <!-- 1 = カンマ区切りのフォルダ名 -->
+    <string name="scan_oem_not_visible_detail">読み取り不可：%1$s</string>
+    <string name="scan_oem_none">/oem に見える APK ファイルはありません</string>
+
+    <!-- 5b. システムアプリのフォルダ。1 = フォルダのパス -->
+    <string name="scan_privapp_hit_title">XCPE らしい名前のシステムアプリフォルダ：%1$s</string>
+    <string name="scan_privapp_hit_detail">これはファームウェアの一部です。削除できるのは新しいファームウェアか root だけです。アプリを無効にしておけば無害のままです。</string>
+    <string name="scan_privapp_none">システムアプリのディレクトリに XCPE らしいフォルダはありません</string>
+    <!-- 1 = カンマ区切りのフォルダ名（5b と 5c で共用） -->
+    <string name="scan_not_visible_detail">アプリから見えません：%1$s</string>
+
+    <!-- 5c. 権限付与ファイル。1 = ファイルのパス、2 = そこに書かれている XCPE アプリ -->
+    <string name="scan_perm_hit_title">"XCPE アプリ用の権限付与ファイル：%1$s  （%2$s に言及）"</string>
+    <string name="scan_perm_hit_detail">ファームウェアがバックドアの権限を事前に承認しています。アプリを削除または無効にすれば、このファイルは効力を失います。</string>
+    <string name="scan_perm_none">XCPE アプリに権限を与える権限付与ファイルはありません</string>
+
+    <!-- 5d. ドロッパーのプロパティ。1 = プロパティ名、2 = その値 -->
+    <string name="scan_prop_set">プロパティ %1$s=%2$s が設定されています（2026 年の XCPE ドロッパーが使用）</string>
+    <string name="scan_prop_none">XCPE ドロッパーのプロパティは設定されていません</string>
+
+    <!-- 6. Play Protect -->
+    <string name="scan_pp_off_title">Play Protect のアプリチェックがオフにされています（まさに XCPE がすること）</string>
+    <string name="scan_pp_off_detail">package_verifier_user_consent=-1。「脅威を削除」で再びオンになります。Play ストア > Play Protect（Play プロテクト）からもオンにできます。</string>
+    <string name="scan_pp_disabled_title">Play Protect のアプリチェックが無効です（package_verifier_enable=0）</string>
+    <string name="scan_pp_disabled_detail">「脅威を削除」で再びオンになります。Play ストア > Play Protect（Play プロテクト）からもオンにできます。</string>
+    <string name="scan_pp_ok">Play Protect のアプリチェックはオフにされていません</string>
+
+    <!-- 7. ユーザー補助。1 = サービス ID（アプリ/クラス） -->
+    <string name="scan_acc_none">有効なユーザー補助サービスはありません</string>
+    <string name="scan_acc_bad_title">XCPE に属するユーザー補助サービス：%1$s</string>
+    <string name="scan_acc_bad_detail">XCPE はこれを使ってリモコンの操作を監視します。アプリを削除するとオフになります。</string>
+    <string name="scan_acc_other">有効なユーザー補助サービス：%1$s（XCPE ではありません）</string>
+
+    <!-- 10. 参考リスト。1 = 数；scan_user_app_off：1 = アプリ名；scan_more：1 = 省略した数 -->
+    <string name="scan_user_apps">このボックスにユーザーがインストールしたアプリが %1$d 個あります（参考）</string>
+    <string name="scan_user_app_off">"%1$s  （無効）"</string>
+    <string name="scan_more">...（ほか %1$d 個）</string>
+
+    <!-- アプリの検出項目の下に出る詳細行 -->
+    <!-- 1 = バージョン名、2 = バージョン番号 -->
+    <string name="scan_detail_version">バージョン：%1$s（%2$d）</string>
+    <!-- 1 = ファイルのパス -->
+    <string name="scan_detail_apk">apk：%1$s</string>
+    <!-- 1 = インストールしたアプリの名前 -->
+    <string name="scan_detail_installer">インストール元：%1$s</string>
+    <string name="scan_detail_installer_none">インストール元：記録なし（手動インストールまたはファームウェアの一部）</string>
+    <!-- 1 = 初回インストール日、2 = 最終更新日 -->
+    <string name="scan_detail_times">"初回インストール：%1$s   最終更新：%2$s"</string>
+    <string name="scan_detail_type_updated_system">種類：更新が上書きされたファームウェアアプリ：アンインストールで更新は消えますが、ファームウェアのコピーは無効にすることしかできません</string>
+    <string name="scan_detail_type_system">種類：ファームウェア（システム）アプリ：root なしでは無効にできますが削除はできません</string>
+    <string name="scan_detail_type_user">種類：ユーザーがインストールしたアプリ：アンインストールできます</string>
+    <string name="scan_detail_state_off">状態：無効</string>
+    <string name="scan_detail_state_off_by_user">状態：ユーザーによって無効化</string>
+    <!-- 1 = エラー -->
+    <string name="scan_detail_unavailable">（詳細を取得できません：%1$s）</string>
+</resources>

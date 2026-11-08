@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tiếng Việt. Văn bản của trình quét: tiêu đề và câu trong báo cáo kiểm tra. Giá trị trong dấu ngoặc kép giữ nguyên khoảng trắng đôi (căn cột). -->
+<resources>
+    <!-- Section names for the live step list -->
+    <string name="scan_sec_device">Đang kiểm tra thiết bị này</string>
+    <string name="scan_sec_known">Đang kiểm tra các ứng dụng đã biết</string>
+    <string name="scan_sec_fake_system">Đang kiểm tra ứng dụng mang tên hệ thống</string>
+    <string name="scan_sec_content">Đang xem bên trong các ứng dụng đã cài</string>
+    <string name="scan_err_content">Không xem được bên trong các ứng dụng đã cài</string>
+    <string name="scan_content_match">%1$s chứa %2$s, một thành phần XCPE đã biết</string>
+    <string name="scan_content_none">Không có ứng dụng đã cài nào chứa thành phần XCPE đã biết</string>
+    <string name="scan_reason_ioc">Tên khớp với danh sách công cụ hỗ trợ XCPE đã công bố</string>
+    <string name="scan_reason_provider">Mở một kênh dữ liệu XCPE</string>
+    <string name="scan_reason_content">Chứa %1$s, một thành phần XCPE đã biết</string>
+    <string name="scan_reason_fake_name">Dùng tên hệ thống nhưng được cài sau</string>
+    <string name="scan_reason_installed_by">%1$s; cài bởi %2$s</string>
+    <string name="scan_sec_providers">Đang kiểm tra các kênh dữ liệu</string>
+    <string name="scan_sec_firmware">Đang kiểm tra firmware tìm bản sao dự phòng</string>
+    <string name="scan_sec_play_protect">Đang kiểm tra Google Play Protect</string>
+    <string name="scan_sec_accessibility">Đang kiểm tra cài đặt Hỗ trợ tiếp cận</string>
+    <string name="scan_sec_user_apps">Đang liệt kê ứng dụng do người dùng cài</string>
+
+    <!-- One section could not run (the scan continues) -->
+    <string name="scan_err_no_context">Không kiểm tra được gì trên TV box này (thiếu ngữ cảnh ứng dụng)</string>
+    <string name="scan_err_finish">Không hoàn tất được việc quét</string>
+    <string name="scan_err_device">Không kiểm tra được thương hiệu và mẫu của TV box này</string>
+    <string name="scan_err_app_list">Không kiểm tra được danh sách đầy đủ các ứng dụng đã cài</string>
+    <string name="scan_err_known">Không kiểm tra được các tên ứng dụng XCPE đã biết</string>
+    <string name="scan_err_fake_system">Không kiểm tra được các ứng dụng núp sau tên hệ thống</string>
+    <string name="scan_err_providers">Không kiểm tra được các kênh dữ liệu XCPE (trình cung cấp nội dung)</string>
+    <string name="scan_err_oem">Không kiểm tra được thư mục /oem để tìm bản sao dự phòng</string>
+    <string name="scan_err_priv_app">Không kiểm tra được các thư mục ứng dụng hệ thống</string>
+    <string name="scan_err_perm_files">Không kiểm tra được các tệp cấp quyền</string>
+    <string name="scan_err_props">Không kiểm tra được các thuộc tính của trình cài lén XCPE</string>
+    <string name="scan_err_play_protect">Không kiểm tra được cài đặt Play Protect</string>
+    <string name="scan_err_accessibility">Không kiểm tra được các dịch vụ hỗ trợ tiếp cận</string>
+    <string name="scan_err_user_apps">Không kiểm tra được danh sách ứng dụng do người dùng cài</string>
+
+    <!-- 1. This box. 1 = brand, 2 = maker, 3 = model, 4 = device code, 5 = Android version, 6 = API level, 7 = security patch date, 8 = build fingerprint -->
+    <string name="scan_device_line">"Thương hiệu: %1$s   Nhà sản xuất: %2$s   Mẫu: %3$s   Thiết bị: %4$s\nAndroid %5$s (API %6$d)  bản vá bảo mật %7$s\nBản dựng: %8$s"</string>
+    <string name="scan_unknown">không rõ</string>
+    <string name="scan_device_unavailable">Không có thông tin chi tiết về thiết bị</string>
+    <string name="scan_device_mecool_brand_title">Thương hiệu hoặc nhà sản xuất là MECOOL / Videostrong (công ty đứng sau XCPE)</string>
+    <!-- 1 = brand, 2 = maker -->
+    <string name="scan_device_mecool_brand_detail">"Thương hiệu: %1$s   Nhà sản xuất: %2$s"</string>
+    <string name="scan_device_mecool_prop_title">TV box này tự nhận là thiết bị MECOOL (ro.mecool.device=true)</string>
+    <string name="scan_device_mecool_prop_detail">Cửa hậu đọc thuộc tính này để chọn máy chủ điều khiển của nó.</string>
+    <!-- 1 = model name -->
+    <string name="scan_device_model_listed_title">Tên mẫu \'%1$s\' có trong danh sách các mẫu bị ảnh hưởng đã công bố (bản thân điều này chưa phải bằng chứng)</string>
+    <string name="scan_device_model_listed_detail">Các TV box mang tên này từng xuất hiện trong chiến dịch XCPE. Các kiểm tra bên dưới cho biết chiếc này có bị nhiễm hay không.</string>
+    <string name="scan_device_model_ok">Tên mẫu không có trong danh sách các mẫu bị ảnh hưởng đã công bố</string>
+
+    <!-- 2. Known apps. 1 = app (package) name -->
+    <string name="scan_pkg_confirmed_active">"%1$s đã cài và đang hoạt động  &lt;-- một phần của cửa hậu XCPE"</string>
+    <string name="scan_pkg_confirmed_dormant_firmware">%1$s có trong firmware nhưng đã tắt cho TV box này (không hoạt động, vô hại khi đang tắt)</string>
+    <string name="scan_pkg_confirmed_dormant_present">%1$s có mặt nhưng đã tắt (không hoạt động, vô hại khi đang tắt)</string>
+    <!-- 1 = how many names are on the confirmed list -->
+    <string name="scan_pkg_confirmed_none">Không có tên nào trong %1$d tên ứng dụng XCPE đã xác nhận đang hoạt động</string>
+    <string name="scan_pkg_suspect_active">%1$s đã cài (công cụ của Videostrong / đối tác, đáng ngờ)</string>
+    <string name="scan_pkg_suspect_dormant_firmware">%1$s (công cụ đáng ngờ) có trong firmware nhưng đã tắt cho TV box này (không hoạt động, vô hại khi đang tắt)</string>
+    <string name="scan_pkg_suspect_dormant_present">%1$s (công cụ đáng ngờ) có mặt nhưng đã tắt (không hoạt động, vô hại khi đang tắt)</string>
+
+    <!-- 3. Apps hiding behind system names. 1 = app name -->
+    <string name="scan_fake_active">%1$s là ứng dụng do người dùng cài đang núp sau tên hệ thống (trình cài lén XCPE hay làm vậy)</string>
+    <string name="scan_fake_dormant">%1$s dùng tên hệ thống nhưng đã tắt (không hoạt động, vô hại khi đang tắt)</string>
+    <string name="scan_fake_none">Không có ứng dụng do người dùng cài nào núp sau tên com.android.*</string>
+
+    <!-- 4. Data channels (content providers). 1 = app name, 2 = channel (authority) name -->
+    <string name="scan_provider_none">Không có ứng dụng nào mở kênh dữ liệu XCPE</string>
+    <string name="scan_provider_active">%1$s mở một kênh dữ liệu XCPE (%2$s)</string>
+    <string name="scan_provider_active_detail">Các ứng dụng XCPE chia sẻ cấu hình qua kênh này.</string>
+    <string name="scan_provider_dormant">%1$s mang một kênh dữ liệu XCPE (%2$s) nhưng đã tắt (không hoạt động)</string>
+
+    <!-- 5a. Spare copies in /oem -->
+    <string name="scan_oem_no_folder">TV box này không có thư mục /oem (không có chỗ cho bản sao dự phòng)</string>
+    <string name="scan_oem_copy_title">/oem chứa một bản sao dự phòng của cửa hậu</string>
+    <string name="scan_oem_copy_detail">Chỉ firmware mới hoặc root mới xóa được nó. Nó vẫn vô hại miễn là chính ứng dụng đó đã bị gỡ bỏ hoặc tắt.</string>
+    <!-- 1 = number of APK files -->
+    <string name="scan_oem_apks_ok">%1$d tệp APK trong /oem, không tệp nào có tên giống XCPE</string>
+    <string name="scan_oem_not_visible_title">Ứng dụng trên TV box này không nhìn thấy thư mục /oem, nên không loại trừ được bản sao dự phòng ở đó</string>
+    <!-- 1 = comma-separated folder names -->
+    <string name="scan_oem_not_visible_detail">Không đọc được: %1$s</string>
+    <string name="scan_oem_none">Không thấy tệp APK nào trong /oem</string>
+
+    <!-- 5b. System app folders. 1 = folder path -->
+    <string name="scan_privapp_hit_title">Thư mục ứng dụng hệ thống có tên giống XCPE: %1$s</string>
+    <string name="scan_privapp_hit_detail">Đây là một phần của firmware. Chỉ firmware mới hoặc root mới xóa được nó; tắt ứng dụng đi là nó vô hại.</string>
+    <string name="scan_privapp_none">Không có thư mục giống XCPE trong các thư mục ứng dụng hệ thống</string>
+    <!-- 1 = comma-separated folder names (shared by 5b and 5c) -->
+    <string name="scan_not_visible_detail">Ứng dụng không nhìn thấy: %1$s</string>
+
+    <!-- 5c. Permission grant files. 1 = file path, 2 = the XCPE app it mentions -->
+    <string name="scan_perm_hit_title">"Tệp cấp quyền cho một ứng dụng XCPE: %1$s  (nhắc đến %2$s)"</string>
+    <string name="scan_perm_hit_detail">Firmware duyệt sẵn quyền cho cửa hậu. Gỡ bỏ hoặc tắt ứng dụng đi thì tệp này mất tác dụng.</string>
+    <string name="scan_perm_none">Không có tệp cấp quyền nào cấp quyền cho ứng dụng XCPE</string>
+
+    <!-- 5d. Dropper properties. 1 = property name, 2 = its value -->
+    <string name="scan_prop_set">Thuộc tính %1$s=%2$s đã được đặt (trình cài lén XCPE năm 2026 dùng)</string>
+    <string name="scan_prop_none">Không có thuộc tính nào của trình cài lén XCPE được đặt</string>
+
+    <!-- 6. Play Protect -->
+    <string name="scan_pp_off_title">Tính năng kiểm tra ứng dụng của Play Protect đang TẮT (đúng những gì XCPE làm)</string>
+    <string name="scan_pp_off_detail">package_verifier_user_consent=-1. \'Gỡ bỏ mối đe dọa\' sẽ bật lại; bạn cũng có thể tự làm trong Cửa hàng Play > Play Protect.</string>
+    <string name="scan_pp_disabled_title">Tính năng kiểm tra ứng dụng của Play Protect bị vô hiệu hóa (package_verifier_enable=0)</string>
+    <string name="scan_pp_disabled_detail">\'Gỡ bỏ mối đe dọa\' sẽ bật lại; bạn cũng có thể tự làm trong Cửa hàng Play > Play Protect.</string>
+    <string name="scan_pp_ok">Tính năng kiểm tra ứng dụng của Play Protect không bị tắt</string>
+
+    <!-- 7. Accessibility. 1 = service id (app/class) -->
+    <string name="scan_acc_none">Không có dịch vụ hỗ trợ tiếp cận nào được bật</string>
+    <string name="scan_acc_bad_title">Một dịch vụ hỗ trợ tiếp cận thuộc về XCPE: %1$s</string>
+    <string name="scan_acc_bad_detail">XCPE dùng nó để theo dõi bạn nhấn gì trên điều khiển. Nó sẽ tắt khi ứng dụng bị gỡ bỏ.</string>
+    <string name="scan_acc_other">Dịch vụ hỗ trợ tiếp cận đang bật: %1$s (không phải XCPE)</string>
+
+    <!-- 10. Reference list. 1 = count; scan_user_app_off: 1 = app name; scan_more: 1 = how many were left out -->
+    <string name="scan_user_apps">%1$d ứng dụng do người dùng cài trên TV box này (để tham khảo)</string>
+    <string name="scan_user_app_off">"%1$s  (đã tắt)"</string>
+    <string name="scan_more">... (còn %1$d nữa)</string>
+
+    <!-- Detail lines under an app finding -->
+    <!-- 1 = version name, 2 = version number -->
+    <string name="scan_detail_version">phiên bản: %1$s (%2$d)</string>
+    <!-- 1 = file path -->
+    <string name="scan_detail_apk">apk: %1$s</string>
+    <!-- 1 = name of the app that installed it -->
+    <string name="scan_detail_installer">cài bởi: %1$s</string>
+    <string name="scan_detail_installer_none">cài bởi: không có ghi nhận (cài thủ công hoặc là một phần của firmware)</string>
+    <!-- 1 = first install date, 2 = last update date -->
+    <string name="scan_detail_times">"cài lần đầu: %1$s   cập nhật gần nhất: %2$s"</string>
+    <string name="scan_detail_type_updated_system">loại: ứng dụng firmware có bản cập nhật đè lên: gỡ cài đặt sẽ bỏ bản cập nhật, bản firmware chỉ có thể tắt</string>
+    <string name="scan_detail_type_system">loại: ứng dụng firmware (hệ thống): không có root thì chỉ tắt được, không xóa được</string>
+    <string name="scan_detail_type_user">loại: ứng dụng do người dùng cài: có thể gỡ cài đặt</string>
+    <string name="scan_detail_state_off">trạng thái: đã tắt</string>
+    <string name="scan_detail_state_off_by_user">trạng thái: người dùng đã tắt</string>
+    <!-- 1 = the error -->
+    <string name="scan_detail_unavailable">(không có chi tiết: %1$s)</string>
+</resources>

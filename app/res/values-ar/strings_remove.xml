@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- العربية: نصوص الإزالة (سلّم الإزالة، التنظيف العميق). مسارات «الإعدادات > التطبيقات > ...» تستخدم الأسماء التي يعرضها Android بالعربية. -->
+<resources>
+    <!-- الحالة المباشرة أثناء الإزالة -->
+    <string name="rm_status_connecting">جارٍ الاتصال بخدمة تصحيح الأخطاء في هذا الجهاز...</string>
+    <string name="rm_status_adb_failed">تعذّر استخدام اتصال تصحيح الأخطاء: %1$s</string>
+    <string name="rm_status_removing">جارٍ إزالة %1$s ‏(%2$d من %3$d)...</string>
+    <string name="rm_status_play_protect">جارٍ إعادة تشغيل Google Play Protect...</string>
+    <string name="rm_status_done">تم.</string>
+    <string name="rm_status_guided">اتبع الخطوات على الشاشة لإزالة كل تطبيق يدويًا.</string>
+    <string name="rm_status_deep_no_root">التنظيف العميق غير ممكن بدون root.</string>
+    <string name="rm_status_deep_looking">جارٍ البحث عن نسخ احتياطية في البرنامج الثابت...</string>
+    <string name="rm_status_deep_none">لم يُعثر على نسخة احتياطية في البرنامج الثابت.</string>
+    <string name="rm_status_deep_unlocking">جارٍ فتح %1$s للكتابة...</string>
+    <string name="rm_status_deep_deleting">جارٍ حذف %1$s...</string>
+    <string name="rm_status_deep_done">تم التنظيف العميق.</string>
+    <string name="rm_status_deep_partial">انتهى التنظيف العميق؛ تعذّر حذف بعض النسخ.</string>
+
+    <!-- السجل: المسار الذي سلكته الإزالة -->
+    <string name="rm_log_nothing_to_remove">لا شيء لإزالته؛ يتم التحقق من الحماية فقط.</string>
+    <string name="rm_log_to_remove">المطلوب إزالته: %1$s</string>
+    <string name="rm_log_path_adb">المسار: ADB ‏(%1$s:%2$d)</string>
+    <string name="rm_log_path_root">المسار: ROOT (su)</string>
+    <string name="rm_log_path_guided">المسار: موجَّه - لا يوجد اتصال تصحيح أخطاء ولا root، لذا تُنفَّذ هذه الخطوات يدويًا:</string>
+    <string name="rm_log_path_deep">المسار: تنظيف عميق عبر ROOT (su)</string>
+    <string name="rm_log_adb_failed">فشل اتصال تصحيح الأخطاء: %1$s</string>
+    <string name="rm_log_port_closed">منفذ تصحيح الأخطاء %1$s:%2$d مغلق.</string>
+    <string name="rm_log_no_root">لا يوجد root (su) في هذا الجهاز.</string>
+    <string name="rm_log_unexpected">مشكلة غير متوقعة: %1$s</string>
+    <string name="rm_log_stopped">أوقفته أنت. لم يتغيّر أي شيء آخر.</string>
+    <string name="rm_log_busy">ما زال تنظيف آخر قيد التشغيل على هذا الجهاز. حاول مرة أخرى بعد قليل.</string>
+    <string name="rm_log_grant_ok">يمكن للتطبيق الآن إيقاف تصحيح الأخطاء وتشغيله بنفسه</string>
+    <string name="rm_log_grant_ineffective">المنح لم يُفعَّل؛ يبقى تصحيح الأخطاء كما ضبطته أنت</string>
+    <string name="rm_log_grant_failed">فشل المنح: %1$s</string>
+    <string name="rm_log_door_opened">تم تشغيل تصحيح الأخطاء من أجل هذا التنظيف.</string>
+    <string name="rm_log_door_failed">تعذّر تشغيل تصحيح الأخطاء من أجل هذا التنظيف.</string>
+
+    <!-- السجل: نتيجة تطبيق واحد -->
+    <string name="rm_log_result_unknown">تعذّر التحقق من النتيجة (لا إجابة من مدير الحزم)؛ يُعامل على أنه ما زال نشطًا</string>
+    <string name="rm_log_disabled">مُوقَف (تعذّر إلغاء تثبيته؛ هو موقوف ولا يمكنه العمل)</string>
+    <string name="rm_log_failed">فشل - ما زال نشطًا. يحتاج هذا الجهاز إلى برنامج ثابت جديد أو إلى استبدال.</string>
+    <string name="rm_log_removed_fw_unknown">أُزيل من هذا الجهاز (تعذّر التحقق مما إذا كانت نسخة من البرنامج الثابت ما زالت موجودة؛ افترض أنها موجودة)</string>
+    <string name="rm_log_removed_fw">أُزيل من هذا الجهاز (تبقى نسخة خاملة في البرنامج الثابت للقراءة فقط)</string>
+    <string name="rm_log_removed">أُزيل بالكامل</string>
+
+    <!-- السجل: الحماية -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">إمكانية الوصول</string>
+    <string name="rm_log_pp_on">التحقق من التطبيقات في Play Protect: قيد التشغيل (consent=%1$s enable=%2$s)</string>
+    <string name="rm_log_pp_failed">Play Protect: تعذّر تغيير الإعداد (consent=%1$s enable=%2$s). شغّله من متجر Play > Play Protect > الإعدادات.</string>
+    <string name="rm_log_acc_removed">أُزيل ارتباط إمكانية الوصول: %1$s</string>
+
+    <!-- السجل: النتيجة الإجمالية -->
+    <string name="rm_log_result_partial">نتيجة التنظيف: جزئية - تعذّرت إزالة: %1$s. استبدل هذا الجهاز أو اطلب من البائع برنامجًا ثابتًا نظيفًا.</string>
+    <string name="rm_log_result_done">نتيجة التنظيف: تم - أُزيل/أُوقف: %1$s</string>
+    <string name="rm_log_result_next">التالي: أعد تشغيل الجهاز، ثم افحص مرة أخرى. إذا عاد تطبيق بعد إعادة التشغيل، فالبرنامج الثابت يعيد تثبيته: استبدل الجهاز.</string>
+    <string name="rm_log_result_nothing">نتيجة التنظيف: لم يكن هناك ما يحتاج إلى إزالة.</string>
+
+    <!-- السجل: خطوات تُنفَّذ يدويًا (لا اتصال تصحيح أخطاء، لا root) -->
+    <string name="rm_log_guided_step">الإعدادات > التطبيقات > %1$s > إلغاء التثبيت (أو «إلغاء تثبيت التحديثات»، ثم «إيقاف»)، ثم فرض الإيقاف</string>
+    <string name="rm_log_guided_pp">Play Protect: افتح متجر Play > ملفك الشخصي > Play Protect > الإعدادات (الترس) > شغّل «فحص التطبيقات باستخدام Play Protect»</string>
+    <string name="rm_log_guided_acc">الإعدادات > إمكانية الوصول: أوقف %1$s</string>
+    <string name="rm_log_guided_nothing">لا شيء يحتاج إلى تنفيذ يدوي.</string>
+
+    <!-- السجل: التنظيف العميق (root فقط) -->
+    <string name="rm_log_deep_no_root">يحتاج التنظيف العميق إلى root (su) وهذا الجهاز لا يملكه. تبقى النسخة الاحتياطية في البرنامج الثابت بلا أثر ما دام التطبيق مُزالًا أو موقوفًا.</string>
+    <string name="rm_log_deep_root_check_failed">تعذّر التحقق من وجود root: %1$s</string>
+    <string name="rm_log_deep_shared_perm_file">%1$s يمنح حقوقًا لتطبيقات أخرى أيضًا؛ تُرك كما هو</string>
+    <string name="rm_log_deep_unverified">%1$s: تعذّرت قراءة أي تطبيق بداخله، لذا تُرك كما هو.</string>
+    <string name="rm_log_deep_not_xcpe">%1$s يحتوي على التطبيق %2$s، وهو ليس جزءًا من XCPE؛ تُرك كما هو.</string>
+    <string name="rm_log_deep_skipped_unusual">تم التخطي (مسار غير معتاد): %1$s</string>
+    <string name="rm_log_deep_skipped_outside">تم التخطي (خارج أدلة البرنامج الثابت): %1$s</string>
+    <string name="rm_log_deep_nothing">لم يُعثر على أي شيء يشبه XCPE في أدلة البرنامج الثابت.</string>
+    <string name="rm_log_deep_targets">نسخ البرنامج الثابت المطلوب حذفها: %1$s</string>
+    <string name="rm_log_deep_write_protected">%1$s: البرنامج الثابت لهذا الجهاز محمي ضد الكتابة؛ تبقى النسخة الاحتياطية بلا أثر</string>
+    <string name="rm_log_deep_deleted">تم حذف %1$s</string>
+    <string name="rm_log_deep_still_there_ro">%1$s ما زال موجودًا: البرنامج الثابت لهذا الجهاز محمي ضد الكتابة؛ تبقى النسخة الاحتياطية بلا أثر</string>
+    <string name="rm_log_deep_still_there">%1$s ما زال موجودًا (تعذّر الحذف)</string>
+    <string name="rm_log_deep_result_done">نتيجة التنظيف العميق: تم - حُذف %1$d عنصر (عناصر) من البرنامج الثابت</string>
+    <string name="rm_log_deep_result_partial">نتيجة التنظيف العميق: جزئية - ما زال في البرنامج الثابت: %1$s</string>
+    <string name="rm_log_deep_unexpected">مشكلة غير متوقعة أثناء التنظيف العميق: %1$s</string>
+</resources>

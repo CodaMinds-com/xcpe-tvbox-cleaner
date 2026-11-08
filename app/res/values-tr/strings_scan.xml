@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Tarama metinleri (Türkçe). res/values/strings_scan.xml ile aynı adlar.
+  Çift tırnak içindeki değerler çift boşluklarını bilerek korur (raporda sütun hizalaması).
+-->
+<resources>
+    <!-- Canlı adım listesi için bölüm adları -->
+    <string name="scan_sec_device">Bu cihaz kontrol ediliyor</string>
+    <string name="scan_sec_known">Bilinen uygulamalar kontrol ediliyor</string>
+    <string name="scan_sec_fake_system">Sistem adlı uygulamalar kontrol ediliyor</string>
+    <string name="scan_sec_content">Yüklü uygulamaların içine bakılıyor</string>
+    <string name="scan_err_content">Yüklü uygulamaların içine bakılamadı</string>
+    <string name="scan_content_match">%1$s, bilinen bir XCPE bileşeni olan %2$s içeriyor</string>
+    <string name="scan_content_none">Hiçbir yüklü uygulama bilinen bir XCPE bileşeni içermiyor</string>
+    <string name="scan_reason_ioc">Ad, yayımlanmış XCPE yardımcı araçları listesiyle eşleşiyor</string>
+    <string name="scan_reason_provider">Bir XCPE veri kanalı sunuyor</string>
+    <string name="scan_reason_content">Bilinen bir XCPE bileşeni olan %1$s içeriyor</string>
+    <string name="scan_reason_fake_name">Sistem adı kullanıyor ama sonradan yüklenmiş</string>
+    <string name="scan_reason_installed_by">%1$s; yükleyen: %2$s</string>
+    <string name="scan_sec_providers">Veri kanalları kontrol ediliyor</string>
+    <string name="scan_sec_firmware">Cihaz yazılımında yedek kopya aranıyor</string>
+    <string name="scan_sec_play_protect">Google Play Protect kontrol ediliyor</string>
+    <string name="scan_sec_accessibility">Erişilebilirlik ayarları kontrol ediliyor</string>
+    <string name="scan_sec_user_apps">Kullanıcının yüklediği uygulamalar listeleniyor</string>
+
+    <!-- Bir bölüm çalışamadı (tarama devam eder) -->
+    <string name="scan_err_no_context">Bu kutuda hiçbir şey kontrol edilemedi (uygulama bağlamı eksikti)</string>
+    <string name="scan_err_finish">Tarama tamamlanamadı</string>
+    <string name="scan_err_device">Bu kutunun markası ve modeli kontrol edilemedi</string>
+    <string name="scan_err_app_list">Yüklü uygulamaların tam listesi kontrol edilemedi</string>
+    <string name="scan_err_known">Bilinen XCPE uygulama adları kontrol edilemedi</string>
+    <string name="scan_err_fake_system">Sistem adlarının arkasına saklanan uygulamalar kontrol edilemedi</string>
+    <string name="scan_err_providers">XCPE veri kanalları (content provider) kontrol edilemedi</string>
+    <string name="scan_err_oem">/oem klasöründe yedek kopya olup olmadığı kontrol edilemedi</string>
+    <string name="scan_err_priv_app">Sistem uygulaması klasörleri kontrol edilemedi</string>
+    <string name="scan_err_perm_files">İzin verme dosyaları kontrol edilemedi</string>
+    <string name="scan_err_props">XCPE yükleyici özellikleri kontrol edilemedi</string>
+    <string name="scan_err_play_protect">Play Protect ayarı kontrol edilemedi</string>
+    <string name="scan_err_accessibility">Erişilebilirlik hizmetleri kontrol edilemedi</string>
+    <string name="scan_err_user_apps">Kullanıcının yüklediği uygulamaların listesi kontrol edilemedi</string>
+
+    <!-- 1. Bu kutu. 1 = marka, 2 = üretici, 3 = model, 4 = cihaz kodu, 5 = Android sürümü, 6 = API düzeyi, 7 = güvenlik yaması tarihi, 8 = derleme parmak izi -->
+    <string name="scan_device_line">"Marka: %1$s   Üretici: %2$s   Model: %3$s   Cihaz: %4$s\nAndroid %5$s (API %6$d)  güvenlik yaması %7$s\nDerleme: %8$s"</string>
+    <string name="scan_unknown">bilinmiyor</string>
+    <string name="scan_device_unavailable">Cihaz ayrıntıları alınamadı</string>
+    <string name="scan_device_mecool_brand_title">Marka veya üretici MECOOL / Videostrong (XCPE\'nin arkasındaki şirket)</string>
+    <!-- 1 = marka, 2 = üretici -->
+    <string name="scan_device_mecool_brand_detail">"Marka: %1$s   Üretici: %2$s"</string>
+    <string name="scan_device_mecool_prop_title">Bu kutu kendini bir MECOOL cihazı olarak tanıtıyor (ro.mecool.device=true)</string>
+    <string name="scan_device_mecool_prop_detail">Arka kapı, kontrol sunucusunu seçmek için bu özelliği okur.</string>
+    <!-- 1 = model adı -->
+    <string name="scan_device_model_listed_title">“%1$s” model adı yayımlanmış etkilenen modeller listesinde (tek başına kanıt değil)</string>
+    <string name="scan_device_model_listed_detail">Bu adı taşıyan kutular XCPE kampanyasında görüldü. Aşağıdaki kontroller bu kutunun enfekte olup olmadığını söyler.</string>
+    <string name="scan_device_model_ok">Model adı yayımlanmış etkilenen modeller listesinde değil</string>
+
+    <!-- 2. Bilinen uygulamalar. 1 = uygulama (paket) adı -->
+    <string name="scan_pkg_confirmed_active">"%1$s yüklü ve etkin  &lt;-- XCPE arka kapısının parçası"</string>
+    <string name="scan_pkg_confirmed_dormant_firmware">%1$s cihaz yazılımında var ama bu kutu için kapalı (uykuda, kapalıyken zararsız)</string>
+    <string name="scan_pkg_confirmed_dormant_present">%1$s mevcut ama kapalı (uykuda, kapalıyken zararsız)</string>
+    <!-- 1 = doğrulanmış listede kaç ad olduğu -->
+    <string name="scan_pkg_confirmed_none">Doğrulanmış %1$d XCPE uygulama adından hiçbiri etkin değil</string>
+    <string name="scan_pkg_suspect_active">%1$s yüklü (Videostrong / iş ortağı aracı, şüpheli)</string>
+    <string name="scan_pkg_suspect_dormant_firmware">%1$s (şüpheli araç) cihaz yazılımında var ama bu kutu için kapalı (uykuda, kapalıyken zararsız)</string>
+    <string name="scan_pkg_suspect_dormant_present">%1$s (şüpheli araç) mevcut ama kapalı (uykuda, kapalıyken zararsız)</string>
+
+    <!-- 3. Sistem adlarının arkasına saklanan uygulamalar. 1 = uygulama adı -->
+    <string name="scan_fake_active">%1$s, bir sistem adının arkasına saklanan kullanıcı yüklemesi bir uygulama (XCPE yükleyicileri bunu yapar)</string>
+    <string name="scan_fake_dormant">%1$s bir sistem adı kullanıyor ama kapalı (uykuda, kapalıyken zararsız)</string>
+    <string name="scan_fake_none">Kullanıcının yüklediği hiçbir uygulama bir com.android.* adının arkasına saklanmıyor</string>
+
+    <!-- 4. Veri kanalları (content provider). 1 = uygulama adı, 2 = kanal (authority) adı -->
+    <string name="scan_provider_none">Hiçbir uygulama XCPE veri kanallarını sunmuyor</string>
+    <string name="scan_provider_active">%1$s bir XCPE veri kanalı sunuyor (%2$s)</string>
+    <string name="scan_provider_active_detail">XCPE uygulamaları yapılandırmalarını bu kanal üzerinden paylaşır.</string>
+    <string name="scan_provider_dormant">%1$s bir XCPE veri kanalı taşıyor (%2$s) ama kapalı (uykuda)</string>
+
+    <!-- 5a. /oem içindeki yedek kopyalar -->
+    <string name="scan_oem_no_folder">Bu kutuda /oem klasörü yok (yedek kopya için yer yok)</string>
+    <string name="scan_oem_copy_title">/oem arka kapının bir yedek kopyasını içeriyor</string>
+    <string name="scan_oem_copy_detail">Onu yalnızca yeni cihaz yazılımı veya root silebilir. Uygulamanın kendisi kaldırılmış veya kapalı olduğu sürece zararsız kalır.</string>
+    <!-- 1 = APK dosyası sayısı -->
+    <string name="scan_oem_apks_ok">/oem içinde %1$d APK dosyası var, hiçbirinin adı XCPE benzeri değil</string>
+    <string name="scan_oem_not_visible_title">/oem klasörü bu kutudaki uygulamalara görünmüyor, bu yüzden oradaki bir yedek kopya dışlanamaz</string>
+    <!-- 1 = virgülle ayrılmış klasör adları -->
+    <string name="scan_oem_not_visible_detail">Okunamıyor: %1$s</string>
+    <string name="scan_oem_none">/oem içinde görünür APK dosyası yok</string>
+
+    <!-- 5b. Sistem uygulaması klasörleri. 1 = klasör yolu -->
+    <string name="scan_privapp_hit_title">XCPE benzeri adlı sistem uygulaması klasörü: %1$s</string>
+    <string name="scan_privapp_hit_detail">Bu, cihaz yazılımının parçası. Onu yalnızca yeni cihaz yazılımı veya root silebilir; uygulamayı kapatmak onu zararsız tutar.</string>
+    <string name="scan_privapp_none">Sistem uygulaması dizinlerinde XCPE benzeri klasör yok</string>
+    <!-- 1 = virgülle ayrılmış klasör adları (5b ve 5c ortak) -->
+    <string name="scan_not_visible_detail">Uygulamalara görünmüyor: %1$s</string>
+
+    <!-- 5c. İzin verme dosyaları. 1 = dosya yolu, 2 = andığı XCPE uygulaması -->
+    <string name="scan_perm_hit_title">"Bir XCPE uygulaması için izin verme dosyası: %1$s  (%2$s adını içeriyor)"</string>
+    <string name="scan_perm_hit_detail">Cihaz yazılımı arka kapıya hakları önceden veriyor. Uygulamayı kaldırmak veya kapatmak bu dosyayı etkisiz kılar.</string>
+    <string name="scan_perm_none">Hiçbir izin verme dosyası bir XCPE uygulamasına hak vermiyor</string>
+
+    <!-- 5d. Yükleyici özellikleri. 1 = özellik adı, 2 = değeri -->
+    <string name="scan_prop_set">%1$s=%2$s özelliği ayarlanmış (2026 XCPE yükleyicileri tarafından kullanılır)</string>
+    <string name="scan_prop_none">XCPE yükleyici özelliklerinden hiçbiri ayarlanmamış</string>
+
+    <!-- 6. Play Protect -->
+    <string name="scan_pp_off_title">Play Protect uygulama kontrolü KAPALI (tam olarak XCPE\'nin yaptığı şey)</string>
+    <string name="scan_pp_off_detail">package_verifier_user_consent=-1. “Tehditleri kaldır” onu yeniden açar; Play Store > Play Protect içinden de yapabilirsiniz.</string>
+    <string name="scan_pp_disabled_title">Play Protect uygulama kontrolü devre dışı (package_verifier_enable=0)</string>
+    <string name="scan_pp_disabled_detail">“Tehditleri kaldır” onu yeniden açar; Play Store > Play Protect içinden de yapabilirsiniz.</string>
+    <string name="scan_pp_ok">Play Protect uygulama kontrolü kapatılmamış</string>
+
+    <!-- 7. Erişilebilirlik. 1 = hizmet kimliği (uygulama/sınıf) -->
+    <string name="scan_acc_none">Etkin erişilebilirlik hizmeti yok</string>
+    <string name="scan_acc_bad_title">Bir erişilebilirlik hizmeti XCPE\'ye ait: %1$s</string>
+    <string name="scan_acc_bad_detail">XCPE bunu kumandada nelere bastığınızı izlemek için kullanır. Uygulama kaldırıldığında kapatılır.</string>
+    <string name="scan_acc_other">Etkin erişilebilirlik hizmeti: %1$s (XCPE değil)</string>
+
+    <!-- 10. Başvuru listesi. 1 = sayı; scan_user_app_off: 1 = uygulama adı; scan_more: 1 = kaç tanesinin dışarıda bırakıldığı -->
+    <string name="scan_user_apps">Bu kutuda kullanıcının yüklediği %1$d uygulama var (bilgi için)</string>
+    <string name="scan_user_app_off">"%1$s  (kapalı)"</string>
+    <string name="scan_more">... (%1$d tane daha)</string>
+
+    <!-- Bir uygulama bulgusunun altındaki ayrıntı satırları -->
+    <!-- 1 = sürüm adı, 2 = sürüm numarası -->
+    <string name="scan_detail_version">sürüm: %1$s (%2$d)</string>
+    <!-- 1 = dosya yolu -->
+    <string name="scan_detail_apk">apk: %1$s</string>
+    <!-- 1 = onu yükleyen uygulamanın adı -->
+    <string name="scan_detail_installer">yükleyen: %1$s</string>
+    <string name="scan_detail_installer_none">yükleyen: kayıt yok (elle yüklenmiş veya cihaz yazılımının parçası)</string>
+    <!-- 1 = ilk yükleme tarihi, 2 = son güncelleme tarihi -->
+    <string name="scan_detail_times">"ilk yükleme: %1$s   son güncelleme: %2$s"</string>
+    <string name="scan_detail_type_updated_system">tür: üzerinde güncelleme olan cihaz yazılımı uygulaması: kaldırmak güncellemeyi siler, cihaz yazılımı kopyası yalnızca kapatılabilir</string>
+    <string name="scan_detail_type_system">tür: cihaz yazılımı (sistem) uygulaması: root olmadan kapatılabilir, silinemez</string>
+    <string name="scan_detail_type_user">tür: kullanıcının yüklediği uygulama: kaldırılabilir</string>
+    <string name="scan_detail_state_off">durum: kapalı</string>
+    <string name="scan_detail_state_off_by_user">durum: kullanıcı tarafından kapatılmış</string>
+    <!-- 1 = hata -->
+    <string name="scan_detail_unavailable">(ayrıntılar alınamadı: %1$s)</string>
+</resources>

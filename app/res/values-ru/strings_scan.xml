@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Русский: тексты отчёта о проверке. Строки в двойных кавычках сохраняют двойные пробелы для выравнивания. -->
+<resources>
+    <!-- Названия разделов для живого списка шагов -->
+    <string name="scan_sec_device">Проверяем это устройство</string>
+    <string name="scan_sec_known">Проверяем известные приложения</string>
+    <string name="scan_sec_fake_system">Проверяем приложения с системными именами</string>
+    <string name="scan_sec_content">Заглядываем внутрь установленных приложений</string>
+    <string name="scan_err_content">Не удалось заглянуть внутрь установленных приложений</string>
+    <string name="scan_content_match">%1$s содержит %2$s — известный компонент XCPE</string>
+    <string name="scan_content_none">Ни одно установленное приложение не содержит известных компонентов XCPE</string>
+    <string name="scan_reason_ioc">Имя совпадает с опубликованным списком вспомогательных инструментов XCPE</string>
+    <string name="scan_reason_provider">Открывает канал данных XCPE</string>
+    <string name="scan_reason_content">Содержит %1$s — известный компонент XCPE</string>
+    <string name="scan_reason_fake_name">Использует системное имя, но установлено позже</string>
+    <string name="scan_reason_installed_by">%1$s; установлено через %2$s</string>
+    <string name="scan_sec_providers">Проверяем каналы данных</string>
+    <string name="scan_sec_firmware">Ищем запасные копии в прошивке</string>
+    <string name="scan_sec_play_protect">Проверяем Google Play Protect</string>
+    <string name="scan_sec_accessibility">Проверяем специальные возможности</string>
+    <string name="scan_sec_user_apps">Составляем список установленных пользователем приложений</string>
+
+    <!-- Один раздел не удалось выполнить (проверка продолжается) -->
+    <string name="scan_err_no_context">Не удалось ничего проверить на этой приставке (отсутствовал контекст приложения)</string>
+    <string name="scan_err_finish">Не удалось завершить проверку</string>
+    <string name="scan_err_device">Не удалось проверить марку и модель этой приставки</string>
+    <string name="scan_err_app_list">Не удалось проверить полный список установленных приложений</string>
+    <string name="scan_err_known">Не удалось проверить известные имена приложений XCPE</string>
+    <string name="scan_err_fake_system">Не удалось проверить приложения, скрывающиеся за системными именами</string>
+    <string name="scan_err_providers">Не удалось проверить каналы данных XCPE (content providers)</string>
+    <string name="scan_err_oem">Не удалось проверить папку /oem на наличие запасной копии</string>
+    <string name="scan_err_priv_app">Не удалось проверить папки системных приложений</string>
+    <string name="scan_err_perm_files">Не удалось проверить файлы выдачи разрешений</string>
+    <string name="scan_err_props">Не удалось проверить свойства дропперов XCPE</string>
+    <string name="scan_err_play_protect">Не удалось проверить настройку Play Protect</string>
+    <string name="scan_err_accessibility">Не удалось проверить службы специальных возможностей</string>
+    <string name="scan_err_user_apps">Не удалось проверить список установленных пользователем приложений</string>
+
+    <!-- 1. Эта приставка -->
+    <string name="scan_device_line">"Марка: %1$s   Производитель: %2$s   Модель: %3$s   Устройство: %4$s\nAndroid %5$s (API %6$d)  обновление безопасности %7$s\nСборка: %8$s"</string>
+    <string name="scan_unknown">неизвестно</string>
+    <string name="scan_device_unavailable">Сведения об устройстве недоступны</string>
+    <string name="scan_device_mecool_brand_title">Марка или производитель — MECOOL / Videostrong (компания, стоящая за XCPE)</string>
+    <string name="scan_device_mecool_brand_detail">"Марка: %1$s   Производитель: %2$s"</string>
+    <string name="scan_device_mecool_prop_title">Эта приставка называет себя устройством MECOOL (ro.mecool.device=true)</string>
+    <string name="scan_device_mecool_prop_detail">Бэкдор читает это свойство, чтобы выбрать свой управляющий сервер.</string>
+    <string name="scan_device_model_listed_title">Модель «%1$s» есть в опубликованном списке затронутых моделей (само по себе это не доказательство)</string>
+    <string name="scan_device_model_listed_detail">Приставки с таким названием встречались в кампании XCPE. Проверки ниже покажут, заражена ли эта.</string>
+    <string name="scan_device_model_ok">Модели нет в опубликованном списке затронутых моделей</string>
+
+    <!-- 2. Известные приложения -->
+    <string name="scan_pkg_confirmed_active">"%1$s установлено и активно  &lt;-- часть бэкдора XCPE"</string>
+    <string name="scan_pkg_confirmed_dormant_firmware">%1$s есть в прошивке, но отключено для этой приставки (спит, безвредно пока отключено)</string>
+    <string name="scan_pkg_confirmed_dormant_present">%1$s присутствует, но отключено (спит, безвредно пока отключено)</string>
+    <string name="scan_pkg_confirmed_none">Ни одно из %1$d подтверждённых имён приложений XCPE не активно</string>
+    <string name="scan_pkg_suspect_active">%1$s установлено (инструмент Videostrong / партнёров, подозрительно)</string>
+    <string name="scan_pkg_suspect_dormant_firmware">%1$s (подозрительный инструмент) есть в прошивке, но отключено для этой приставки (спит, безвредно пока отключено)</string>
+    <string name="scan_pkg_suspect_dormant_present">%1$s (подозрительный инструмент) присутствует, но отключено (спит, безвредно пока отключено)</string>
+
+    <!-- 3. Приложения за системными именами -->
+    <string name="scan_fake_active">%1$s — установленное пользователем приложение, скрывающееся за системным именем (так делают дропперы XCPE)</string>
+    <string name="scan_fake_dormant">%1$s использует системное имя, но отключено (спит, безвредно пока отключено)</string>
+    <string name="scan_fake_none">Ни одно установленное пользователем приложение не скрывается за именем com.android.*</string>
+
+    <!-- 4. Каналы данных -->
+    <string name="scan_provider_none">Ни одно приложение не открывает каналы данных XCPE</string>
+    <string name="scan_provider_active">%1$s открывает канал данных XCPE (%2$s)</string>
+    <string name="scan_provider_active_detail">Приложения XCPE обмениваются через этот канал своими настройками.</string>
+    <string name="scan_provider_dormant">%1$s содержит канал данных XCPE (%2$s), но отключено (спит)</string>
+
+    <!-- 5a. Запасные копии в /oem -->
+    <string name="scan_oem_no_folder">На этой приставке нет папки /oem (запасной копии негде лежать)</string>
+    <string name="scan_oem_copy_title">В /oem лежит запасная копия бэкдора</string>
+    <string name="scan_oem_copy_detail">Удалить её может только новая прошивка или root. Она безвредна, пока само приложение удалено или отключено.</string>
+    <string name="scan_oem_apks_ok">APK-файлов в /oem: %1$d, ни одного с именем, похожим на XCPE</string>
+    <string name="scan_oem_not_visible_title">Папка /oem на этой приставке не видна приложениям, поэтому запасную копию там исключить нельзя</string>
+    <string name="scan_oem_not_visible_detail">Не читается: %1$s</string>
+    <string name="scan_oem_none">В /oem не видно APK-файлов</string>
+
+    <!-- 5b. Папки системных приложений -->
+    <string name="scan_privapp_hit_title">Папка системного приложения с именем, похожим на XCPE: %1$s</string>
+    <string name="scan_privapp_hit_detail">Это часть прошивки. Удалить её может только новая прошивка или root; пока приложение отключено, она безвредна.</string>
+    <string name="scan_privapp_none">В папках системных приложений нет папок, похожих на XCPE</string>
+    <string name="scan_not_visible_detail">Не видно приложениям: %1$s</string>
+
+    <!-- 5c. Файлы выдачи разрешений -->
+    <string name="scan_perm_hit_title">"Файл выдачи разрешений для приложения XCPE: %1$s  (упоминает %2$s)"</string>
+    <string name="scan_perm_hit_detail">Прошивка заранее выдаёт бэкдору права. После удаления или отключения приложения этот файл ни на что не влияет.</string>
+    <string name="scan_perm_none">Ни один файл выдачи разрешений не даёт прав приложению XCPE</string>
+
+    <!-- 5d. Свойства дропперов -->
+    <string name="scan_prop_set">Задано свойство %1$s=%2$s (его используют дропперы XCPE 2026 года)</string>
+    <string name="scan_prop_none">Ни одно из свойств дропперов XCPE не задано</string>
+
+    <!-- 6. Play Protect -->
+    <string name="scan_pp_off_title">Проверка приложений Play Protect ВЫКЛЮЧЕНА (именно так делает XCPE)</string>
+    <string name="scan_pp_off_detail">package_verifier_user_consent=-1. «Удалить угрозы» снова включит её; это можно сделать и в Play Маркет > Play Protect.</string>
+    <string name="scan_pp_disabled_title">Проверка приложений Play Protect отключена (package_verifier_enable=0)</string>
+    <string name="scan_pp_disabled_detail">«Удалить угрозы» снова включит её; это можно сделать и в Play Маркет > Play Protect.</string>
+    <string name="scan_pp_ok">Проверка приложений Play Protect не выключена</string>
+
+    <!-- 7. Специальные возможности -->
+    <string name="scan_acc_none">Службы специальных возможностей не включены</string>
+    <string name="scan_acc_bad_title">Служба специальных возможностей принадлежит XCPE: %1$s</string>
+    <string name="scan_acc_bad_detail">XCPE следит через неё за тем, что вы нажимаете на пульте. Она отключается при удалении приложения.</string>
+    <string name="scan_acc_other">Включена служба специальных возможностей: %1$s (не XCPE)</string>
+
+    <!-- 10. Справочный список -->
+    <string name="scan_user_apps">Установленных пользователем приложений на этой приставке: %1$d (для справки)</string>
+    <string name="scan_user_app_off">"%1$s  (отключено)"</string>
+    <string name="scan_more">... (ещё %1$d)</string>
+
+    <!-- Подробности под найденным приложением -->
+    <string name="scan_detail_version">версия: %1$s (%2$d)</string>
+    <string name="scan_detail_apk">apk: %1$s</string>
+    <string name="scan_detail_installer">установлено через: %1$s</string>
+    <string name="scan_detail_installer_none">установлено через: не записано (загружено вручную или часть прошивки)</string>
+    <string name="scan_detail_times">"первая установка: %1$s   последнее обновление: %2$s"</string>
+    <string name="scan_detail_type_updated_system">тип: приложение из прошивки с обновлением поверх: удаление убирает обновление, копию в прошивке можно только отключить</string>
+    <string name="scan_detail_type_system">тип: приложение из прошивки (системное): без root его можно только отключить, не удалить</string>
+    <string name="scan_detail_type_user">тип: установлено пользователем: его можно удалить</string>
+    <string name="scan_detail_state_off">состояние: отключено</string>
+    <string name="scan_detail_state_off_by_user">состояние: отключено пользователем</string>
+    <string name="scan_detail_unavailable">(подробности недоступны: %1$s)</string>
+</resources>

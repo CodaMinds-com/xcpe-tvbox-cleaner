@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bahasa Melayu (Malaysia). Teks pengimbas: tajuk dan ayat laporan semakan. Nilai dalam tanda petik berganda mengekalkan ruang berganda (penjajaran lajur). -->
+<resources>
+    <!-- Section names for the live step list -->
+    <string name="scan_sec_device">Menyemak peranti ini</string>
+    <string name="scan_sec_known">Menyemak apl yang diketahui</string>
+    <string name="scan_sec_fake_system">Menyemak apl dengan nama sistem</string>
+    <string name="scan_sec_content">Melihat ke dalam apl yang dipasang</string>
+    <string name="scan_err_content">Tidak dapat melihat ke dalam apl yang dipasang</string>
+    <string name="scan_content_match">%1$s mengandungi %2$s, komponen XCPE yang diketahui</string>
+    <string name="scan_content_none">Tiada apl yang dipasang mengandungi komponen XCPE yang diketahui</string>
+    <string name="scan_reason_ioc">Nama sepadan dengan senarai alat pembantu XCPE yang diterbitkan</string>
+    <string name="scan_reason_provider">Mendedahkan saluran data XCPE</string>
+    <string name="scan_reason_content">Mengandungi %1$s, komponen XCPE yang diketahui</string>
+    <string name="scan_reason_fake_name">Menggunakan nama sistem tetapi dipasang kemudian</string>
+    <string name="scan_reason_installed_by">%1$s; dipasang oleh %2$s</string>
+    <string name="scan_sec_providers">Menyemak saluran data</string>
+    <string name="scan_sec_firmware">Menyemak firmware untuk salinan simpanan</string>
+    <string name="scan_sec_play_protect">Menyemak Google Play Protect</string>
+    <string name="scan_sec_accessibility">Menyemak tetapan Kebolehaksesan</string>
+    <string name="scan_sec_user_apps">Menyenaraikan apl yang dipasang pengguna</string>
+
+    <!-- One section could not run (the scan continues) -->
+    <string name="scan_err_no_context">Tidak dapat menyemak apa-apa pada kotak ini (konteks apl tiada)</string>
+    <string name="scan_err_finish">Tidak dapat menyelesaikan imbasan</string>
+    <string name="scan_err_device">Tidak dapat menyemak jenama dan model kotak ini</string>
+    <string name="scan_err_app_list">Tidak dapat menyemak senarai penuh apl yang dipasang</string>
+    <string name="scan_err_known">Tidak dapat menyemak nama apl XCPE yang diketahui</string>
+    <string name="scan_err_fake_system">Tidak dapat menyemak apl yang bersembunyi di sebalik nama sistem</string>
+    <string name="scan_err_providers">Tidak dapat menyemak saluran data XCPE (pembekal kandungan)</string>
+    <string name="scan_err_oem">Tidak dapat menyemak folder /oem untuk salinan simpanan</string>
+    <string name="scan_err_priv_app">Tidak dapat menyemak folder apl sistem</string>
+    <string name="scan_err_perm_files">Tidak dapat menyemak fail pemberian kebenaran</string>
+    <string name="scan_err_props">Tidak dapat menyemak sifat pemasang senyap XCPE</string>
+    <string name="scan_err_play_protect">Tidak dapat menyemak tetapan Play Protect</string>
+    <string name="scan_err_accessibility">Tidak dapat menyemak perkhidmatan kebolehaksesan</string>
+    <string name="scan_err_user_apps">Tidak dapat menyemak senarai apl yang dipasang pengguna</string>
+
+    <!-- 1. This box. 1 = brand, 2 = maker, 3 = model, 4 = device code, 5 = Android version, 6 = API level, 7 = security patch date, 8 = build fingerprint -->
+    <string name="scan_device_line">"Jenama: %1$s   Pembuat: %2$s   Model: %3$s   Peranti: %4$s\nAndroid %5$s (API %6$d)  tampalan keselamatan %7$s\nBinaan: %8$s"</string>
+    <string name="scan_unknown">tidak diketahui</string>
+    <string name="scan_device_unavailable">Butiran peranti tidak tersedia</string>
+    <string name="scan_device_mecool_brand_title">Jenama atau pembuat ialah MECOOL / Videostrong (syarikat di sebalik XCPE)</string>
+    <!-- 1 = brand, 2 = maker -->
+    <string name="scan_device_mecool_brand_detail">"Jenama: %1$s   Pembuat: %2$s"</string>
+    <string name="scan_device_mecool_prop_title">Kotak ini mengenal pasti dirinya sebagai peranti MECOOL (ro.mecool.device=true)</string>
+    <string name="scan_device_mecool_prop_detail">Pintu belakang membaca sifat ini untuk memilih pelayan kawalannya.</string>
+    <!-- 1 = model name -->
+    <string name="scan_device_model_listed_title">Nama model \'%1$s\' ada dalam senarai model terjejas yang diterbitkan (bukan bukti dengan sendirinya)</string>
+    <string name="scan_device_model_listed_detail">Kotak dengan nama ini pernah dilihat dalam kempen XCPE. Semakan di bawah menentukan sama ada kotak ini dijangkiti.</string>
+    <string name="scan_device_model_ok">Nama model tiada dalam senarai model terjejas yang diterbitkan</string>
+
+    <!-- 2. Known apps. 1 = app (package) name -->
+    <string name="scan_pkg_confirmed_active">"%1$s dipasang dan aktif  &lt;-- sebahagian daripada pintu belakang XCPE"</string>
+    <string name="scan_pkg_confirmed_dormant_firmware">%1$s ada dalam firmware tetapi dimatikan untuk kotak ini (tidak aktif, tidak berbahaya selagi mati)</string>
+    <string name="scan_pkg_confirmed_dormant_present">%1$s ada tetapi dimatikan (tidak aktif, tidak berbahaya selagi mati)</string>
+    <!-- 1 = how many names are on the confirmed list -->
+    <string name="scan_pkg_confirmed_none">Tiada satu pun daripada %1$d nama apl XCPE yang disahkan sedang aktif</string>
+    <string name="scan_pkg_suspect_active">%1$s dipasang (alat Videostrong / rakan kongsinya, disyaki)</string>
+    <string name="scan_pkg_suspect_dormant_firmware">%1$s (alat yang disyaki) ada dalam firmware tetapi dimatikan untuk kotak ini (tidak aktif, tidak berbahaya selagi mati)</string>
+    <string name="scan_pkg_suspect_dormant_present">%1$s (alat yang disyaki) ada tetapi dimatikan (tidak aktif, tidak berbahaya selagi mati)</string>
+
+    <!-- 3. Apps hiding behind system names. 1 = app name -->
+    <string name="scan_fake_active">%1$s ialah apl yang dipasang pengguna yang bersembunyi di sebalik nama sistem (pemasang senyap XCPE berbuat begini)</string>
+    <string name="scan_fake_dormant">%1$s menggunakan nama sistem tetapi dimatikan (tidak aktif, tidak berbahaya selagi mati)</string>
+    <string name="scan_fake_none">Tiada apl yang dipasang pengguna bersembunyi di sebalik nama com.android.*</string>
+
+    <!-- 4. Data channels (content providers). 1 = app name, 2 = channel (authority) name -->
+    <string name="scan_provider_none">Tiada apl mendedahkan saluran data XCPE</string>
+    <string name="scan_provider_active">%1$s mendedahkan saluran data XCPE (%2$s)</string>
+    <string name="scan_provider_active_detail">Apl XCPE berkongsi konfigurasinya melalui saluran ini.</string>
+    <string name="scan_provider_dormant">%1$s membawa saluran data XCPE (%2$s) tetapi dimatikan (tidak aktif)</string>
+
+    <!-- 5a. Spare copies in /oem -->
+    <string name="scan_oem_no_folder">Kotak ini tiada folder /oem (tiada tempat untuk salinan simpanan)</string>
+    <string name="scan_oem_copy_title">/oem menyimpan salinan simpanan pintu belakang</string>
+    <string name="scan_oem_copy_detail">Hanya firmware baharu atau root boleh memadamnya. Ia kekal tidak berbahaya selagi apl itu sendiri dibuang atau dimatikan.</string>
+    <!-- 1 = number of APK files -->
+    <string name="scan_oem_apks_ok">%1$d fail APK dalam /oem, tiada satu pun dengan nama seperti XCPE</string>
+    <string name="scan_oem_not_visible_title">Folder /oem tidak kelihatan kepada apl pada kotak ini, jadi salinan simpanan di situ tidak dapat ditolak</string>
+    <!-- 1 = comma-separated folder names -->
+    <string name="scan_oem_not_visible_detail">Tidak boleh dibaca: %1$s</string>
+    <string name="scan_oem_none">Tiada fail APK kelihatan dalam /oem</string>
+
+    <!-- 5b. System app folders. 1 = folder path -->
+    <string name="scan_privapp_hit_title">Folder apl sistem dengan nama seperti XCPE: %1$s</string>
+    <string name="scan_privapp_hit_detail">Ini sebahagian daripada firmware. Hanya firmware baharu atau root boleh memadamnya; mematikan apl itu mengekalkannya tidak berbahaya.</string>
+    <string name="scan_privapp_none">Tiada folder seperti XCPE dalam direktori apl sistem</string>
+    <!-- 1 = comma-separated folder names (shared by 5b and 5c) -->
+    <string name="scan_not_visible_detail">Tidak kelihatan kepada apl: %1$s</string>
+
+    <!-- 5c. Permission grant files. 1 = file path, 2 = the XCPE app it mentions -->
+    <string name="scan_perm_hit_title">"Fail pemberian kebenaran untuk apl XCPE: %1$s  (menyebut %2$s)"</string>
+    <string name="scan_perm_hit_detail">Firmware meluluskan hak untuk pintu belakang terlebih dahulu. Membuang atau mematikan apl itu menjadikan fail ini tidak berkesan.</string>
+    <string name="scan_perm_none">Tiada fail pemberian kebenaran memberi hak kepada apl XCPE</string>
+
+    <!-- 5d. Dropper properties. 1 = property name, 2 = its value -->
+    <string name="scan_prop_set">Sifat %1$s=%2$s ditetapkan (digunakan oleh pemasang senyap XCPE 2026)</string>
+    <string name="scan_prop_none">Tiada satu pun sifat pemasang senyap XCPE ditetapkan</string>
+
+    <!-- 6. Play Protect -->
+    <string name="scan_pp_off_title">Semakan apl Play Protect DIMATIKAN (betul-betul apa yang XCPE lakukan)</string>
+    <string name="scan_pp_off_detail">package_verifier_user_consent=-1. \'Buang ancaman\' menghidupkannya semula; anda juga boleh melakukannya dalam Gedung Play > Play Protect.</string>
+    <string name="scan_pp_disabled_title">Semakan apl Play Protect dilumpuhkan (package_verifier_enable=0)</string>
+    <string name="scan_pp_disabled_detail">\'Buang ancaman\' menghidupkannya semula; anda juga boleh melakukannya dalam Gedung Play > Play Protect.</string>
+    <string name="scan_pp_ok">Semakan apl Play Protect tidak dimatikan</string>
+
+    <!-- 7. Accessibility. 1 = service id (app/class) -->
+    <string name="scan_acc_none">Tiada perkhidmatan kebolehaksesan dihidupkan</string>
+    <string name="scan_acc_bad_title">Satu perkhidmatan kebolehaksesan milik XCPE: %1$s</string>
+    <string name="scan_acc_bad_detail">XCPE menggunakannya untuk memerhati apa yang anda tekan pada alat kawalan jauh. Ia dimatikan apabila apl itu dibuang.</string>
+    <string name="scan_acc_other">Perkhidmatan kebolehaksesan dihidupkan: %1$s (bukan XCPE)</string>
+
+    <!-- 10. Reference list. 1 = count; scan_user_app_off: 1 = app name; scan_more: 1 = how many were left out -->
+    <string name="scan_user_apps">%1$d apl yang dipasang pengguna pada kotak ini (untuk rujukan)</string>
+    <string name="scan_user_app_off">"%1$s  (dimatikan)"</string>
+    <string name="scan_more">... (%1$d lagi)</string>
+
+    <!-- Detail lines under an app finding -->
+    <!-- 1 = version name, 2 = version number -->
+    <string name="scan_detail_version">versi: %1$s (%2$d)</string>
+    <!-- 1 = file path -->
+    <string name="scan_detail_apk">apk: %1$s</string>
+    <!-- 1 = name of the app that installed it -->
+    <string name="scan_detail_installer">dipasang oleh: %1$s</string>
+    <string name="scan_detail_installer_none">dipasang oleh: tiada rekod (dipasang sendiri atau sebahagian daripada firmware)</string>
+    <!-- 1 = first install date, 2 = last update date -->
+    <string name="scan_detail_times">"pertama dipasang: %1$s   terakhir dikemas kini: %2$s"</string>
+    <string name="scan_detail_type_updated_system">jenis: apl firmware dengan kemas kini di atasnya: menyahpasang membuang kemas kini itu, salinan firmware hanya boleh dimatikan</string>
+    <string name="scan_detail_type_system">jenis: apl firmware (sistem): tanpa root ia hanya boleh dimatikan, bukan dipadam</string>
+    <string name="scan_detail_type_user">jenis: apl yang dipasang pengguna: ia boleh dinyahpasang</string>
+    <string name="scan_detail_state_off">keadaan: dimatikan</string>
+    <string name="scan_detail_state_off_by_user">keadaan: dimatikan oleh pengguna</string>
+    <!-- 1 = the error -->
+    <string name="scan_detail_unavailable">(butiran tidak tersedia: %1$s)</string>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  One screen, driven with a TV remote.
+  Focus order: buttons left/right in the bar (Scan has focus on start); DOWN from any button lands on
+  the report frame, where UP/DOWN scroll the report and UP at the top returns to the button you came from.
+  The button bar itself is never focusable: before the first layout a HorizontalScrollView would
+  otherwise grab focus instead of its first button.
+  Padding keeps everything inside the TV's safe area (48dp sides, 27dp top/bottom). Start/End so RTL mirrors.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#0F1A1C"
+    android:paddingStart="48dp" android:paddingEnd="48dp" android:paddingTop="27dp" android:paddingBottom="27dp">
+
+    <TextView android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/title" android:textColor="#E7EEEC" android:textSize="34sp" android:textStyle="bold"/>
+    <TextView android:id="@+id/subtitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/subtitle" android:textColor="#A3B3B0" android:textSize="18sp" android:layout_marginTop="4dp"/>
+    <TextView android:id="@+id/last_check" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/last_check_none" android:textColor="#7FA39E" android:textSize="15sp" android:layout_marginTop="6dp"/>
+
+    <com.codaminds.xcpecleaner.FlowLayout android:id="@+id/buttons" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="18dp" android:paddingTop="4dp" android:paddingBottom="4dp"
+        android:focusable="false" android:descendantFocusability="afterDescendants">
+            <Button android:id="@+id/btn_scan" style="@style/TvButton" android:text="@string/btn_scan"
+                android:focusedByDefault="true" android:nextFocusDown="@+id/report_scroll"/>
+            <Button android:id="@+id/btn_remove" style="@style/TvButton" android:text="@string/btn_remove" android:enabled="false"
+                android:nextFocusDown="@id/report_scroll"/>
+            <Button android:id="@+id/btn_details" style="@style/TvButton" android:text="@string/btn_details_show" android:visibility="gone"
+                android:nextFocusDown="@id/report_scroll"/>
+            <Button android:id="@+id/btn_devopts" style="@style/TvButton" android:text="@string/btn_devopts"
+                android:nextFocusDown="@id/report_scroll"/>
+            <Button android:id="@+id/btn_deepclean" style="@style/TvButton" android:text="@string/btn_deepclean" android:visibility="gone"
+                android:nextFocusDown="@id/report_scroll"/>
+            <Button android:id="@+id/btn_debugoff" style="@style/TvButton" android:text="@string/btn_debugoff" android:visibility="gone"
+                android:nextFocusDown="@id/report_scroll"/>
+            <Button android:id="@+id/btn_help" style="@style/TvButton" android:text="@string/btn_help"
+                android:nextFocusDown="@id/report_scroll"/>
+    </com.codaminds.xcpecleaner.FlowLayout>
+
+    <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/status_idle" android:textColor="#E7EEEC" android:textSize="22sp" android:layout_marginTop="16dp"
+        android:lineSpacingExtra="3dp"/>
+
+    <ScrollView android:id="@id/report_scroll" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:layout_marginTop="12dp" android:background="@drawable/report_frame" android:padding="14dp"
+        android:focusable="true" android:scrollbars="vertical" android:fadeScrollbars="false" android:scrollbarStyle="insideInset"
+        android:nextFocusUp="@id/btn_scan" android:nextFocusDown="@id/report_scroll" android:contentDescription="@string/report_frame_desc">
+        <TextView android:id="@+id/report" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="#C9D4D1" android:textSize="15sp" android:typeface="monospace" android:lineSpacingExtra="2dp"/>
+    </ScrollView>
+</LinearLayout>

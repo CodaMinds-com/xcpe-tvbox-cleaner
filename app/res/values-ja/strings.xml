@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 日本語。技術的な知識がなく、ソファからテレビを見ている人向け：まず何が起きたかを伝え、次に何をすればよいかを伝える。 -->
+<resources>
+    <string name="app_name">XCPE クリーナー</string>
+    <string name="title">XCPE クリーナー</string>
+    <string name="subtitle">このボックスにある XCPE バックドアを見つけて削除します。データが外部に送られることはありません。</string>
+
+    <!-- ボタン -->
+    <string name="btn_scan">スキャン</string>
+    <string name="btn_remove">脅威を削除</string>
+    <string name="btn_devopts">開発者向けオプションを開く</string>
+    <string name="btn_deepclean">ディープクリーン（root）</string>
+    <string name="btn_help">仕組み</string>
+    <string name="btn_details_show">詳細を表示</string>
+    <string name="btn_details_hide">詳細を隠す</string>
+    <string name="report_frame_desc">確認レポートです。上下ボタンでスクロールします。</string>
+
+    <!-- 書式の部品（文字はないが、引用符・区切り・順序は翻訳者が変えてよい） -->
+    <string name="app_label_fmt">「%1$s」（%2$s）</string>
+    <string name="name_quoted">「%s」</string>
+    <string name="list_separator">、</string>
+    <string name="bullet_line">  - %s</string>
+    <string name="join_sentences">%1$s%2$s</string>
+    <string name="progress_line">- %s</string>
+    <string name="progress_block">%1$s\n%2$s</string>
+    <string name="progress_step_start">%s…</string>
+    <string name="progress_step_done">%s…完了</string>
+    <string name="progress_scan_header">確認中：</string>
+
+    <!-- 開始画面 -->
+    <string name="status_idle">「スキャン」を押すと、このボックスを確認します。</string>
+    <string name="report_intro">スキャンで調べること：\n\n  - XCPE の一部として知られている 8 つのアプリ\n  - Android の一部になりすましているアプリ\n  - XCPE が使う隠しデータチャネル\n  - ボックスのファームウェアに保存された予備のコピー\n  - Google Play Protect がオフにされていないか\n  - XCPE がユーザー補助に入り込んでいないか\n\n確認には数秒かかり、何も変更しません。\nどこにも何も送信しません。\n\n確認が終わると、このボックスは次の 3 つのうち 1 つを表示します：\n  問題なし、疑わしい、感染あり。\n問題なし以外のときは、「脅威を削除」を押してください。</string>
+    <string name="last_check_none">前回の確認：なし</string>
+    <!-- 1 = 日時、2 = 結果の言葉、3 = 誰が確認したか -->
+    <string name="last_check_fmt">前回の確認：%1$s · %2$s（%3$s）</string>
+    <string name="src_manual">手動で確認</string>
+    <string name="src_auto">再起動後の自動確認</string>
+    <string name="check_clean">問題なし</string>
+    <string name="check_suspicious">疑わしい</string>
+    <string name="check_infected">感染あり</string>
+    <string name="check_removed_again">XCPE が再び現れたため、もう一度削除しました</string>
+    <string name="check_failed">XCPE が再び現れ、削除できませんでした</string>
+    <string name="check_debug_opened">削除のためにデバッグをオンにしました</string>
+    <string name="check_debug_open_failed">デバッグをオンにできませんでした</string>
+    <string name="check_debug_closed">デバッグを再びオフにしました</string>
+    <string name="check_debug_close_failed">デバッグはまだオンのままです</string>
+    <string name="check_summary_join">%1$s；%2$s</string>
+
+    <!-- スキャン -->
+    <string name="status_scanning">このボックスを確認しています… 数秒かかります。</string>
+    <string name="status_scan_failed">確認を最後まで行えませんでした。「スキャン」を押してやり直してください。</string>
+    <plurals name="status_infected">
+        <item quantity="one">感染あり：このボックスで XCPE の構成要素が %d 個動作しています。「脅威を削除」を押してください。</item>
+        <item quantity="other">感染あり：このボックスで XCPE の構成要素が %d 個動作しています。「脅威を削除」を押してください。</item>
+    </plurals>
+    <string name="status_suspicious">疑わしい：動作中の確認済み XCPE アプリはありませんが、このボックスには警告のサインがあります。「脅威を削除」を押して対処できるものを対処するか、下ボタンを押してレポートをお読みください。</string>
+    <string name="status_clean">問題なし：このボックスに XCPE のものは見つかりませんでした。このままお使いいただけます。</string>
+
+    <!-- 削除：ひとつだけの質問 -->
+    <string name="dlg_review_title">削除前の確認</string>
+    <plurals name="dlg_review_msg_confirmed">
+        <item quantity="other">確認済みの XCPE 構成要素 %1$d 件を削除します。以下は、ほかに注意すべきアプリです。名前以外にも根拠がある場合にだけ最初からチェックが入っています。行の上で OK を押すと変更できます。</item>
+    </plurals>
+    <string name="dlg_review_msg_only">動作中の確認済み XCPE アプリはありません。以下は注意すべきアプリです。名前以外にも根拠がある場合にだけ最初からチェックが入っています。行の上で OK を押すと変更できます。</string>
+    <string name="dlg_review_remove">選択したものを削除</string>
+    <string name="status_review_kept">ほかには何も削除していません。ボックスは変更されていません。</string>
+    <string name="scan_reason_vendor_warning">ボックス独自のストアやテレビサービスの一部かもしれません。削除するとそのサービスが使えなくなることがあります。</string>
+    <string name="dlg_suspects_title">疑わしいアプリも削除しますか？</string>
+    <string name="dlg_suspects_msg">確認済みの XCPE の構成要素のほかに、このボックスには XCPE と一緒に入っていることが多いアプリがあります：\n\n%s\n\nテレビボックスにこれらは必要ありません。</string>
+    <string name="dlg_suspects_yes">はい、これらも削除する</string>
+    <string name="dlg_suspects_no">いいえ、確認済みのものだけ</string>
+    <string name="dlg_suspects_only_title">疑わしいアプリを削除しますか？</string>
+    <string name="dlg_suspects_only_msg">動作中の確認済み XCPE アプリはありませんが、次のアプリは XCPE と一緒に入っていることが多いものです：\n\n%s\n\nテレビボックスにこれらは必要ありません。</string>
+    <string name="dlg_remove">削除する</string>
+    <string name="dlg_keep">残す</string>
+    <string name="status_kept">何も変更していません。いつでも「スキャン」を押して再確認できます。</string>
+
+    <!-- 削除：実行中 -->
+    <string name="status_removing">削除しています… ボックスの電源を切らないでください。テレビにデバッグについての質問が表示されたら、「常に許可」にチェックを入れて「許可」を押してください。</string>
+    <string name="report_remove_live">現在の状況：</string>
+    <string name="report_remove_log">詳細：</string>
+    <string name="report_remove_crashed">削除処理がエラーで停止しました：%s</string>
+
+    <!-- 削除：結果 -->
+    <string name="outcome_removed">削除済み：%s</string>
+    <string name="outcome_disabled">無効化済み（完全には削除できませんでしたが、動作はできません）：%s</string>
+    <string name="outcome_failed">まだ動作中（削除できませんでした）：%s</string>
+    <string name="outcome_firmware_remain">このボックスのファームウェアには予備のコピーが残っています。上記のアプリが削除または無効のあいだは動作できません。削除できるのは root でのディープクリーンか、メーカーの新しいファームウェアだけです。</string>
+    <string name="outcome_pp_on">Google Play Protect：再びオンにしました。</string>
+    <string name="outcome_pp_off">Google Play Protect：まだオフです。Google Play アプリを開き、プロフィール アイコンを押して「Play Protect（Play プロテクト）」を選び、歯車アイコンを押して「Play プロテクトによるアプリのスキャン」をオンにしてください。</string>
+    <string name="outcome_pp_fine">Google Play Protect：すでにオンでした。</string>
+    <string name="status_outcome_done">完了：XCPE の構成要素を削除しました。ボックスを再起動してから、もう一度「スキャン」を押して、戻ってきていないことを確認してください。</string>
+    <string name="status_outcome_partial">一部は削除できませんでした。下ボタンを押して詳細をお読みください。再起動後も残っている場合は、このボックスを買い替えてください。</string>
+    <string name="status_outcome_nothing">削除が必要なものはありませんでした。いつでも「スキャン」を押して再確認できます。</string>
+    <string name="status_outcome_pp_only">完了：Google Play Protect を再びオンにしました。「スキャン」を押して再確認してください。</string>
+    <string name="status_outcome_none">今回は何も変更していません。「開発者向けオプションを開く」を押してアプリが自分で削除できるようにしてから、もう一度「脅威を削除」を押してください。</string>
+
+    <!-- 再起動 -->
+    <string name="dlg_restart_title">今すぐボックスを再起動しますか？</string>
+    <string name="dlg_restart_msg_adb">再起動でクリーンアップが完了します。画面が 1 分ほど暗くなります。その後、このアプリが自動でボックスを再確認し、何かが戻ってきていればお知らせします。</string>
+    <string name="dlg_restart_msg_manual">再起動でクリーンアップが完了します。ボックスの電源コードを抜き、10 秒待ってから差し直してください。その後、このアプリを開いて「スキャン」を押してください。</string>
+    <string name="dlg_restart_now">今すぐ再起動</string>
+    <string name="dlg_restart_later">後で</string>
+    <string name="dlg_ok">OK</string>
+    <string name="btn_debugoff">デバッグをオフにする</string>
+    <string name="dlg_debugoff_title">デバッグをオフにしますか？</string>
+    <string name="dlg_debugoff_msg">デバッグがあるからこそ、このアプリはボックスをクリーンアップし、再起動のたびに確認できます。オフにする場合、アプリはまず、その確認のために自分でデバッグをオンに戻せるかをテストします。最大 1 分ほどかかりますが、その間もボックスは使えます。</string>
+    <string name="dlg_debugoff_yes">テストしてオフにする</string>
+    <string name="status_debug_kept">再起動のたびにこのアプリがボックスを確認できるよう、デバッグはオンのままです。オフにしたい場合は「デバッグをオフにする」を押してください。</string>
+    <string name="status_debug_probe">このボックスが自分でデバッグをオンに戻せるかをテストしています…</string>
+    <string name="status_debug_probe_ok">デバッグはオフです。自動確認のとき、アプリはデバッグを一時的にオンにし、すぐにオフに戻します。</string>
+    <string name="status_debug_probe_failed">このボックスは自分でデバッグをオンに戻せないため、デバッグはオンのままです。自動モードが動かなくなった場合は、ボックスを再起動してください。</string>
+    <string name="status_debug_reclosed">このクリーンアップのためにデバッグをオンにしましたが、再びオフに戻しました。</string>
+    <string name="status_auto_report">これは前回の再起動後に行われた自動確認のレポートです。改めて確認するには「スキャン」を押してください。</string>
+    <string name="status_clean_dormant">問題なし：動作中の XCPE のものはありません。オフにされた残りがファームウェアに残っていますが、オフのあいだは無害です。</string>
+    <string name="status_outcome_done_mixed">完了：XCPE の構成要素を削除またはオフにしました。ボックスを再起動してから、もう一度「スキャン」を押して、戻ってきていないことを確認してください。</string>
+    <string name="dlg_stop_title">クリーンアップを中止しますか？</string>
+    <string name="dlg_stop_msg">アプリはまだボックスを処理中です。今中止すると、まだ削除されていないものはそのまま残ります。あとでもう一度「脅威を削除」を押せます。</string>
+    <string name="dlg_stop_yes">中止</string>
+    <string name="status_stopping">中止しています…</string>
+    <string name="result_infected">結果：感染あり - XCPE バックドアがこのボックスで動作中です：%1$s</string>
+    <string name="result_suspicious">結果：疑わしい - 動作中の確認済み XCPE アプリはありませんが、上の警告をご覧ください</string>
+    <string name="result_clean">結果：問題なし - XCPE のものは見つかりませんでした</string>
+    <string name="adb_status_connecting">ボックスのデバッグサービスに接続しています…</string>
+    <string name="adb_status_look_at_tv">テレビをご覧ください：「このパソコンからの USB デバッグを常に許可する」にチェックを入れて「許可」を押してください。</string>
+    <string name="adb_status_connected">接続しました：ボックスがこのアプリからの指示を受け付けています。</string>
+    <string name="adb_err_denied">ボックスがこのアプリを許可しませんでした（「拒否」が押されたか、質問が時間切れになりました）。もう一度試し、テレビに質問が表示されたら「常に許可」にチェックを入れて「許可」を押してください。</string>
+    <string name="adb_err_pairing_only">このボックスは「ワイヤレスデバッグ」のペア設定しか提供しておらず、このアプリでは使えません。代わりに案内の手順に従ってください。</string>
+    <string name="adb_err_not_allowed">このアプリはまだボックスのデバッグサービスで許可されていません。「脅威を削除」を一度押すと、テレビが許可するかどうかを尋ねてきます。</string>
+    <string name="adb_err_lost">ボックスのデバッグサービスとの接続が切れました。もう一度お試しください。</string>
+    <string name="adb_err_no_answer">ボックスのデバッグサービスから時間内に応答がありませんでした。しばらくしてからもう一度お試しください。</string>
+    <string name="adb_err_generic">デバッグ接続の問題：%1$s</string>
+    <string name="status_debug_opening">再起動のためにデバッグの入り口を開いています…</string>
+    <string name="status_debug_opening_clean">このクリーンアップのためにデバッグの入り口を開いています…</string>
+    <string name="status_rebooting">再起動しています… 画面が 1 分ほど暗くなります。暗くならない場合は、電源コードを抜き、10 秒待ってから差し直してください。</string>
+    <string name="status_reboot_failed">ボックスは自動で再起動しませんでした。電源コードを抜き、10 秒待ってから差し直してください。その後、このアプリを開いて「スキャン」を押してください。</string>
+
+    <!-- 手動での削除案内（ボックスがアプリによる削除を許可していない場合） -->
+    <string name="dlg_guided_title">手動で 1 つずつ削除</string>
+    <string name="dlg_guided_msg">このボックスではアプリが自分で削除することを許可していないため、一緒に進めます。このアプリが問題のあるアプリの設定ページを 1 つずつ開き（残り %d 個）、各ページの前にどのボタンを押すかをお伝えします。ページの作業が終わったら、リモコンの戻るボタンを押してください。</string>
+    <string name="dlg_guided_start">開始</string>
+    <string name="dlg_guided_later">今はしない</string>
+    <string name="status_guided_later">削除は開始していません。準備ができたら「脅威を削除」を押すか、「開発者向けオプションを開く」を押してアプリが自分で削除できるようにしてください。</string>
+    <!-- 1 = ステップ番号、2 = 合計、3 = アプリ名 -->
+    <string name="guide_step_uninstall">ステップ %1$d/%2$d：%3$s を削除するかどうかの質問が表示されます。「OK」または「アンインストール」を押してください。</string>
+    <string name="dlg_guide_step_title">ステップ %1$d/%2$d：%3$s</string>
+    <string name="dlg_guide_step_msg">次のページで「アンインストール」を押してください。\n\n「アンインストール」ボタンがない場合：「アップデートのアンインストール」があればそれを押し、次に「無効にする」、そして「強制停止」を押してください。\n\n終わったら、リモコンの戻るボタンを押してここに戻ってください。</string>
+    <string name="dlg_guide_open">ページを開く</string>
+    <string name="dlg_guide_skip">このアプリをスキップ</string>
+    <string name="guide_step_appinfo">ステップ %1$d/%2$d：%3$s のページで「アンインストール」を押してください。ない場合は「アップデートのアンインストール」、次に「無効にする」、そして「強制停止」を押してください。終わったら戻るボタンを押してください。</string>
+    <string name="status_guided_checking">何が変わったか確認しています…</string>
+    <string name="status_guide_cannot_open">このボックスでは %s の設定ページを開けませんでした。次に進みます。</string>
+    <string name="guide_still_active_title">%s はまだ動作中です</string>
+    <string name="guide_still_active_msg">まだ消えていません。もう一度ページを開くか、このアプリをスキップするか、ここで止めることができます。</string>
+    <string name="guide_try_again">もう一度</string>
+    <string name="guide_skip">スキップ</string>
+    <string name="guide_stop">停止</string>
+    <string name="guide_pp_title">Google Play Protect を再びオンにする</string>
+    <string name="guide_pp_msg">XCPE が Google のアプリチェックをオフにしました。次のページで「Play プロテクトによるアプリのスキャン」をオンにして、戻るボタンを押してください。</string>
+    <string name="guide_pp_fallback">このボックスにはそのページを直接開く方法がありません。Google Play アプリを開き、右上のプロフィール アイコンを押して「Play Protect（Play プロテクト）」を選び、歯車アイコンを押して「Play プロテクトによるアプリのスキャン」をオンにしてください。</string>
+    <string name="status_guide_pp">次のページで「Play プロテクトによるアプリのスキャン」をオンにして、戻るボタンを押してください。</string>
+    <string name="dlg_guide_skip_step">このステップをスキップ</string>
+    <string name="guide_acc_title">XCPE が使うユーザー補助サービスをオフにする</string>
+    <string name="guide_acc_msg">XCPE はこのボックスのユーザー補助設定に入り込んでいます。次のページで %s を見つけてオフにし、戻るボタンを押してください。</string>
+    <string name="status_guide_acc">次のページで %s をオフにして、戻るボタンを押してください。</string>
+    <string name="guided_tail_acc">ユーザー補助：%s はまだオンです。「設定」>「ユーザー補助」でオフにしてください。</string>
+    <!-- 1 = 対処済み、2 = まだ動作中、3 = 次にすること -->
+    <string name="status_guided_done">手動での作業が完了：%1$d 個を削除または無効化、%2$d 個がまだ動作中。%3$s</string>
+    <string name="guided_tail_restart">次にボックスを再起動し（電源コードを抜いて差し直します）、このアプリを開いてもう一度「スキャン」を押してください。</string>
+    <string name="guided_tail_replace">再起動後もまだ動作している場合、このボックスはきれいにできません。買い替えてください。</string>
+
+    <!-- 開発者向けオプション -->
+    <string name="status_devopts_hint">次のページで「USB デバッグ」をオンにしてください。ボックスによっては「ネットワークデバッグ」「ADB デバッグ」「ネットワーク経由の ADB」という名前です。それもオンにしてください。質問が表示されたら「常に許可」にチェックを入れて「許可」を押してください。その後、戻るボタンを押してください。</string>
+    <string name="status_devopts_hidden">このボックスでは開発者向けオプションが隠れています。次のページで「ビルド番号」（または「ビルド」）を見つけ、その上で OK を 7 回押してください。その後、戻るボタンを押してから、もう一度「開発者向けオプションを開く」を押してください。</string>
+    <string name="status_devopts_missing">このボックスではアプリから設定を開けません。ご自身で「設定」を開いてください：デバイス設定 > 端末情報 で「ビルド」を 7 回押し、次に「開発者向けオプション」で「USB デバッグ」をオンにします。</string>
+    <string name="status_port_open">良好：デバッグの入り口が開いています。「脅威を削除」を押すと、アプリがすべて自分で削除します。</string>
+    <string name="status_port_closed_usb_only">USB デバッグはオンですが、ネットワーク側の入り口はまだ閉じています。開発者向けオプションで「ネットワークデバッグ」「ネットワーク経由の ADB」「ワイヤレスデバッグ」を探して、それもオンにしてください。このボックスにどれもない場合は、「脅威を削除」が代わりに手順を 1 つずつ案内します。</string>
+    <string name="status_port_closed_after">デバッグの入り口はまだ閉じています。もう一度「開発者向けオプションを開く」を試すか、「脅威を削除」を押すと、アプリが代わりに手順を 1 つずつ案内します。</string>
+
+    <!-- ディープクリーン -->
+    <string name="dlg_deep_title">ファームウェアをディープクリーンしますか？</string>
+    <string name="dlg_deep_msg">このボックスのファームウェアに保存されたバックドアの予備のコピーを削除します。root 権限のあるボックスでのみ動作し、XCPE に属するファイルにしか触れません。</string>
+    <string name="dlg_deep_yes">予備のコピーを削除</string>
+    <string name="dlg_cancel">キャンセル</string>
+    <string name="status_deep_running">ディープクリーン中… ボックスの電源を切らないでください。</string>
+    <string name="status_deep_done">ディープクリーンが終わりました。下ボタンを押して結果を読み、「スキャン」を押して再確認してください。</string>
+    <string name="report_deep_header">ディープクリーン：</string>
+
+    <!-- 仕組み -->
+    <string name="help_title">このアプリの仕組み。下ボタンで読み進め、上ボタンで戻ります。</string>
+    <string name="help_text">XCPE とは\nXCPE は、多くの安価な Android テレビボックス（MECOOL、Videostrong、および別の名前で販売されているボックス）のファームウェアに組み込まれたバックドアです。見知らぬ人があなたのボックス上でさまざまなことを実行できるようになります。偽の広告クリック、あなたのインターネット回線を通る隠れた通信、そのほか送り込まれたものなら何でもです。\n\nスキャンがすること\nスキャンはこのボックスのアプリ、Google Play Protect、ユーザー補助の設定を調べ、公開されている XCPE 構成要素のリストと照らし合わせます。何も変更せず、どこにも何も送信しません。\n\n脅威を削除がすること\nこのボックスから XCPE のアプリを削除し、Google Play Protect を再びオンにします。削除できないアプリは、動作できないように無効にします。アプリはまずこれを自分で行おうとします。これはボックスのデバッグの入り口（開発者向けオプション）が開いているときに動作します。そうでない場合は、適切な設定ページを開いて、どのボタンを押すかをお伝えします。\n\n残るもの\n多くのボックスは、ファームウェアの読み取り専用の部分にバックドアの予備のコピーを保持しています。root 権限がなければアプリはそのコピーを削除できませんが、アプリが削除または無効のあいだ、そのコピーは動作できません。再起動後に XCPE が戻ってきた場合、このアプリはそれに気づいてもう一度削除し、お知らせします。\n\n率直なアドバイス\n最初からバックドア入りで出荷されたボックスは、あなただけのものだったことは一度もありません。できれば、よく知られたブランドのボックス（Google TV Streamer、Apple TV、Fire TV、Nvidia Shield）に買い替えてください。使い続ける場合は、このボックスで銀行やメールにログインしないでください。\n\nパスワードを変更してください\nこのボックスでパスワードを入力したことがあるなら、別の機器から変更してください。Google アカウント、Netflix、Wi-Fi、そのほかここで使ったものすべてです。\n\nクリーンアップの後\nボックスを再起動し、このアプリを開いてもう一度「スキャン」を押してください。アプリは再起動のたびに自動でも確認し、結果を「前回の確認」の下に表示します。\n\n「スキャン」を押すと確認結果をもう一度表示します。</string>
+
+    <!-- 再起動後の確認からの通知 -->
+    <string name="notif_channel">再起動後の確認</string>
+    <string name="notif_channel_desc">再起動後に XCPE が戻ってきたときにお知らせします。</string>
+    <string name="notif_removed_again_title">再起動後に XCPE が戻ってきたため、もう一度削除しました</string>
+    <string name="notif_removed_again_text">XCPE クリーナーを開いて詳細をご覧ください。これが繰り返される場合は、ボックスを買い替えてください。</string>
+    <string name="notif_failed_title">XCPE が戻ってきて削除できませんでした：このボックスを買い替えてください</string>
+    <string name="notif_failed_text">XCPE クリーナーを開いて「脅威を削除」を押し、もう一度お試しください。</string>
+    <string name="notif_failed_text_port_closed">デバッグの入り口が閉じているため、アプリは自分で削除できませんでした。XCPE クリーナーを開いて「脅威を削除」を押してください。</string>
+    <string name="notif_suspicious_title">このボックスに警告のサインがあります</string>
+    <string name="notif_suspicious_text">XCPE クリーナーを開いて「スキャン」を押し、詳細をお読みください。</string>
+    <string name="report_auto_remove_header">再起動後の自動削除：</string>
+</resources>

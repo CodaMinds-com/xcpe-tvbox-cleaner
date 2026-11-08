@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Español (neutral). Textos del análisis: cada titular y frase del informe, más los nombres de sección que se muestran mientras se ejecuta.
+  Se conservan %1$s / %2$d, nombres de paquete, "XCPE", "Play Protect", "MECOOL", "Videostrong", /oem y nombres de ajustes.
+  Los valores entre comillas dobles conservan sus espacios dobles a propósito (alineación de columnas en el informe).
+-->
+<resources>
+    <!-- Nombres de sección para la lista de pasos en vivo -->
+    <string name="scan_sec_device">Comprobando este dispositivo</string>
+    <string name="scan_sec_known">Comprobando aplicaciones conocidas</string>
+    <string name="scan_sec_fake_system">Comprobando aplicaciones con nombres del sistema</string>
+    <string name="scan_sec_content">Mirando dentro de las aplicaciones instaladas</string>
+    <string name="scan_err_content">No se pudo mirar dentro de las aplicaciones instaladas</string>
+    <string name="scan_content_match">%1$s contiene %2$s, un componente conocido de XCPE</string>
+    <string name="scan_content_none">Ninguna aplicación instalada contiene un componente conocido de XCPE</string>
+    <string name="scan_reason_ioc">El nombre coincide con la lista publicada de herramientas auxiliares de XCPE</string>
+    <string name="scan_reason_provider">Expone un canal de datos de XCPE</string>
+    <string name="scan_reason_content">Contiene %1$s, un componente conocido de XCPE</string>
+    <string name="scan_reason_fake_name">Usa un nombre del sistema pero se instaló después</string>
+    <string name="scan_reason_installed_by">%1$s; instalada por %2$s</string>
+    <string name="scan_sec_providers">Comprobando canales de datos</string>
+    <string name="scan_sec_firmware">Buscando copias de reserva en el firmware</string>
+    <string name="scan_sec_play_protect">Comprobando Google Play Protect</string>
+    <string name="scan_sec_accessibility">Comprobando los ajustes de Accesibilidad</string>
+    <string name="scan_sec_user_apps">Listando aplicaciones instaladas por el usuario</string>
+
+    <!-- Una sección no pudo ejecutarse (el análisis continúa) -->
+    <string name="scan_err_no_context">No se pudo comprobar nada en este dispositivo (faltaba el contexto de la aplicación)</string>
+    <string name="scan_err_finish">No se pudo terminar el análisis</string>
+    <string name="scan_err_device">No se pudo comprobar la marca y el modelo de este dispositivo</string>
+    <string name="scan_err_app_list">No se pudo comprobar la lista completa de aplicaciones instaladas</string>
+    <string name="scan_err_known">No se pudieron comprobar los nombres de aplicaciones XCPE conocidos</string>
+    <string name="scan_err_fake_system">No se pudieron comprobar las aplicaciones escondidas tras nombres del sistema</string>
+    <string name="scan_err_providers">No se pudieron comprobar los canales de datos de XCPE (proveedores de contenido)</string>
+    <string name="scan_err_oem">No se pudo comprobar si hay una copia de reserva en la carpeta /oem</string>
+    <string name="scan_err_priv_app">No se pudieron comprobar las carpetas de aplicaciones del sistema</string>
+    <string name="scan_err_perm_files">No se pudieron comprobar los archivos de concesión de permisos</string>
+    <string name="scan_err_props">No se pudieron comprobar las propiedades del instalador oculto de XCPE</string>
+    <string name="scan_err_play_protect">No se pudo comprobar el ajuste de Play Protect</string>
+    <string name="scan_err_accessibility">No se pudieron comprobar los servicios de accesibilidad</string>
+    <string name="scan_err_user_apps">No se pudo comprobar la lista de aplicaciones instaladas por el usuario</string>
+
+    <!-- 1. Este dispositivo. 1 = marca, 2 = fabricante, 3 = modelo, 4 = código de dispositivo, 5 = versión de Android, 6 = nivel de API, 7 = fecha del parche de seguridad, 8 = huella de compilación -->
+    <string name="scan_device_line">"Marca: %1$s   Fabricante: %2$s   Modelo: %3$s   Dispositivo: %4$s\nAndroid %5$s (API %6$d)  parche de seguridad %7$s\nCompilación: %8$s"</string>
+    <string name="scan_unknown">desconocido</string>
+    <string name="scan_device_unavailable">Datos del dispositivo no disponibles</string>
+    <string name="scan_device_mecool_brand_title">La marca o el fabricante es MECOOL / Videostrong (la empresa detrás de XCPE)</string>
+    <!-- 1 = marca, 2 = fabricante -->
+    <string name="scan_device_mecool_brand_detail">"Marca: %1$s   Fabricante: %2$s"</string>
+    <string name="scan_device_mecool_prop_title">Este dispositivo se identifica como un dispositivo MECOOL (ro.mecool.device=true)</string>
+    <string name="scan_device_mecool_prop_detail">La puerta trasera lee esta propiedad para elegir su servidor de control.</string>
+    <!-- 1 = nombre del modelo -->
+    <string name="scan_device_model_listed_title">El nombre de modelo \'%1$s\' está en la lista publicada de modelos afectados (por sí solo no es una prueba)</string>
+    <string name="scan_device_model_listed_detail">Se vieron dispositivos con este nombre en la campaña XCPE. Las comprobaciones de abajo dicen si este está infectado.</string>
+    <string name="scan_device_model_ok">El nombre de modelo no está en la lista publicada de modelos afectados</string>
+
+    <!-- 2. Aplicaciones conocidas. 1 = nombre de la aplicación (paquete) -->
+    <string name="scan_pkg_confirmed_active">"%1$s está instalada y activa  &lt;-- parte de la puerta trasera XCPE"</string>
+    <string name="scan_pkg_confirmed_dormant_firmware">%1$s está en el firmware pero desactivada en este dispositivo (inactiva, inofensiva mientras esté desactivada)</string>
+    <string name="scan_pkg_confirmed_dormant_present">%1$s está presente pero desactivada (inactiva, inofensiva mientras esté desactivada)</string>
+    <!-- 1 = cuántos nombres hay en la lista confirmada -->
+    <string name="scan_pkg_confirmed_none">Ninguno de los %1$d nombres de aplicaciones XCPE confirmados está activo</string>
+    <string name="scan_pkg_suspect_active">%1$s está instalada (herramienta de Videostrong / afiliados, sospechosa)</string>
+    <string name="scan_pkg_suspect_dormant_firmware">%1$s (herramienta sospechosa) está en el firmware pero desactivada en este dispositivo (inactiva, inofensiva mientras esté desactivada)</string>
+    <string name="scan_pkg_suspect_dormant_present">%1$s (herramienta sospechosa) está presente pero desactivada (inactiva, inofensiva mientras esté desactivada)</string>
+
+    <!-- 3. Aplicaciones escondidas tras nombres del sistema. 1 = nombre de la aplicación -->
+    <string name="scan_fake_active">%1$s es una aplicación instalada por el usuario que se esconde tras un nombre del sistema (los instaladores ocultos de XCPE hacen esto)</string>
+    <string name="scan_fake_dormant">%1$s usa un nombre del sistema pero está desactivada (inactiva, inofensiva mientras esté desactivada)</string>
+    <string name="scan_fake_none">Ninguna aplicación instalada por el usuario se esconde tras un nombre com.android.*</string>
+
+    <!-- 4. Canales de datos (proveedores de contenido). 1 = nombre de la aplicación, 2 = nombre del canal (authority) -->
+    <string name="scan_provider_none">Ninguna aplicación expone los canales de datos de XCPE</string>
+    <string name="scan_provider_active">%1$s expone un canal de datos de XCPE (%2$s)</string>
+    <string name="scan_provider_active_detail">Las aplicaciones de XCPE comparten su configuración a través de este canal.</string>
+    <string name="scan_provider_dormant">%1$s lleva un canal de datos de XCPE (%2$s) pero está desactivada (inactiva)</string>
+
+    <!-- 5a. Copias de reserva en /oem -->
+    <string name="scan_oem_no_folder">Este dispositivo no tiene carpeta /oem (no hay sitio para una copia de reserva)</string>
+    <string name="scan_oem_copy_title">/oem contiene una copia de reserva de la puerta trasera</string>
+    <string name="scan_oem_copy_detail">Solo un firmware nuevo o root pueden borrarla. Es inofensiva mientras la aplicación en sí esté eliminada o desactivada.</string>
+    <!-- 1 = número de archivos APK -->
+    <string name="scan_oem_apks_ok">%1$d archivo(s) APK en /oem, ninguno con un nombre parecido a XCPE</string>
+    <string name="scan_oem_not_visible_title">La carpeta /oem no es visible para las aplicaciones en este dispositivo, así que no se puede descartar una copia de reserva ahí</string>
+    <!-- 1 = nombres de carpetas separados por comas -->
+    <string name="scan_oem_not_visible_detail">No legible: %1$s</string>
+    <string name="scan_oem_none">No hay archivos APK visibles en /oem</string>
+
+    <!-- 5b. Carpetas de aplicaciones del sistema. 1 = ruta de la carpeta -->
+    <string name="scan_privapp_hit_title">Carpeta de aplicaciones del sistema con un nombre parecido a XCPE: %1$s</string>
+    <string name="scan_privapp_hit_detail">Esto es parte del firmware. Solo un firmware nuevo o root pueden borrarla; desactivar la aplicación la mantiene inofensiva.</string>
+    <string name="scan_privapp_none">No hay carpetas parecidas a XCPE en los directorios de aplicaciones del sistema</string>
+    <!-- 1 = nombres de carpetas separados por comas (compartido por 5b y 5c) -->
+    <string name="scan_not_visible_detail">No visible para las aplicaciones: %1$s</string>
+
+    <!-- 5c. Archivos de concesión de permisos. 1 = ruta del archivo, 2 = la aplicación XCPE que menciona -->
+    <string name="scan_perm_hit_title">"Archivo de concesión de permisos para una aplicación XCPE: %1$s  (menciona %2$s)"</string>
+    <string name="scan_perm_hit_detail">El firmware aprueba de antemano permisos para la puerta trasera. Eliminar o desactivar la aplicación deja este archivo sin efecto.</string>
+    <string name="scan_perm_none">Ningún archivo de concesión de permisos da permisos a una aplicación XCPE</string>
+
+    <!-- 5d. Propiedades del instalador oculto. 1 = nombre de la propiedad, 2 = su valor -->
+    <string name="scan_prop_set">La propiedad %1$s=%2$s está definida (la usan los instaladores ocultos de XCPE de 2026)</string>
+    <string name="scan_prop_none">Ninguna de las propiedades del instalador oculto de XCPE está definida</string>
+
+    <!-- 6. Play Protect -->
+    <string name="scan_pp_off_title">La comprobación de aplicaciones de Play Protect está DESACTIVADA (justo lo que hace XCPE)</string>
+    <string name="scan_pp_off_detail">package_verifier_user_consent=-1. \'Eliminar amenazas\' la vuelve a activar; también puedes hacerlo en Play Store > Play Protect.</string>
+    <string name="scan_pp_disabled_title">La comprobación de aplicaciones de Play Protect está inhabilitada (package_verifier_enable=0)</string>
+    <string name="scan_pp_disabled_detail">\'Eliminar amenazas\' la vuelve a activar; también puedes hacerlo en Play Store > Play Protect.</string>
+    <string name="scan_pp_ok">La comprobación de aplicaciones de Play Protect no está desactivada</string>
+
+    <!-- 7. Accesibilidad. 1 = id del servicio (aplicación/clase) -->
+    <string name="scan_acc_none">No hay servicios de accesibilidad activados</string>
+    <string name="scan_acc_bad_title">Un servicio de accesibilidad pertenece a XCPE: %1$s</string>
+    <string name="scan_acc_bad_detail">XCPE lo usa para ver qué pulsas en el control remoto. Se desactiva al eliminar la aplicación.</string>
+    <string name="scan_acc_other">Servicio de accesibilidad activado: %1$s (no es XCPE)</string>
+
+    <!-- 10. Lista de referencia. 1 = cantidad; scan_user_app_off: 1 = nombre de la aplicación; scan_more: 1 = cuántas se omitieron -->
+    <string name="scan_user_apps">%1$d aplicación(es) instalada(s) por el usuario en este dispositivo (como referencia)</string>
+    <string name="scan_user_app_off">"%1$s  (desactivada)"</string>
+    <string name="scan_more">... (%1$d más)</string>
+
+    <!-- Líneas de detalle bajo un hallazgo de aplicación -->
+    <!-- 1 = nombre de versión, 2 = número de versión -->
+    <string name="scan_detail_version">versión: %1$s (%2$d)</string>
+    <!-- 1 = ruta del archivo -->
+    <string name="scan_detail_apk">apk: %1$s</string>
+    <!-- 1 = nombre de la aplicación que la instaló -->
+    <string name="scan_detail_installer">instalada por: %1$s</string>
+    <string name="scan_detail_installer_none">instalada por: sin registro (cargada a mano o parte del firmware)</string>
+    <!-- 1 = fecha de primera instalación, 2 = fecha de última actualización -->
+    <string name="scan_detail_times">"primera instalación: %1$s   última actualización: %2$s"</string>
+    <string name="scan_detail_type_updated_system">tipo: aplicación del firmware con una actualización encima: desinstalar quita la actualización, la copia del firmware solo se puede desactivar</string>
+    <string name="scan_detail_type_system">tipo: aplicación del firmware (sistema): sin root se puede desactivar, no borrar</string>
+    <string name="scan_detail_type_user">tipo: aplicación instalada por el usuario: se puede desinstalar</string>
+    <string name="scan_detail_state_off">estado: desactivada</string>
+    <string name="scan_detail_state_off_by_user">estado: desactivada por el usuario</string>
+    <!-- 1 = el error -->
+    <string name="scan_detail_unavailable">(detalles no disponibles: %1$s)</string>
+</resources>

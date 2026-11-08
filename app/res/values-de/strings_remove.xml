@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Texte der Entfernung (Deutsch). Gleiche Namen wie res/values/strings_remove.xml.
+    rm_status_*  Statuszeilen, die während der Entfernung live angezeigt werden
+    rm_log_*     die Zusammenfassungszeilen des Protokolls in einfacher Sprache (die Befehlsmitschrift bleibt Englisch)
+  Pfade wie „Einstellungen > Apps > ...“ benutzen die Namen, die Android auf Deutsch anzeigt.
+-->
+<resources>
+    <!-- Live-Status während der Entfernung -->
+    <string name="rm_status_connecting">Verbindung zum Debugging-Dienst dieser Box wird hergestellt...</string>
+    <!-- 1 = der Grund, ein einfacher Satz vom Debugging-Client -->
+    <string name="rm_status_adb_failed">Die Debugging-Verbindung konnte nicht genutzt werden: %1$s</string>
+    <!-- 1 = App-Name, 2 = laufende Nummer, 3 = gesamt -->
+    <string name="rm_status_removing">%1$s wird entfernt (%2$d von %3$d)...</string>
+    <string name="rm_status_play_protect">Google Play Protect wird wieder eingeschaltet...</string>
+    <string name="rm_status_done">Fertig.</string>
+    <string name="rm_status_guided">Folgen Sie den Schritten auf dem Bildschirm, um jede App von Hand zu entfernen.</string>
+    <string name="rm_status_deep_no_root">Ohne Root ist keine Tiefenreinigung möglich.</string>
+    <string name="rm_status_deep_looking">Firmware wird nach Ersatzkopien durchsucht...</string>
+    <string name="rm_status_deep_none">Keine Ersatzkopie in der Firmware gefunden.</string>
+    <!-- 1 = Partition wie /oem oder /system -->
+    <string name="rm_status_deep_unlocking">%1$s wird zum Schreiben entsperrt...</string>
+    <!-- 1 = Datei- oder Ordnerpfad -->
+    <string name="rm_status_deep_deleting">%1$s wird gelöscht...</string>
+    <string name="rm_status_deep_done">Tiefenreinigung fertig.</string>
+    <string name="rm_status_deep_partial">Tiefenreinigung abgeschlossen; einige Kopien konnten nicht gelöscht werden.</string>
+
+    <!-- Protokoll: welcher Weg genommen wurde -->
+    <string name="rm_log_nothing_to_remove">Nichts zu entfernen; nur die Schutzfunktionen werden geprüft.</string>
+    <!-- 1 = App-Namen, durch Kommas getrennt -->
+    <string name="rm_log_to_remove">Zu entfernen: %1$s</string>
+    <!-- 1 = Host, 2 = Port -->
+    <string name="rm_log_path_adb">Weg: ADB (%1$s:%2$d)</string>
+    <string name="rm_log_path_root">Weg: ROOT (su)</string>
+    <string name="rm_log_path_guided">Weg: GEFÜHRT - keine Debugging-Verbindung und kein Root, diese Schritte werden also von Hand erledigt:</string>
+    <string name="rm_log_path_deep">Weg: ROOT (su) Tiefenreinigung</string>
+    <!-- 1 = der Grund -->
+    <string name="rm_log_adb_failed">Debugging-Verbindung fehlgeschlagen: %1$s</string>
+    <!-- 1 = Host, 2 = Port -->
+    <string name="rm_log_port_closed">Debugging-Port %1$s:%2$d ist geschlossen.</string>
+    <string name="rm_log_no_root">Kein Root (su) auf dieser Box.</string>
+    <!-- 1 = der Fehler -->
+    <string name="rm_log_unexpected">Unerwartetes Problem: %1$s</string>
+    <string name="rm_log_stopped">Von Ihnen gestoppt. Sonst wurde nichts geändert.</string>
+    <string name="rm_log_busy">Auf dieser Box läuft noch eine andere Reinigung. Versuchen Sie es gleich noch einmal.</string>
+    <string name="rm_log_grant_ok">die App kann das Debugging jetzt selbst aus- und einschalten</string>
+    <string name="rm_log_grant_ineffective">Freigabe ohne Wirkung; das Debugging bleibt so, wie Sie es eingestellt haben</string>
+    <!-- 1 = der Fehler -->
+    <string name="rm_log_grant_failed">Freigabe fehlgeschlagen: %1$s</string>
+    <string name="rm_log_door_opened">Debugging für diese Reinigung eingeschaltet.</string>
+    <string name="rm_log_door_failed">Debugging konnte für diese Reinigung nicht eingeschaltet werden.</string>
+
+    <!-- Protokoll: Ergebnis für eine App -->
+    <string name="rm_log_result_unknown">Ergebnis konnte nicht geprüft werden (keine Antwort vom Paketmanager); wird als noch aktiv behandelt</string>
+    <string name="rm_log_disabled">DEAKTIVIERT (konnte nicht deinstalliert werden; ist ausgeschaltet und kann nicht laufen)</string>
+    <string name="rm_log_failed">FEHLGESCHLAGEN - noch aktiv. Diese Box braucht neue Firmware oder Ersatz.</string>
+    <string name="rm_log_removed_fw_unknown">ENTFERNT für diese Box (ob eine Firmware-Kopie bleibt, ließ sich nicht prüfen; gehen Sie davon aus)</string>
+    <string name="rm_log_removed_fw">ENTFERNT für diese Box (eine schlafende Kopie bleibt in der schreibgeschützten Firmware)</string>
+    <string name="rm_log_removed">VOLLSTÄNDIG ENTFERNT</string>
+
+    <!-- Protokoll: Schutzfunktionen -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">Bedienungshilfen</string>
+    <!-- 1 und 2 = die beiden zurückgelesenen Einstellungswerte -->
+    <string name="rm_log_pp_on">App-Prüfung von Play Protect: AN (consent=%1$s enable=%2$s)</string>
+    <string name="rm_log_pp_failed">Play Protect: Einstellung konnte nicht geändert werden (consent=%1$s enable=%2$s). Schalten Sie sie im Play Store > Play Protect > Einstellungen ein.</string>
+    <!-- 1 = ID des Bedienungshilfen-Dienstes -->
+    <string name="rm_log_acc_removed">aus den Bedienungshilfen entfernt: %1$s</string>
+
+    <!-- Protokoll: Gesamtergebnis -->
+    <!-- 1 = App-Namen, durch Leerzeichen getrennt -->
+    <string name="rm_log_result_partial">ERGEBNIS DER REINIGUNG: TEILWEISE - nicht entfernt werden konnten: %1$s. Ersetzen Sie diese Box oder bitten Sie den Verkäufer um saubere Firmware.</string>
+    <string name="rm_log_result_done">ERGEBNIS DER REINIGUNG: FERTIG - entfernt/deaktiviert: %1$s</string>
+    <string name="rm_log_result_next">ALS NÄCHSTES: Box neu starten, dann erneut prüfen. Kommt eine App nach dem Neustart zurück, installiert die Firmware sie neu: Ersetzen Sie die Box.</string>
+    <string name="rm_log_result_nothing">ERGEBNIS DER REINIGUNG: Es musste nichts entfernt werden.</string>
+
+    <!-- Protokoll: Schritte von Hand (keine Debugging-Verbindung, kein Root) -->
+    <!-- 1 = App-Name -->
+    <string name="rm_log_guided_step">Einstellungen > Apps > %1$s > Deinstallieren (oder „Updates deinstallieren“, dann „Deaktivieren“), dann Beenden erzwingen</string>
+    <string name="rm_log_guided_pp">Play Protect: Play Store öffnen > Ihr Profil > Play Protect > Einstellungen (Zahnrad) > „Apps mit Play Protect scannen“ einschalten</string>
+    <!-- 1 = IDs der Bedienungshilfen-Dienste, durch Kommas getrennt -->
+    <string name="rm_log_guided_acc">Einstellungen > Bedienungshilfen: %1$s ausschalten</string>
+    <string name="rm_log_guided_nothing">Nichts von Hand zu tun.</string>
+
+    <!-- Protokoll: Tiefenreinigung (nur mit Root) -->
+    <string name="rm_log_deep_no_root">Die Tiefenreinigung braucht Root (su), und diese Box hat keins. Eine Ersatzkopie in der Firmware bleibt wirkungslos, solange die App entfernt oder deaktiviert ist.</string>
+    <!-- 1 = der Fehler -->
+    <string name="rm_log_deep_root_check_failed">Root konnte nicht geprüft werden: %1$s</string>
+    <!-- 1 = Dateipfad -->
+    <string name="rm_log_deep_shared_perm_file">%1$s erteilt auch anderen Apps Rechte; unverändert gelassen</string>
+    <!-- 1 = Dateipfad, 2 = Paketname -->
+    <string name="rm_log_deep_unverified">%1$s: Es ließ sich nicht lesen, welche App darin steckt; unverändert gelassen.</string>
+    <string name="rm_log_deep_not_xcpe">%1$s enthält die App %2$s, die nicht zu XCPE gehört; unverändert gelassen.</string>
+    <string name="rm_log_deep_skipped_unusual">übersprungen (ungewöhnlicher Pfad): %1$s</string>
+    <string name="rm_log_deep_skipped_outside">übersprungen (außerhalb der Firmware-Ordner): %1$s</string>
+    <string name="rm_log_deep_nothing">Nichts XCPE-Ähnliches in den Firmware-Verzeichnissen gefunden.</string>
+    <!-- 1 = Pfade, durch Kommas getrennt -->
+    <string name="rm_log_deep_targets">Zu löschende Firmware-Kopien: %1$s</string>
+    <!-- 1 = Partition wie /oem -->
+    <string name="rm_log_deep_write_protected">%1$s: Die Firmware dieser Box ist schreibgeschützt; die Ersatzkopie bleibt wirkungslos</string>
+    <!-- 1 = Datei- oder Ordnerpfad -->
+    <string name="rm_log_deep_deleted">gelöscht: %1$s</string>
+    <string name="rm_log_deep_still_there_ro">%1$s noch da: Die Firmware dieser Box ist schreibgeschützt; die Ersatzkopie bleibt wirkungslos</string>
+    <string name="rm_log_deep_still_there">%1$s noch da (konnte nicht gelöscht werden)</string>
+    <!-- 1 = Anzahl -->
+    <string name="rm_log_deep_result_done">ERGEBNIS DER TIEFENREINIGUNG: FERTIG - %1$d Firmware-Element(e) gelöscht</string>
+    <!-- 1 = Pfade, durch Kommas getrennt -->
+    <string name="rm_log_deep_result_partial">ERGEBNIS DER TIEFENREINIGUNG: TEILWEISE - noch in der Firmware: %1$s</string>
+    <!-- 1 = der Fehler -->
+    <string name="rm_log_deep_unexpected">Unerwartetes Problem bei der Tiefenreinigung: %1$s</string>
+</resources>

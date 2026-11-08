@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Texte der Prüfung (Deutsch). Gleiche Namen wie res/values/strings_scan.xml.
+  Werte in doppelten Anführungszeichen behalten ihre doppelten Leerzeichen mit Absicht (Spaltenausrichtung im Bericht).
+-->
+<resources>
+    <!-- Abschnittsnamen für die Schrittliste -->
+    <string name="scan_sec_device">Dieses Gerät wird geprüft</string>
+    <string name="scan_sec_known">Bekannte Apps werden geprüft</string>
+    <string name="scan_sec_fake_system">Apps mit Systemnamen werden geprüft</string>
+    <string name="scan_sec_content">Installierte Apps werden von innen geprüft</string>
+    <string name="scan_err_content">Die installierten Apps konnten nicht von innen geprüft werden</string>
+    <string name="scan_content_match">%1$s enthält %2$s, einen bekannten XCPE-Bestandteil</string>
+    <string name="scan_content_none">Keine installierte App enthält einen bekannten XCPE-Bestandteil</string>
+    <string name="scan_reason_ioc">Der Name steht auf der veröffentlichten Liste der XCPE-Hilfswerkzeuge</string>
+    <string name="scan_reason_provider">Stellt einen XCPE-Datenkanal bereit</string>
+    <string name="scan_reason_content">Enthält %1$s, einen bekannten XCPE-Bestandteil</string>
+    <string name="scan_reason_fake_name">Benutzt einen Systemnamen, wurde aber später installiert</string>
+    <string name="scan_reason_installed_by">%1$s; installiert von %2$s</string>
+    <string name="scan_sec_providers">Datenkanäle werden geprüft</string>
+    <string name="scan_sec_firmware">Firmware wird auf Ersatzkopien geprüft</string>
+    <string name="scan_sec_play_protect">Google Play Protect wird geprüft</string>
+    <string name="scan_sec_accessibility">Bedienungshilfen werden geprüft</string>
+    <string name="scan_sec_user_apps">Vom Nutzer installierte Apps werden aufgelistet</string>
+
+    <!-- Ein Abschnitt konnte nicht laufen (die Prüfung geht weiter) -->
+    <string name="scan_err_no_context">Auf dieser Box konnte nichts geprüft werden (der App-Kontext fehlte)</string>
+    <string name="scan_err_finish">Die Prüfung konnte nicht abgeschlossen werden</string>
+    <string name="scan_err_device">Marke und Modell dieser Box konnten nicht geprüft werden</string>
+    <string name="scan_err_app_list">Die vollständige Liste der installierten Apps konnte nicht geprüft werden</string>
+    <string name="scan_err_known">Die bekannten XCPE-App-Namen konnten nicht geprüft werden</string>
+    <string name="scan_err_fake_system">Apps, die sich hinter Systemnamen verstecken, konnten nicht geprüft werden</string>
+    <string name="scan_err_providers">Die XCPE-Datenkanäle (Content Provider) konnten nicht geprüft werden</string>
+    <string name="scan_err_oem">Der Ordner /oem konnte nicht auf eine Ersatzkopie geprüft werden</string>
+    <string name="scan_err_priv_app">Die System-App-Ordner konnten nicht geprüft werden</string>
+    <string name="scan_err_perm_files">Die Berechtigungsdateien konnten nicht geprüft werden</string>
+    <string name="scan_err_props">Die Eigenschaften der XCPE-Installer konnten nicht geprüft werden</string>
+    <string name="scan_err_play_protect">Die Play Protect-Einstellung konnte nicht geprüft werden</string>
+    <string name="scan_err_accessibility">Die Bedienungshilfen-Dienste konnten nicht geprüft werden</string>
+    <string name="scan_err_user_apps">Die Liste der vom Nutzer installierten Apps konnte nicht geprüft werden</string>
+
+    <!-- 1. Diese Box. 1 = Marke, 2 = Hersteller, 3 = Modell, 4 = Gerätecode, 5 = Android-Version, 6 = API-Level, 7 = Datum des Sicherheitspatches, 8 = Build-Fingerabdruck -->
+    <string name="scan_device_line">"Marke: %1$s   Hersteller: %2$s   Modell: %3$s   Gerät: %4$s\nAndroid %5$s (API %6$d)  Sicherheitspatch %7$s\nBuild: %8$s"</string>
+    <string name="scan_unknown">unbekannt</string>
+    <string name="scan_device_unavailable">Gerätedetails nicht verfügbar</string>
+    <string name="scan_device_mecool_brand_title">Marke oder Hersteller ist MECOOL / Videostrong (die Firma hinter XCPE)</string>
+    <!-- 1 = Marke, 2 = Hersteller -->
+    <string name="scan_device_mecool_brand_detail">"Marke: %1$s   Hersteller: %2$s"</string>
+    <string name="scan_device_mecool_prop_title">Diese Box gibt sich als MECOOL-Gerät aus (ro.mecool.device=true)</string>
+    <string name="scan_device_mecool_prop_detail">Die Hintertür liest diese Eigenschaft, um ihren Steuerserver auszuwählen.</string>
+    <!-- 1 = Modellname -->
+    <string name="scan_device_model_listed_title">Modellname „%1$s“ steht auf der veröffentlichten Liste betroffener Modelle (für sich allein kein Beweis)</string>
+    <string name="scan_device_model_listed_detail">Boxen mit diesem Namen wurden in der XCPE-Kampagne gesehen. Die Prüfungen unten zeigen, ob diese hier infiziert ist.</string>
+    <string name="scan_device_model_ok">Der Modellname steht nicht auf der veröffentlichten Liste betroffener Modelle</string>
+
+    <!-- 2. Bekannte Apps. 1 = App-(Paket-)Name -->
+    <string name="scan_pkg_confirmed_active">"%1$s ist installiert und aktiv  &lt;-- Teil der XCPE-Hintertür"</string>
+    <string name="scan_pkg_confirmed_dormant_firmware">%1$s ist in der Firmware, aber für diese Box ausgeschaltet (schlafend, harmlos solange aus)</string>
+    <string name="scan_pkg_confirmed_dormant_present">%1$s ist vorhanden, aber ausgeschaltet (schlafend, harmlos solange aus)</string>
+    <!-- 1 = wie viele Namen auf der bestätigten Liste stehen -->
+    <string name="scan_pkg_confirmed_none">Keiner der %1$d bestätigten XCPE-App-Namen ist aktiv</string>
+    <string name="scan_pkg_suspect_active">%1$s ist installiert (Videostrong-/Partner-Tool, verdächtig)</string>
+    <string name="scan_pkg_suspect_dormant_firmware">%1$s (verdächtiges Tool) ist in der Firmware, aber für diese Box ausgeschaltet (schlafend, harmlos solange aus)</string>
+    <string name="scan_pkg_suspect_dormant_present">%1$s (verdächtiges Tool) ist vorhanden, aber ausgeschaltet (schlafend, harmlos solange aus)</string>
+
+    <!-- 3. Apps, die sich hinter Systemnamen verstecken. 1 = App-Name -->
+    <string name="scan_fake_active">%1$s ist eine vom Nutzer installierte App, die sich hinter einem Systemnamen versteckt (XCPE-Installer machen das)</string>
+    <string name="scan_fake_dormant">%1$s benutzt einen Systemnamen, ist aber ausgeschaltet (schlafend, harmlos solange aus)</string>
+    <string name="scan_fake_none">Keine vom Nutzer installierte App versteckt sich hinter einem com.android.*-Namen</string>
+
+    <!-- 4. Datenkanäle (Content Provider). 1 = App-Name, 2 = Kanalname (Authority) -->
+    <string name="scan_provider_none">Keine App stellt die XCPE-Datenkanäle bereit</string>
+    <string name="scan_provider_active">%1$s stellt einen XCPE-Datenkanal bereit (%2$s)</string>
+    <string name="scan_provider_active_detail">XCPE-Apps teilen ihre Konfiguration über diesen Kanal.</string>
+    <string name="scan_provider_dormant">%1$s trägt einen XCPE-Datenkanal (%2$s), ist aber ausgeschaltet (schlafend)</string>
+
+    <!-- 5a. Ersatzkopien in /oem -->
+    <string name="scan_oem_no_folder">Diese Box hat keinen Ordner /oem (kein Platz für eine Ersatzkopie)</string>
+    <string name="scan_oem_copy_title">/oem enthält eine Ersatzkopie der Hintertür</string>
+    <string name="scan_oem_copy_detail">Nur neue Firmware oder Root kann sie löschen. Sie bleibt harmlos, solange die App selbst entfernt oder ausgeschaltet ist.</string>
+    <!-- 1 = Anzahl der APK-Dateien -->
+    <string name="scan_oem_apks_ok">%1$d APK-Datei(en) in /oem, keine mit einem XCPE-ähnlichen Namen</string>
+    <string name="scan_oem_not_visible_title">Der Ordner /oem ist für Apps auf dieser Box nicht sichtbar, eine Ersatzkopie dort lässt sich also nicht ausschließen</string>
+    <!-- 1 = Ordnernamen, durch Kommas getrennt -->
+    <string name="scan_oem_not_visible_detail">Nicht lesbar: %1$s</string>
+    <string name="scan_oem_none">Keine APK-Dateien in /oem sichtbar</string>
+
+    <!-- 5b. System-App-Ordner. 1 = Ordnerpfad -->
+    <string name="scan_privapp_hit_title">System-App-Ordner mit XCPE-ähnlichem Namen: %1$s</string>
+    <string name="scan_privapp_hit_detail">Das ist Teil der Firmware. Nur neue Firmware oder Root kann es löschen; die App auszuschalten hält es harmlos.</string>
+    <string name="scan_privapp_none">Keine XCPE-ähnlichen Ordner in den System-App-Verzeichnissen</string>
+    <!-- 1 = Ordnernamen, durch Kommas getrennt (von 5b und 5c geteilt) -->
+    <string name="scan_not_visible_detail">Für Apps nicht sichtbar: %1$s</string>
+
+    <!-- 5c. Berechtigungsdateien. 1 = Dateipfad, 2 = die XCPE-App, die sie nennt -->
+    <string name="scan_perm_hit_title">"Berechtigungsdatei für eine XCPE-App: %1$s  (nennt %2$s)"</string>
+    <string name="scan_perm_hit_detail">Die Firmware erteilt der Hintertür vorab Rechte. Wird die App entfernt oder ausgeschaltet, ist diese Datei wirkungslos.</string>
+    <string name="scan_perm_none">Keine Berechtigungsdatei erteilt einer XCPE-App Rechte</string>
+
+    <!-- 5d. Installer-Eigenschaften. 1 = Name der Eigenschaft, 2 = ihr Wert -->
+    <string name="scan_prop_set">Eigenschaft %1$s=%2$s ist gesetzt (von den XCPE-Installern von 2026 benutzt)</string>
+    <string name="scan_prop_none">Keine der Eigenschaften der XCPE-Installer ist gesetzt</string>
+
+    <!-- 6. Play Protect -->
+    <string name="scan_pp_off_title">Die App-Prüfung von Play Protect ist AUSGESCHALTET (genau das macht XCPE)</string>
+    <string name="scan_pp_off_detail">package_verifier_user_consent=-1. „Bedrohungen entfernen“ schaltet sie wieder ein; Sie können es auch im Play Store > Play Protect tun.</string>
+    <string name="scan_pp_disabled_title">Die App-Prüfung von Play Protect ist deaktiviert (package_verifier_enable=0)</string>
+    <string name="scan_pp_disabled_detail">„Bedrohungen entfernen“ schaltet sie wieder ein; Sie können es auch im Play Store > Play Protect tun.</string>
+    <string name="scan_pp_ok">Die App-Prüfung von Play Protect ist nicht ausgeschaltet</string>
+
+    <!-- 7. Bedienungshilfen. 1 = Dienst-ID (App/Klasse) -->
+    <string name="scan_acc_none">Keine Bedienungshilfen-Dienste eingeschaltet</string>
+    <string name="scan_acc_bad_title">Ein Bedienungshilfen-Dienst gehört zu XCPE: %1$s</string>
+    <string name="scan_acc_bad_detail">XCPE beobachtet damit, was Sie auf der Fernbedienung drücken. Er wird ausgeschaltet, wenn die App entfernt wird.</string>
+    <string name="scan_acc_other">Bedienungshilfen-Dienst eingeschaltet: %1$s (nicht XCPE)</string>
+
+    <!-- 10. Referenzliste. 1 = Anzahl; scan_user_app_off: 1 = App-Name; scan_more: 1 = wie viele weggelassen wurden -->
+    <string name="scan_user_apps">%1$d vom Nutzer installierte App(s) auf dieser Box (zur Information)</string>
+    <string name="scan_user_app_off">"%1$s  (ausgeschaltet)"</string>
+    <string name="scan_more">... (%1$d weitere)</string>
+
+    <!-- Detailzeilen unter einem App-Fund -->
+    <!-- 1 = Versionsname, 2 = Versionsnummer -->
+    <string name="scan_detail_version">Version: %1$s (%2$d)</string>
+    <!-- 1 = Dateipfad -->
+    <string name="scan_detail_apk">APK: %1$s</string>
+    <!-- 1 = Name der App, die sie installiert hat -->
+    <string name="scan_detail_installer">installiert von: %1$s</string>
+    <string name="scan_detail_installer_none">installiert von: nichts vermerkt (von Hand installiert oder Teil der Firmware)</string>
+    <!-- 1 = Datum der ersten Installation, 2 = Datum des letzten Updates -->
+    <string name="scan_detail_times">"erstmals installiert: %1$s   zuletzt aktualisiert: %2$s"</string>
+    <string name="scan_detail_type_updated_system">Typ: Firmware-App mit einem Update darüber: Deinstallieren entfernt das Update, die Firmware-Kopie lässt sich nur ausschalten</string>
+    <string name="scan_detail_type_system">Typ: Firmware-App (System-App): ohne Root lässt sie sich ausschalten, nicht löschen</string>
+    <string name="scan_detail_type_user">Typ: vom Nutzer installierte App: sie lässt sich deinstallieren</string>
+    <string name="scan_detail_state_off">Zustand: ausgeschaltet</string>
+    <string name="scan_detail_state_off_by_user">Zustand: vom Nutzer ausgeschaltet</string>
+    <!-- 1 = der Fehler -->
+    <string name="scan_detail_unavailable">(Details nicht verfügbar: %1$s)</string>
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Textes de la suppression (français). Mêmes noms que res/values/strings_remove.xml.
+    rm_status_*  lignes d\'état en direct pendant la suppression
+    rm_log_*     lignes de résumé en langage simple du journal (la transcription des commandes reste en anglais)
+  Les chemins « Paramètres > Applications > ... » utilisent les noms qu\'Android affiche en français.
+-->
+<resources>
+    <!-- État en direct pendant la suppression -->
+    <string name="rm_status_connecting">Connexion au service de débogage de ce boîtier...</string>
+    <!-- 1 = la raison, une phrase simple venant du client de débogage -->
+    <string name="rm_status_adb_failed">Impossible d\'utiliser la connexion de débogage : %1$s</string>
+    <!-- 1 = nom de l\'application, 2 = son numéro, 3 = total -->
+    <string name="rm_status_removing">Suppression de %1$s (%2$d sur %3$d)...</string>
+    <string name="rm_status_play_protect">Réactivation de Google Play Protect...</string>
+    <string name="rm_status_done">Terminé.</string>
+    <string name="rm_status_guided">Suivez les étapes à l\'écran pour supprimer chaque application à la main.</string>
+    <string name="rm_status_deep_no_root">Le nettoyage en profondeur est impossible sans root.</string>
+    <string name="rm_status_deep_looking">Recherche de copies de réserve dans le firmware...</string>
+    <string name="rm_status_deep_none">Aucune copie de réserve trouvée dans le firmware.</string>
+    <!-- 1 = partition telle que /oem ou /system -->
+    <string name="rm_status_deep_unlocking">Déverrouillage de %1$s en écriture...</string>
+    <!-- 1 = chemin du fichier ou du dossier -->
+    <string name="rm_status_deep_deleting">Effacement de %1$s...</string>
+    <string name="rm_status_deep_done">Nettoyage en profondeur terminé.</string>
+    <string name="rm_status_deep_partial">Nettoyage en profondeur terminé ; certaines copies n\'ont pas pu être effacées.</string>
+
+    <!-- Journal : quelle méthode a été utilisée -->
+    <string name="rm_log_nothing_to_remove">Rien à supprimer ; vérification des protections seulement.</string>
+    <!-- 1 = noms d\'applications séparés par des virgules -->
+    <string name="rm_log_to_remove">À supprimer : %1$s</string>
+    <!-- 1 = hôte, 2 = port -->
+    <string name="rm_log_path_adb">Méthode : ADB (%1$s:%2$d)</string>
+    <string name="rm_log_path_root">Méthode : ROOT (su)</string>
+    <string name="rm_log_path_guided">Méthode : GUIDÉE - pas de connexion de débogage ni de root, donc ces étapes se font à la main :</string>
+    <string name="rm_log_path_deep">Méthode : nettoyage en profondeur ROOT (su)</string>
+    <!-- 1 = la raison -->
+    <string name="rm_log_adb_failed">Échec de la connexion de débogage : %1$s</string>
+    <!-- 1 = hôte, 2 = port -->
+    <string name="rm_log_port_closed">Le port de débogage %1$s:%2$d est fermé.</string>
+    <string name="rm_log_no_root">Pas de root (su) sur ce boîtier.</string>
+    <!-- 1 = l\'erreur -->
+    <string name="rm_log_unexpected">Problème inattendu : %1$s</string>
+    <string name="rm_log_stopped">Arrêté par vous. Rien d\'autre n\'a été modifié.</string>
+    <string name="rm_log_busy">Un autre nettoyage est encore en cours sur ce boîtier. Réessayez dans un instant.</string>
+    <string name="rm_log_grant_ok">l\'application peut maintenant désactiver et activer le débogage elle-même</string>
+    <string name="rm_log_grant_ineffective">autorisation sans effet ; le débogage reste comme vous l\'avez réglé</string>
+    <!-- 1 = l\'erreur -->
+    <string name="rm_log_grant_failed">échec de l\'autorisation : %1$s</string>
+    <string name="rm_log_door_opened">Débogage activé pour ce nettoyage.</string>
+    <string name="rm_log_door_failed">Impossible d\'activer le débogage pour ce nettoyage.</string>
+
+    <!-- Journal : résultat pour une application -->
+    <string name="rm_log_result_unknown">impossible de vérifier le résultat (pas de réponse du gestionnaire de paquets) ; considéré comme toujours actif</string>
+    <string name="rm_log_disabled">DÉSACTIVÉ (n\'a pas pu être désinstallé ; il est désactivé et ne peut pas s\'exécuter)</string>
+    <string name="rm_log_failed">ÉCHEC - toujours actif. Ce boîtier a besoin d\'un nouveau firmware ou d\'être remplacé.</string>
+    <string name="rm_log_removed_fw_unknown">SUPPRIMÉ pour ce boîtier (impossible de vérifier s\'il reste une copie dans le firmware ; supposez que oui)</string>
+    <string name="rm_log_removed_fw">SUPPRIMÉ pour ce boîtier (une copie dormante reste dans le firmware en lecture seule)</string>
+    <string name="rm_log_removed">SUPPRIMÉ complètement</string>
+
+    <!-- Journal : protections -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">Accessibilité</string>
+    <!-- 1 et 2 = les deux valeurs de réglage relues -->
+    <string name="rm_log_pp_on">Vérification des applications par Play Protect : ACTIVÉE (consent=%1$s enable=%2$s)</string>
+    <string name="rm_log_pp_failed">Play Protect : impossible de modifier le réglage (consent=%1$s enable=%2$s). Activez-le dans Play Store > Play Protect > paramètres.</string>
+    <!-- 1 = identifiant du service d\'accessibilité -->
+    <string name="rm_log_acc_removed">retiré des services d\'accessibilité : %1$s</string>
+
+    <!-- Journal : résultat global -->
+    <!-- 1 = noms d\'applications séparés par des espaces -->
+    <string name="rm_log_result_partial">RÉSULTAT DU NETTOYAGE : PARTIEL - impossible de supprimer : %1$s. Remplacez ce boîtier ou demandez un firmware sain au vendeur.</string>
+    <string name="rm_log_result_done">RÉSULTAT DU NETTOYAGE : TERMINÉ - supprimés/désactivés : %1$s</string>
+    <string name="rm_log_result_next">ENSUITE : redémarrez le boîtier, puis analysez de nouveau. Si une application revient après le redémarrage, c\'est le firmware qui la réinstalle : remplacez le boîtier.</string>
+    <string name="rm_log_result_nothing">RÉSULTAT DU NETTOYAGE : il n\'y avait rien à supprimer.</string>
+
+    <!-- Journal : étapes à faire à la main (pas de connexion de débogage, pas de root) -->
+    <!-- 1 = nom de l\'application -->
+    <string name="rm_log_guided_step">Paramètres > Applications > %1$s > Désinstaller (ou « Désinstaller les mises à jour », puis « Désactiver »), puis Forcer l\'arrêt</string>
+    <string name="rm_log_guided_pp">Play Protect : ouvrez Play Store > votre profil > Play Protect > paramètres (roue dentée) > activez « Analyser les applications avec Play Protect »</string>
+    <!-- 1 = identifiants de services d\'accessibilité séparés par des virgules -->
+    <string name="rm_log_guided_acc">Paramètres > Accessibilité : désactivez %1$s</string>
+    <string name="rm_log_guided_nothing">Rien à faire à la main.</string>
+
+    <!-- Journal : nettoyage en profondeur (root seulement) -->
+    <string name="rm_log_deep_no_root">Le nettoyage en profondeur nécessite root (su) et ce boîtier n\'en a pas. Une copie de réserve dans le firmware reste inerte tant que l\'application est supprimée ou désactivée.</string>
+    <!-- 1 = l\'erreur -->
+    <string name="rm_log_deep_root_check_failed">Impossible de vérifier la présence de root : %1$s</string>
+    <!-- 1 = chemin du fichier -->
+    <string name="rm_log_deep_shared_perm_file">%1$s accorde aussi des droits à d\'autres applications ; laissé en place</string>
+    <!-- 1 = chemin du fichier, 2 = nom du paquet -->
+    <string name="rm_log_deep_unverified">%1$s : impossible de lire quelle application s\'y trouve, donc laissé en place.</string>
+    <string name="rm_log_deep_not_xcpe">%1$s contient l\'application %2$s, qui ne fait pas partie de XCPE ; laissé en place.</string>
+    <string name="rm_log_deep_skipped_unusual">ignoré (chemin inhabituel) : %1$s</string>
+    <string name="rm_log_deep_skipped_outside">ignoré (hors des dossiers du firmware) : %1$s</string>
+    <string name="rm_log_deep_nothing">Rien de type XCPE trouvé dans les répertoires du firmware.</string>
+    <!-- 1 = chemins séparés par des virgules -->
+    <string name="rm_log_deep_targets">Copies du firmware à effacer : %1$s</string>
+    <!-- 1 = partition telle que /oem -->
+    <string name="rm_log_deep_write_protected">%1$s : le firmware de ce boîtier est protégé en écriture ; la copie de réserve reste inerte</string>
+    <!-- 1 = chemin du fichier ou du dossier -->
+    <string name="rm_log_deep_deleted">effacé : %1$s</string>
+    <string name="rm_log_deep_still_there_ro">%1$s toujours là : le firmware de ce boîtier est protégé en écriture ; la copie de réserve reste inerte</string>
+    <string name="rm_log_deep_still_there">%1$s toujours là (impossible à effacer)</string>
+    <!-- 1 = nombre -->
+    <string name="rm_log_deep_result_done">RÉSULTAT DU NETTOYAGE EN PROFONDEUR : TERMINÉ - %1$d élément(s) du firmware effacé(s)</string>
+    <!-- 1 = chemins séparés par des virgules -->
+    <string name="rm_log_deep_result_partial">RÉSULTAT DU NETTOYAGE EN PROFONDEUR : PARTIEL - toujours dans le firmware : %1$s</string>
+    <!-- 1 = l\'erreur -->
+    <string name="rm_log_deep_unexpected">Problème inattendu pendant le nettoyage en profondeur : %1$s</string>
+</resources>

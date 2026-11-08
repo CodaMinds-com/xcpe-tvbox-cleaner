@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Français. Chaque ligne qu\'une personne voit. Écrit pour quelqu\'un qui n\'a jamais entendu le mot « paquet » : dire ce qui se passe, puis quoi faire. -->
+<resources>
+    <string name="app_name">XCPE Cleaner</string>
+    <string name="title">XCPE Cleaner</string>
+    <string name="subtitle">Détecte la porte dérobée XCPE sur ce boîtier et la supprime. Rien ne quitte cet appareil.</string>
+
+    <!-- Boutons -->
+    <string name="btn_scan">Analyser</string>
+    <string name="btn_remove">Supprimer les menaces</string>
+    <string name="btn_devopts">Ouvrir les options pour les développeurs</string>
+    <string name="btn_deepclean">Nettoyage en profondeur (root)</string>
+    <string name="btn_help">Comment ça marche</string>
+    <string name="btn_details_show">Afficher les détails</string>
+    <string name="btn_details_hide">Masquer les détails</string>
+    <string name="report_frame_desc">Rapport de vérification. Utilisez les flèches bas et haut pour faire défiler.</string>
+
+    <!-- Éléments de mise en forme -->
+    <string name="app_label_fmt">« %1$s » (%2$s)</string>
+    <string name="name_quoted">« %s »</string>
+    <string name="list_separator">", "</string>
+    <string name="bullet_line">  - %s</string>
+    <string name="join_sentences">%1$s %2$s</string>
+    <string name="progress_line">- %s</string>
+    <string name="progress_block">%1$s\n%2$s</string>
+    <string name="progress_step_start">%s…</string>
+    <string name="progress_step_done">%s… terminé</string>
+    <string name="progress_scan_header">Vérification :</string>
+
+    <!-- Écran de départ -->
+    <string name="status_idle">Appuyez sur Analyser pour vérifier ce boîtier.</string>
+    <string name="report_intro">Ce que l\'analyse examine :\n\n  - les huit applications connues pour faire partie de XCPE\n  - les applications qui se font passer pour une partie d\'Android\n  - les canaux de données cachés utilisés par XCPE\n  - les copies de réserve stockées dans le firmware du boîtier\n  - si Google Play Protect a été désactivé\n  - si XCPE s\'est installé dans les paramètres d\'accessibilité\n\nLa vérification prend quelques secondes et ne modifie rien.\nRien n\'est envoyé nulle part.\n\nAprès la vérification, ce boîtier vous dit l\'une de ces trois choses :\n  Sain, Suspect ou Infecté.\nS\'il n\'est pas sain, appuyez sur Supprimer les menaces.</string>
+    <string name="last_check_none">Dernière vérification : jamais</string>
+    <!-- 1 = date et heure, 2 = résultat, 3 = qui a vérifié -->
+    <string name="last_check_fmt">Dernière vérification : %1$s · %2$s (%3$s)</string>
+    <string name="src_manual">vérifié par vous</string>
+    <string name="src_auto">vérification automatique après un redémarrage</string>
+    <string name="check_clean">Sain</string>
+    <string name="check_suspicious">Suspect</string>
+    <string name="check_infected">Infecté</string>
+    <string name="check_removed_again">XCPE est revenu et a été supprimé de nouveau</string>
+    <string name="check_failed">XCPE est revenu et n\'a pas pu être supprimé</string>
+    <string name="check_debug_opened">le débogage a été activé pour la suppression</string>
+    <string name="check_debug_open_failed">le débogage n\'a pas pu être activé</string>
+    <string name="check_debug_closed">débogage désactivé de nouveau</string>
+    <string name="check_debug_close_failed">le débogage est toujours activé</string>
+    <string name="check_summary_join">%1$s ; %2$s</string>
+
+    <!-- Analyse -->
+    <string name="status_scanning">Vérification de ce boîtier… cela prend quelques secondes.</string>
+    <string name="status_scan_failed">La vérification n\'a pas pu aboutir. Appuyez sur Analyser pour réessayer.</string>
+    <plurals name="status_infected">
+        <item quantity="one">Infecté : %d élément de XCPE est actif sur ce boîtier. Appuyez sur Supprimer les menaces.</item>
+        <item quantity="other">Infecté : %d éléments de XCPE sont actifs sur ce boîtier. Appuyez sur Supprimer les menaces.</item>
+    </plurals>
+    <string name="status_suspicious">Suspect : aucune application XCPE confirmée ne tourne, mais ce boîtier présente des signes suspects. Appuyez sur Supprimer les menaces pour corriger ce qui peut l\'être, ou appuyez sur la flèche du bas pour lire le rapport.</string>
+    <string name="status_clean">Sain : rien de XCPE n\'a été trouvé sur ce boîtier. Vous pouvez continuer à l\'utiliser.</string>
+
+    <!-- Suppression : la seule question -->
+    <string name="dlg_review_title">Vérifier avant de supprimer</string>
+    <plurals name="dlg_review_msg_confirmed">
+        <item quantity="one">%1$d élément XCPE confirmé sera supprimé. Ci-dessous, d\'autres applications qui méritent un coup d\'œil. Cochées d\'avance seulement quand il y a une preuve au-delà du nom ; appuyez sur OK sur une ligne pour changer.</item>
+        <item quantity="other">%1$d éléments XCPE confirmés seront supprimés. Ci-dessous, d\'autres applications qui méritent un coup d\'œil. Cochées d\'avance seulement quand il y a une preuve au-delà du nom ; appuyez sur OK sur une ligne pour changer.</item>
+    </plurals>
+    <string name="dlg_review_msg_only">Aucune application XCPE confirmée ne tourne. Ci-dessous, des applications qui méritent un coup d\'œil. Cochées d\'avance seulement quand il y a une preuve au-delà du nom ; appuyez sur OK sur une ligne pour changer.</string>
+    <string name="dlg_review_remove">Supprimer la sélection</string>
+    <string name="status_review_kept">Rien d\'autre n\'a été supprimé. Le boîtier est inchangé.</string>
+    <string name="scan_reason_vendor_warning">Fait peut-être partie de la boutique ou du service TV propre au boîtier. Le supprimer peut casser ce service.</string>
+    <string name="dlg_suspects_title">Supprimer aussi les applications suspectes ?</string>
+    <string name="dlg_suspects_msg">En plus des éléments XCPE confirmés, ce boîtier contient des applications qui l\'accompagnent habituellement :\n\n%s\n\nUn boîtier TV n\'en a jamais besoin.</string>
+    <string name="dlg_suspects_yes">Oui, les supprimer aussi</string>
+    <string name="dlg_suspects_no">Non, seulement les confirmées</string>
+    <string name="dlg_suspects_only_title">Supprimer les applications suspectes ?</string>
+    <string name="dlg_suspects_only_msg">Aucune application XCPE confirmée ne tourne, mais ces applications l\'accompagnent habituellement :\n\n%s\n\nUn boîtier TV n\'en a jamais besoin.</string>
+    <string name="dlg_remove">Les supprimer</string>
+    <string name="dlg_keep">Les garder</string>
+    <string name="status_kept">Rien n\'a été modifié. Appuyez sur Analyser à tout moment pour vérifier de nouveau.</string>
+
+    <!-- Suppression : pendant l\'opération -->
+    <string name="status_removing">Suppression en cours… laissez le boîtier allumé. Si le téléviseur pose une question sur le débogage, cochez « Toujours autoriser » et appuyez sur Autoriser.</string>
+    <string name="report_remove_live">Ce qui se passe :</string>
+    <string name="report_remove_log">Détails :</string>
+    <string name="report_remove_crashed">La suppression s\'est arrêtée sur une erreur : %s</string>
+
+    <!-- Suppression : résultat -->
+    <string name="outcome_removed">Supprimé : %s</string>
+    <string name="outcome_disabled">Désactivé (n\'a pas pu être supprimé complètement, ne peut plus s\'exécuter) : %s</string>
+    <string name="outcome_failed">Toujours actif (n\'a pas pu être supprimé) : %s</string>
+    <string name="outcome_firmware_remain">Une copie de réserve reste dans le firmware de ce boîtier. Elle ne peut pas s\'exécuter tant que l\'application ci-dessus est supprimée ou désactivée. Seul un nettoyage en profondeur avec root ou un nouveau firmware du fabricant peut l\'effacer.</string>
+    <string name="outcome_pp_on">Google Play Protect : réactivé.</string>
+    <string name="outcome_pp_off">Google Play Protect : toujours désactivé. Ouvrez l\'application Google Play, appuyez sur votre photo de profil, choisissez Play Protect, appuyez sur la roue dentée et activez « Analyser les applications avec Play Protect ».</string>
+    <string name="outcome_pp_fine">Google Play Protect : était déjà activé.</string>
+    <string name="status_outcome_done">Terminé : les éléments XCPE ont été supprimés. Redémarrez le boîtier, puis appuyez de nouveau sur Analyser pour vérifier qu\'ils ne reviennent pas.</string>
+    <string name="status_outcome_partial">Certains éléments n\'ont pas pu être supprimés. Appuyez sur la flèche du bas pour lire les détails. S\'ils sont toujours là après un redémarrage, remplacez ce boîtier.</string>
+    <string name="status_outcome_nothing">Il n\'y avait rien à supprimer. Appuyez sur Analyser à tout moment pour vérifier de nouveau.</string>
+    <string name="status_outcome_pp_only">Terminé : Google Play Protect est réactivé. Appuyez sur Analyser pour vérifier de nouveau.</string>
+    <string name="status_outcome_none">Rien n\'a été modifié cette fois. Appuyez sur Ouvrir les options pour les développeurs pour que l\'application puisse supprimer les éléments elle-même, puis appuyez de nouveau sur Supprimer les menaces.</string>
+
+    <!-- Redémarrage -->
+    <string name="dlg_restart_title">Redémarrer le boîtier maintenant ?</string>
+    <string name="dlg_restart_msg_adb">Un redémarrage termine le nettoyage. L\'écran reste noir pendant environ une minute. Ensuite, cette application revérifie le boîtier d\'elle-même et vous dit si quelque chose est revenu.</string>
+    <string name="dlg_restart_msg_manual">Un redémarrage termine le nettoyage. Débranchez le cordon d\'alimentation du boîtier, attendez dix secondes et rebranchez-le. Ouvrez ensuite cette application et appuyez sur Analyser.</string>
+    <string name="dlg_restart_now">Redémarrer maintenant</string>
+    <string name="dlg_restart_later">Plus tard</string>
+    <string name="dlg_ok">OK</string>
+    <string name="btn_debugoff">Désactiver le débogage</string>
+    <string name="dlg_debugoff_title">Désactiver le débogage ?</string>
+    <string name="dlg_debugoff_msg">C\'est le débogage qui permet à cette application de nettoyer le boîtier et de le vérifier après chaque redémarrage. Si vous le désactivez, l\'application teste d\'abord qu\'elle peut le réactiver d\'elle-même pour ces vérifications. Cela prend jusqu\'à une minute ; le boîtier reste utilisable.</string>
+    <string name="dlg_debugoff_yes">Tester et désactiver</string>
+    <string name="status_debug_kept">Le débogage reste activé pour que cette application puisse vérifier le boîtier après chaque redémarrage. Si vous préférez le désactiver, appuyez sur « Désactiver le débogage ».</string>
+    <string name="status_debug_probe">Test en cours : ce boîtier peut-il réactiver le débogage de lui-même…</string>
+    <string name="status_debug_probe_ok">Le débogage est désactivé. Pour ses vérifications automatiques, l\'application l\'active un instant puis le désactive de nouveau.</string>
+    <string name="status_debug_probe_failed">Ce boîtier ne peut pas réactiver le débogage de lui-même, il reste donc activé. Si le mode automatique cesse de fonctionner, redémarrez le boîtier.</string>
+    <string name="status_debug_reclosed">Le débogage a été activé pour ce nettoyage et est de nouveau désactivé.</string>
+    <string name="status_auto_report">Voici le rapport de la vérification automatique effectuée après le dernier redémarrage. Appuyez sur Analyser pour une nouvelle vérification.</string>
+    <string name="status_clean_dormant">Sain : rien de XCPE ne tourne. Des restes désactivés demeurent dans le firmware ; ils sont inoffensifs tant qu\'ils sont désactivés.</string>
+    <string name="status_outcome_done_mixed">Terminé : les éléments XCPE ont été supprimés ou désactivés. Redémarrez le boîtier, puis appuyez de nouveau sur Analyser pour vérifier qu\'ils ne reviennent pas.</string>
+    <string name="dlg_stop_title">Arrêter le nettoyage ?</string>
+    <string name="dlg_stop_msg">L\'application travaille encore sur le boîtier. Si vous arrêtez maintenant, ce qui n\'a pas encore été supprimé reste en place ; vous pourrez appuyer de nouveau sur Supprimer les menaces plus tard.</string>
+    <string name="dlg_stop_yes">Arrêter</string>
+    <string name="status_stopping">Arrêt en cours…</string>
+    <string name="result_infected">RÉSULTAT : INFECTÉ - la porte dérobée XCPE est active sur ce boîtier : %1$s</string>
+    <string name="result_suspicious">RÉSULTAT : SUSPECT - aucune application XCPE confirmée n\'est active, mais voyez les avertissements ci-dessus</string>
+    <string name="result_clean">RÉSULTAT : SAIN - rien de XCPE trouvé</string>
+    <string name="adb_status_connecting">Connexion au service de débogage du boîtier…</string>
+    <string name="adb_status_look_at_tv">Regardez le téléviseur : cochez « Toujours autoriser sur cet ordinateur » et appuyez sur Autoriser.</string>
+    <string name="adb_status_connected">Connecté : le boîtier accepte les commandes de cette application.</string>
+    <string name="adb_err_denied">Le boîtier n\'a pas autorisé cette application (Refuser a été pressé, ou la question a expiré). Réessayez et, quand le téléviseur pose la question, cochez « Toujours autoriser » et appuyez sur Autoriser.</string>
+    <string name="adb_err_pairing_only">Ce boîtier ne propose que l\'association du Débogage sans fil, que cette application ne peut pas utiliser. Suivez plutôt les étapes guidées.</string>
+    <string name="adb_err_not_allowed">Cette application n\'est pas encore autorisée sur le service de débogage du boîtier. Appuyez une fois sur Supprimer les menaces ; le téléviseur vous demandera alors de l\'autoriser.</string>
+    <string name="adb_err_lost">La connexion au service de débogage du boîtier a été perdue. Réessayez.</string>
+    <string name="adb_err_no_answer">Le service de débogage du boîtier n\'a pas répondu à temps. Réessayez dans un instant.</string>
+    <string name="adb_err_generic">Problème de connexion de débogage : %1$s</string>
+    <string name="status_debug_opening">Ouverture de l\'accès de débogage pour le redémarrage…</string>
+    <string name="status_debug_opening_clean">Ouverture de l\'accès de débogage pour ce nettoyage…</string>
+    <string name="status_rebooting">Redémarrage… l\'écran va rester noir pendant environ une minute. Si ce n\'est pas le cas, débranchez le cordon d\'alimentation, attendez dix secondes et rebranchez-le.</string>
+    <string name="status_reboot_failed">Le boîtier n\'a pas redémarré de lui-même. Débranchez le cordon d\'alimentation, attendez dix secondes et rebranchez-le. Ouvrez ensuite cette application et appuyez sur Analyser.</string>
+
+    <!-- Suppression guidée (le boîtier ne laisse pas l\'application supprimer elle-même) -->
+    <string name="dlg_guided_title">Suppression manuelle, étape par étape</string>
+    <string name="dlg_guided_msg">Ce boîtier ne laisse pas l\'application supprimer les éléments elle-même, alors nous le faisons ensemble. L\'application ouvre pour vous la page de paramètres de chaque application nuisible, une à la fois (%d restantes), et vous dit sur quel bouton appuyer avant chaque page. Appuyez sur Retour sur la télécommande quand vous avez fini avec une page.</string>
+    <string name="dlg_guided_start">Commencer</string>
+    <string name="dlg_guided_later">Pas maintenant</string>
+    <string name="status_guided_later">La suppression n\'a pas été lancée. Appuyez sur Supprimer les menaces quand vous êtes prêt, ou sur Ouvrir les options pour les développeurs pour laisser l\'application le faire elle-même.</string>
+    <!-- 1 = étape, 2 = total, 3 = nom de l\'application -->
+    <string name="guide_step_uninstall">Étape %1$d sur %2$d : une question sur la suppression de %3$s apparaît. Appuyez sur OK ou Désinstaller.</string>
+    <string name="dlg_guide_step_title">Étape %1$d sur %2$d : %3$s</string>
+    <string name="dlg_guide_step_msg">Sur la page suivante, appuyez sur Désinstaller.\n\nS\'il n\'y a pas de bouton Désinstaller : appuyez sur Désinstaller les mises à jour si vous le voyez, puis sur Désactiver, puis sur Forcer l\'arrêt.\n\nQuand vous avez fini, appuyez sur Retour sur la télécommande pour revenir ici.</string>
+    <string name="dlg_guide_open">Ouvrir la page</string>
+    <string name="dlg_guide_skip">Passer cette application</string>
+    <string name="guide_step_appinfo">Étape %1$d sur %2$d : sur la page de %3$s, appuyez sur Désinstaller. S\'il n\'y en a pas : Désinstaller les mises à jour, puis Désactiver, puis Forcer l\'arrêt. Appuyez sur Retour quand c\'est fait.</string>
+    <string name="status_guided_checking">Vérification de ce qui a changé…</string>
+    <string name="status_guide_cannot_open">La page de paramètres de %s n\'a pas pu être ouverte sur ce boîtier. On passe à la suite.</string>
+    <string name="guide_still_active_title">%s est toujours actif</string>
+    <string name="guide_still_active_msg">Il n\'a pas disparu. Vous pouvez rouvrir sa page, passer cette application ou vous arrêter ici.</string>
+    <string name="guide_try_again">Réessayer</string>
+    <string name="guide_skip">Passer</string>
+    <string name="guide_stop">Arrêter</string>
+    <string name="guide_pp_title">Réactiver Google Play Protect</string>
+    <string name="guide_pp_msg">XCPE a désactivé la vérification des applications de Google. Sur la page suivante, activez « Analyser les applications avec Play Protect », puis appuyez sur Retour.</string>
+    <string name="guide_pp_fallback">Ce boîtier n\'a pas de page directe pour cela. Ouvrez l\'application Google Play, appuyez sur votre photo de profil en haut à droite, choisissez Play Protect, appuyez sur la roue dentée et activez « Analyser les applications avec Play Protect ».</string>
+    <string name="status_guide_pp">Activez « Analyser les applications avec Play Protect » sur la page suivante, puis appuyez sur Retour.</string>
+    <string name="dlg_guide_skip_step">Passer cette étape</string>
+    <string name="guide_acc_title">Retirer XCPE des paramètres d\'accessibilité</string>
+    <string name="guide_acc_msg">XCPE s\'est installé dans les paramètres d\'accessibilité de ce boîtier. Sur la page suivante, trouvez %s et désactivez-le, puis appuyez sur Retour.</string>
+    <string name="status_guide_acc">Désactivez %s sur la page suivante, puis appuyez sur Retour.</string>
+    <string name="guided_tail_acc">Accessibilité : %s est toujours activé ; désactivez-le dans Paramètres, Accessibilité.</string>
+    <!-- 1 = traités, 2 = toujours actifs, 3 = quoi faire ensuite -->
+    <string name="status_guided_done">Terminé à la main : %1$d supprimés ou désactivés, %2$d toujours actifs. %3$s</string>
+    <string name="guided_tail_restart">Redémarrez maintenant le boîtier (débranchez puis rebranchez le cordon d\'alimentation), ouvrez cette application et appuyez de nouveau sur Analyser.</string>
+    <string name="guided_tail_replace">S\'ils sont toujours actifs après un redémarrage, ce boîtier ne peut pas être nettoyé : remplacez-le.</string>
+
+    <!-- Options pour les développeurs -->
+    <string name="status_devopts_hint">Sur la page suivante, activez « Débogage USB ». Sur certains boîtiers, cela s\'appelle « Débogage réseau », « Débogage ADB » ou « ADB via le réseau » ; activez-le aussi. Si une question apparaît, cochez « Toujours autoriser » et appuyez sur Autoriser. Appuyez ensuite sur Retour.</string>
+    <string name="status_devopts_hidden">Les options pour les développeurs sont masquées sur ce boîtier. Sur la page suivante, trouvez « Numéro de build » (ou « Build ») et appuyez sept fois sur OK dessus. Appuyez ensuite sur Retour, puis de nouveau sur Ouvrir les options pour les développeurs.</string>
+    <string name="status_devopts_missing">Ce boîtier ne laisse pas l\'application ouvrir ses paramètres. Ouvrez Paramètres vous-même : Préférences relatives à l\'appareil, À propos, appuyez sept fois sur « Build », puis Options pour les développeurs, activez Débogage USB.</string>
+    <string name="status_port_open">Parfait : l\'accès de débogage est ouvert. Appuyez sur Supprimer les menaces et l\'application supprime tout elle-même.</string>
+    <string name="status_port_closed_usb_only">Le débogage USB est activé, mais l\'accès réseau est encore fermé. Cherchez dans les options pour les développeurs « Débogage réseau », « ADB via le réseau » ou « Débogage sans fil » et activez-le aussi. Si ce boîtier n\'a rien de tout cela, Supprimer les menaces vous guidera étape par étape à la place.</string>
+    <string name="status_port_closed_after">L\'accès de débogage est toujours fermé. Réessayez Ouvrir les options pour les développeurs, ou appuyez sur Supprimer les menaces et l\'application vous guidera étape par étape à la place.</string>
+
+    <!-- Nettoyage en profondeur -->
+    <string name="dlg_deep_title">Nettoyer le firmware en profondeur ?</string>
+    <string name="dlg_deep_msg">Ceci efface les copies de réserve de la porte dérobée stockées dans le firmware de ce boîtier. Cela ne fonctionne que sur les boîtiers avec accès root et ne touche qu\'aux fichiers appartenant à XCPE.</string>
+    <string name="dlg_deep_yes">Effacer les copies de réserve</string>
+    <string name="dlg_cancel">Annuler</string>
+    <string name="status_deep_running">Nettoyage en profondeur… laissez le boîtier allumé.</string>
+    <string name="status_deep_done">Nettoyage en profondeur terminé. Appuyez sur la flèche du bas pour lire ce qui s\'est passé, puis sur Analyser pour vérifier de nouveau.</string>
+    <string name="report_deep_header">Nettoyage en profondeur :</string>
+
+    <!-- Comment ça marche -->
+    <string name="help_title">Comment cette application fonctionne. Appuyez sur la flèche du bas pour lire, sur la flèche du haut pour revenir.</string>
+    <string name="help_text">CE QU\'EST XCPE\nXCPE est une porte dérobée intégrée au firmware de nombreux boîtiers Android TV bon marché (MECOOL, Videostrong et des boîtiers vendus sous d\'autres noms). Elle permet à des inconnus de faire tourner des choses sur votre boîtier : de faux clics publicitaires, du trafic caché passant par votre connexion internet, et tout ce qu\'ils lui envoient d\'autre.\n\nCE QUE FAIT ANALYSER\nAnalyser examine les applications de ce boîtier, Google Play Protect et les paramètres d\'accessibilité, et les compare à la liste publiée des éléments de XCPE. Cela ne modifie rien et n\'envoie rien nulle part.\n\nCE QUE FAIT SUPPRIMER LES MENACES\nCela supprime les applications XCPE pour ce boîtier et réactive Google Play Protect. Si une application ne peut pas être supprimée, elle est désactivée pour ne plus pouvoir s\'exécuter. L\'application essaie d\'abord de le faire elle-même ; cela fonctionne quand l\'accès de débogage du boîtier est ouvert (options pour les développeurs). Sinon, elle ouvre pour vous les bonnes pages de paramètres et vous dit sur quel bouton appuyer.\n\nCE QUI RESTE\nBeaucoup de boîtiers gardent une copie de réserve de la porte dérobée dans une partie du firmware en lecture seule. L\'application ne peut pas effacer cette copie sans accès root, mais la copie ne peut pas s\'exécuter tant que l\'application est supprimée ou désactivée. Si XCPE revient après un redémarrage, cette application s\'en aperçoit, le supprime de nouveau et vous prévient.\n\nNOTRE CONSEIL SINCÈRE\nUn boîtier livré avec une porte dérobée n\'a jamais été vraiment à vous seul. Si vous le pouvez, remplacez-le par un boîtier d\'une marque connue (Google TV Streamer, Apple TV, Fire TV, Nvidia Shield). Si vous le gardez, ne vous connectez pas à votre banque ni à votre messagerie dessus.\n\nCHANGEZ VOS MOTS DE PASSE\nSi vous avez un jour saisi un mot de passe sur ce boîtier, changez-le depuis un autre appareil : compte Google, Netflix, Wi-Fi et tout ce que vous avez utilisé ici.\n\nAPRÈS LE NETTOYAGE\nRedémarrez le boîtier, ouvrez cette application et appuyez encore une fois sur Analyser. L\'application vérifie aussi d\'elle-même après chaque redémarrage et affiche le résultat sous « Dernière vérification ».\n\nAppuyez sur Analyser pour revoir le résultat de la vérification.</string>
+
+    <!-- Notifications de la vérification après un redémarrage -->
+    <string name="notif_channel">Vérification après redémarrage</string>
+    <string name="notif_channel_desc">Vous prévient quand XCPE est revenu après un redémarrage.</string>
+    <string name="notif_removed_again_title">XCPE est revenu après le redémarrage et a été supprimé de nouveau</string>
+    <string name="notif_removed_again_text">Ouvrez XCPE Cleaner pour voir les détails. Si cela se reproduit, remplacez le boîtier.</string>
+    <string name="notif_failed_title">XCPE est revenu et n\'a pas pu être supprimé : remplacez ce boîtier</string>
+    <string name="notif_failed_text">Ouvrez XCPE Cleaner et appuyez sur Supprimer les menaces pour réessayer.</string>
+    <string name="notif_failed_text_port_closed">L\'application n\'a pas pu le supprimer elle-même parce que l\'accès de débogage est fermé. Ouvrez XCPE Cleaner et appuyez sur Supprimer les menaces.</string>
+    <string name="notif_suspicious_title">Ce boîtier présente des signes suspects</string>
+    <string name="notif_suspicious_text">Ouvrez XCPE Cleaner et appuyez sur Analyser pour lire les détails.</string>
+    <string name="report_auto_remove_header">Suppression automatique après le redémarrage :</string>
+</resources>

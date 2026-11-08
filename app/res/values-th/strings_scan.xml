@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ข้อความรายงานการตรวจสอบ ภาษาไทย คงตัวยึดตำแหน่ง %1$s / %2$d ชื่อแพ็กเกจ "XCPE" "Play Protect" "MECOOL" "Videostrong"
+  ชื่อโฟลเดอร์อย่าง /oem และชื่อการตั้งค่าอย่าง package_verifier_user_consent ไว้ตามต้นฉบับ
+  ค่าที่ครอบด้วยเครื่องหมายคำพูดคู่ตั้งใจคงช่องว่างสองช่องไว้เพื่อจัดคอลัมน์ในรายงาน
+-->
+<resources>
+    <!-- Section names for the live step list -->
+    <string name="scan_sec_device">กำลังตรวจสอบอุปกรณ์นี้</string>
+    <string name="scan_sec_known">กำลังตรวจสอบแอปที่รู้จัก</string>
+    <string name="scan_sec_fake_system">กำลังตรวจสอบแอปที่ใช้ชื่อระบบ</string>
+    <string name="scan_sec_content">กำลังดูภายในแอปที่ติดตั้งไว้</string>
+    <string name="scan_err_content">ดูภายในแอปที่ติดตั้งไว้ไม่ได้</string>
+    <string name="scan_content_match">%1$s มี %2$s ซึ่งเป็นส่วนประกอบของ XCPE ที่รู้จัก</string>
+    <string name="scan_content_none">ไม่มีแอปที่ติดตั้งไว้แอปใดมีส่วนประกอบของ XCPE ที่รู้จัก</string>
+    <string name="scan_reason_ioc">ชื่อตรงกับรายชื่อเครื่องมือช่วยของ XCPE ที่เผยแพร่ไว้</string>
+    <string name="scan_reason_provider">เปิดช่องทางข้อมูลของ XCPE</string>
+    <string name="scan_reason_content">มี %1$s ซึ่งเป็นส่วนประกอบของ XCPE ที่รู้จัก</string>
+    <string name="scan_reason_fake_name">ใช้ชื่อระบบแต่ถูกติดตั้งในภายหลัง</string>
+    <string name="scan_reason_installed_by">%1$s; ติดตั้งโดย %2$s</string>
+    <string name="scan_sec_providers">กำลังตรวจสอบช่องทางข้อมูล</string>
+    <string name="scan_sec_firmware">กำลังตรวจสอบสำเนาสำรองในเฟิร์มแวร์</string>
+    <string name="scan_sec_play_protect">กำลังตรวจสอบ Google Play Protect</string>
+    <string name="scan_sec_accessibility">กำลังตรวจสอบการตั้งค่าการช่วยเหลือพิเศษ</string>
+    <string name="scan_sec_user_apps">กำลังรวบรวมรายชื่อแอปที่ผู้ใช้ติดตั้ง</string>
+
+    <!-- One section could not run (the scan continues) -->
+    <string name="scan_err_no_context">ตรวจสอบอะไรในกล่องนี้ไม่ได้เลย (ไม่มีบริบทของแอป)</string>
+    <string name="scan_err_finish">สแกนให้เสร็จไม่ได้</string>
+    <string name="scan_err_device">ตรวจสอบแบรนด์และรุ่นของกล่องนี้ไม่ได้</string>
+    <string name="scan_err_app_list">ตรวจสอบรายชื่อแอปที่ติดตั้งทั้งหมดไม่ได้</string>
+    <string name="scan_err_known">ตรวจสอบชื่อแอป XCPE ที่รู้จักไม่ได้</string>
+    <string name="scan_err_fake_system">ตรวจสอบแอปที่ซ่อนอยู่หลังชื่อระบบไม่ได้</string>
+    <string name="scan_err_providers">ตรวจสอบช่องทางข้อมูลของ XCPE (content provider) ไม่ได้</string>
+    <string name="scan_err_oem">ตรวจสอบโฟลเดอร์ /oem เพื่อหาสำเนาสำรองไม่ได้</string>
+    <string name="scan_err_priv_app">ตรวจสอบโฟลเดอร์แอประบบไม่ได้</string>
+    <string name="scan_err_perm_files">ตรวจสอบไฟล์ให้สิทธิ์ล่วงหน้าไม่ได้</string>
+    <string name="scan_err_props">ตรวจสอบค่าคุณสมบัติของโปรแกรมติดตั้ง XCPE ไม่ได้</string>
+    <string name="scan_err_play_protect">ตรวจสอบการตั้งค่า Play Protect ไม่ได้</string>
+    <string name="scan_err_accessibility">ตรวจสอบบริการการช่วยเหลือพิเศษไม่ได้</string>
+    <string name="scan_err_user_apps">ตรวจสอบรายชื่อแอปที่ผู้ใช้ติดตั้งไม่ได้</string>
+
+    <!-- 1. This box. 1 = brand, 2 = maker, 3 = model, 4 = device code, 5 = Android version, 6 = API level, 7 = security patch date, 8 = build fingerprint -->
+    <string name="scan_device_line">"แบรนด์: %1$s   ผู้ผลิต: %2$s   รุ่น: %3$s   อุปกรณ์: %4$s\nAndroid %5$s (API %6$d)  แพตช์ความปลอดภัย %7$s\nบิลด์: %8$s"</string>
+    <string name="scan_unknown">ไม่ทราบ</string>
+    <string name="scan_device_unavailable">ไม่มีข้อมูลอุปกรณ์</string>
+    <string name="scan_device_mecool_brand_title">แบรนด์หรือผู้ผลิตคือ MECOOL / Videostrong (บริษัทที่อยู่เบื้องหลัง XCPE)</string>
+    <!-- 1 = brand, 2 = maker -->
+    <string name="scan_device_mecool_brand_detail">"แบรนด์: %1$s   ผู้ผลิต: %2$s"</string>
+    <string name="scan_device_mecool_prop_title">กล่องนี้ระบุตัวเองว่าเป็นอุปกรณ์ MECOOL (ro.mecool.device=true)</string>
+    <string name="scan_device_mecool_prop_detail">แบ็กดอร์อ่านค่านี้เพื่อเลือกเซิร์ฟเวอร์ควบคุม</string>
+    <!-- 1 = model name -->
+    <string name="scan_device_model_listed_title">ชื่อรุ่น \'%1$s\' อยู่ในรายชื่อรุ่นที่ได้รับผลกระทบที่เผยแพร่ไว้ (ยังไม่ใช่หลักฐานโดยตัวมันเอง)</string>
+    <string name="scan_device_model_listed_detail">กล่องที่ใช้ชื่อนี้เคยถูกพบในการโจมตีของ XCPE การตรวจสอบด้านล่างจะบอกว่ากล่องนี้ติดมัลแวร์หรือไม่</string>
+    <string name="scan_device_model_ok">ชื่อรุ่นไม่อยู่ในรายชื่อรุ่นที่ได้รับผลกระทบที่เผยแพร่ไว้</string>
+
+    <!-- 2. Known apps. 1 = app (package) name -->
+    <string name="scan_pkg_confirmed_active">"%1$s ติดตั้งอยู่และกำลังทำงาน  &lt;-- ส่วนหนึ่งของแบ็กดอร์ XCPE"</string>
+    <string name="scan_pkg_confirmed_dormant_firmware">%1$s อยู่ในเฟิร์มแวร์แต่ถูกปิดไว้สำหรับกล่องนี้ (ไม่ทำงาน ไม่เป็นอันตรายตราบใดที่ปิดอยู่)</string>
+    <string name="scan_pkg_confirmed_dormant_present">%1$s มีอยู่แต่ถูกปิดไว้ (ไม่ทำงาน ไม่เป็นอันตรายตราบใดที่ปิดอยู่)</string>
+    <!-- 1 = how many names are on the confirmed list -->
+    <string name="scan_pkg_confirmed_none">ไม่มีชื่อแอป XCPE ที่ยืนยันแล้วทั้ง %1$d ชื่อกำลังทำงานอยู่</string>
+    <string name="scan_pkg_suspect_active">%1$s ติดตั้งอยู่ (เครื่องมือของ Videostrong / บริษัทในเครือ น่าสงสัย)</string>
+    <string name="scan_pkg_suspect_dormant_firmware">%1$s (เครื่องมือน่าสงสัย) อยู่ในเฟิร์มแวร์แต่ถูกปิดไว้สำหรับกล่องนี้ (ไม่ทำงาน ไม่เป็นอันตรายตราบใดที่ปิดอยู่)</string>
+    <string name="scan_pkg_suspect_dormant_present">%1$s (เครื่องมือน่าสงสัย) มีอยู่แต่ถูกปิดไว้ (ไม่ทำงาน ไม่เป็นอันตรายตราบใดที่ปิดอยู่)</string>
+
+    <!-- 3. Apps hiding behind system names. 1 = app name -->
+    <string name="scan_fake_active">%1$s เป็นแอปที่ผู้ใช้ติดตั้งซึ่งซ่อนอยู่หลังชื่อระบบ (โปรแกรมติดตั้งของ XCPE ทำแบบนี้)</string>
+    <string name="scan_fake_dormant">%1$s ใช้ชื่อระบบแต่ถูกปิดไว้ (ไม่ทำงาน ไม่เป็นอันตรายตราบใดที่ปิดอยู่)</string>
+    <string name="scan_fake_none">ไม่มีแอปที่ผู้ใช้ติดตั้งซ่อนอยู่หลังชื่อ com.android.*</string>
+
+    <!-- 4. Data channels (content providers). 1 = app name, 2 = channel (authority) name -->
+    <string name="scan_provider_none">ไม่มีแอปใดเปิดช่องทางข้อมูลของ XCPE</string>
+    <string name="scan_provider_active">%1$s เปิดช่องทางข้อมูลของ XCPE (%2$s)</string>
+    <string name="scan_provider_active_detail">แอป XCPE ใช้ช่องทางนี้แบ่งปันการตั้งค่าระหว่างกัน</string>
+    <string name="scan_provider_dormant">%1$s มีช่องทางข้อมูลของ XCPE (%2$s) แต่ถูกปิดไว้ (ไม่ทำงาน)</string>
+
+    <!-- 5a. Spare copies in /oem -->
+    <string name="scan_oem_no_folder">กล่องนี้ไม่มีโฟลเดอร์ /oem (ไม่มีที่เก็บสำเนาสำรอง)</string>
+    <string name="scan_oem_copy_title">/oem มีสำเนาสำรองของแบ็กดอร์</string>
+    <string name="scan_oem_copy_detail">มีเพียงเฟิร์มแวร์ใหม่หรือ root เท่านั้นที่ลบมันได้ มันไม่เป็นอันตรายตราบใดที่ตัวแอปถูกลบออกหรือปิดไว้</string>
+    <!-- 1 = number of APK files -->
+    <string name="scan_oem_apks_ok">มีไฟล์ APK %1$d ไฟล์ใน /oem ไม่มีไฟล์ใดใช้ชื่อคล้าย XCPE</string>
+    <string name="scan_oem_not_visible_title">แอปในกล่องนี้มองไม่เห็นโฟลเดอร์ /oem จึงตัดความเป็นไปได้ว่ามีสำเนาสำรองอยู่ในนั้นไม่ได้</string>
+    <!-- 1 = comma-separated folder names -->
+    <string name="scan_oem_not_visible_detail">อ่านไม่ได้: %1$s</string>
+    <string name="scan_oem_none">ไม่พบไฟล์ APK ใน /oem</string>
+
+    <!-- 5b. System app folders. 1 = folder path -->
+    <string name="scan_privapp_hit_title">โฟลเดอร์แอประบบที่ใช้ชื่อคล้าย XCPE: %1$s</string>
+    <string name="scan_privapp_hit_detail">นี่เป็นส่วนหนึ่งของเฟิร์มแวร์ มีเพียงเฟิร์มแวร์ใหม่หรือ root เท่านั้นที่ลบมันได้ การปิดใช้แอปทำให้มันไม่เป็นอันตราย</string>
+    <string name="scan_privapp_none">ไม่มีโฟลเดอร์ที่ใช้ชื่อคล้าย XCPE ในไดเรกทอรีแอประบบ</string>
+    <!-- 1 = comma-separated folder names (shared by 5b and 5c) -->
+    <string name="scan_not_visible_detail">แอปมองไม่เห็น: %1$s</string>
+
+    <!-- 5c. Permission grant files. 1 = file path, 2 = the XCPE app it mentions -->
+    <string name="scan_perm_hit_title">"ไฟล์ให้สิทธิ์ล่วงหน้าแก่แอป XCPE: %1$s  (กล่าวถึง %2$s)"</string>
+    <string name="scan_perm_hit_detail">เฟิร์มแวร์อนุมัติสิทธิ์ให้แบ็กดอร์ไว้ล่วงหน้า การลบหรือปิดใช้แอปทำให้ไฟล์นี้ไม่มีผล</string>
+    <string name="scan_perm_none">ไม่มีไฟล์ให้สิทธิ์ล่วงหน้าที่ให้สิทธิ์แก่แอป XCPE</string>
+
+    <!-- 5d. Dropper properties. 1 = property name, 2 = its value -->
+    <string name="scan_prop_set">มีการตั้งค่าคุณสมบัติ %1$s=%2$s (โปรแกรมติดตั้ง XCPE ปี 2026 ใช้ค่านี้)</string>
+    <string name="scan_prop_none">ไม่มีค่าคุณสมบัติของโปรแกรมติดตั้ง XCPE ถูกตั้งไว้</string>
+
+    <!-- 6. Play Protect -->
+    <string name="scan_pp_off_title">การตรวจสอบแอปของ Play Protect ถูกปิดอยู่ (ตรงกับสิ่งที่ XCPE ทำ)</string>
+    <string name="scan_pp_off_detail">package_verifier_user_consent=-1 \'ลบภัยคุกคาม\' จะเปิดกลับให้ คุณเปิดเองได้ที่ Play Store > Play Protect ด้วย</string>
+    <string name="scan_pp_disabled_title">การตรวจสอบแอปของ Play Protect ถูกปิดใช้ (package_verifier_enable=0)</string>
+    <string name="scan_pp_disabled_detail">\'ลบภัยคุกคาม\' จะเปิดกลับให้ คุณเปิดเองได้ที่ Play Store > Play Protect ด้วย</string>
+    <string name="scan_pp_ok">การตรวจสอบแอปของ Play Protect ไม่ได้ถูกปิด</string>
+
+    <!-- 7. Accessibility. 1 = service id (app/class) -->
+    <string name="scan_acc_none">ไม่มีบริการการช่วยเหลือพิเศษเปิดใช้งานอยู่</string>
+    <string name="scan_acc_bad_title">บริการการช่วยเหลือพิเศษที่เป็นของ XCPE: %1$s</string>
+    <string name="scan_acc_bad_detail">XCPE ใช้มันเพื่อดูว่าคุณกดอะไรบนรีโมต มันจะถูกปิดเมื่อลบแอปออก</string>
+    <string name="scan_acc_other">บริการการช่วยเหลือพิเศษที่เปิดใช้งาน: %1$s (ไม่ใช่ XCPE)</string>
+
+    <!-- 10. Reference list. 1 = count; scan_user_app_off: 1 = app name; scan_more: 1 = how many were left out -->
+    <string name="scan_user_apps">แอปที่ผู้ใช้ติดตั้งในกล่องนี้ %1$d แอป (เพื่อใช้อ้างอิง)</string>
+    <string name="scan_user_app_off">"%1$s  (ปิดอยู่)"</string>
+    <string name="scan_more">... (อีก %1$d รายการ)</string>
+
+    <!-- Detail lines under an app finding -->
+    <!-- 1 = version name, 2 = version number -->
+    <string name="scan_detail_version">เวอร์ชัน: %1$s (%2$d)</string>
+    <!-- 1 = file path -->
+    <string name="scan_detail_apk">ไฟล์ apk: %1$s</string>
+    <!-- 1 = name of the app that installed it -->
+    <string name="scan_detail_installer">ติดตั้งโดย: %1$s</string>
+    <string name="scan_detail_installer_none">ติดตั้งโดย: ไม่มีบันทึก (ติดตั้งเองหรือเป็นส่วนหนึ่งของเฟิร์มแวร์)</string>
+    <!-- 1 = first install date, 2 = last update date -->
+    <string name="scan_detail_times">"ติดตั้งครั้งแรก: %1$s   อัปเดตล่าสุด: %2$s"</string>
+    <string name="scan_detail_type_updated_system">ประเภท: แอปเฟิร์มแวร์ที่มีการอัปเดตทับอยู่ การถอนการติดตั้งจะลบเฉพาะการอัปเดต ส่วนสำเนาในเฟิร์มแวร์ทำได้แค่ปิดใช้</string>
+    <string name="scan_detail_type_system">ประเภท: แอปเฟิร์มแวร์ (ระบบ) หากไม่มี root ทำได้แค่ปิดใช้ ลบไม่ได้</string>
+    <string name="scan_detail_type_user">ประเภท: แอปที่ผู้ใช้ติดตั้ง ถอนการติดตั้งได้</string>
+    <string name="scan_detail_state_off">สถานะ: ปิดอยู่</string>
+    <string name="scan_detail_state_off_by_user">สถานะ: ผู้ใช้ปิดไว้</string>
+    <!-- 1 = the error -->
+    <string name="scan_detail_unavailable">(ไม่มีรายละเอียด: %1$s)</string>
+</resources>

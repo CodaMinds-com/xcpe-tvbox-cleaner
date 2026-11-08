@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Türkçe. Bir kişinin gördüğü her satır. "Paket" sözcüğünü hiç duymamış biri için yazıldı: önce ne olduğunu, sonra ne yapılacağını söyle. -->
+<resources>
+    <string name="app_name">XCPE Cleaner</string>
+    <string name="title">XCPE Cleaner</string>
+    <string name="subtitle">Bu kutudaki XCPE arka kapısını bulur ve kaldırır. Hiçbir şey bu cihazdan dışarı çıkmaz.</string>
+
+    <!-- Düğmeler -->
+    <string name="btn_scan">Tara</string>
+    <string name="btn_remove">Tehditleri kaldır</string>
+    <string name="btn_devopts">Geliştirici seçeneklerini aç</string>
+    <string name="btn_deepclean">Derin temizlik (root)</string>
+    <string name="btn_help">Nasıl çalışır</string>
+    <string name="btn_details_show">Ayrıntıları göster</string>
+    <string name="btn_details_hide">Ayrıntıları gizle</string>
+    <string name="report_frame_desc">Kontrol raporu. Kaydırmak için aşağı ve yukarı tuşlarına basın.</string>
+
+    <!-- Biçim parçaları -->
+    <string name="app_label_fmt">“%1$s” (%2$s)</string>
+    <string name="name_quoted">“%s”</string>
+    <string name="list_separator">", "</string>
+    <string name="bullet_line">  - %s</string>
+    <string name="join_sentences">%1$s %2$s</string>
+    <string name="progress_line">- %s</string>
+    <string name="progress_block">%1$s\n%2$s</string>
+    <string name="progress_step_start">%s…</string>
+    <string name="progress_step_done">%s… tamam</string>
+    <string name="progress_scan_header">Kontrol ediliyor:</string>
+
+    <!-- Başlangıç ekranı -->
+    <string name="status_idle">Bu kutuyu kontrol etmek için Tara düğmesine basın.</string>
+    <string name="report_intro">Tarama şunlara bakar:\n\n  - XCPE\'nin parçası olduğu bilinen sekiz uygulama\n  - Android\'in parçasıymış gibi davranan uygulamalar\n  - XCPE\'nin kullandığı gizli veri kanalları\n  - kutunun cihaz yazılımında saklanan yedek kopyalar\n  - Google Play Protect\'in kapatılıp kapatılmadığı\n  - XCPE\'nin kendini Erişilebilirlik ayarlarına bağlayıp bağlamadığı\n\nKontrol birkaç saniye sürer ve hiçbir şeyi değiştirmez.\nHiçbir yere hiçbir şey gönderilmez.\n\nKontrolden sonra bu kutu size üç şeyden birini söyler:\n  Temiz, Şüpheli veya Enfekte.\nTemiz değilse Tehditleri kaldır düğmesine basın.</string>
+    <string name="last_check_none">Son kontrol: hiç</string>
+    <!-- 1 = tarih ve saat, 2 = sonuç, 3 = kimin kontrol ettiği -->
+    <string name="last_check_fmt">Son kontrol: %1$s · %2$s (%3$s)</string>
+    <string name="src_manual">sizin tarafınızdan kontrol edildi</string>
+    <string name="src_auto">yeniden başlatma sonrası otomatik kontrol</string>
+    <string name="check_clean">Temiz</string>
+    <string name="check_suspicious">Şüpheli</string>
+    <string name="check_infected">Enfekte</string>
+    <string name="check_removed_again">XCPE geri geldi ve yeniden kaldırıldı</string>
+    <string name="check_failed">XCPE geri geldi ve kaldırılamadı</string>
+    <string name="check_debug_opened">kaldırma için hata ayıklama açıldı</string>
+    <string name="check_debug_open_failed">hata ayıklama açılamadı</string>
+    <string name="check_debug_closed">hata ayıklama yeniden kapatıldı</string>
+    <string name="check_debug_close_failed">hata ayıklama hâlâ açık</string>
+    <string name="check_summary_join">%1$s; %2$s</string>
+
+    <!-- Tarama -->
+    <string name="status_scanning">Bu kutu kontrol ediliyor… birkaç saniye sürer.</string>
+    <string name="status_scan_failed">Kontrol tamamlanamadı. Yeniden denemek için Tara düğmesine basın.</string>
+    <plurals name="status_infected">
+        <item quantity="one">Enfekte: bu kutuda XCPE\'nin %d parçası etkin. Tehditleri kaldır düğmesine basın.</item>
+        <item quantity="other">Enfekte: bu kutuda XCPE\'nin %d parçası etkin. Tehditleri kaldır düğmesine basın.</item>
+    </plurals>
+    <string name="status_suspicious">Şüpheli: doğrulanmış bir XCPE uygulaması çalışmıyor, ancak bu kutuda uyarı işaretleri var. Düzeltilebilecekleri düzeltmek için Tehditleri kaldır düğmesine basın veya raporu okumak için aşağı tuşuna basın.</string>
+    <string name="status_clean">Temiz: bu kutuda XCPE\'ye ait hiçbir şey bulunamadı. Kullanmaya devam edebilirsiniz.</string>
+
+    <!-- Kaldırma: tek soru -->
+    <string name="dlg_review_title">Kaldırmadan önce gözden geçirin</string>
+    <plurals name="dlg_review_msg_confirmed">
+        <item quantity="one">Doğrulanmış %1$d XCPE parçası kaldırılacak. Aşağıda bakılmaya değer başka uygulamalar var. Yalnızca addan öte kanıt olan yerlerde baştan işaretli; değiştirmek için bir satırda Tamam düğmesine basın.</item>
+        <item quantity="other">Doğrulanmış %1$d XCPE parçası kaldırılacak. Aşağıda bakılmaya değer başka uygulamalar var. Yalnızca addan öte kanıt olan yerlerde baştan işaretli; değiştirmek için bir satırda Tamam düğmesine basın.</item>
+    </plurals>
+    <string name="dlg_review_msg_only">Doğrulanmış bir XCPE uygulaması çalışmıyor. Aşağıda bakılmaya değer uygulamalar var. Yalnızca addan öte kanıt olan yerlerde baştan işaretli; değiştirmek için bir satırda Tamam düğmesine basın.</string>
+    <string name="dlg_review_remove">Seçilenleri kaldır</string>
+    <string name="status_review_kept">Başka bir şey kaldırılmadı. Kutu değişmedi.</string>
+    <string name="scan_reason_vendor_warning">Kutunun kendi mağazasının veya TV hizmetinin parçası olabilir. Kaldırmak o hizmeti bozabilir.</string>
+    <string name="dlg_suspects_title">Şüpheli uygulamalar da kaldırılsın mı?</string>
+    <string name="dlg_suspects_msg">Doğrulanmış XCPE parçalarının yanı sıra bu kutuda genellikle onunla birlikte gelen uygulamalar var:\n\n%s\n\nBir TV kutusunun bunlara hiçbir zaman ihtiyacı yoktur.</string>
+    <string name="dlg_suspects_yes">Evet, onları da kaldır</string>
+    <string name="dlg_suspects_no">Hayır, yalnızca doğrulanmış olanları</string>
+    <string name="dlg_suspects_only_title">Şüpheli uygulamalar kaldırılsın mı?</string>
+    <string name="dlg_suspects_only_msg">Doğrulanmış bir XCPE uygulaması çalışmıyor, ancak bu uygulamalar genellikle onunla birlikte gelir:\n\n%s\n\nBir TV kutusunun bunlara hiçbir zaman ihtiyacı yoktur.</string>
+    <string name="dlg_remove">Onları kaldır</string>
+    <string name="dlg_keep">Onları tut</string>
+    <string name="status_kept">Hiçbir şey değiştirilmedi. Yeniden kontrol etmek için istediğiniz zaman Tara düğmesine basın.</string>
+
+    <!-- Kaldırma: çalışırken -->
+    <string name="status_removing">Kaldırılıyor… kutuyu açık tutun. TV hata ayıklama hakkında bir soru sorarsa “Her zaman izin ver” kutusunu işaretleyin ve İzin ver düğmesine basın.</string>
+    <string name="report_remove_live">Neler oluyor:</string>
+    <string name="report_remove_log">Ayrıntılar:</string>
+    <string name="report_remove_crashed">Kaldırma bir hatayla durdu: %s</string>
+
+    <!-- Kaldırma: sonuç -->
+    <string name="outcome_removed">Kaldırıldı: %s</string>
+    <string name="outcome_disabled">Kapatıldı (tamamen kaldırılamadı, çalışamaz): %s</string>
+    <string name="outcome_failed">Hâlâ etkin (kaldırılamadı): %s</string>
+    <string name="outcome_firmware_remain">Bu kutunun cihaz yazılımında bir yedek kopya kalıyor. Yukarıdaki uygulama kaldırılmış veya kapalı olduğu sürece çalışamaz. Onu yalnızca root ile derin temizlik veya üreticiden gelen yeni bir cihaz yazılımı silebilir.</string>
+    <string name="outcome_pp_on">Google Play Protect: yeniden açıldı.</string>
+    <string name="outcome_pp_off">Google Play Protect: hâlâ kapalı. Google Play uygulamasını açın, profil resminize basın, Play Protect\'i seçin, dişli simgesine basın ve “Uygulamaları Play Protect ile tara” seçeneğini açın.</string>
+    <string name="outcome_pp_fine">Google Play Protect: zaten açıktı.</string>
+    <string name="status_outcome_done">Tamamlandı: XCPE parçaları kaldırıldı. Kutuyu yeniden başlatın, sonra geri gelmediklerinden emin olmak için yeniden Tara düğmesine basın.</string>
+    <string name="status_outcome_partial">Bazı parçalar kaldırılamadı. Ayrıntıları okumak için aşağı tuşuna basın. Yeniden başlatmadan sonra hâlâ oradalarsa bu kutuyu değiştirin.</string>
+    <string name="status_outcome_nothing">Kaldırılması gereken bir şey yoktu. Yeniden kontrol etmek için istediğiniz zaman Tara düğmesine basın.</string>
+    <string name="status_outcome_pp_only">Tamamlandı: Google Play Protect yeniden açıldı. Yeniden kontrol etmek için Tara düğmesine basın.</string>
+    <string name="status_outcome_none">Bu sefer hiçbir şey değiştirilmedi. Uygulamanın kendi başına kaldırabilmesi için Geliştirici seçeneklerini aç düğmesine basın, sonra yeniden Tehditleri kaldır düğmesine basın.</string>
+
+    <!-- Yeniden başlatma -->
+    <string name="dlg_restart_title">Kutu şimdi yeniden başlatılsın mı?</string>
+    <string name="dlg_restart_msg_adb">Yeniden başlatma temizliği tamamlar. Ekran yaklaşık bir dakika karanlık kalır. Ardından bu uygulama kutuyu kendi başına yeniden kontrol eder ve bir şey geri geldiyse size söyler.</string>
+    <string name="dlg_restart_msg_manual">Yeniden başlatma temizliği tamamlar. Kutunun güç kablosunu çekin, on saniye bekleyin ve yeniden takın. Sonra bu uygulamayı açın ve Tara düğmesine basın.</string>
+    <string name="dlg_restart_now">Şimdi yeniden başlat</string>
+    <string name="dlg_restart_later">Daha sonra</string>
+    <string name="dlg_ok">Tamam</string>
+    <string name="btn_debugoff">Hata ayıklamayı kapat</string>
+    <string name="dlg_debugoff_title">Hata ayıklama kapatılsın mı?</string>
+    <string name="dlg_debugoff_msg">Bu uygulamanın kutuyu temizlemesini ve her yeniden başlatmadan sonra kontrol etmesini sağlayan şey hata ayıklamadır. Kapatırsanız uygulama önce, bu kontroller için onu kendi başına yeniden açıp açamayacağını test eder. Bu en fazla bir dakika sürer; kutu bu sırada kullanılabilir.</string>
+    <string name="dlg_debugoff_yes">Test et ve kapat</string>
+    <string name="status_debug_kept">Bu uygulamanın her yeniden başlatmadan sonra kutuyu kontrol edebilmesi için hata ayıklama açık kalır. Kapalı olmasını isterseniz “Hata ayıklamayı kapat” düğmesine basın.</string>
+    <string name="status_debug_probe">Bu kutunun hata ayıklamayı kendi başına yeniden açıp açamayacağı test ediliyor…</string>
+    <string name="status_debug_probe_ok">Hata ayıklama kapalı. Otomatik kontrolleri için uygulama onu kısa bir süre açar ve yeniden kapatır.</string>
+    <string name="status_debug_probe_failed">Bu kutu hata ayıklamayı kendi başına yeniden açamıyor, bu yüzden açık kalıyor. Otomatik mod çalışmayı durdurursa kutuyu yeniden başlatın.</string>
+    <string name="status_debug_reclosed">Hata ayıklama bu temizlik için açıldı ve yeniden kapatıldı.</string>
+    <string name="status_auto_report">Bu, son yeniden başlatmadan sonra yapılan otomatik kontrolün raporudur. Yeni bir kontrol için Tara düğmesine basın.</string>
+    <string name="status_clean_dormant">Temiz: XCPE\'ye ait hiçbir şey çalışmıyor. Kapatılmış kalıntılar cihaz yazılımında duruyor; kapalı oldukları sürece zararsızdır.</string>
+    <string name="status_outcome_done_mixed">Tamamlandı: XCPE parçaları kaldırıldı veya kapatıldı. Kutuyu yeniden başlatın, sonra geri gelmediklerinden emin olmak için yeniden Tara düğmesine basın.</string>
+    <string name="dlg_stop_title">Temizlik durdurulsun mu?</string>
+    <string name="dlg_stop_msg">Uygulama hâlâ kutu üzerinde çalışıyor. Şimdi durdurursanız henüz kaldırılmamış olanlar olduğu gibi kalır; daha sonra yeniden Tehditleri kaldır düğmesine basabilirsiniz.</string>
+    <string name="dlg_stop_yes">Durdur</string>
+    <string name="status_stopping">Durduruluyor…</string>
+    <string name="result_infected">SONUÇ: ENFEKTE - XCPE arka kapısı bu kutuda etkin: %1$s</string>
+    <string name="result_suspicious">SONUÇ: ŞÜPHELİ - doğrulanmış bir XCPE uygulaması etkin değil, ancak yukarıdaki uyarılara bakın</string>
+    <string name="result_clean">SONUÇ: TEMİZ - XCPE\'ye ait hiçbir şey bulunamadı</string>
+    <string name="adb_status_connecting">Kutunun hata ayıklama hizmetine bağlanılıyor…</string>
+    <string name="adb_status_look_at_tv">TV\'ye bakın: “Bu bilgisayardan her zaman izin ver” kutusunu işaretleyin ve İzin ver düğmesine basın.</string>
+    <string name="adb_status_connected">Bağlandı: kutu bu uygulamadan gelen komutları kabul ediyor.</string>
+    <string name="adb_err_denied">Kutu bu uygulamaya izin vermedi (Reddet düğmesine basıldı veya sorunun süresi doldu). Yeniden deneyin ve TV sorduğunda “Her zaman izin ver” kutusunu işaretleyip İzin ver düğmesine basın.</string>
+    <string name="adb_err_pairing_only">Bu kutu yalnızca Kablosuz hata ayıklama eşlemesi sunuyor; bu uygulama onu kullanamaz. Bunun yerine rehberli adımları izleyin.</string>
+    <string name="adb_err_not_allowed">Bu uygulamaya kutunun hata ayıklama hizmetinde henüz izin verilmedi. Tehditleri kaldır düğmesine bir kez basın; TV ardından sizden izin ister.</string>
+    <string name="adb_err_lost">Kutunun hata ayıklama hizmetiyle bağlantı koptu. Yeniden deneyin.</string>
+    <string name="adb_err_no_answer">Kutunun hata ayıklama hizmeti zamanında yanıt vermedi. Birazdan yeniden deneyin.</string>
+    <string name="adb_err_generic">Hata ayıklama bağlantısı sorunu: %1$s</string>
+    <string name="status_debug_opening">Yeniden başlatma için hata ayıklama erişimi açılıyor…</string>
+    <string name="status_debug_opening_clean">Bu temizlik için hata ayıklama erişimi açılıyor…</string>
+    <string name="status_rebooting">Yeniden başlatılıyor… ekran yaklaşık bir dakika karanlık kalacak. Kalmazsa güç kablosunu çekin, on saniye bekleyin ve yeniden takın.</string>
+    <string name="status_reboot_failed">Kutu kendi başına yeniden başlamadı. Güç kablosunu çekin, on saniye bekleyin ve yeniden takın. Sonra bu uygulamayı açın ve Tara düğmesine basın.</string>
+
+    <!-- Rehberli kaldırma (kutu uygulamanın kendi başına kaldırmasına izin vermiyor) -->
+    <string name="dlg_guided_title">Elle kaldırma, adım adım</string>
+    <string name="dlg_guided_msg">Bu kutu uygulamanın kendi başına kaldırmasına izin vermiyor, bu yüzden birlikte yapacağız. Uygulama her zararlı uygulamanın ayarlar sayfasını sizin için teker teker açar (%d kaldı) ve her sayfadan önce hangi düğmeye basacağınızı söyler. Bir sayfayla işiniz bittiğinde kumandadaki Geri tuşuna basın.</string>
+    <string name="dlg_guided_start">Başla</string>
+    <string name="dlg_guided_later">Şimdi değil</string>
+    <string name="status_guided_later">Kaldırma başlatılmadı. Hazır olduğunuzda Tehditleri kaldır düğmesine basın veya uygulamanın kendi başına yapmasına izin vermek için Geliştirici seçeneklerini aç düğmesine basın.</string>
+    <!-- 1 = adım, 2 = toplam, 3 = uygulama adı -->
+    <string name="guide_step_uninstall">Adım %1$d / %2$d: %3$s uygulamasının kaldırılmasıyla ilgili bir soru görünür. Tamam veya Kaldır düğmesine basın.</string>
+    <string name="dlg_guide_step_title">Adım %1$d / %2$d: %3$s</string>
+    <string name="dlg_guide_step_msg">Sonraki sayfada Kaldır düğmesine basın.\n\nKaldır düğmesi yoksa: görüyorsanız Güncellemeleri kaldır düğmesine, sonra Devre dışı bırak düğmesine, sonra Durmaya zorla düğmesine basın.\n\nİşiniz bittiğinde buraya dönmek için kumandadaki Geri tuşuna basın.</string>
+    <string name="dlg_guide_open">Sayfayı aç</string>
+    <string name="dlg_guide_skip">Bu uygulamayı atla</string>
+    <string name="guide_step_appinfo">Adım %1$d / %2$d: %3$s sayfasında Kaldır düğmesine basın. Yoksa: Güncellemeleri kaldır, sonra Devre dışı bırak, sonra Durmaya zorla. Bitince Geri tuşuna basın.</string>
+    <string name="status_guided_checking">Neyin değiştiği kontrol ediliyor…</string>
+    <string name="status_guide_cannot_open">%s için ayarlar sayfası bu kutuda açılamadı. Devam ediliyor.</string>
+    <string name="guide_still_active_title">%s hâlâ etkin</string>
+    <string name="guide_still_active_msg">Gitmedi. Sayfasını yeniden açabilir, bu uygulamayı atlayabilir veya burada durabilirsiniz.</string>
+    <string name="guide_try_again">Yeniden dene</string>
+    <string name="guide_skip">Atla</string>
+    <string name="guide_stop">Dur</string>
+    <string name="guide_pp_title">Google Play Protect\'i yeniden açın</string>
+    <string name="guide_pp_msg">XCPE, Google\'ın uygulama kontrolünü kapattı. Sonraki sayfada “Uygulamaları Play Protect ile tara” seçeneğini açın, sonra Geri tuşuna basın.</string>
+    <string name="guide_pp_fallback">Bu kutuda bunun için doğrudan bir sayfa yok. Google Play uygulamasını açın, sağ üstteki profil resminize basın, Play Protect\'i seçin, dişli simgesine basın ve “Uygulamaları Play Protect ile tara” seçeneğini açın.</string>
+    <string name="status_guide_pp">Sonraki sayfada “Uygulamaları Play Protect ile tara” seçeneğini açın, sonra Geri tuşuna basın.</string>
+    <string name="dlg_guide_skip_step">Bu adımı atla</string>
+    <string name="guide_acc_title">XCPE\'nin Erişilebilirlik bağlantısını kapatın</string>
+    <string name="guide_acc_msg">XCPE kendini bu kutunun Erişilebilirlik ayarlarına bağlamış. Sonraki sayfada %s öğesini bulup kapatın, sonra Geri tuşuna basın.</string>
+    <string name="status_guide_acc">Sonraki sayfada %s öğesini kapatın, sonra Geri tuşuna basın.</string>
+    <string name="guided_tail_acc">Erişilebilirlik: %s hâlâ açık; Ayarlar, Erişilebilirlik altından kapatın.</string>
+    <!-- 1 = halledilen, 2 = hâlâ etkin, 3 = sonra ne yapılacağı -->
+    <string name="status_guided_done">Elle tamamlandı: %1$d kaldırıldı veya kapatıldı, %2$d hâlâ etkin. %3$s</string>
+    <string name="guided_tail_restart">Şimdi kutuyu yeniden başlatın (güç kablosunu çekip yeniden takın), bu uygulamayı açın ve yeniden Tara düğmesine basın.</string>
+    <string name="guided_tail_replace">Yeniden başlatmadan sonra hâlâ etkinlerse bu kutu temizlenemez: değiştirin.</string>
+
+    <!-- Geliştirici seçenekleri -->
+    <string name="status_devopts_hint">Sonraki sayfada “USB hata ayıklama” seçeneğini açın. Bazı kutularda adı “Ağ hata ayıklama”, “ADB hata ayıklama” veya “Ağ üzerinden ADB” olabilir; onu da açın. Bir soru görünürse “Her zaman izin ver” kutusunu işaretleyin ve İzin ver düğmesine basın. Sonra Geri tuşuna basın.</string>
+    <string name="status_devopts_hidden">Bu kutuda Geliştirici seçenekleri gizli. Sonraki sayfada “Derleme numarası” (veya “Derleme”) öğesini bulun ve üzerinde yedi kez Tamam tuşuna basın. Sonra Geri tuşuna basın ve yeniden Geliştirici seçeneklerini aç düğmesine basın.</string>
+    <string name="status_devopts_missing">Bu kutu uygulamanın ayarlarını açmasına izin vermiyor. Ayarlar menüsünü kendiniz açın: Cihaz Tercihleri, Hakkında, “Derleme” üzerine yedi kez basın, sonra Geliştirici seçenekleri, USB hata ayıklamayı açın.</string>
+    <string name="status_port_open">Güzel: hata ayıklama erişimi açık. Tehditleri kaldır düğmesine basın, uygulama her şeyi kendi başına kaldırır.</string>
+    <string name="status_port_closed_usb_only">USB hata ayıklama açık, ancak ağ erişimi hâlâ kapalı. Geliştirici seçeneklerinde “Ağ hata ayıklama”, “Ağ üzerinden ADB” veya “Kablosuz hata ayıklama” seçeneğini arayın ve onu da açın. Bu kutuda bunlardan hiçbiri yoksa Tehditleri kaldır size bunun yerine adım adım yol gösterir.</string>
+    <string name="status_port_closed_after">Hata ayıklama erişimi hâlâ kapalı. Geliştirici seçeneklerini aç düğmesini yeniden deneyin veya Tehditleri kaldır düğmesine basın; uygulama size bunun yerine adım adım yol gösterir.</string>
+
+    <!-- Derin temizlik -->
+    <string name="dlg_deep_title">Cihaz yazılımı derin temizlensin mi?</string>
+    <string name="dlg_deep_msg">Bu, arka kapının bu kutunun cihaz yazılımında saklanan yedek kopyalarını siler. Yalnızca root erişimi olan kutularda çalışır ve yalnızca XCPE\'ye ait dosyalara dokunur.</string>
+    <string name="dlg_deep_yes">Yedek kopyaları sil</string>
+    <string name="dlg_cancel">İptal</string>
+    <string name="status_deep_running">Derin temizlik yapılıyor… kutuyu açık tutun.</string>
+    <string name="status_deep_done">Derin temizlik bitti. Neler olduğunu okumak için aşağı tuşuna basın, sonra yeniden kontrol etmek için Tara düğmesine basın.</string>
+    <string name="report_deep_header">Derin temizlik:</string>
+
+    <!-- Nasıl çalışır -->
+    <string name="help_title">Bu uygulama nasıl çalışır. Okumak için aşağı, geri dönmek için yukarı tuşuna basın.</string>
+    <string name="help_text">XCPE NEDİR\nXCPE, birçok ucuz Android TV kutusunun (MECOOL, Videostrong ve başka adlarla satılan kutular) cihaz yazılımına yerleştirilmiş bir arka kapıdır. Yabancıların kutunuzda bir şeyler çalıştırmasına izin verir: sahte reklam tıklamaları, internet bağlantınız üzerinden gizli trafik ve ona gönderdikleri başka her şey.\n\nTARA NE YAPAR\nTara bu kutudaki uygulamalara, Google Play Protect\'e ve Erişilebilirlik ayarlarına bakar ve bunları yayımlanmış XCPE parçaları listesiyle karşılaştırır. Hiçbir şeyi değiştirmez ve hiçbir yere hiçbir şey göndermez.\n\nTEHDİTLERİ KALDIR NE YAPAR\nBu kutu için XCPE uygulamalarını kaldırır ve Google Play Protect\'i yeniden açar. Bir uygulama kaldırılamazsa çalışamaması için kapatılır. Uygulama önce bunu kendi başına yapmayı dener; bu, kutunun hata ayıklama erişimi açıkken (Geliştirici seçenekleri) işe yarar. Aksi halde doğru ayar sayfalarını sizin için açar ve hangi düğmeye basacağınızı söyler.\n\nNE KALIR\nBirçok kutu, arka kapının bir yedek kopyasını cihaz yazılımının salt okunur bir bölümünde tutar. Uygulama bu kopyayı root erişimi olmadan silemez, ancak uygulama kaldırılmış veya kapalı olduğu sürece kopya çalışamaz. XCPE yeniden başlatmadan sonra geri gelirse bu uygulama bunu fark eder, onu yeniden kaldırır ve size söyler.\n\nDÜRÜST TAVSİYEMİZ\nArka kapıyla gelen bir kutu hiçbir zaman yalnızca sizin olmadı. Yapabiliyorsanız onu bilinen bir markanın kutusuyla (Google TV Streamer, Apple TV, Fire TV, Nvidia Shield) değiştirin. Tutarsanız üzerinde bankacılık veya e-posta hesaplarınıza giriş yapmayın.\n\nŞİFRELERİNİZİ DEĞİŞTİRİN\nBu kutuda bir kez bile şifre yazdıysanız onu başka bir cihazdan değiştirin: Google hesabı, Netflix, Wi-Fi ve burada kullandığınız başka her şey.\n\nTEMİZLİKTEN SONRA\nKutuyu yeniden başlatın, bu uygulamayı açın ve bir kez daha Tara düğmesine basın. Uygulama ayrıca her yeniden başlatmadan sonra kendi başına kontrol eder ve sonucu “Son kontrol” altında gösterir.\n\nKontrol sonucunu yeniden görmek için Tara düğmesine basın.</string>
+
+    <!-- Yeniden başlatma sonrası kontrolün bildirimleri -->
+    <string name="notif_channel">Yeniden başlatma sonrası kontrol</string>
+    <string name="notif_channel_desc">XCPE yeniden başlatmadan sonra geri geldiğinde size haber verir.</string>
+    <string name="notif_removed_again_title">XCPE yeniden başlatmadan sonra geri geldi ve yeniden kaldırıldı</string>
+    <string name="notif_removed_again_text">Ayrıntıları görmek için XCPE Cleaner\'ı açın. Bu tekrarlanırsa kutuyu değiştirin.</string>
+    <string name="notif_failed_title">XCPE geri geldi ve kaldırılamadı: bu kutuyu değiştirin</string>
+    <string name="notif_failed_text">XCPE Cleaner\'ı açın ve yeniden denemek için Tehditleri kaldır düğmesine basın.</string>
+    <string name="notif_failed_text_port_closed">Hata ayıklama erişimi kapalı olduğu için uygulama onu kendi başına kaldıramadı. XCPE Cleaner\'ı açın ve Tehditleri kaldır düğmesine basın.</string>
+    <string name="notif_suspicious_title">Bu kutuda uyarı işaretleri var</string>
+    <string name="notif_suspicious_text">XCPE Cleaner\'ı açın ve ayrıntıları okumak için Tara düğmesine basın.</string>
+    <string name="report_auto_remove_header">Yeniden başlatma sonrası otomatik kaldırma:</string>
+</resources>

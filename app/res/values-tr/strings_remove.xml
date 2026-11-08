@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Kaldırma metinleri (Türkçe). res/values/strings_remove.xml ile aynı adlar.
+    rm_status_*  kaldırma sırasında ekrana gönderilen canlı durum satırları
+    rm_log_*     günlüğün sade dilli özet satırları (komut dökümü İngilizce kalır)
+  "Ayarlar > Uygulamalar > ..." yolları Android\'in Türkçede gösterdiği adları kullanır.
+-->
+<resources>
+    <!-- Kaldırma sırasında canlı durum -->
+    <string name="rm_status_connecting">Bu kutunun hata ayıklama hizmetine bağlanılıyor...</string>
+    <!-- 1 = neden, hata ayıklama istemcisinden gelen sade bir cümle -->
+    <string name="rm_status_adb_failed">Hata ayıklama bağlantısı kullanılamadı: %1$s</string>
+    <!-- 1 = uygulama adı, 2 = bunun sırası, 3 = toplam -->
+    <string name="rm_status_removing">%1$s kaldırılıyor (%2$d / %3$d)...</string>
+    <string name="rm_status_play_protect">Google Play Protect yeniden açılıyor...</string>
+    <string name="rm_status_done">Tamamlandı.</string>
+    <string name="rm_status_guided">Her uygulamayı elle kaldırmak için ekrandaki adımları izleyin.</string>
+    <string name="rm_status_deep_no_root">Root olmadan derin temizlik yapılamaz.</string>
+    <string name="rm_status_deep_looking">Cihaz yazılımında yedek kopyalar aranıyor...</string>
+    <string name="rm_status_deep_none">Cihaz yazılımında yedek kopya bulunamadı.</string>
+    <!-- 1 = /oem veya /system gibi bölüm -->
+    <string name="rm_status_deep_unlocking">%1$s yazma için açılıyor...</string>
+    <!-- 1 = dosya veya klasör yolu -->
+    <string name="rm_status_deep_deleting">%1$s siliniyor...</string>
+    <string name="rm_status_deep_done">Derin temizlik tamamlandı.</string>
+    <string name="rm_status_deep_partial">Derin temizlik bitti; bazı kopyalar silinemedi.</string>
+
+    <!-- Günlük: kaldırma hangi yoldan gitti -->
+    <string name="rm_log_nothing_to_remove">Kaldırılacak bir şey yok; yalnızca korumalar kontrol ediliyor.</string>
+    <!-- 1 = virgülle ayrılmış uygulama adları -->
+    <string name="rm_log_to_remove">Kaldırılacaklar: %1$s</string>
+    <!-- 1 = ana makine, 2 = bağlantı noktası -->
+    <string name="rm_log_path_adb">Yol: ADB (%1$s:%2$d)</string>
+    <string name="rm_log_path_root">Yol: ROOT (su)</string>
+    <string name="rm_log_path_guided">Yol: REHBERLİ - hata ayıklama bağlantısı ve root yok, bu yüzden şu adımlar elle yapılır:</string>
+    <string name="rm_log_path_deep">Yol: ROOT (su) derin temizlik</string>
+    <!-- 1 = neden -->
+    <string name="rm_log_adb_failed">Hata ayıklama bağlantısı başarısız: %1$s</string>
+    <!-- 1 = ana makine, 2 = bağlantı noktası -->
+    <string name="rm_log_port_closed">Hata ayıklama bağlantı noktası %1$s:%2$d kapalı.</string>
+    <string name="rm_log_no_root">Bu kutuda root (su) yok.</string>
+    <!-- 1 = hata -->
+    <string name="rm_log_unexpected">Beklenmeyen sorun: %1$s</string>
+    <string name="rm_log_stopped">Sizin tarafınızdan durduruldu. Başka bir şey değiştirilmedi.</string>
+    <string name="rm_log_busy">Bu kutuda başka bir temizlik hâlâ sürüyor. Birazdan yeniden deneyin.</string>
+    <string name="rm_log_grant_ok">uygulama artık hata ayıklamayı kendi başına kapatıp açabilir</string>
+    <string name="rm_log_grant_ineffective">yetki etkili olmadı; hata ayıklama sizin ayarladığınız gibi kalır</string>
+    <!-- 1 = hata -->
+    <string name="rm_log_grant_failed">yetki verilemedi: %1$s</string>
+    <string name="rm_log_door_opened">Bu temizlik için hata ayıklama açıldı.</string>
+    <string name="rm_log_door_failed">Bu temizlik için hata ayıklama açılamadı.</string>
+
+    <!-- Günlük: bir uygulama için sonuç -->
+    <string name="rm_log_result_unknown">sonuç kontrol edilemedi (paket yöneticisinden yanıt yok); hâlâ etkin sayıldı</string>
+    <string name="rm_log_disabled">DEVRE DIŞI (kaldırılamadı; kapatıldı ve çalışamaz)</string>
+    <string name="rm_log_failed">BAŞARISIZ - hâlâ etkin. Bu kutuya yeni cihaz yazılımı gerekiyor veya değiştirilmeli.</string>
+    <string name="rm_log_removed_fw_unknown">Bu kutu için KALDIRILDI (cihaz yazılımında kopya kalıp kalmadığı kontrol edilemedi; kaldığını varsayın)</string>
+    <string name="rm_log_removed_fw">Bu kutu için KALDIRILDI (salt okunur cihaz yazılımında uykuda bir kopya kalıyor)</string>
+    <string name="rm_log_removed">Tamamen KALDIRILDI</string>
+
+    <!-- Günlük: korumalar -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">Erişilebilirlik</string>
+    <!-- 1 ve 2 = geri okunan iki ayar değeri -->
+    <string name="rm_log_pp_on">Play Protect uygulama doğrulaması: AÇIK (consent=%1$s enable=%2$s)</string>
+    <string name="rm_log_pp_failed">Play Protect: ayar değiştirilemedi (consent=%1$s enable=%2$s). Play Store > Play Protect > ayarlar içinden açın.</string>
+    <!-- 1 = erişilebilirlik hizmeti kimliği -->
+    <string name="rm_log_acc_removed">erişilebilirlik bağlantısı kaldırıldı: %1$s</string>
+
+    <!-- Günlük: genel sonuç -->
+    <!-- 1 = boşlukla ayrılmış uygulama adları -->
+    <string name="rm_log_result_partial">TEMİZLİK SONUCU: KISMİ - kaldırılamadı: %1$s. Bu kutuyu değiştirin veya satıcıdan temiz cihaz yazılımı isteyin.</string>
+    <string name="rm_log_result_done">TEMİZLİK SONUCU: TAMAMLANDI - kaldırıldı/devre dışı bırakıldı: %1$s</string>
+    <string name="rm_log_result_next">SONRAKİ ADIM: kutuyu yeniden başlatın, sonra yeniden tarayın. Yeniden başlatmadan sonra bir uygulama geri gelirse onu cihaz yazılımı yeniden yüklüyor demektir: kutuyu değiştirin.</string>
+    <string name="rm_log_result_nothing">TEMİZLİK SONUCU: kaldırılması gereken bir şey yoktu.</string>
+
+    <!-- Günlük: elle yapılacak adımlar (hata ayıklama bağlantısı yok, root yok) -->
+    <!-- 1 = uygulama adı -->
+    <string name="rm_log_guided_step">Ayarlar > Uygulamalar > %1$s > Kaldır (veya “Güncellemeleri kaldır”, sonra “Devre dışı bırak”), sonra Durmaya zorla</string>
+    <string name="rm_log_guided_pp">Play Protect: Play Store > profiliniz > Play Protect > ayarlar (dişli) > “Uygulamaları Play Protect ile tara” seçeneğini açın</string>
+    <!-- 1 = virgülle ayrılmış erişilebilirlik hizmeti kimlikleri -->
+    <string name="rm_log_guided_acc">Ayarlar > Erişilebilirlik: %1$s öğesini kapatın</string>
+    <string name="rm_log_guided_nothing">Elle yapılacak bir şey yok.</string>
+
+    <!-- Günlük: derin temizlik (yalnızca root) -->
+    <string name="rm_log_deep_no_root">Derin temizlik için root (su) gerekir ve bu kutuda yok. Uygulama kaldırılmış veya devre dışı olduğu sürece cihaz yazılımındaki yedek kopya etkisiz kalır.</string>
+    <!-- 1 = hata -->
+    <string name="rm_log_deep_root_check_failed">Root kontrol edilemedi: %1$s</string>
+    <!-- 1 = dosya yolu -->
+    <string name="rm_log_deep_shared_perm_file">%1$s başka uygulamalara da hak veriyor; dokunulmadı</string>
+    <!-- 1 = dosya yolu, 2 = paket adı -->
+    <string name="rm_log_deep_unverified">%1$s: içinde hangi uygulamanın olduğu okunamadı, bu yüzden dokunulmadı.</string>
+    <string name="rm_log_deep_not_xcpe">%1$s, XCPE\'nin parçası olmayan %2$s uygulamasını içeriyor; dokunulmadı.</string>
+    <string name="rm_log_deep_skipped_unusual">atlandı (alışılmadık yol): %1$s</string>
+    <string name="rm_log_deep_skipped_outside">atlandı (cihaz yazılımı dizinlerinin dışında): %1$s</string>
+    <string name="rm_log_deep_nothing">Cihaz yazılımı dizinlerinde XCPE benzeri bir şey bulunamadı.</string>
+    <!-- 1 = virgülle ayrılmış yollar -->
+    <string name="rm_log_deep_targets">Silinecek cihaz yazılımı kopyaları: %1$s</string>
+    <!-- 1 = /oem gibi bölüm -->
+    <string name="rm_log_deep_write_protected">%1$s: bu kutunun cihaz yazılımı yazmaya karşı korumalı; yedek kopya etkisiz kalır</string>
+    <!-- 1 = dosya veya klasör yolu -->
+    <string name="rm_log_deep_deleted">silindi: %1$s</string>
+    <string name="rm_log_deep_still_there_ro">%1$s hâlâ orada: bu kutunun cihaz yazılımı yazmaya karşı korumalı; yedek kopya etkisiz kalır</string>
+    <string name="rm_log_deep_still_there">%1$s hâlâ orada (silinemedi)</string>
+    <!-- 1 = sayı -->
+    <string name="rm_log_deep_result_done">DERİN TEMİZLİK SONUCU: TAMAMLANDI - %1$d cihaz yazılımı öğesi silindi</string>
+    <!-- 1 = virgülle ayrılmış yollar -->
+    <string name="rm_log_deep_result_partial">DERİN TEMİZLİK SONUCU: KISMİ - hâlâ cihaz yazılımında: %1$s</string>
+    <!-- 1 = hata -->
+    <string name="rm_log_deep_unexpected">Derin temizlik sırasında beklenmeyen sorun: %1$s</string>
+</resources>

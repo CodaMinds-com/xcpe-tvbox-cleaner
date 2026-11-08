@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  清除文案（简体中文）：清除流程和深度清理。两类：
+    rm_status_*  清除运行时推送到屏幕的实时状态行
+    rm_log_*     结果日志中的通俗摘要行（命令记录本身保持英文）
+  保留 %1$s / %2$d 占位符、包名、"XCPE"、"Play Protect"、"ADB"、"su"、"root"。
+  "设置 > 应用 > ..." 路径使用 Android 在本语言中显示的名称。
+-->
+<resources>
+    <!-- 清除时的实时状态 -->
+    <string name="rm_status_connecting">正在连接这台盒子的调试服务...</string>
+    <!-- 1 = 原因，来自调试客户端的一句通俗说明 -->
+    <string name="rm_status_adb_failed">无法使用调试连接：%1$s</string>
+    <!-- 1 = 应用名，2 = 当前序号，3 = 总数 -->
+    <string name="rm_status_removing">正在清除 %1$s（第 %2$d 个，共 %3$d 个）...</string>
+    <string name="rm_status_play_protect">正在重新开启 Google Play Protect...</string>
+    <string name="rm_status_done">完成。</string>
+    <string name="rm_status_guided">请按照屏幕上的步骤手动清除每个应用。</string>
+    <string name="rm_status_deep_no_root">没有 root 就无法进行深度清理。</string>
+    <string name="rm_status_deep_looking">正在固件中查找备用副本...</string>
+    <string name="rm_status_deep_none">固件中没有找到备用副本。</string>
+    <!-- 1 = 分区，例如 /oem 或 /system -->
+    <string name="rm_status_deep_unlocking">正在解锁 %1$s 以便写入...</string>
+    <!-- 1 = 文件或文件夹路径 -->
+    <string name="rm_status_deep_deleting">正在删除 %1$s...</string>
+    <string name="rm_status_deep_done">深度清理完成。</string>
+    <string name="rm_status_deep_partial">深度清理已结束；有些副本无法删除。</string>
+
+    <!-- 日志：清除走了哪条路 -->
+    <string name="rm_log_nothing_to_remove">没有需要清除的内容；只检查防护设置。</string>
+    <!-- 1 = 以逗号分隔的应用名 -->
+    <string name="rm_log_to_remove">待清除：%1$s</string>
+    <!-- 1 = 主机，2 = 端口 -->
+    <string name="rm_log_path_adb">方式：ADB（%1$s:%2$d）</string>
+    <string name="rm_log_path_root">方式：ROOT（su）</string>
+    <string name="rm_log_path_guided">方式：引导手动操作 - 没有调试连接也没有 root，因此以下步骤需要手动完成：</string>
+    <string name="rm_log_path_deep">方式：ROOT（su）深度清理</string>
+    <!-- 1 = 原因 -->
+    <string name="rm_log_adb_failed">调试连接失败：%1$s</string>
+    <!-- 1 = 主机，2 = 端口 -->
+    <string name="rm_log_port_closed">调试端口 %1$s:%2$d 已关闭。</string>
+    <string name="rm_log_no_root">这台盒子没有 root（su）。</string>
+    <!-- 1 = 错误信息 -->
+    <string name="rm_log_unexpected">意外问题：%1$s</string>
+    <string name="rm_log_stopped">已由您停止。没有再做其他改动。</string>
+    <string name="rm_log_busy">这台盒子上还有另一次清理正在进行。请稍后再试。</string>
+    <string name="rm_log_grant_ok">本应用现在可以自行开关调试了</string>
+    <string name="rm_log_grant_ineffective">授权未生效；调试保持您设置的状态</string>
+    <!-- 1 = 错误信息 -->
+    <string name="rm_log_grant_failed">授权失败：%1$s</string>
+    <string name="rm_log_door_opened">为了这次清理，调试已开启。</string>
+    <string name="rm_log_door_failed">无法为这次清理开启调试。</string>
+
+    <!-- 日志：单个应用的结果 -->
+    <string name="rm_log_result_unknown">无法检查结果（系统的应用管理器没有回应）；视为仍在运行</string>
+    <string name="rm_log_disabled">已停用（无法卸载；已停用且无法运行）</string>
+    <string name="rm_log_failed">失败 - 仍在运行。这台盒子需要新固件或更换。</string>
+    <string name="rm_log_removed_fw_unknown">已为这台盒子清除（无法检查固件里是否还有副本；假定有）</string>
+    <string name="rm_log_removed_fw">已为这台盒子清除（只读固件里还留有一份休眠副本）</string>
+    <string name="rm_log_removed">已完全清除</string>
+
+    <!-- 日志：防护 -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">无障碍</string>
+    <!-- 1 和 2 = 读回的两个设置值 -->
+    <string name="rm_log_pp_on">Play Protect 应用验证：已开启（consent=%1$s enable=%2$s）</string>
+    <string name="rm_log_pp_failed">Play Protect：无法更改设置（consent=%1$s enable=%2$s）。请在 Play 商店 > Play Protect（Play 保护机制）> 设置中开启。</string>
+    <!-- 1 = 无障碍服务 ID -->
+    <string name="rm_log_acc_removed">已移除接入无障碍的服务：%1$s</string>
+
+    <!-- 日志：总体结果 -->
+    <!-- 1 = 以空格分隔的应用名 -->
+    <string name="rm_log_result_partial">清理结果：部分完成 - 无法清除：%1$s。请更换这台盒子，或向卖家索取干净的固件。</string>
+    <string name="rm_log_result_done">清理结果：完成 - 已清除/停用：%1$s</string>
+    <string name="rm_log_result_next">下一步：重启盒子，然后再次扫描。如果某个应用在重启后又出现，说明固件会重新安装它：请更换盒子。</string>
+    <string name="rm_log_result_nothing">清理结果：没有需要清除的内容。</string>
+
+    <!-- 日志：需要手动完成的步骤（没有调试连接，没有 root） -->
+    <!-- 1 = 应用名 -->
+    <string name="rm_log_guided_step">设置 > 应用 > %1$s > 卸载（或“卸载更新”，然后“停用”），再按“强行停止”</string>
+    <string name="rm_log_guided_pp">Play Protect：打开 Play 商店 > 您的头像 > Play Protect（Play 保护机制）> 设置（齿轮）> 开启“使用 Play 保护机制扫描应用”</string>
+    <!-- 1 = 以逗号分隔的无障碍服务 ID -->
+    <string name="rm_log_guided_acc">设置 > 无障碍：关闭 %1$s</string>
+    <string name="rm_log_guided_nothing">没有需要手动完成的步骤。</string>
+
+    <!-- 日志：深度清理（仅限 root） -->
+    <string name="rm_log_deep_no_root">深度清理需要 root（su），而这台盒子没有。只要应用已被清除或停用，固件里的备用副本就不起作用。</string>
+    <!-- 1 = 错误信息 -->
+    <string name="rm_log_deep_root_check_failed">无法检查是否有 root：%1$s</string>
+    <!-- 1 = 文件路径 -->
+    <string name="rm_log_deep_shared_perm_file">%1$s 也为其他应用授予权限；保持原样</string>
+    <!-- 1 = 文件路径，2 = 包名 -->
+    <string name="rm_log_deep_unverified">%1$s：无法读出里面是哪个应用，因此保持原样。</string>
+    <string name="rm_log_deep_not_xcpe">%1$s 里包含应用 %2$s，它不属于 XCPE；保持原样。</string>
+    <string name="rm_log_deep_skipped_unusual">已跳过（路径不寻常）：%1$s</string>
+    <string name="rm_log_deep_skipped_outside">已跳过（不在固件目录内）：%1$s</string>
+    <string name="rm_log_deep_nothing">固件目录中没有发现类似 XCPE 的内容。</string>
+    <!-- 1 = 以逗号分隔的路径 -->
+    <string name="rm_log_deep_targets">要删除的固件副本：%1$s</string>
+    <!-- 1 = 分区，例如 /oem -->
+    <string name="rm_log_deep_write_protected">%1$s：这台盒子的固件有写保护；备用副本保持不起作用</string>
+    <!-- 1 = 文件或文件夹路径 -->
+    <string name="rm_log_deep_deleted">已删除 %1$s</string>
+    <string name="rm_log_deep_still_there_ro">%1$s 仍然存在：这台盒子的固件有写保护；备用副本保持不起作用</string>
+    <string name="rm_log_deep_still_there">%1$s 仍然存在（无法删除）</string>
+    <!-- 1 = 数量 -->
+    <string name="rm_log_deep_result_done">深度清理结果：完成 - 已删除 %1$d 个固件项目</string>
+    <!-- 1 = 以逗号分隔的路径 -->
+    <string name="rm_log_deep_result_partial">深度清理结果：部分完成 - 固件中仍有：%1$s</string>
+    <!-- 1 = 错误信息 -->
+    <string name="rm_log_deep_unexpected">深度清理期间出现意外问题：%1$s</string>
+</resources>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  掃描文案（繁體中文）：檢查報告的每一個標題和句子，以及執行時顯示的各區段名稱。
+  保留 %1$s / %2$d 預留位置、套件名稱、"XCPE"、"Play Protect"、"MECOOL"、"Videostrong"、
+  /oem 之類的資料夾名稱以及 package_verifier_user_consent 之類的設定名稱。
+  用雙引號包起來的值刻意保留了雙空格（報告中的欄位對齊）。
+-->
+<resources>
+    <!-- 執行時步驟清單的區段名稱 -->
+    <string name="scan_sec_device">正在檢查這部裝置</string>
+    <string name="scan_sec_known">正在檢查已知的應用程式</string>
+    <string name="scan_sec_fake_system">正在檢查使用系統名稱的應用程式</string>
+    <string name="scan_sec_content">正在查看已安裝應用程式的內部</string>
+    <string name="scan_err_content">無法查看已安裝應用程式的內部</string>
+    <string name="scan_content_match">%1$s 包含 %2$s，這是已知的 XCPE 元件</string>
+    <string name="scan_content_none">沒有已安裝的應用程式包含已知的 XCPE 元件</string>
+    <string name="scan_reason_ioc">名稱與已公布的 XCPE 輔助工具清單相符</string>
+    <string name="scan_reason_provider">開放了一個 XCPE 資料通道</string>
+    <string name="scan_reason_content">包含 %1$s，這是已知的 XCPE 元件</string>
+    <string name="scan_reason_fake_name">使用系統名稱，但是後來才安裝的</string>
+    <string name="scan_reason_installed_by">%1$s；安裝來源：%2$s</string>
+    <string name="scan_sec_providers">正在檢查資料通道</string>
+    <string name="scan_sec_firmware">正在檢查韌體中的備用副本</string>
+    <string name="scan_sec_play_protect">正在檢查 Google Play Protect</string>
+    <string name="scan_sec_accessibility">正在檢查協助工具設定</string>
+    <string name="scan_sec_user_apps">正在列出使用者安裝的應用程式</string>
+
+    <!-- 某個區段無法執行（掃描繼續） -->
+    <string name="scan_err_no_context">無法檢查這台電視盒上的任何內容（缺少應用程式內容環境）</string>
+    <string name="scan_err_finish">無法完成掃描</string>
+    <string name="scan_err_device">無法檢查這台電視盒的品牌和型號</string>
+    <string name="scan_err_app_list">無法檢查已安裝應用程式的完整清單</string>
+    <string name="scan_err_known">無法檢查已知的 XCPE 應用程式名稱</string>
+    <string name="scan_err_fake_system">無法檢查躲在系統名稱後面的應用程式</string>
+    <string name="scan_err_providers">無法檢查 XCPE 資料通道（內容提供者）</string>
+    <string name="scan_err_oem">無法檢查 /oem 資料夾中是否有備用副本</string>
+    <string name="scan_err_priv_app">無法檢查系統應用程式資料夾</string>
+    <string name="scan_err_perm_files">無法檢查權限授予檔案</string>
+    <string name="scan_err_props">無法檢查 XCPE 植入程式的屬性</string>
+    <string name="scan_err_play_protect">無法檢查 Play Protect 設定</string>
+    <string name="scan_err_accessibility">無法檢查協助工具服務</string>
+    <string name="scan_err_user_apps">無法檢查使用者安裝的應用程式清單</string>
+
+    <!-- 1. 這台電視盒。1 = 品牌，2 = 製造商，3 = 型號，4 = 裝置代號，5 = Android 版本，6 = API 等級，7 = 安全性更新日期，8 = 版本指紋 -->
+    <string name="scan_device_line">"品牌：%1$s   製造商：%2$s   型號：%3$s   裝置：%4$s\nAndroid %5$s（API %6$d）  安全性更新 %7$s\n版本：%8$s"</string>
+    <string name="scan_unknown">不明</string>
+    <string name="scan_device_unavailable">無法取得裝置資訊</string>
+    <string name="scan_device_mecool_brand_title">品牌或製造商是 MECOOL / Videostrong（XCPE 背後的公司）</string>
+    <!-- 1 = 品牌，2 = 製造商 -->
+    <string name="scan_device_mecool_brand_detail">"品牌：%1$s   製造商：%2$s"</string>
+    <string name="scan_device_mecool_prop_title">這台電視盒自稱是 MECOOL 裝置（ro.mecool.device=true）</string>
+    <string name="scan_device_mecool_prop_detail">後門會讀取這個屬性來選擇它的控制伺服器。</string>
+    <!-- 1 = 型號名稱 -->
+    <string name="scan_device_model_listed_title">型號名稱「%1$s」在已公布的受影響型號清單上（這本身不能證明已感染）</string>
+    <string name="scan_device_model_listed_detail">使用這個名稱的電視盒曾在 XCPE 事件中出現。下面的檢查會判斷這一台是否已感染。</string>
+    <string name="scan_device_model_ok">型號名稱不在已公布的受影響型號清單上</string>
+
+    <!-- 2. 已知的應用程式。1 = 應用程式（套件）名稱 -->
+    <string name="scan_pkg_confirmed_active">"%1$s 已安裝且正在啟用  &lt;-- XCPE 後門的組成部分"</string>
+    <string name="scan_pkg_confirmed_dormant_firmware">%1$s 在韌體裡，但對這台電視盒已停用（休眠，關閉時無害）</string>
+    <string name="scan_pkg_confirmed_dormant_present">%1$s 存在但已停用（休眠，關閉時無害）</string>
+    <!-- 1 = 已確認清單上的名稱數量 -->
+    <string name="scan_pkg_confirmed_none">%1$d 個已確認的 XCPE 應用程式名稱均未啟用</string>
+    <string name="scan_pkg_suspect_active">%1$s 已安裝（Videostrong / 推廣工具，可疑）</string>
+    <string name="scan_pkg_suspect_dormant_firmware">%1$s（可疑工具）在韌體裡，但對這台電視盒已停用（休眠，關閉時無害）</string>
+    <string name="scan_pkg_suspect_dormant_present">%1$s（可疑工具）存在但已停用（休眠，關閉時無害）</string>
+
+    <!-- 3. 躲在系統名稱後面的應用程式。1 = 應用程式名稱 -->
+    <string name="scan_fake_active">%1$s 是使用者安裝的應用程式，卻躲在系統名稱後面（XCPE 植入程式常這樣做）</string>
+    <string name="scan_fake_dormant">%1$s 使用系統名稱，但已停用（休眠，關閉時無害）</string>
+    <string name="scan_fake_none">沒有使用者安裝的應用程式躲在 com.android.* 名稱後面</string>
+
+    <!-- 4. 資料通道（內容提供者）。1 = 應用程式名稱，2 = 通道（authority）名稱 -->
+    <string name="scan_provider_none">沒有應用程式開放 XCPE 資料通道</string>
+    <string name="scan_provider_active">%1$s 開放了一個 XCPE 資料通道（%2$s）</string>
+    <string name="scan_provider_active_detail">XCPE 應用程式透過這個通道共用它們的設定。</string>
+    <string name="scan_provider_dormant">%1$s 帶有 XCPE 資料通道（%2$s），但已停用（休眠）</string>
+
+    <!-- 5a. /oem 中的備用副本 -->
+    <string name="scan_oem_no_folder">這台電視盒沒有 /oem 資料夾（沒有存放備用副本的地方）</string>
+    <string name="scan_oem_copy_title">/oem 裡存有後門的備用副本</string>
+    <string name="scan_oem_copy_detail">只有新韌體或 root 才能刪除它。只要應用程式本身已被清除或停用，它就是無害的。</string>
+    <!-- 1 = APK 檔案數量 -->
+    <string name="scan_oem_apks_ok">/oem 中有 %1$d 個 APK 檔案，沒有一個名稱像 XCPE</string>
+    <string name="scan_oem_not_visible_title">這台電視盒上的應用程式看不到 /oem 資料夾，因此無法排除那裡有備用副本</string>
+    <!-- 1 = 以逗號分隔的資料夾名稱 -->
+    <string name="scan_oem_not_visible_detail">無法讀取：%1$s</string>
+    <string name="scan_oem_none">/oem 中看不到 APK 檔案</string>
+
+    <!-- 5b. 系統應用程式資料夾。1 = 資料夾路徑 -->
+    <string name="scan_privapp_hit_title">名稱像 XCPE 的系統應用程式資料夾：%1$s</string>
+    <string name="scan_privapp_hit_detail">這是韌體的一部分。只有新韌體或 root 才能刪除它；停用應用程式後它就是無害的。</string>
+    <string name="scan_privapp_none">系統應用程式目錄中沒有名稱像 XCPE 的資料夾</string>
+    <!-- 1 = 以逗號分隔的資料夾名稱（5b 和 5c 共用） -->
+    <string name="scan_not_visible_detail">應用程式看不到：%1$s</string>
+
+    <!-- 5c. 權限授予檔案。1 = 檔案路徑，2 = 檔案中提到的 XCPE 應用程式 -->
+    <string name="scan_perm_hit_title">"為 XCPE 應用程式預設權限的檔案：%1$s  （提到 %2$s）"</string>
+    <string name="scan_perm_hit_detail">韌體預先為後門核准了權限。清除或停用該應用程式後，這個檔案就不起作用了。</string>
+    <string name="scan_perm_none">沒有權限授予檔案為 XCPE 應用程式授予權限</string>
+
+    <!-- 5d. 植入程式屬性。1 = 屬性名稱，2 = 屬性值 -->
+    <string name="scan_prop_set">已設定屬性 %1$s=%2$s（2026 年的 XCPE 植入程式會使用它）</string>
+    <string name="scan_prop_none">沒有設定任何 XCPE 植入程式屬性</string>
+
+    <!-- 6. Play Protect -->
+    <string name="scan_pp_off_title">Play Protect 的應用程式檢查已被關閉（正是 XCPE 的做法）</string>
+    <string name="scan_pp_off_detail">package_verifier_user_consent=-1。「清除威脅」會把它重新開啟；您也可以在 Play 商店 > Play Protect（Play 安全防護）中開啟。</string>
+    <string name="scan_pp_disabled_title">Play Protect 的應用程式檢查已被停用（package_verifier_enable=0）</string>
+    <string name="scan_pp_disabled_detail">「清除威脅」會把它重新開啟；您也可以在 Play 商店 > Play Protect（Play 安全防護）中開啟。</string>
+    <string name="scan_pp_ok">Play Protect 的應用程式檢查沒有被關閉</string>
+
+    <!-- 7. 協助工具。1 = 服務 ID（應用程式/類別） -->
+    <string name="scan_acc_none">沒有啟用任何協助工具服務</string>
+    <string name="scan_acc_bad_title">有一個協助工具服務屬於 XCPE：%1$s</string>
+    <string name="scan_acc_bad_detail">XCPE 用它來監看您在遙控器上按了什麼。清除該應用程式後它就會關閉。</string>
+    <string name="scan_acc_other">已啟用的協助工具服務：%1$s（不是 XCPE）</string>
+
+    <!-- 10. 參考清單。1 = 數量；scan_user_app_off：1 = 應用程式名稱；scan_more：1 = 省略了多少個 -->
+    <string name="scan_user_apps">這台電視盒上有 %1$d 個使用者安裝的應用程式（僅供參考）</string>
+    <string name="scan_user_app_off">"%1$s  （已停用）"</string>
+    <string name="scan_more">...（還有 %1$d 個）</string>
+
+    <!-- 應用程式發現項目下方的詳細資料行 -->
+    <!-- 1 = 版本名稱，2 = 版本號碼 -->
+    <string name="scan_detail_version">版本：%1$s（%2$d）</string>
+    <!-- 1 = 檔案路徑 -->
+    <string name="scan_detail_apk">apk：%1$s</string>
+    <!-- 1 = 安裝它的應用程式名稱 -->
+    <string name="scan_detail_installer">安裝來源：%1$s</string>
+    <string name="scan_detail_installer_none">安裝來源：沒有記錄（手動安裝或韌體內建）</string>
+    <!-- 1 = 首次安裝日期，2 = 最近更新日期 -->
+    <string name="scan_detail_times">"首次安裝：%1$s   最近更新：%2$s"</string>
+    <string name="scan_detail_type_updated_system">類型：韌體應用程式，上面疊加了更新：解除安裝只會移除更新，韌體裡的副本只能停用</string>
+    <string name="scan_detail_type_system">類型：韌體（系統）應用程式：沒有 root 只能停用，不能刪除</string>
+    <string name="scan_detail_type_user">類型：使用者安裝的應用程式：可以解除安裝</string>
+    <string name="scan_detail_state_off">狀態：已停用</string>
+    <string name="scan_detail_state_off_by_user">狀態：已被使用者停用</string>
+    <!-- 1 = 錯誤訊息 -->
+    <string name="scan_detail_unavailable">（無法取得詳細資料：%1$s）</string>
+</resources>

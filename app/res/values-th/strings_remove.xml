@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ข้อความของตัวลบ ภาษาไทย (ขั้นตอนการลบ การล้างขั้นลึก)
+    rm_status_*  บรรทัดสถานะที่แสดงบนหน้าจอขณะกำลังลบ
+    rm_log_*     บรรทัดสรุปภาษาง่ายๆ ใน Outcome.log (บันทึกคำสั่งเองยังคงเป็นภาษาอังกฤษ)
+  คงตัวยึดตำแหน่ง %1$s / %2$d ชื่อแพ็กเกจ "XCPE" "Play Protect" "ADB" "su" "root" ไว้ตามต้นฉบับ
+  เส้นทาง "การตั้งค่า > แอป > ..." ใช้ชื่อที่ Android แสดงเป็นภาษาไทย
+-->
+<resources>
+    <!-- Live status while removing -->
+    <string name="rm_status_connecting">กำลังเชื่อมต่อกับบริการแก้ไขข้อบกพร่องของกล่องนี้...</string>
+    <!-- 1 = the reason, a plain-language sentence from the debugging client -->
+    <string name="rm_status_adb_failed">ใช้การเชื่อมต่อแก้ไขข้อบกพร่องไม่ได้: %1$s</string>
+    <!-- 1 = app name, 2 = this one's number, 3 = total -->
+    <string name="rm_status_removing">กำลังลบ %1$s (%2$d จาก %3$d)...</string>
+    <string name="rm_status_play_protect">กำลังเปิด Google Play Protect กลับ...</string>
+    <string name="rm_status_done">เสร็จแล้ว</string>
+    <string name="rm_status_guided">ทำตามขั้นตอนบนหน้าจอเพื่อลบแต่ละแอปด้วยตนเอง</string>
+    <string name="rm_status_deep_no_root">ล้างขั้นลึกไม่ได้หากไม่มี root</string>
+    <string name="rm_status_deep_looking">กำลังหาสำเนาสำรองในเฟิร์มแวร์...</string>
+    <string name="rm_status_deep_none">ไม่พบสำเนาสำรองในเฟิร์มแวร์</string>
+    <!-- 1 = partition such as /oem or /system -->
+    <string name="rm_status_deep_unlocking">กำลังปลดล็อก %1$s เพื่อเขียนข้อมูล...</string>
+    <!-- 1 = file or folder path -->
+    <string name="rm_status_deep_deleting">กำลังลบ %1$s...</string>
+    <string name="rm_status_deep_done">ล้างขั้นลึกเสร็จแล้ว</string>
+    <string name="rm_status_deep_partial">ล้างขั้นลึกเสร็จแล้ว แต่บางสำเนาลบไม่ได้</string>
+
+    <!-- Log: which way the removal went -->
+    <string name="rm_log_nothing_to_remove">ไม่มีอะไรต้องลบ ตรวจสอบเฉพาะการป้องกัน</string>
+    <!-- 1 = comma-separated app names -->
+    <string name="rm_log_to_remove">สิ่งที่จะลบ: %1$s</string>
+    <!-- 1 = host, 2 = port -->
+    <string name="rm_log_path_adb">วิธี: ADB (%1$s:%2$d)</string>
+    <string name="rm_log_path_root">วิธี: ROOT (su)</string>
+    <string name="rm_log_path_guided">วิธี: ทำตามคำแนะนำ - ไม่มีการเชื่อมต่อแก้ไขข้อบกพร่องและไม่มี root จึงต้องทำขั้นตอนเหล่านี้ด้วยตนเอง:</string>
+    <string name="rm_log_path_deep">วิธี: ROOT (su) ล้างขั้นลึก</string>
+    <!-- 1 = the reason -->
+    <string name="rm_log_adb_failed">การเชื่อมต่อแก้ไขข้อบกพร่องล้มเหลว: %1$s</string>
+    <!-- 1 = host, 2 = port -->
+    <string name="rm_log_port_closed">พอร์ตแก้ไขข้อบกพร่อง %1$s:%2$d ปิดอยู่</string>
+    <string name="rm_log_no_root">กล่องนี้ไม่มี root (su)</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_unexpected">ปัญหาที่ไม่คาดคิด: %1$s</string>
+    <string name="rm_log_stopped">คุณหยุดไว้ ไม่มีการเปลี่ยนแปลงอื่นใดอีก</string>
+    <string name="rm_log_busy">มีการล้างอีกรายการยังทำงานอยู่ในกล่องนี้ ลองใหม่อีกครั้งในอีกสักครู่</string>
+    <string name="rm_log_grant_ok">ตอนนี้แอปเปิดและปิดการแก้ไขข้อบกพร่องได้เอง</string>
+    <string name="rm_log_grant_ineffective">การให้สิทธิ์ไม่มีผล การแก้ไขข้อบกพร่องคงอยู่ตามที่คุณตั้งไว้</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_grant_failed">การให้สิทธิ์ล้มเหลว: %1$s</string>
+    <string name="rm_log_door_opened">เปิดการแก้ไขข้อบกพร่องสำหรับการล้างครั้งนี้แล้ว</string>
+    <string name="rm_log_door_failed">เปิดการแก้ไขข้อบกพร่องสำหรับการล้างครั้งนี้ไม่ได้</string>
+
+    <!-- Log: result for one app -->
+    <string name="rm_log_result_unknown">ตรวจสอบผลไม่ได้ (ไม่มีคำตอบจากตัวจัดการแพ็กเกจ) ถือว่ายังทำงานอยู่</string>
+    <string name="rm_log_disabled">ปิดใช้แล้ว (ถอนการติดตั้งไม่ได้ จึงปิดไว้และทำงานไม่ได้)</string>
+    <string name="rm_log_failed">ล้มเหลว - ยังทำงานอยู่ กล่องนี้ต้องใช้เฟิร์มแวร์ใหม่หรือเปลี่ยนเครื่อง</string>
+    <string name="rm_log_removed_fw_unknown">ลบออกจากกล่องนี้แล้ว (ตรวจสอบไม่ได้ว่ายังมีสำเนาในเฟิร์มแวร์หรือไม่ ให้ถือว่ามี)</string>
+    <string name="rm_log_removed_fw">ลบออกจากกล่องนี้แล้ว (ยังมีสำเนาที่ไม่ทำงานอยู่ในเฟิร์มแวร์แบบอ่านอย่างเดียว)</string>
+    <string name="rm_log_removed">ลบออกแล้วทั้งหมด</string>
+
+    <!-- Log: protections -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">การช่วยเหลือพิเศษ</string>
+    <!-- 1 and 2 = the two setting values read back -->
+    <string name="rm_log_pp_on">การยืนยันแอปของ Play Protect: เปิด (consent=%1$s enable=%2$s)</string>
+    <string name="rm_log_pp_failed">Play Protect: เปลี่ยนการตั้งค่าไม่ได้ (consent=%1$s enable=%2$s) เปิดได้ที่ Play Store > Play Protect > การตั้งค่า</string>
+    <!-- 1 = accessibility service id -->
+    <string name="rm_log_acc_removed">ลบการเชื่อมต่อในการช่วยเหลือพิเศษแล้ว: %1$s</string>
+
+    <!-- Log: overall result -->
+    <!-- 1 = space-separated app names -->
+    <string name="rm_log_result_partial">ผลการล้าง: สำเร็จบางส่วน - ลบไม่ได้: %1$s เปลี่ยนกล่องนี้หรือขอเฟิร์มแวร์ที่สะอาดจากผู้ขาย</string>
+    <string name="rm_log_result_done">ผลการล้าง: เสร็จสิ้น - ลบหรือปิดใช้แล้ว: %1$s</string>
+    <string name="rm_log_result_next">ขั้นต่อไป: รีสตาร์ทกล่อง แล้วสแกนอีกครั้ง หากแอปกลับมาหลังรีสตาร์ท แสดงว่าเฟิร์มแวร์ติดตั้งมันใหม่: ให้เปลี่ยนกล่อง</string>
+    <string name="rm_log_result_nothing">ผลการล้าง: ไม่มีอะไรต้องลบ</string>
+
+    <!-- Log: steps to do by hand (no debugging connection, no root) -->
+    <!-- 1 = app name -->
+    <string name="rm_log_guided_step">การตั้งค่า > แอป > %1$s > ถอนการติดตั้ง (หรือ \'ถอนการติดตั้งการอัปเดต\' แล้ว \'ปิดใช้\') จากนั้น บังคับหยุด</string>
+    <string name="rm_log_guided_pp">Play Protect: เปิด Play Store > โปรไฟล์ของคุณ > Play Protect > การตั้งค่า (รูปเฟือง) > เปิด \'สแกนแอปด้วย Play Protect\'</string>
+    <!-- 1 = comma-separated accessibility service ids -->
+    <string name="rm_log_guided_acc">การตั้งค่า > การช่วยเหลือพิเศษ: ปิด %1$s</string>
+    <string name="rm_log_guided_nothing">ไม่มีอะไรต้องทำด้วยตนเอง</string>
+
+    <!-- Log: deep clean (root only) -->
+    <string name="rm_log_deep_no_root">การล้างขั้นลึกต้องใช้ root (su) และกล่องนี้ไม่มี สำเนาสำรองในเฟิร์มแวร์จะไม่มีผลตราบใดที่แอปถูกลบออกหรือปิดใช้อยู่</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_deep_root_check_failed">ตรวจสอบ root ไม่ได้: %1$s</string>
+    <!-- 1 = file path -->
+    <string name="rm_log_deep_shared_perm_file">%1$s ให้สิทธิ์แก่แอปอื่นด้วย จึงปล่อยไว้</string>
+    <!-- 1 = file path, 2 = package name -->
+    <string name="rm_log_deep_unverified">%1$s: อ่านไม่ได้ว่าข้างในเป็นแอปใด จึงปล่อยไว้</string>
+    <string name="rm_log_deep_not_xcpe">%1$s มีแอป %2$s อยู่ข้างใน ซึ่งไม่ใช่ส่วนหนึ่งของ XCPE จึงปล่อยไว้</string>
+    <string name="rm_log_deep_skipped_unusual">ข้าม (เส้นทางผิดปกติ): %1$s</string>
+    <string name="rm_log_deep_skipped_outside">ข้าม (อยู่นอกไดเรกทอรีเฟิร์มแวร์): %1$s</string>
+    <string name="rm_log_deep_nothing">ไม่พบสิ่งที่คล้าย XCPE ในไดเรกทอรีเฟิร์มแวร์</string>
+    <!-- 1 = comma-separated paths -->
+    <string name="rm_log_deep_targets">สำเนาในเฟิร์มแวร์ที่จะลบ: %1$s</string>
+    <!-- 1 = partition such as /oem -->
+    <string name="rm_log_deep_write_protected">%1$s: เฟิร์มแวร์ของกล่องนี้ป้องกันการเขียน สำเนาสำรองจะอยู่ต่อไปโดยไม่มีผล</string>
+    <!-- 1 = file or folder path -->
+    <string name="rm_log_deep_deleted">ลบ %1$s แล้ว</string>
+    <string name="rm_log_deep_still_there_ro">%1$s ยังอยู่: เฟิร์มแวร์ของกล่องนี้ป้องกันการเขียน สำเนาสำรองจะอยู่ต่อไปโดยไม่มีผล</string>
+    <string name="rm_log_deep_still_there">%1$s ยังอยู่ (ลบไม่ได้)</string>
+    <!-- 1 = count -->
+    <string name="rm_log_deep_result_done">ผลการล้างขั้นลึก: เสร็จสิ้น - ลบรายการในเฟิร์มแวร์แล้ว %1$d รายการ</string>
+    <!-- 1 = comma-separated paths -->
+    <string name="rm_log_deep_result_partial">ผลการล้างขั้นลึก: สำเร็จบางส่วน - ยังอยู่ในเฟิร์มแวร์: %1$s</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_deep_unexpected">ปัญหาที่ไม่คาดคิดระหว่างล้างขั้นลึก: %1$s</string>
+</resources>

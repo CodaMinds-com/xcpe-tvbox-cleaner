@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bahasa Melayu (Malaysia). Nama menu mengikut Android: Tetapan, Apl, Pilihan pembangun, Penyahpepijatan USB, Paksa berhenti, Nyahpasang, Lumpuhkan, Kebolehaksesan, Gedung Play. -->
+<resources>
+    <string name="app_name">XCPE Cleaner</string>
+    <string name="title">XCPE Cleaner</string>
+    <string name="subtitle">Mencari pintu belakang XCPE pada kotak ini dan membuangnya. Tiada apa-apa yang keluar dari peranti ini.</string>
+
+    <!-- Buttons -->
+    <string name="btn_scan">Imbas</string>
+    <string name="btn_remove">Buang ancaman</string>
+    <string name="btn_devopts">Buka Pilihan pembangun</string>
+    <string name="btn_deepclean">Pembersihan mendalam (root)</string>
+    <string name="btn_help">Cara ia berfungsi</string>
+    <string name="btn_details_show">Tunjukkan butiran</string>
+    <string name="btn_details_hide">Sembunyikan butiran</string>
+    <string name="report_frame_desc">Laporan semakan. Tekan bawah dan atas untuk menatal.</string>
+
+    <!-- Formatting pieces -->
+    <string name="app_label_fmt">\'%1$s\' (%2$s)</string>
+    <string name="name_quoted">\'%s\'</string>
+    <string name="list_separator">", "</string>
+    <string name="bullet_line">  - %s</string>
+    <string name="join_sentences">%1$s %2$s</string>
+    <string name="progress_line">- %s</string>
+    <string name="progress_block">%1$s\n%2$s</string>
+    <string name="progress_step_start">%s…</string>
+    <string name="progress_step_done">%s… selesai</string>
+    <string name="progress_scan_header">Menyemak:</string>
+
+    <!-- Start screen -->
+    <string name="status_idle">Tekan Imbas untuk menyemak kotak ini.</string>
+    <string name="report_intro">Apa yang Imbas periksa:\n\n  - lapan apl yang diketahui sebahagian daripada XCPE\n  - apl yang berpura-pura menjadi sebahagian daripada Android\n  - saluran data tersembunyi yang XCPE gunakan\n  - salinan simpanan yang disimpan dalam firmware kotak ini\n  - sama ada Google Play Protect telah dimatikan\n  - sama ada XCPE telah memasang dirinya dalam Kebolehaksesan\n\nSemakan ini mengambil masa beberapa saat dan tidak mengubah apa-apa.\nTiada apa-apa dihantar ke mana-mana.\n\nSelepas semakan, kotak ini memberitahu anda satu daripada tiga perkara:\n  Bersih, Mencurigakan, atau Dijangkiti.\nJika ia tidak bersih, tekan Buang ancaman.</string>
+    <string name="last_check_none">Semakan terakhir: belum pernah</string>
+    <!-- 1 = date and time, 2 = result words, 3 = who checked -->
+    <string name="last_check_fmt">Semakan terakhir: %1$s · %2$s (%3$s)</string>
+    <string name="src_manual">disemak oleh anda</string>
+    <string name="src_auto">semakan automatik selepas mula semula</string>
+    <string name="check_clean">Bersih</string>
+    <string name="check_suspicious">Mencurigakan</string>
+    <string name="check_infected">Dijangkiti</string>
+    <string name="check_removed_again">XCPE kembali dan dibuang sekali lagi</string>
+    <string name="check_failed">XCPE kembali dan tidak dapat dibuang</string>
+    <string name="check_debug_opened">penyahpepijatan dihidupkan untuk pembuangan</string>
+    <string name="check_debug_open_failed">penyahpepijatan tidak dapat dihidupkan</string>
+    <string name="check_debug_closed">penyahpepijatan dimatikan semula</string>
+    <string name="check_debug_close_failed">penyahpepijatan masih hidup</string>
+    <string name="check_summary_join">%1$s; %2$s</string>
+
+    <!-- Scan -->
+    <string name="status_scanning">Menyemak kotak ini… ini mengambil masa beberapa saat.</string>
+    <string name="status_scan_failed">Semakan tidak dapat diselesaikan. Tekan Imbas untuk cuba lagi.</string>
+    <plurals name="status_infected">
+        <item quantity="other">Dijangkiti: %d bahagian XCPE aktif pada kotak ini. Tekan Buang ancaman.</item>
+    </plurals>
+    <string name="status_suspicious">Mencurigakan: tiada apl XCPE yang disahkan sedang berjalan, tetapi kotak ini menunjukkan tanda amaran. Tekan Buang ancaman untuk membaiki apa yang boleh dibaiki, atau tekan bawah untuk membaca laporan.</string>
+    <string name="status_clean">Bersih: tiada apa-apa daripada XCPE ditemui pada kotak ini. Anda boleh terus menggunakannya.</string>
+
+    <!-- Remove: the one question -->
+    <string name="dlg_review_title">Semak sebelum membuang</string>
+    <plurals name="dlg_review_msg_confirmed">
+        <item quantity="other">%1$d bahagian XCPE yang disahkan akan dibuang. Di bawah ialah apl lain yang patut dilihat. Ditandakan secara lalai hanya jika ada bukti selain nama; tekan OK pada satu baris untuk mengubahnya.</item>
+    </plurals>
+    <string name="dlg_review_msg_only">Tiada apl XCPE yang disahkan sedang berjalan. Di bawah ialah apl yang patut dilihat. Ditandakan secara lalai hanya jika ada bukti selain nama; tekan OK pada satu baris untuk mengubahnya.</string>
+    <string name="dlg_review_remove">Buang yang dipilih</string>
+    <string name="status_review_kept">Tiada apa-apa lagi yang dibuang. Kotak ini tidak berubah.</string>
+    <string name="scan_reason_vendor_warning">Mungkin sebahagian daripada gedung atau perkhidmatan TV kotak ini sendiri. Membuangnya boleh merosakkan perkhidmatan itu.</string>
+    <string name="dlg_suspects_title">Buang juga apl yang disyaki?</string>
+    <string name="dlg_suspects_msg">Selain bahagian XCPE yang disahkan, kotak ini mempunyai apl yang biasanya datang bersamanya:\n\n%s\n\nKotak TV tidak pernah memerlukannya.</string>
+    <string name="dlg_suspects_yes">Ya, buang juga</string>
+    <string name="dlg_suspects_no">Tidak, yang disahkan sahaja</string>
+    <string name="dlg_suspects_only_title">Buang apl yang mencurigakan?</string>
+    <string name="dlg_suspects_only_msg">Tiada apl XCPE yang disahkan sedang berjalan, tetapi apl ini biasanya datang bersamanya:\n\n%s\n\nKotak TV tidak pernah memerlukannya.</string>
+    <string name="dlg_remove">Buang</string>
+    <string name="dlg_keep">Biarkan</string>
+    <string name="status_kept">Tiada apa-apa diubah. Tekan Imbas pada bila-bila masa untuk menyemak semula.</string>
+
+    <!-- Remove: while it runs -->
+    <string name="status_removing">Membuang… biarkan kotak ini hidup. Jika TV bertanya soalan tentang penyahpepijatan, tandakan \'Sentiasa benarkan\' dan tekan Benarkan.</string>
+    <string name="report_remove_live">Apa yang sedang berlaku:</string>
+    <string name="report_remove_log">Butiran:</string>
+    <string name="report_remove_crashed">Pembuang berhenti dengan ralat: %s</string>
+
+    <!-- Remove: outcome -->
+    <string name="outcome_removed">Dibuang: %s</string>
+    <string name="outcome_disabled">Dimatikan (tidak dapat dibuang sepenuhnya, tidak boleh berjalan): %s</string>
+    <string name="outcome_failed">Masih aktif (tidak dapat dibuang): %s</string>
+    <string name="outcome_firmware_remain">Satu salinan simpanan kekal di dalam firmware kotak ini. Ia tidak boleh berjalan selagi apl di atas dibuang atau dimatikan. Hanya pembersihan mendalam dengan root atau firmware baharu daripada pengeluar boleh memadamnya.</string>
+    <string name="outcome_pp_on">Google Play Protect: dihidupkan semula.</string>
+    <string name="outcome_pp_off">Google Play Protect: masih mati. Buka apl Google Play, tekan gambar profil anda, pilih Play Protect, tekan ikon gear dan hidupkan \'Imbas apl dengan Play Protect\'.</string>
+    <string name="outcome_pp_fine">Google Play Protect: sudah pun hidup.</string>
+    <string name="status_outcome_done">Selesai: bahagian XCPE telah dibuang. Mulakan semula kotak ini, kemudian tekan Imbas sekali lagi untuk memastikan ia tidak kembali.</string>
+    <string name="status_outcome_partial">Sesetengah bahagian tidak dapat dibuang. Tekan bawah untuk membaca butiran. Jika ia masih ada selepas mula semula, gantikan kotak ini.</string>
+    <string name="status_outcome_nothing">Tiada apa-apa perlu dibuang. Tekan Imbas pada bila-bila masa untuk menyemak semula.</string>
+    <string name="status_outcome_pp_only">Selesai: Google Play Protect dihidupkan semula. Tekan Imbas untuk menyemak semula.</string>
+    <string name="status_outcome_none">Tiada apa-apa diubah kali ini. Tekan Buka Pilihan pembangun supaya apl ini boleh membuang sendiri, kemudian tekan Buang ancaman sekali lagi.</string>
+
+    <!-- Restart -->
+    <string name="dlg_restart_title">Mulakan semula kotak ini sekarang?</string>
+    <string name="dlg_restart_msg_adb">Mula semula melengkapkan pembersihan. Skrin akan gelap selama kira-kira seminit. Selepas itu apl ini menyemak kotak ini sendiri dan memberitahu anda jika ada yang kembali.</string>
+    <string name="dlg_restart_msg_manual">Mula semula melengkapkan pembersihan. Cabut kord kuasa kotak ini, tunggu sepuluh saat dan pasangkan semula. Kemudian buka apl ini dan tekan Imbas.</string>
+    <string name="dlg_restart_now">Mulakan semula sekarang</string>
+    <string name="dlg_restart_later">Nanti</string>
+    <string name="dlg_ok">OK</string>
+    <string name="btn_debugoff">Matikan penyahpepijatan</string>
+    <string name="dlg_debugoff_title">Matikan penyahpepijatan?</string>
+    <string name="dlg_debugoff_msg">Penyahpepijatan ialah apa yang membolehkan apl ini membersihkan kotak ini dan menyemaknya selepas setiap mula semula. Jika anda mematikannya, apl ini akan menguji dahulu sama ada ia boleh menghidupkannya semula dengan sendirinya untuk semakan itu. Ini mengambil masa sehingga seminit; kotak ini masih boleh digunakan.</string>
+    <string name="dlg_debugoff_yes">Uji dan matikan</string>
+    <string name="status_debug_kept">Penyahpepijatan kekal hidup supaya apl ini boleh menyemak kotak ini selepas setiap mula semula. Jika anda mahu ia dimatikan, tekan \'Matikan penyahpepijatan\'.</string>
+    <string name="status_debug_probe">Menguji sama ada kotak ini boleh menghidupkan semula penyahpepijatan dengan sendirinya…</string>
+    <string name="status_debug_probe_ok">Penyahpepijatan dimatikan. Untuk semakan automatiknya, apl ini menghidupkannya seketika dan mematikannya semula.</string>
+    <string name="status_debug_probe_failed">Kotak ini tidak boleh menghidupkan semula penyahpepijatan dengan sendirinya, jadi ia kekal hidup. Jika mod automatik berhenti berfungsi, mulakan semula kotak ini.</string>
+    <string name="status_debug_reclosed">Penyahpepijatan dibuka untuk pembersihan ini dan kini dimatikan semula.</string>
+    <string name="status_auto_report">Ini ialah laporan semakan automatik selepas mula semula yang terakhir. Tekan Imbas untuk semakan baharu.</string>
+    <string name="status_clean_dormant">Bersih: tiada apa-apa daripada XCPE sedang berjalan. Saki-baki yang dimatikan kekal dalam firmware; ia tidak berbahaya selagi dimatikan.</string>
+    <string name="status_outcome_done_mixed">Selesai: bahagian XCPE telah dibuang atau dimatikan. Mulakan semula kotak ini, kemudian tekan Imbas sekali lagi untuk memastikan ia tidak kembali.</string>
+    <string name="dlg_stop_title">Hentikan pembersihan?</string>
+    <string name="dlg_stop_msg">Apl ini masih bekerja pada kotak ini. Jika berhenti sekarang, apa-apa yang belum dibuang akan kekal; anda boleh menekan Buang ancaman sekali lagi kemudian.</string>
+    <string name="dlg_stop_yes">Hentikan</string>
+    <string name="status_stopping">Menghentikan…</string>
+    <string name="result_infected">KEPUTUSAN: DIJANGKITI - pintu belakang XCPE aktif pada kotak ini: %1$s</string>
+    <string name="result_suspicious">KEPUTUSAN: MENCURIGAKAN - tiada apl XCPE yang disahkan aktif, tetapi lihat amaran di atas</string>
+    <string name="result_clean">KEPUTUSAN: BERSIH - tiada apa-apa daripada XCPE ditemui</string>
+    <string name="adb_status_connecting">Menyambung ke perkhidmatan penyahpepijatan kotak ini…</string>
+    <string name="adb_status_look_at_tv">Lihat TV: tandakan \'Sentiasa benarkan daripada komputer ini\' dan tekan Benarkan.</string>
+    <string name="adb_status_connected">Disambungkan: kotak ini menerima arahan daripada apl ini.</string>
+    <string name="adb_err_denied">Kotak ini tidak membenarkan apl ini (Tolak ditekan, atau soalan itu tamat masa). Cuba lagi, dan apabila TV bertanya, tandakan \'Sentiasa benarkan\' dan tekan Benarkan.</string>
+    <string name="adb_err_pairing_only">Kotak ini hanya menawarkan penggandingan Penyahpepijatan wayarles, yang tidak boleh digunakan oleh apl ini. Ikut langkah berpandu sebagai ganti.</string>
+    <string name="adb_err_not_allowed">Apl ini belum dibenarkan pada perkhidmatan penyahpepijatan kotak ini. Tekan Buang ancaman sekali; TV kemudian meminta anda membenarkannya.</string>
+    <string name="adb_err_lost">Sambungan ke perkhidmatan penyahpepijatan kotak ini terputus. Cuba lagi.</string>
+    <string name="adb_err_no_answer">Perkhidmatan penyahpepijatan kotak ini tidak menjawab tepat pada masanya. Cuba lagi sebentar nanti.</string>
+    <string name="adb_err_generic">Masalah sambungan penyahpepijatan: %1$s</string>
+    <string name="status_debug_opening">Membuka pintu penyahpepijatan untuk mula semula…</string>
+    <string name="status_debug_opening_clean">Membuka pintu penyahpepijatan untuk pembersihan ini…</string>
+    <string name="status_rebooting">Memulakan semula… skrin akan gelap selama kira-kira seminit. Jika tidak, cabut kord kuasa, tunggu sepuluh saat dan pasangkan semula.</string>
+    <string name="status_reboot_failed">Kotak ini tidak dimulakan semula dengan sendirinya. Cabut kord kuasa, tunggu sepuluh saat dan pasangkan semula. Kemudian buka apl ini dan tekan Imbas.</string>
+
+    <!-- Guided removal -->
+    <string name="dlg_guided_title">Buang secara manual, langkah demi langkah</string>
+    <string name="dlg_guided_msg">Kotak ini tidak membenarkan apl ini membuang sendiri, jadi kita lakukannya bersama-sama. Apl ini membuka halaman tetapan setiap apl jahat untuk anda, satu demi satu (%d lagi), dan memberitahu butang mana yang perlu ditekan sebelum setiap halaman. Tekan Kembali pada alat kawalan jauh apabila anda selesai dengan satu halaman.</string>
+    <string name="dlg_guided_start">Mula</string>
+    <string name="dlg_guided_later">Bukan sekarang</string>
+    <string name="status_guided_later">Pembuangan tidak dimulakan. Tekan Buang ancaman apabila anda bersedia, atau Buka Pilihan pembangun supaya apl ini boleh melakukannya sendiri.</string>
+    <!-- 1 = step, 2 = total, 3 = app name -->
+    <string name="guide_step_uninstall">Langkah %1$d daripada %2$d: satu soalan tentang membuang %3$s muncul. Tekan OK atau Nyahpasang.</string>
+    <string name="dlg_guide_step_title">Langkah %1$d daripada %2$d: %3$s</string>
+    <string name="dlg_guide_step_msg">Pada halaman seterusnya tekan Nyahpasang.\n\nJika tiada butang Nyahpasang: tekan Nyahpasang kemas kini jika anda nampak, kemudian tekan Lumpuhkan, kemudian Paksa berhenti.\n\nApabila selesai, tekan Kembali pada alat kawalan jauh untuk kembali ke sini.</string>
+    <string name="dlg_guide_open">Buka halaman</string>
+    <string name="dlg_guide_skip">Langkau apl ini</string>
+    <string name="guide_step_appinfo">Langkah %1$d daripada %2$d: pada halaman %3$s tekan Nyahpasang. Jika tiada: Nyahpasang kemas kini, kemudian Lumpuhkan, kemudian Paksa berhenti. Tekan Kembali apabila selesai.</string>
+    <string name="status_guided_checking">Menyemak apa yang berubah…</string>
+    <string name="status_guide_cannot_open">Halaman tetapan untuk %s tidak dapat dibuka pada kotak ini. Teruskan ke yang seterusnya.</string>
+    <string name="guide_still_active_title">%s masih aktif</string>
+    <string name="guide_still_active_msg">Ia tidak hilang. Anda boleh membuka halamannya sekali lagi, melangkau apl ini, atau berhenti di sini.</string>
+    <string name="guide_try_again">Cuba lagi</string>
+    <string name="guide_skip">Langkau</string>
+    <string name="guide_stop">Berhenti</string>
+    <string name="guide_pp_title">Hidupkan semula Google Play Protect</string>
+    <string name="guide_pp_msg">XCPE mematikan semakan apl Google. Pada halaman seterusnya hidupkan \'Imbas apl dengan Play Protect\', kemudian tekan Kembali.</string>
+    <string name="guide_pp_fallback">Kotak ini tiada halaman terus untuknya. Buka apl Google Play, tekan gambar profil anda di penjuru kanan atas, pilih Play Protect, tekan ikon gear dan hidupkan \'Imbas apl dengan Play Protect\'.</string>
+    <string name="status_guide_pp">Hidupkan \'Imbas apl dengan Play Protect\' pada halaman seterusnya, kemudian tekan Kembali.</string>
+    <string name="dlg_guide_skip_step">Langkau langkah ini</string>
+    <string name="guide_acc_title">Matikan perkhidmatan Kebolehaksesan XCPE</string>
+    <string name="guide_acc_msg">XCPE memasang dirinya dalam tetapan Kebolehaksesan kotak ini. Pada halaman seterusnya cari %s dan matikannya, kemudian tekan Kembali.</string>
+    <string name="status_guide_acc">Matikan %s pada halaman seterusnya, kemudian tekan Kembali.</string>
+    <string name="guided_tail_acc">Kebolehaksesan: %s masih hidup; matikannya di bawah Tetapan, Kebolehaksesan.</string>
+    <!-- 1 = handled, 2 = still active, 3 = what to do next -->
+    <string name="status_guided_done">Selesai secara manual: %1$d dibuang atau dimatikan, %2$d masih aktif. %3$s</string>
+    <string name="guided_tail_restart">Sekarang mulakan semula kotak ini (cabut dan pasangkan semula kord kuasa), buka apl ini dan tekan Imbas sekali lagi.</string>
+    <string name="guided_tail_replace">Jika ia masih aktif selepas mula semula, kotak ini tidak boleh dibersihkan: gantikannya.</string>
+
+    <!-- Developer options -->
+    <string name="status_devopts_hint">Pada halaman seterusnya hidupkan \'Penyahpepijatan USB\'. Pada sesetengah kotak ia dipanggil \'Penyahpepijatan rangkaian\', \'Penyahpepijatan ADB\' atau \'ADB melalui rangkaian\'; hidupkan itu juga. Jika satu soalan muncul, tandakan \'Sentiasa benarkan\' dan tekan Benarkan. Kemudian tekan Kembali.</string>
+    <string name="status_devopts_hidden">Pilihan pembangun tersembunyi pada kotak ini. Pada halaman seterusnya cari \'Nombor binaan\' (atau \'Binaan\') dan tekan OK padanya tujuh kali. Kemudian tekan Kembali dan tekan Buka Pilihan pembangun sekali lagi.</string>
+    <string name="status_devopts_missing">Kotak ini tidak membenarkan apl ini membuka tetapannya. Buka Tetapan sendiri: Keutamaan Peranti, Perihal, tekan \'Binaan\' tujuh kali, kemudian Pilihan pembangun, hidupkan Penyahpepijatan USB.</string>
+    <string name="status_port_open">Bagus: pintu penyahpepijatan terbuka. Tekan Buang ancaman dan apl ini membuang semuanya sendiri.</string>
+    <string name="status_port_closed_usb_only">Penyahpepijatan USB hidup, tetapi pintu rangkaian masih tertutup. Cari dalam Pilihan pembangun \'Penyahpepijatan rangkaian\', \'ADB melalui rangkaian\' atau \'Penyahpepijatan wayarles\' dan hidupkan itu juga. Jika kotak ini tiada satu pun daripadanya, Buang ancaman akan membimbing anda langkah demi langkah.</string>
+    <string name="status_port_closed_after">Pintu penyahpepijatan masih tertutup. Cuba Buka Pilihan pembangun sekali lagi, atau tekan Buang ancaman dan apl ini membimbing anda langkah demi langkah.</string>
+
+    <!-- Deep clean -->
+    <string name="dlg_deep_title">Bersihkan firmware secara mendalam?</string>
+    <string name="dlg_deep_msg">Ini memadamkan salinan simpanan pintu belakang yang disimpan dalam firmware kotak ini. Ia hanya berfungsi pada kotak yang mempunyai akses root dan hanya menyentuh fail milik XCPE.</string>
+    <string name="dlg_deep_yes">Padam salinan simpanan</string>
+    <string name="dlg_cancel">Batal</string>
+    <string name="status_deep_running">Pembersihan mendalam sedang berjalan… biarkan kotak ini hidup.</string>
+    <string name="status_deep_done">Pembersihan mendalam selesai. Tekan bawah untuk membaca apa yang berlaku, kemudian tekan Imbas untuk menyemak semula.</string>
+    <string name="report_deep_header">Pembersihan mendalam:</string>
+
+    <!-- How it works -->
+    <string name="help_title">Cara apl ini berfungsi. Tekan bawah untuk membaca, atas untuk kembali.</string>
+    <string name="help_text">APA ITU XCPE\nXCPE ialah pintu belakang yang dibina dalam firmware banyak kotak TV Android murah (MECOOL, Videostrong dan kotak yang dijual di bawah nama lain). Ia membenarkan orang asing menjalankan sesuatu pada kotak anda: klik iklan palsu, trafik tersembunyi melalui sambungan internet anda, dan apa sahaja lagi yang mereka hantar kepadanya.\n\nAPA YANG IMBAS LAKUKAN\nImbas melihat apl pada kotak ini, Google Play Protect dan tetapan Kebolehaksesan, lalu membandingkannya dengan senarai bahagian XCPE yang diterbitkan. Ia tidak mengubah apa-apa dan tidak menghantar apa-apa ke mana-mana.\n\nAPA YANG BUANG ANCAMAN LAKUKAN\nIa membuang apl XCPE untuk kotak ini dan menghidupkan semula Google Play Protect. Jika sesuatu apl tidak dapat dibuang, ia dimatikan supaya tidak boleh berjalan. Apl ini cuba melakukannya sendiri dahulu; ini berjaya apabila pintu penyahpepijatan kotak ini terbuka (Pilihan pembangun). Jika tidak, ia membuka halaman tetapan yang betul untuk anda dan memberitahu butang mana yang perlu ditekan.\n\nAPA YANG KEKAL\nBanyak kotak menyimpan salinan simpanan pintu belakang dalam bahagian firmware yang baca sahaja. Apl ini tidak dapat memadam salinan itu tanpa akses root, tetapi salinan itu tidak boleh berjalan selagi apl tersebut dibuang atau dimatikan. Jika XCPE kembali selepas mula semula, apl ini perasan dan membuangnya sekali lagi, lalu memberitahu anda.\n\nNASIHAT JUJUR KAMI\nKotak yang dihantar dengan pintu belakang tidak pernah menjadi milik anda seorang. Jika boleh, gantikannya dengan peranti daripada jenama yang dikenali (Google TV Streamer, Apple TV, Fire TV, Nvidia Shield). Jika anda menyimpannya, jangan log masuk ke perbankan atau e-mel padanya.\n\nTUKAR KATA LALUAN ANDA\nJika anda pernah menaip kata laluan pada kotak ini, tukarkannya dari peranti lain: akaun Google, Netflix, Wi-Fi dan apa sahaja lagi yang anda gunakan di sini.\n\nSELEPAS PEMBERSIHAN\nMulakan semula kotak ini, buka apl ini dan tekan Imbas sekali lagi. Apl ini juga menyemak sendiri selepas setiap mula semula dan menunjukkan keputusannya di bawah \'Semakan terakhir\'.\n\nTekan Imbas untuk melihat keputusan semakan sekali lagi.</string>
+
+    <!-- Notifications from the check after a restart -->
+    <string name="notif_channel">Semakan selepas mula semula</string>
+    <string name="notif_channel_desc">Memberitahu anda apabila XCPE kembali selepas mula semula.</string>
+    <string name="notif_removed_again_title">XCPE kembali selepas mula semula dan dibuang sekali lagi</string>
+    <string name="notif_removed_again_text">Buka XCPE Cleaner untuk melihat butiran. Jika ini terus berlaku, gantikan kotak ini.</string>
+    <string name="notif_failed_title">XCPE kembali dan tidak dapat dibuang: gantikan kotak ini</string>
+    <string name="notif_failed_text">Buka XCPE Cleaner dan tekan Buang ancaman untuk cuba lagi.</string>
+    <string name="notif_failed_text_port_closed">Apl ini tidak dapat membuangnya sendiri kerana pintu penyahpepijatan tertutup. Buka XCPE Cleaner dan tekan Buang ancaman.</string>
+    <string name="notif_suspicious_title">Kotak ini menunjukkan tanda amaran</string>
+    <string name="notif_suspicious_text">Buka XCPE Cleaner dan tekan Imbas untuk membaca butiran.</string>
+    <string name="report_auto_remove_header">Pembuangan automatik selepas mula semula:</string>
+</resources>

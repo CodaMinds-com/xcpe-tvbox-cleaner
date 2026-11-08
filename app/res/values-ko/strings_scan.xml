@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  한국어 검사 보고서 텍스트. %1$s / %2$d 자리표시자, 패키지 이름, "XCPE", "Play Protect", "MECOOL", "Videostrong",
+  /oem 같은 폴더 이름, package_verifier_user_consent 같은 설정 이름은 영어 원문 그대로 둡니다.
+  큰따옴표로 감싼 값은 보고서의 열 맞춤을 위해 두 칸 공백을 일부러 유지합니다.
+-->
+<resources>
+    <!-- Section names for the live step list -->
+    <string name="scan_sec_device">이 기기 점검</string>
+    <string name="scan_sec_known">알려진 앱 점검</string>
+    <string name="scan_sec_fake_system">시스템 이름을 쓰는 앱 점검</string>
+    <string name="scan_sec_content">설치된 앱 내부 살펴보기</string>
+    <string name="scan_err_content">설치된 앱 내부를 살펴볼 수 없었습니다</string>
+    <string name="scan_content_match">%1$s 안에 알려진 XCPE 구성 요소 %2$s이(가) 들어 있습니다</string>
+    <string name="scan_content_none">알려진 XCPE 구성 요소가 들어 있는 설치된 앱이 없습니다</string>
+    <string name="scan_reason_ioc">이름이 공개된 XCPE 보조 도구 목록과 일치함</string>
+    <string name="scan_reason_provider">XCPE 데이터 통로를 열어 둠</string>
+    <string name="scan_reason_content">알려진 XCPE 구성 요소 %1$s이(가) 들어 있음</string>
+    <string name="scan_reason_fake_name">시스템 이름을 쓰지만 나중에 설치됨</string>
+    <string name="scan_reason_installed_by">%1$s; 설치한 앱: %2$s</string>
+    <string name="scan_sec_providers">데이터 통로 점검</string>
+    <string name="scan_sec_firmware">펌웨어의 예비 복사본 점검</string>
+    <string name="scan_sec_play_protect">Google Play Protect 점검</string>
+    <string name="scan_sec_accessibility">접근성 설정 점검</string>
+    <string name="scan_sec_user_apps">사용자가 설치한 앱 목록 작성</string>
+
+    <!-- One section could not run (the scan continues) -->
+    <string name="scan_err_no_context">이 기기에서 아무것도 점검할 수 없었습니다 (앱 컨텍스트가 없음)</string>
+    <string name="scan_err_finish">검사를 끝내지 못했습니다</string>
+    <string name="scan_err_device">이 기기의 브랜드와 모델을 확인할 수 없었습니다</string>
+    <string name="scan_err_app_list">설치된 앱 전체 목록을 확인할 수 없었습니다</string>
+    <string name="scan_err_known">알려진 XCPE 앱 이름을 확인할 수 없었습니다</string>
+    <string name="scan_err_fake_system">시스템 이름 뒤에 숨은 앱을 확인할 수 없었습니다</string>
+    <string name="scan_err_providers">XCPE 데이터 통로(콘텐츠 제공자)를 확인할 수 없었습니다</string>
+    <string name="scan_err_oem">/oem 폴더의 예비 복사본을 확인할 수 없었습니다</string>
+    <string name="scan_err_priv_app">시스템 앱 폴더를 확인할 수 없었습니다</string>
+    <string name="scan_err_perm_files">권한 사전 승인 파일을 확인할 수 없었습니다</string>
+    <string name="scan_err_props">XCPE 설치 프로그램 속성을 확인할 수 없었습니다</string>
+    <string name="scan_err_play_protect">Play Protect 설정을 확인할 수 없었습니다</string>
+    <string name="scan_err_accessibility">접근성 서비스를 확인할 수 없었습니다</string>
+    <string name="scan_err_user_apps">사용자가 설치한 앱 목록을 확인할 수 없었습니다</string>
+
+    <!-- 1. This box. 1 = brand, 2 = maker, 3 = model, 4 = device code, 5 = Android version, 6 = API level, 7 = security patch date, 8 = build fingerprint -->
+    <string name="scan_device_line">"브랜드: %1$s   제조사: %2$s   모델: %3$s   기기: %4$s\nAndroid %5$s (API %6$d)  보안 패치 %7$s\n빌드: %8$s"</string>
+    <string name="scan_unknown">알 수 없음</string>
+    <string name="scan_device_unavailable">기기 정보를 가져올 수 없음</string>
+    <string name="scan_device_mecool_brand_title">브랜드 또는 제조사가 MECOOL / Videostrong입니다 (XCPE의 배후 회사)</string>
+    <!-- 1 = brand, 2 = maker -->
+    <string name="scan_device_mecool_brand_detail">"브랜드: %1$s   제조사: %2$s"</string>
+    <string name="scan_device_mecool_prop_title">이 기기는 스스로를 MECOOL 기기라고 밝힙니다 (ro.mecool.device=true)</string>
+    <string name="scan_device_mecool_prop_detail">백도어는 이 속성을 읽어 제어 서버를 고릅니다.</string>
+    <!-- 1 = model name -->
+    <string name="scan_device_model_listed_title">모델명 \'%1$s\': 공개된 피해 모델 목록에 있는 이름입니다 (이것만으로 감염의 증거는 아님)</string>
+    <string name="scan_device_model_listed_detail">이 이름의 기기가 XCPE 공격 사례에서 발견되었습니다. 이 기기가 감염되었는지는 아래 점검 결과가 알려 줍니다.</string>
+    <string name="scan_device_model_ok">모델명이 공개된 피해 모델 목록에 없습니다</string>
+
+    <!-- 2. Known apps. 1 = app (package) name -->
+    <string name="scan_pkg_confirmed_active">"%1$s 앱이 설치되어 있고 활성 상태입니다  &lt;-- XCPE 백도어의 일부"</string>
+    <string name="scan_pkg_confirmed_dormant_firmware">%1$s 앱이 펌웨어에 있지만 이 기기에서는 꺼져 있습니다 (휴면 상태, 꺼져 있는 동안은 무해함)</string>
+    <string name="scan_pkg_confirmed_dormant_present">%1$s 앱이 있지만 꺼져 있습니다 (휴면 상태, 꺼져 있는 동안은 무해함)</string>
+    <!-- 1 = how many names are on the confirmed list -->
+    <string name="scan_pkg_confirmed_none">확인된 XCPE 앱 이름 %1$d개 중 활성 상태인 것이 없습니다</string>
+    <string name="scan_pkg_suspect_active">%1$s 앱이 설치되어 있습니다 (Videostrong / 제휴 도구, 의심)</string>
+    <string name="scan_pkg_suspect_dormant_firmware">%1$s 앱(의심 도구)이 펌웨어에 있지만 이 기기에서는 꺼져 있습니다 (휴면 상태, 꺼져 있는 동안은 무해함)</string>
+    <string name="scan_pkg_suspect_dormant_present">%1$s 앱(의심 도구)이 있지만 꺼져 있습니다 (휴면 상태, 꺼져 있는 동안은 무해함)</string>
+
+    <!-- 3. Apps hiding behind system names. 1 = app name -->
+    <string name="scan_fake_active">%1$s 앱은 사용자가 설치한 앱인데 시스템 이름 뒤에 숨어 있습니다 (XCPE 설치 프로그램이 쓰는 수법)</string>
+    <string name="scan_fake_dormant">%1$s 앱은 시스템 이름을 쓰지만 꺼져 있습니다 (휴면 상태, 꺼져 있는 동안은 무해함)</string>
+    <string name="scan_fake_none">com.android.* 이름 뒤에 숨은 사용자 설치 앱이 없습니다</string>
+
+    <!-- 4. Data channels (content providers). 1 = app name, 2 = channel (authority) name -->
+    <string name="scan_provider_none">XCPE 데이터 통로를 여는 앱이 없습니다</string>
+    <string name="scan_provider_active">%1$s 앱이 XCPE 데이터 통로(%2$s)를 열어 두고 있습니다</string>
+    <string name="scan_provider_active_detail">XCPE 앱들은 이 통로를 통해 설정을 주고받습니다.</string>
+    <string name="scan_provider_dormant">%1$s 앱에 XCPE 데이터 통로(%2$s)가 있지만 꺼져 있습니다 (휴면 상태)</string>
+
+    <!-- 5a. Spare copies in /oem -->
+    <string name="scan_oem_no_folder">이 기기에는 /oem 폴더가 없습니다 (예비 복사본을 둘 곳이 없음)</string>
+    <string name="scan_oem_copy_title">/oem 안에 백도어의 예비 복사본이 있습니다</string>
+    <string name="scan_oem_copy_detail">새 펌웨어나 root로만 삭제할 수 있습니다. 앱 자체가 제거되거나 꺼져 있는 동안은 무해합니다.</string>
+    <!-- 1 = number of APK files -->
+    <string name="scan_oem_apks_ok">/oem에 APK 파일 %1$d개, XCPE와 비슷한 이름은 없음</string>
+    <string name="scan_oem_not_visible_title">이 기기에서는 앱이 /oem 폴더를 볼 수 없어 예비 복사본이 없다고 단정할 수 없습니다</string>
+    <!-- 1 = comma-separated folder names -->
+    <string name="scan_oem_not_visible_detail">읽을 수 없음: %1$s</string>
+    <string name="scan_oem_none">/oem에 보이는 APK 파일이 없습니다</string>
+
+    <!-- 5b. System app folders. 1 = folder path -->
+    <string name="scan_privapp_hit_title">XCPE와 비슷한 이름의 시스템 앱 폴더: %1$s</string>
+    <string name="scan_privapp_hit_detail">펌웨어의 일부입니다. 새 펌웨어나 root로만 삭제할 수 있으며, 앱을 꺼 두면 무해합니다.</string>
+    <string name="scan_privapp_none">시스템 앱 디렉터리에 XCPE와 비슷한 이름의 폴더가 없습니다</string>
+    <!-- 1 = comma-separated folder names (shared by 5b and 5c) -->
+    <string name="scan_not_visible_detail">앱이 볼 수 없음: %1$s</string>
+
+    <!-- 5c. Permission grant files. 1 = file path, 2 = the XCPE app it mentions -->
+    <string name="scan_perm_hit_title">"XCPE 앱에 대한 권한 사전 승인 파일: %1$s  (%2$s 언급)"</string>
+    <string name="scan_perm_hit_detail">펌웨어가 백도어에 권한을 미리 승인해 둔 것입니다. 앱을 제거하거나 끄면 이 파일은 아무 효력이 없습니다.</string>
+    <string name="scan_perm_none">XCPE 앱에 권한을 주는 사전 승인 파일이 없습니다</string>
+
+    <!-- 5d. Dropper properties. 1 = property name, 2 = its value -->
+    <string name="scan_prop_set">%1$s=%2$s 속성이 설정되어 있습니다 (2026년 XCPE 설치 프로그램이 사용)</string>
+    <string name="scan_prop_none">XCPE 설치 프로그램 속성이 하나도 설정되어 있지 않습니다</string>
+
+    <!-- 6. Play Protect -->
+    <string name="scan_pp_off_title">Play Protect 앱 검사가 꺼져 있습니다 (XCPE가 하는 바로 그 일)</string>
+    <string name="scan_pp_off_detail">package_verifier_user_consent=-1. \'위협 제거\'가 다시 켭니다. Play 스토어 > Play Protect에서 직접 켤 수도 있습니다.</string>
+    <string name="scan_pp_disabled_title">Play Protect 앱 검사가 사용 중지되어 있습니다 (package_verifier_enable=0)</string>
+    <string name="scan_pp_disabled_detail">\'위협 제거\'가 다시 켭니다. Play 스토어 > Play Protect에서 직접 켤 수도 있습니다.</string>
+    <string name="scan_pp_ok">Play Protect 앱 검사가 꺼져 있지 않습니다</string>
+
+    <!-- 7. Accessibility. 1 = service id (app/class) -->
+    <string name="scan_acc_none">켜져 있는 접근성 서비스가 없습니다</string>
+    <string name="scan_acc_bad_title">XCPE에 속한 접근성 서비스: %1$s</string>
+    <string name="scan_acc_bad_detail">XCPE는 이것으로 리모컨에서 무엇을 누르는지 지켜봅니다. 앱을 제거하면 꺼집니다.</string>
+    <string name="scan_acc_other">켜져 있는 접근성 서비스: %1$s (XCPE 아님)</string>
+
+    <!-- 10. Reference list. 1 = count; scan_user_app_off: 1 = app name; scan_more: 1 = how many were left out -->
+    <string name="scan_user_apps">이 기기에 사용자가 설치한 앱 %1$d개 (참고용)</string>
+    <string name="scan_user_app_off">"%1$s  (꺼짐)"</string>
+    <string name="scan_more">... (%1$d개 더)</string>
+
+    <!-- Detail lines under an app finding -->
+    <!-- 1 = version name, 2 = version number -->
+    <string name="scan_detail_version">버전: %1$s (%2$d)</string>
+    <!-- 1 = file path -->
+    <string name="scan_detail_apk">apk 파일: %1$s</string>
+    <!-- 1 = name of the app that installed it -->
+    <string name="scan_detail_installer">설치한 앱: %1$s</string>
+    <string name="scan_detail_installer_none">설치한 앱: 기록 없음 (직접 설치했거나 펌웨어의 일부)</string>
+    <!-- 1 = first install date, 2 = last update date -->
+    <string name="scan_detail_times">"처음 설치: %1$s   마지막 업데이트: %2$s"</string>
+    <string name="scan_detail_type_updated_system">종류: 업데이트가 덧씌워진 펌웨어 앱. 제거하면 업데이트만 사라지고 펌웨어 복사본은 끄는 것만 가능</string>
+    <string name="scan_detail_type_system">종류: 펌웨어(시스템) 앱. root 없이는 끌 수만 있고 삭제할 수 없음</string>
+    <string name="scan_detail_type_user">종류: 사용자가 설치한 앱. 제거할 수 있음</string>
+    <string name="scan_detail_state_off">상태: 꺼짐</string>
+    <string name="scan_detail_state_off_by_user">상태: 사용자가 껐음</string>
+    <!-- 1 = the error -->
+    <string name="scan_detail_unavailable">(자세한 정보 없음: %1$s)</string>
+</resources>

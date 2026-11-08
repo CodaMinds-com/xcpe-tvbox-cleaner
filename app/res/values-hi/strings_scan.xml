@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- हिन्दी। स्कैनर के टेक्स्ट: जांच की रिपोर्ट की हर पंक्ति और चलते समय दिखने वाले हिस्सों के नाम। -->
+<resources>
+    <!-- चलते समय दिखने वाले हिस्सों के नाम -->
+    <string name="scan_sec_device">इस डिवाइस की जांच</string>
+    <string name="scan_sec_known">जाने-पहचाने ऐप्लिकेशन की जांच</string>
+    <string name="scan_sec_fake_system">सिस्टम जैसे नाम वाले ऐप्लिकेशन की जांच</string>
+    <string name="scan_sec_content">इंस्टॉल किए गए ऐप्लिकेशन के अंदर की जांच</string>
+    <string name="scan_err_content">इंस्टॉल किए गए ऐप्लिकेशन के अंदर की जांच नहीं हो सकी</string>
+    <string name="scan_content_match">%1$s में %2$s है, जो XCPE का एक जाना-पहचाना घटक है</string>
+    <string name="scan_content_none">इंस्टॉल किए गए किसी भी ऐप्लिकेशन में XCPE का जाना-पहचाना घटक नहीं है</string>
+    <string name="scan_reason_ioc">नाम XCPE के सहायक टूल की प्रकाशित सूची से मेल खाता है</string>
+    <string name="scan_reason_provider">XCPE का डेटा चैनल उपलब्ध कराता है</string>
+    <string name="scan_reason_content">इसमें %1$s है, जो XCPE का एक जाना-पहचाना घटक है</string>
+    <string name="scan_reason_fake_name">सिस्टम नाम इस्तेमाल करता है लेकिन बाद में इंस्टॉल हुआ</string>
+    <string name="scan_reason_installed_by">%1$s; इंस्टॉल करने वाला: %2$s</string>
+    <string name="scan_sec_providers">डेटा चैनलों की जांच</string>
+    <string name="scan_sec_firmware">फ़र्मवेयर में अतिरिक्त कॉपियों की जांच</string>
+    <string name="scan_sec_play_protect">Google Play Protect की जांच</string>
+    <string name="scan_sec_accessibility">सुलभता सेटिंग की जांच</string>
+    <string name="scan_sec_user_apps">उपयोगकर्ता द्वारा इंस्टॉल किए गए ऐप्लिकेशन की सूची</string>
+
+    <!-- कोई एक हिस्सा नहीं चल सका (जांच जारी रहती है) -->
+    <string name="scan_err_no_context">इस बॉक्स में कुछ भी जांचा नहीं जा सका (ऐप्लिकेशन का कॉन्टेक्स्ट नहीं मिला)</string>
+    <string name="scan_err_finish">जांच पूरी नहीं हो सकी</string>
+    <string name="scan_err_device">इस बॉक्स का ब्रांड और मॉडल नहीं जांचा जा सका</string>
+    <string name="scan_err_app_list">इंस्टॉल किए गए ऐप्लिकेशन की पूरी सूची नहीं जांची जा सकी</string>
+    <string name="scan_err_known">XCPE के जाने-पहचाने ऐप्लिकेशन नामों की जांच नहीं हो सकी</string>
+    <string name="scan_err_fake_system">सिस्टम नामों के पीछे छिपे ऐप्लिकेशन की जांच नहीं हो सकी</string>
+    <string name="scan_err_providers">XCPE के डेटा चैनलों (कॉन्टेंट प्रोवाइडर) की जांच नहीं हो सकी</string>
+    <string name="scan_err_oem">अतिरिक्त कॉपी के लिए /oem फ़ोल्डर की जांच नहीं हो सकी</string>
+    <string name="scan_err_priv_app">सिस्टम ऐप्लिकेशन के फ़ोल्डरों की जांच नहीं हो सकी</string>
+    <string name="scan_err_perm_files">अनुमति देने वाली फ़ाइलों की जांच नहीं हो सकी</string>
+    <string name="scan_err_props">XCPE के छिपे इंस्टॉलर की प्रॉपर्टी की जांच नहीं हो सकी</string>
+    <string name="scan_err_play_protect">Play Protect की सेटिंग नहीं जांची जा सकी</string>
+    <string name="scan_err_accessibility">सुलभता सेवाओं की जांच नहीं हो सकी</string>
+    <string name="scan_err_user_apps">उपयोगकर्ता द्वारा इंस्टॉल किए गए ऐप्लिकेशन की सूची नहीं जांची जा सकी</string>
+
+    <!-- 1. यह बॉक्स। 1 = ब्रांड, 2 = निर्माता, 3 = मॉडल, 4 = डिवाइस कोड, 5 = Android वर्शन, 6 = API लेवल, 7 = सुरक्षा पैच की तारीख, 8 = बिल्ड फ़िंगरप्रिंट -->
+    <string name="scan_device_line">"ब्रांड: %1$s   निर्माता: %2$s   मॉडल: %3$s   डिवाइस: %4$s\nAndroid %5$s (API %6$d)  सुरक्षा पैच %7$s\nबिल्ड: %8$s"</string>
+    <string name="scan_unknown">अज्ञात</string>
+    <string name="scan_device_unavailable">डिवाइस की जानकारी उपलब्ध नहीं है</string>
+    <string name="scan_device_mecool_brand_title">ब्रांड या निर्माता MECOOL / Videostrong है (XCPE के पीछे की कंपनी)</string>
+    <!-- 1 = ब्रांड, 2 = निर्माता -->
+    <string name="scan_device_mecool_brand_detail">"ब्रांड: %1$s   निर्माता: %2$s"</string>
+    <string name="scan_device_mecool_prop_title">यह बॉक्स खुद को MECOOL डिवाइस बताता है (ro.mecool.device=true)</string>
+    <string name="scan_device_mecool_prop_detail">बैकडोर अपना कंट्रोल सर्वर चुनने के लिए यही प्रॉपर्टी पढ़ता है।</string>
+    <!-- 1 = मॉडल का नाम -->
+    <string name="scan_device_model_listed_title">मॉडल का नाम ‘%1$s’ प्रभावित मॉडलों की प्रकाशित सूची में है (सिर्फ़ इससे कुछ साबित नहीं होता)</string>
+    <string name="scan_device_model_listed_detail">इस नाम के बॉक्स XCPE अभियान में देखे गए थे। नीचे की जांचें बताती हैं कि यह बॉक्स संक्रमित है या नहीं।</string>
+    <string name="scan_device_model_ok">मॉडल का नाम प्रभावित मॉडलों की प्रकाशित सूची में नहीं है</string>
+
+    <!-- 2. जाने-पहचाने ऐप्लिकेशन। 1 = ऐप्लिकेशन (पैकेज) का नाम -->
+    <string name="scan_pkg_confirmed_active">"%1$s इंस्टॉल है और सक्रिय है  &lt;-- XCPE बैकडोर का हिस्सा"</string>
+    <string name="scan_pkg_confirmed_dormant_firmware">%1$s फ़र्मवेयर में है लेकिन इस बॉक्स के लिए बंद है (निष्क्रिय, बंद रहने तक कोई खतरा नहीं)</string>
+    <string name="scan_pkg_confirmed_dormant_present">%1$s मौजूद है लेकिन बंद है (निष्क्रिय, बंद रहने तक कोई खतरा नहीं)</string>
+    <!-- 1 = पक्की सूची में कितने नाम हैं -->
+    <string name="scan_pkg_confirmed_none">XCPE के %1$d पक्के ऐप्लिकेशन नामों में से कोई भी सक्रिय नहीं है</string>
+    <string name="scan_pkg_suspect_active">%1$s इंस्टॉल है (Videostrong / उससे जुड़ा टूल, संदिग्ध)</string>
+    <string name="scan_pkg_suspect_dormant_firmware">%1$s (संदिग्ध टूल) फ़र्मवेयर में है लेकिन इस बॉक्स के लिए बंद है (निष्क्रिय, बंद रहने तक कोई खतरा नहीं)</string>
+    <string name="scan_pkg_suspect_dormant_present">%1$s (संदिग्ध टूल) मौजूद है लेकिन बंद है (निष्क्रिय, बंद रहने तक कोई खतरा नहीं)</string>
+
+    <!-- 3. सिस्टम नामों के पीछे छिपे ऐप्लिकेशन। 1 = ऐप्लिकेशन का नाम -->
+    <string name="scan_fake_active">%1$s उपयोगकर्ता द्वारा इंस्टॉल किया गया ऐप्लिकेशन है जो सिस्टम नाम के पीछे छिपा है (XCPE के छिपे इंस्टॉलर ऐसा करते हैं)</string>
+    <string name="scan_fake_dormant">%1$s सिस्टम नाम इस्तेमाल करता है लेकिन बंद है (निष्क्रिय, बंद रहने तक कोई खतरा नहीं)</string>
+    <string name="scan_fake_none">कोई भी उपयोगकर्ता द्वारा इंस्टॉल किया गया ऐप्लिकेशन com.android.* नाम के पीछे नहीं छिपा है</string>
+
+    <!-- 4. डेटा चैनल (कॉन्टेंट प्रोवाइडर)। 1 = ऐप्लिकेशन का नाम, 2 = चैनल (अथॉरिटी) का नाम -->
+    <string name="scan_provider_none">कोई भी ऐप्लिकेशन XCPE का डेटा चैनल उपलब्ध नहीं कराता</string>
+    <string name="scan_provider_active">%1$s एक XCPE डेटा चैनल (%2$s) उपलब्ध कराता है</string>
+    <string name="scan_provider_active_detail">XCPE के ऐप्लिकेशन इसी चैनल से अपनी सेटिंग आपस में साझा करते हैं।</string>
+    <string name="scan_provider_dormant">%1$s में एक XCPE डेटा चैनल (%2$s) है लेकिन वह बंद है (निष्क्रिय)</string>
+
+    <!-- 5a. /oem में अतिरिक्त कॉपियां -->
+    <string name="scan_oem_no_folder">इस बॉक्स में /oem फ़ोल्डर नहीं है (अतिरिक्त कॉपी रखने की कोई जगह नहीं)</string>
+    <string name="scan_oem_copy_title">/oem में बैकडोर की एक अतिरिक्त कॉपी है</string>
+    <string name="scan_oem_copy_detail">इसे सिर्फ़ नया फ़र्मवेयर या root ही मिटा सकता है। जब तक ऐप्लिकेशन खुद हटा हुआ या बंद है, इससे कोई खतरा नहीं।</string>
+    <!-- 1 = APK फ़ाइलों की संख्या -->
+    <string name="scan_oem_apks_ok">/oem में APK फ़ाइलें: %1$d, किसी का भी नाम XCPE जैसा नहीं</string>
+    <string name="scan_oem_not_visible_title">इस बॉक्स में /oem फ़ोल्डर ऐप्लिकेशन को नहीं दिखता, इसलिए पक्का नहीं कहा जा सकता कि वहां कोई अतिरिक्त कॉपी नहीं है</string>
+    <!-- 1 = कॉमा से अलग किए गए फ़ोल्डर के नाम -->
+    <string name="scan_oem_not_visible_detail">पढ़ा नहीं जा सका: %1$s</string>
+    <string name="scan_oem_none">/oem में कोई APK फ़ाइल नहीं दिखी</string>
+
+    <!-- 5b. सिस्टम ऐप्लिकेशन के फ़ोल्डर। 1 = फ़ोल्डर का पाथ -->
+    <string name="scan_privapp_hit_title">XCPE जैसे नाम वाला सिस्टम ऐप्लिकेशन फ़ोल्डर: %1$s</string>
+    <string name="scan_privapp_hit_detail">यह फ़र्मवेयर का हिस्सा है। इसे सिर्फ़ नया फ़र्मवेयर या root ही मिटा सकता है; ऐप्लिकेशन को बंद रखने से इससे कोई खतरा नहीं रहता।</string>
+    <string name="scan_privapp_none">सिस्टम ऐप्लिकेशन के फ़ोल्डरों में XCPE जैसे नाम वाला कोई फ़ोल्डर नहीं है</string>
+    <!-- 1 = कॉमा से अलग किए गए फ़ोल्डर के नाम (5b और 5c दोनों में) -->
+    <string name="scan_not_visible_detail">ऐप्लिकेशन को नहीं दिखते: %1$s</string>
+
+    <!-- 5c. अनुमति देने वाली फ़ाइलें। 1 = फ़ाइल का पाथ, 2 = जिस XCPE ऐप्लिकेशन का उसमें ज़िक्र है -->
+    <string name="scan_perm_hit_title">"XCPE ऐप्लिकेशन के लिए अनुमति देने वाली फ़ाइल: %1$s  (%2$s का ज़िक्र है)"</string>
+    <string name="scan_perm_hit_detail">फ़र्मवेयर बैकडोर के लिए अधिकार पहले से मंज़ूर कर देता है। ऐप्लिकेशन को हटाने या बंद करने से यह फ़ाइल बेअसर हो जाती है।</string>
+    <string name="scan_perm_none">कोई भी अनुमति फ़ाइल XCPE ऐप्लिकेशन को अधिकार नहीं देती</string>
+
+    <!-- 5d. छिपे इंस्टॉलर की प्रॉपर्टी। 1 = प्रॉपर्टी का नाम, 2 = उसकी वैल्यू -->
+    <string name="scan_prop_set">प्रॉपर्टी %1$s=%2$s सेट है (2026 के XCPE छिपे इंस्टॉलर इसका इस्तेमाल करते हैं)</string>
+    <string name="scan_prop_none">XCPE के छिपे इंस्टॉलर की कोई भी प्रॉपर्टी सेट नहीं है</string>
+
+    <!-- 6. Play Protect -->
+    <string name="scan_pp_off_title">Play Protect की ऐप्लिकेशन जांच बंद है (XCPE ठीक यही करता है)</string>
+    <string name="scan_pp_off_detail">package_verifier_user_consent=-1 है। ‘खतरे हटाएं’ इसे फिर से चालू करता है; आप इसे Play Store > Play Protect में भी कर सकते हैं।</string>
+    <string name="scan_pp_disabled_title">Play Protect की ऐप्लिकेशन जांच बंद कर दी गई है (package_verifier_enable=0)</string>
+    <string name="scan_pp_disabled_detail">‘खतरे हटाएं’ इसे फिर से चालू करता है; आप इसे Play Store > Play Protect में भी कर सकते हैं।</string>
+    <string name="scan_pp_ok">Play Protect की ऐप्लिकेशन जांच बंद नहीं है</string>
+
+    <!-- 7. सुलभता। 1 = सेवा की आईडी (ऐप्लिकेशन/क्लास) -->
+    <string name="scan_acc_none">कोई सुलभता सेवा चालू नहीं है</string>
+    <string name="scan_acc_bad_title">एक सुलभता सेवा XCPE की है: %1$s</string>
+    <string name="scan_acc_bad_detail">XCPE इससे देखता है कि आप रिमोट पर क्या दबाते हैं। ऐप्लिकेशन हटते ही यह बंद हो जाती है।</string>
+    <string name="scan_acc_other">सुलभता सेवा चालू है: %1$s (XCPE नहीं)</string>
+
+    <!-- 10. जानकारी के लिए सूची। 1 = संख्या; scan_user_app_off: 1 = ऐप्लिकेशन का नाम; scan_more: 1 = कितने छोड़े गए -->
+    <string name="scan_user_apps">इस बॉक्स में उपयोगकर्ता द्वारा इंस्टॉल किए गए ऐप्लिकेशन: %1$d (जानकारी के लिए)</string>
+    <string name="scan_user_app_off">"%1$s  (बंद)"</string>
+    <string name="scan_more">... (%1$d और)</string>
+
+    <!-- किसी ऐप्लिकेशन के नीचे की जानकारी की पंक्तियां -->
+    <!-- 1 = वर्शन का नाम, 2 = वर्शन नंबर -->
+    <string name="scan_detail_version">वर्शन: %1$s (%2$d)</string>
+    <!-- 1 = फ़ाइल का पाथ -->
+    <string name="scan_detail_apk">apk: %1$s</string>
+    <!-- 1 = जिस ऐप्लिकेशन ने इसे इंस्टॉल किया उसका नाम -->
+    <string name="scan_detail_installer">इंस्टॉल करने वाला: %1$s</string>
+    <string name="scan_detail_installer_none">इंस्टॉल करने वाला: कोई रिकॉर्ड नहीं (साइडलोड किया गया या फ़र्मवेयर का हिस्सा)</string>
+    <!-- 1 = पहली बार इंस्टॉल की तारीख, 2 = आखिरी अपडेट की तारीख -->
+    <string name="scan_detail_times">"पहली बार इंस्टॉल: %1$s   आखिरी अपडेट: %2$s"</string>
+    <string name="scan_detail_type_updated_system">प्रकार: फ़र्मवेयर ऐप्लिकेशन जिसके ऊपर एक अपडेट है: अनइंस्टॉल करने से अपडेट हटता है, फ़र्मवेयर वाली कॉपी सिर्फ़ बंद की जा सकती है</string>
+    <string name="scan_detail_type_system">प्रकार: फ़र्मवेयर (सिस्टम) ऐप्लिकेशन: बिना root के इसे बंद किया जा सकता है, मिटाया नहीं</string>
+    <string name="scan_detail_type_user">प्रकार: उपयोगकर्ता द्वारा इंस्टॉल किया गया ऐप्लिकेशन: इसे अनइंस्टॉल किया जा सकता है</string>
+    <string name="scan_detail_state_off">स्थिति: बंद</string>
+    <string name="scan_detail_state_off_by_user">स्थिति: उपयोगकर्ता ने बंद किया</string>
+    <!-- 1 = गड़बड़ी -->
+    <string name="scan_detail_unavailable">(जानकारी उपलब्ध नहीं: %1$s)</string>
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  한국어 제거 도구 텍스트 (제거 단계, 정밀 청소).
+    rm_status_*  제거가 진행되는 동안 화면에 표시되는 상태 줄
+    rm_log_*     Outcome.log 의 쉬운 말 요약 줄 (명령어 기록 자체는 영어로 남습니다)
+  %1$s / %2$d 자리표시자, 패키지 이름, "XCPE", "Play Protect", "ADB", "su", "root" 는 그대로 둡니다.
+  "설정 > 앱 > ..." 경로는 Android 가 한국어로 보여 주는 이름을 씁니다.
+-->
+<resources>
+    <!-- Live status while removing -->
+    <string name="rm_status_connecting">이 기기의 디버깅 서비스에 연결하는 중...</string>
+    <!-- 1 = the reason, a plain-language sentence from the debugging client -->
+    <string name="rm_status_adb_failed">디버깅 연결을 사용할 수 없습니다: %1$s</string>
+    <!-- 1 = app name, 2 = this one's number, 3 = total -->
+    <string name="rm_status_removing">%1$s 제거 중 (%2$d/%3$d)...</string>
+    <string name="rm_status_play_protect">Google Play Protect를 다시 켜는 중...</string>
+    <string name="rm_status_done">완료.</string>
+    <string name="rm_status_guided">화면의 단계를 따라 각 앱을 직접 제거하세요.</string>
+    <string name="rm_status_deep_no_root">root 없이는 정밀 청소를 할 수 없습니다.</string>
+    <string name="rm_status_deep_looking">펌웨어에서 예비 복사본을 찾는 중...</string>
+    <string name="rm_status_deep_none">펌웨어에서 예비 복사본을 찾지 못했습니다.</string>
+    <!-- 1 = partition such as /oem or /system -->
+    <string name="rm_status_deep_unlocking">%1$s의 쓰기 잠금을 푸는 중...</string>
+    <!-- 1 = file or folder path -->
+    <string name="rm_status_deep_deleting">%1$s 삭제 중...</string>
+    <string name="rm_status_deep_done">정밀 청소 완료.</string>
+    <string name="rm_status_deep_partial">정밀 청소가 끝났지만 일부 복사본은 삭제하지 못했습니다.</string>
+
+    <!-- Log: which way the removal went -->
+    <string name="rm_log_nothing_to_remove">제거할 것이 없습니다. 보호 기능만 확인합니다.</string>
+    <!-- 1 = comma-separated app names -->
+    <string name="rm_log_to_remove">제거 대상: %1$s</string>
+    <!-- 1 = host, 2 = port -->
+    <string name="rm_log_path_adb">방법: ADB (%1$s:%2$d)</string>
+    <string name="rm_log_path_root">방법: ROOT (su)</string>
+    <string name="rm_log_path_guided">방법: 안내 모드 - 디버깅 연결도 root도 없어 아래 단계를 직접 하셔야 합니다:</string>
+    <string name="rm_log_path_deep">방법: ROOT (su) 정밀 청소</string>
+    <!-- 1 = the reason -->
+    <string name="rm_log_adb_failed">디버깅 연결 실패: %1$s</string>
+    <!-- 1 = host, 2 = port -->
+    <string name="rm_log_port_closed">디버깅 포트(%1$s:%2$d)가 닫혀 있습니다.</string>
+    <string name="rm_log_no_root">이 기기에는 root(su)가 없습니다.</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_unexpected">예상치 못한 문제: %1$s</string>
+    <string name="rm_log_stopped">사용자가 중지했습니다. 그 밖에는 아무것도 바뀌지 않았습니다.</string>
+    <string name="rm_log_busy">이 기기에서 다른 청소가 아직 진행 중입니다. 잠시 후 다시 시도하세요.</string>
+    <string name="rm_log_grant_ok">이제 앱이 디버깅을 스스로 켜고 끌 수 있습니다</string>
+    <string name="rm_log_grant_ineffective">권한 부여가 적용되지 않았습니다. 디버깅은 설정하신 대로 유지됩니다</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_grant_failed">권한 부여 실패: %1$s</string>
+    <string name="rm_log_door_opened">이번 청소를 위해 디버깅을 켰습니다.</string>
+    <string name="rm_log_door_failed">이번 청소를 위해 디버깅을 켜지 못했습니다.</string>
+
+    <!-- Log: result for one app -->
+    <string name="rm_log_result_unknown">결과를 확인할 수 없었습니다 (패키지 관리자가 응답하지 않음). 아직 활성 상태로 간주합니다</string>
+    <string name="rm_log_disabled">사용 중지됨 (제거할 수 없어 꺼 두었으며 실행되지 않음)</string>
+    <string name="rm_log_failed">실패 - 아직 활성 상태. 이 기기에는 새 펌웨어가 필요하거나 교체해야 합니다.</string>
+    <string name="rm_log_removed_fw_unknown">이 기기에서 제거됨 (펌웨어 복사본이 남아 있는지 확인할 수 없음. 남아 있다고 가정)</string>
+    <string name="rm_log_removed_fw">이 기기에서 제거됨 (읽기 전용 펌웨어에 휴면 복사본이 남아 있음)</string>
+    <string name="rm_log_removed">완전히 제거됨</string>
+
+    <!-- Log: protections -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">접근성</string>
+    <!-- 1 and 2 = the two setting values read back -->
+    <string name="rm_log_pp_on">Play Protect 앱 검사: 켜짐 (consent=%1$s enable=%2$s)</string>
+    <string name="rm_log_pp_failed">Play Protect: 설정을 바꾸지 못했습니다 (consent=%1$s enable=%2$s). Play 스토어 > Play Protect > 설정에서 켜세요.</string>
+    <!-- 1 = accessibility service id -->
+    <string name="rm_log_acc_removed">접근성 연결 제거됨: %1$s</string>
+
+    <!-- Log: overall result -->
+    <!-- 1 = space-separated app names -->
+    <string name="rm_log_result_partial">제거 결과: 일부만 완료 - 제거하지 못함: %1$s. 이 기기를 교체하거나 판매자에게 깨끗한 펌웨어를 요청하세요.</string>
+    <string name="rm_log_result_done">제거 결과: 완료 - 제거 또는 사용 중지됨: %1$s</string>
+    <string name="rm_log_result_next">다음 할 일: 기기를 다시 시작한 뒤 다시 검사하세요. 다시 시작 후 앱이 돌아온다면 펌웨어가 다시 설치하는 것입니다. 기기를 교체하세요.</string>
+    <string name="rm_log_result_nothing">제거 결과: 제거할 것이 없었습니다.</string>
+
+    <!-- Log: steps to do by hand (no debugging connection, no root) -->
+    <!-- 1 = app name -->
+    <string name="rm_log_guided_step">설정 > 앱 > %1$s > 제거 (또는 \'업데이트 제거\' 후 \'사용 중지\'), 그다음 강제 종료</string>
+    <string name="rm_log_guided_pp">Play Protect: Play 스토어 열기 > 내 프로필 > Play Protect > 설정(톱니바퀴) > \'Play Protect로 앱 검사\' 켜기</string>
+    <!-- 1 = comma-separated accessibility service ids -->
+    <string name="rm_log_guided_acc">설정 > 접근성: %1$s 끄기</string>
+    <string name="rm_log_guided_nothing">직접 할 일이 없습니다.</string>
+
+    <!-- Log: deep clean (root only) -->
+    <string name="rm_log_deep_no_root">정밀 청소에는 root(su)가 필요한데 이 기기에는 없습니다. 펌웨어의 예비 복사본은 앱이 제거되거나 꺼져 있는 동안 아무 효력이 없습니다.</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_deep_root_check_failed">root 여부를 확인할 수 없었습니다: %1$s</string>
+    <!-- 1 = file path -->
+    <string name="rm_log_deep_shared_perm_file">%1$s 파일은 다른 앱에도 권한을 주므로 그대로 두었습니다</string>
+    <!-- 1 = file path, 2 = package name -->
+    <string name="rm_log_deep_unverified">%1$s: 안에 어떤 앱이 들어 있는지 읽을 수 없어 그대로 두었습니다.</string>
+    <string name="rm_log_deep_not_xcpe">%1$s에 들어 있는 앱 %2$s은(는) XCPE의 일부가 아닙니다. 그대로 두었습니다.</string>
+    <string name="rm_log_deep_skipped_unusual">건너뜀 (특이한 경로): %1$s</string>
+    <string name="rm_log_deep_skipped_outside">건너뜀 (펌웨어 디렉터리 밖): %1$s</string>
+    <string name="rm_log_deep_nothing">펌웨어 디렉터리에서 XCPE와 비슷한 것을 찾지 못했습니다.</string>
+    <!-- 1 = comma-separated paths -->
+    <string name="rm_log_deep_targets">삭제할 펌웨어 복사본: %1$s</string>
+    <!-- 1 = partition such as /oem -->
+    <string name="rm_log_deep_write_protected">%1$s: 이 기기의 펌웨어는 쓰기 방지되어 있습니다. 예비 복사본은 효력 없이 남아 있습니다</string>
+    <!-- 1 = file or folder path -->
+    <string name="rm_log_deep_deleted">%1$s 삭제됨</string>
+    <string name="rm_log_deep_still_there_ro">%1$s 아직 남아 있음: 이 기기의 펌웨어는 쓰기 방지되어 있습니다. 예비 복사본은 효력 없이 남아 있습니다</string>
+    <string name="rm_log_deep_still_there">%1$s 아직 남아 있음 (삭제하지 못함)</string>
+    <!-- 1 = count -->
+    <string name="rm_log_deep_result_done">정밀 청소 결과: 완료 - 펌웨어 항목 %1$d개 삭제</string>
+    <!-- 1 = comma-separated paths -->
+    <string name="rm_log_deep_result_partial">정밀 청소 결과: 일부만 완료 - 펌웨어에 아직 남아 있음: %1$s</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_deep_unexpected">정밀 청소 중 예상치 못한 문제: %1$s</string>
+</resources>

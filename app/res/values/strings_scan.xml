@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Scanner texts: every headline and sentence of the check report, plus the section names shown while it runs.
+    scan_sec_*      section names for the live step list (Scanner.Listener)
+    scan_err_*      "Could not check ..." lines when one section fails
+    scan_device_*   section 1 (this box), scan_pkg_* section 2 (known apps), scan_fake_* section 3,
+    scan_provider_* section 4, scan_oem_* / scan_privapp_* / scan_perm_* / scan_prop_* section 5 (firmware),
+    scan_pp_*       section 6 (Play Protect), scan_acc_* section 7 (Accessibility), scan_user_apps section 10
+    scan_detail_*   the indented detail lines under an app finding
+  Translators: keep %1$s / %2$d placeholders, package names, "XCPE", "Play Protect", "MECOOL", "Videostrong",
+  folder names like /oem and setting names like package_verifier_user_consent exactly as they are.
+  Strings in double quotes keep their double spaces on purpose (column alignment in the report).
+-->
+<resources>
+    <!-- Section names for the live step list -->
+    <string name="scan_sec_device">Checking this device</string>
+    <string name="scan_sec_known">Checking known apps</string>
+    <string name="scan_sec_fake_system">Checking apps with system names</string>
+    <string name="scan_sec_content">Looking inside installed apps</string>
+    <string name="scan_err_content">Could not look inside the installed apps</string>
+    <string name="scan_content_match">%1$s contains %2$s, a known XCPE component</string>
+    <string name="scan_content_none">No installed app contains a known XCPE component</string>
+    <string name="scan_reason_ioc">Name matches the published list of XCPE helper tools</string>
+    <string name="scan_reason_provider">Exposes an XCPE data channel</string>
+    <string name="scan_reason_content">Contains %1$s, a known XCPE component</string>
+    <string name="scan_reason_fake_name">Uses a system name but was installed later</string>
+    <string name="scan_reason_installed_by">%1$s; installed by %2$s</string>
+    <string name="scan_sec_providers">Checking data channels</string>
+    <string name="scan_sec_firmware">Checking the firmware for spare copies</string>
+    <string name="scan_sec_play_protect">Checking Google Play Protect</string>
+    <string name="scan_sec_accessibility">Checking Accessibility settings</string>
+    <string name="scan_sec_user_apps">Listing user-installed apps</string>
+
+    <!-- One section could not run (the scan continues) -->
+    <string name="scan_err_no_context">Could not check anything on this box (the app context was missing)</string>
+    <string name="scan_err_finish">Could not finish the scan</string>
+    <string name="scan_err_device">Could not check this box\'s brand and model</string>
+    <string name="scan_err_app_list">Could not check the full list of installed apps</string>
+    <string name="scan_err_known">Could not check the known XCPE app names</string>
+    <string name="scan_err_fake_system">Could not check apps hiding behind system names</string>
+    <string name="scan_err_providers">Could not check the XCPE data channels (content providers)</string>
+    <string name="scan_err_oem">Could not check the /oem folder for a spare copy</string>
+    <string name="scan_err_priv_app">Could not check the system app folders</string>
+    <string name="scan_err_perm_files">Could not check the permission grant files</string>
+    <string name="scan_err_props">Could not check the XCPE dropper properties</string>
+    <string name="scan_err_play_protect">Could not check the Play Protect setting</string>
+    <string name="scan_err_accessibility">Could not check the accessibility services</string>
+    <string name="scan_err_user_apps">Could not check the list of user-installed apps</string>
+
+    <!-- 1. This box. 1 = brand, 2 = maker, 3 = model, 4 = device code, 5 = Android version, 6 = API level, 7 = security patch date, 8 = build fingerprint -->
+    <string name="scan_device_line">"Brand: %1$s   Maker: %2$s   Model: %3$s   Device: %4$s\nAndroid %5$s (API %6$d)  security patch %7$s\nBuild: %8$s"</string>
+    <string name="scan_unknown">unknown</string>
+    <string name="scan_device_unavailable">Device details unavailable</string>
+    <string name="scan_device_mecool_brand_title">Brand or maker is MECOOL / Videostrong (the company behind XCPE)</string>
+    <!-- 1 = brand, 2 = maker -->
+    <string name="scan_device_mecool_brand_detail">"Brand: %1$s   Maker: %2$s"</string>
+    <string name="scan_device_mecool_prop_title">This box identifies itself as a MECOOL device (ro.mecool.device=true)</string>
+    <string name="scan_device_mecool_prop_detail">The backdoor reads this property to pick its control server.</string>
+    <!-- 1 = model name -->
+    <string name="scan_device_model_listed_title">Model name \'%1$s\' is on the published list of affected models (not proof by itself)</string>
+    <string name="scan_device_model_listed_detail">Boxes with this name were seen in the XCPE campaign. The checks below tell whether this one is infected.</string>
+    <string name="scan_device_model_ok">Model name is not on the published list of affected models</string>
+
+    <!-- 2. Known apps. 1 = app (package) name -->
+    <string name="scan_pkg_confirmed_active">"%1$s is installed and active  &lt;-- part of the XCPE backdoor"</string>
+    <string name="scan_pkg_confirmed_dormant_firmware">%1$s is in the firmware but switched off for this box (dormant, harmless while off)</string>
+    <string name="scan_pkg_confirmed_dormant_present">%1$s is present but switched off (dormant, harmless while off)</string>
+    <!-- 1 = how many names are on the confirmed list -->
+    <string name="scan_pkg_confirmed_none">None of the %1$d confirmed XCPE app names is active</string>
+    <string name="scan_pkg_suspect_active">%1$s is installed (Videostrong / affiliate tool, suspect)</string>
+    <string name="scan_pkg_suspect_dormant_firmware">%1$s (suspect tool) is in the firmware but switched off for this box (dormant, harmless while off)</string>
+    <string name="scan_pkg_suspect_dormant_present">%1$s (suspect tool) is present but switched off (dormant, harmless while off)</string>
+
+    <!-- 3. Apps hiding behind system names. 1 = app name -->
+    <string name="scan_fake_active">%1$s is a user-installed app hiding behind a system name (XCPE droppers do this)</string>
+    <string name="scan_fake_dormant">%1$s uses a system name but is switched off (dormant, harmless while off)</string>
+    <string name="scan_fake_none">No user-installed app is hiding behind a com.android.* name</string>
+
+    <!-- 4. Data channels (content providers). 1 = app name, 2 = channel (authority) name -->
+    <string name="scan_provider_none">No app exposes the XCPE data channels</string>
+    <string name="scan_provider_active">%1$s exposes an XCPE data channel (%2$s)</string>
+    <string name="scan_provider_active_detail">XCPE apps share their configuration through this channel.</string>
+    <string name="scan_provider_dormant">%1$s carries an XCPE data channel (%2$s) but is switched off (dormant)</string>
+
+    <!-- 5a. Spare copies in /oem -->
+    <string name="scan_oem_no_folder">This box has no /oem folder (nowhere for a spare copy)</string>
+    <string name="scan_oem_copy_title">/oem holds a spare copy of the backdoor</string>
+    <string name="scan_oem_copy_detail">Only new firmware or root can delete it. It stays harmless as long as the app itself is removed or switched off.</string>
+    <!-- 1 = number of APK files -->
+    <string name="scan_oem_apks_ok">%1$d APK file(s) in /oem, none with an XCPE-like name</string>
+    <string name="scan_oem_not_visible_title">The /oem folder is not visible to apps on this box, so a spare copy there cannot be ruled out</string>
+    <!-- 1 = comma-separated folder names -->
+    <string name="scan_oem_not_visible_detail">Not readable: %1$s</string>
+    <string name="scan_oem_none">No APK files visible in /oem</string>
+
+    <!-- 5b. System app folders. 1 = folder path -->
+    <string name="scan_privapp_hit_title">System app folder with an XCPE-like name: %1$s</string>
+    <string name="scan_privapp_hit_detail">This is part of the firmware. Only new firmware or root can delete it; switching the app off keeps it harmless.</string>
+    <string name="scan_privapp_none">No XCPE-like folders in the system app directories</string>
+    <!-- 1 = comma-separated folder names (shared by 5b and 5c) -->
+    <string name="scan_not_visible_detail">Not visible to apps: %1$s</string>
+
+    <!-- 5c. Permission grant files. 1 = file path, 2 = the XCPE app it mentions -->
+    <string name="scan_perm_hit_title">"Permission grant file for an XCPE app: %1$s  (mentions %2$s)"</string>
+    <string name="scan_perm_hit_detail">The firmware pre-approves rights for the backdoor. Removing or switching off the app makes this file inert.</string>
+    <string name="scan_perm_none">No permission grant file gives rights to an XCPE app</string>
+
+    <!-- 5d. Dropper properties. 1 = property name, 2 = its value -->
+    <string name="scan_prop_set">Property %1$s=%2$s is set (used by the 2026 XCPE droppers)</string>
+    <string name="scan_prop_none">None of the XCPE dropper properties is set</string>
+
+    <!-- 6. Play Protect -->
+    <string name="scan_pp_off_title">Play Protect app checking is switched OFF (exactly what XCPE does)</string>
+    <string name="scan_pp_off_detail">package_verifier_user_consent=-1. \'Remove threats\' switches it back on; you can also do it in Play Store > Play Protect.</string>
+    <string name="scan_pp_disabled_title">Play Protect app checking is disabled (package_verifier_enable=0)</string>
+    <string name="scan_pp_disabled_detail">\'Remove threats\' switches it back on; you can also do it in Play Store > Play Protect.</string>
+    <string name="scan_pp_ok">Play Protect app checking is not switched off</string>
+
+    <!-- 7. Accessibility. 1 = service id (app/class) -->
+    <string name="scan_acc_none">No accessibility services enabled</string>
+    <string name="scan_acc_bad_title">An accessibility service belongs to XCPE: %1$s</string>
+    <string name="scan_acc_bad_detail">XCPE uses it to watch what you press on the remote. It is switched off when the app is removed.</string>
+    <string name="scan_acc_other">Accessibility service enabled: %1$s (not XCPE)</string>
+
+    <!-- 10. Reference list. 1 = count; scan_user_app_off: 1 = app name; scan_more: 1 = how many were left out -->
+    <string name="scan_user_apps">%1$d user-installed app(s) on this box (for reference)</string>
+    <string name="scan_user_app_off">"%1$s  (switched off)"</string>
+    <string name="scan_more">... (%1$d more)</string>
+
+    <!-- Detail lines under an app finding -->
+    <!-- 1 = version name, 2 = version number -->
+    <string name="scan_detail_version">version: %1$s (%2$d)</string>
+    <!-- 1 = file path -->
+    <string name="scan_detail_apk">apk: %1$s</string>
+    <!-- 1 = name of the app that installed it -->
+    <string name="scan_detail_installer">installed by: %1$s</string>
+    <string name="scan_detail_installer_none">installed by: none recorded (sideloaded or part of the firmware)</string>
+    <!-- 1 = first install date, 2 = last update date -->
+    <string name="scan_detail_times">"first installed: %1$s   last updated: %2$s"</string>
+    <string name="scan_detail_type_updated_system">type: firmware app with an update on top: uninstalling removes the update, the firmware copy can only be switched off</string>
+    <string name="scan_detail_type_system">type: firmware (system) app: without root it can be switched off, not deleted</string>
+    <string name="scan_detail_type_user">type: user-installed app: it can be uninstalled</string>
+    <string name="scan_detail_state_off">state: switched off</string>
+    <string name="scan_detail_state_off_by_user">state: switched off by the user</string>
+    <!-- 1 = the error -->
+    <string name="scan_detail_unavailable">(details unavailable: %1$s)</string>
+</resources>

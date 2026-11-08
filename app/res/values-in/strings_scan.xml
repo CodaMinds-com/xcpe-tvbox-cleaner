@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bahasa Indonesia. Teks pemindai: judul dan kalimat laporan pemeriksaan. Nilai dalam tanda kutip ganda mempertahankan spasi ganda (perataan kolom). -->
+<resources>
+    <!-- Section names for the live step list -->
+    <string name="scan_sec_device">Memeriksa perangkat ini</string>
+    <string name="scan_sec_known">Memeriksa aplikasi yang diketahui</string>
+    <string name="scan_sec_fake_system">Memeriksa aplikasi bernama sistem</string>
+    <string name="scan_sec_content">Melihat ke dalam aplikasi yang terinstal</string>
+    <string name="scan_err_content">Tidak bisa melihat ke dalam aplikasi yang terinstal</string>
+    <string name="scan_content_match">%1$s berisi %2$s, komponen XCPE yang diketahui</string>
+    <string name="scan_content_none">Tidak ada aplikasi terinstal yang berisi komponen XCPE yang diketahui</string>
+    <string name="scan_reason_ioc">Nama cocok dengan daftar alat bantu XCPE yang dipublikasikan</string>
+    <string name="scan_reason_provider">Membuka saluran data XCPE</string>
+    <string name="scan_reason_content">Berisi %1$s, komponen XCPE yang diketahui</string>
+    <string name="scan_reason_fake_name">Memakai nama sistem tetapi diinstal belakangan</string>
+    <string name="scan_reason_installed_by">%1$s; diinstal oleh %2$s</string>
+    <string name="scan_sec_providers">Memeriksa saluran data</string>
+    <string name="scan_sec_firmware">Memeriksa firmware untuk salinan cadangan</string>
+    <string name="scan_sec_play_protect">Memeriksa Google Play Protect</string>
+    <string name="scan_sec_accessibility">Memeriksa setelan Aksesibilitas</string>
+    <string name="scan_sec_user_apps">Mendaftar aplikasi yang diinstal pengguna</string>
+
+    <!-- One section could not run (the scan continues) -->
+    <string name="scan_err_no_context">Tidak bisa memeriksa apa pun di TV box ini (konteks aplikasi tidak ada)</string>
+    <string name="scan_err_finish">Tidak bisa menyelesaikan pemindaian</string>
+    <string name="scan_err_device">Tidak bisa memeriksa merek dan model TV box ini</string>
+    <string name="scan_err_app_list">Tidak bisa memeriksa daftar lengkap aplikasi yang terinstal</string>
+    <string name="scan_err_known">Tidak bisa memeriksa nama-nama aplikasi XCPE yang diketahui</string>
+    <string name="scan_err_fake_system">Tidak bisa memeriksa aplikasi yang bersembunyi di balik nama sistem</string>
+    <string name="scan_err_providers">Tidak bisa memeriksa saluran data XCPE (penyedia konten)</string>
+    <string name="scan_err_oem">Tidak bisa memeriksa folder /oem untuk salinan cadangan</string>
+    <string name="scan_err_priv_app">Tidak bisa memeriksa folder aplikasi sistem</string>
+    <string name="scan_err_perm_files">Tidak bisa memeriksa file pemberian izin</string>
+    <string name="scan_err_props">Tidak bisa memeriksa properti penginstal diam-diam XCPE</string>
+    <string name="scan_err_play_protect">Tidak bisa memeriksa setelan Play Protect</string>
+    <string name="scan_err_accessibility">Tidak bisa memeriksa layanan aksesibilitas</string>
+    <string name="scan_err_user_apps">Tidak bisa memeriksa daftar aplikasi yang diinstal pengguna</string>
+
+    <!-- 1. This box. 1 = brand, 2 = maker, 3 = model, 4 = device code, 5 = Android version, 6 = API level, 7 = security patch date, 8 = build fingerprint -->
+    <string name="scan_device_line">"Merek: %1$s   Pembuat: %2$s   Model: %3$s   Perangkat: %4$s\nAndroid %5$s (API %6$d)  patch keamanan %7$s\nBuild: %8$s"</string>
+    <string name="scan_unknown">tidak diketahui</string>
+    <string name="scan_device_unavailable">Detail perangkat tidak tersedia</string>
+    <string name="scan_device_mecool_brand_title">Merek atau pembuatnya MECOOL / Videostrong (perusahaan di balik XCPE)</string>
+    <!-- 1 = brand, 2 = maker -->
+    <string name="scan_device_mecool_brand_detail">"Merek: %1$s   Pembuat: %2$s"</string>
+    <string name="scan_device_mecool_prop_title">TV box ini mengenali dirinya sebagai perangkat MECOOL (ro.mecool.device=true)</string>
+    <string name="scan_device_mecool_prop_detail">Pintu belakang membaca properti ini untuk memilih server kendalinya.</string>
+    <!-- 1 = model name -->
+    <string name="scan_device_model_listed_title">Nama model \'%1$s\' ada di daftar model terdampak yang dipublikasikan (bukan bukti dengan sendirinya)</string>
+    <string name="scan_device_model_listed_detail">TV box dengan nama ini pernah terlihat dalam kampanye XCPE. Pemeriksaan di bawah menentukan apakah yang ini terinfeksi.</string>
+    <string name="scan_device_model_ok">Nama model tidak ada di daftar model terdampak yang dipublikasikan</string>
+
+    <!-- 2. Known apps. 1 = app (package) name -->
+    <string name="scan_pkg_confirmed_active">"%1$s terinstal dan aktif  &lt;-- bagian dari pintu belakang XCPE"</string>
+    <string name="scan_pkg_confirmed_dormant_firmware">%1$s ada di firmware tetapi dinonaktifkan untuk TV box ini (tidak aktif, tidak berbahaya selama nonaktif)</string>
+    <string name="scan_pkg_confirmed_dormant_present">%1$s ada tetapi dinonaktifkan (tidak aktif, tidak berbahaya selama nonaktif)</string>
+    <!-- 1 = how many names are on the confirmed list -->
+    <string name="scan_pkg_confirmed_none">Tidak satu pun dari %1$d nama aplikasi XCPE yang terkonfirmasi sedang aktif</string>
+    <string name="scan_pkg_suspect_active">%1$s terinstal (alat Videostrong / afiliasinya, dicurigai)</string>
+    <string name="scan_pkg_suspect_dormant_firmware">%1$s (alat yang dicurigai) ada di firmware tetapi dinonaktifkan untuk TV box ini (tidak aktif, tidak berbahaya selama nonaktif)</string>
+    <string name="scan_pkg_suspect_dormant_present">%1$s (alat yang dicurigai) ada tetapi dinonaktifkan (tidak aktif, tidak berbahaya selama nonaktif)</string>
+
+    <!-- 3. Apps hiding behind system names. 1 = app name -->
+    <string name="scan_fake_active">%1$s adalah aplikasi yang diinstal pengguna yang bersembunyi di balik nama sistem (penginstal diam-diam XCPE melakukan ini)</string>
+    <string name="scan_fake_dormant">%1$s memakai nama sistem tetapi dinonaktifkan (tidak aktif, tidak berbahaya selama nonaktif)</string>
+    <string name="scan_fake_none">Tidak ada aplikasi yang diinstal pengguna bersembunyi di balik nama com.android.*</string>
+
+    <!-- 4. Data channels (content providers). 1 = app name, 2 = channel (authority) name -->
+    <string name="scan_provider_none">Tidak ada aplikasi yang membuka saluran data XCPE</string>
+    <string name="scan_provider_active">%1$s membuka saluran data XCPE (%2$s)</string>
+    <string name="scan_provider_active_detail">Aplikasi XCPE berbagi konfigurasinya lewat saluran ini.</string>
+    <string name="scan_provider_dormant">%1$s membawa saluran data XCPE (%2$s) tetapi dinonaktifkan (tidak aktif)</string>
+
+    <!-- 5a. Spare copies in /oem -->
+    <string name="scan_oem_no_folder">TV box ini tidak punya folder /oem (tidak ada tempat untuk salinan cadangan)</string>
+    <string name="scan_oem_copy_title">/oem menyimpan salinan cadangan pintu belakang</string>
+    <string name="scan_oem_copy_detail">Hanya firmware baru atau root yang bisa menghapusnya. Salinan ini tetap tidak berbahaya selama aplikasinya sendiri dihapus atau dinonaktifkan.</string>
+    <!-- 1 = number of APK files -->
+    <string name="scan_oem_apks_ok">%1$d file APK di /oem, tidak ada yang bernama mirip XCPE</string>
+    <string name="scan_oem_not_visible_title">Folder /oem tidak terlihat oleh aplikasi di TV box ini, jadi salinan cadangan di sana tidak bisa dipastikan tidak ada</string>
+    <!-- 1 = comma-separated folder names -->
+    <string name="scan_oem_not_visible_detail">Tidak bisa dibaca: %1$s</string>
+    <string name="scan_oem_none">Tidak ada file APK yang terlihat di /oem</string>
+
+    <!-- 5b. System app folders. 1 = folder path -->
+    <string name="scan_privapp_hit_title">Folder aplikasi sistem bernama mirip XCPE: %1$s</string>
+    <string name="scan_privapp_hit_detail">Ini bagian dari firmware. Hanya firmware baru atau root yang bisa menghapusnya; menonaktifkan aplikasinya membuatnya tetap tidak berbahaya.</string>
+    <string name="scan_privapp_none">Tidak ada folder bernama mirip XCPE di direktori aplikasi sistem</string>
+    <!-- 1 = comma-separated folder names (shared by 5b and 5c) -->
+    <string name="scan_not_visible_detail">Tidak terlihat oleh aplikasi: %1$s</string>
+
+    <!-- 5c. Permission grant files. 1 = file path, 2 = the XCPE app it mentions -->
+    <string name="scan_perm_hit_title">"File pemberian izin untuk aplikasi XCPE: %1$s  (menyebut %2$s)"</string>
+    <string name="scan_perm_hit_detail">Firmware menyetujui hak untuk pintu belakang sejak awal. Menghapus atau menonaktifkan aplikasinya membuat file ini tidak berdaya.</string>
+    <string name="scan_perm_none">Tidak ada file pemberian izin yang memberi hak ke aplikasi XCPE</string>
+
+    <!-- 5d. Dropper properties. 1 = property name, 2 = its value -->
+    <string name="scan_prop_set">Properti %1$s=%2$s disetel (dipakai oleh penginstal diam-diam XCPE tahun 2026)</string>
+    <string name="scan_prop_none">Tidak satu pun properti penginstal diam-diam XCPE yang disetel</string>
+
+    <!-- 6. Play Protect -->
+    <string name="scan_pp_off_title">Pemeriksaan aplikasi Play Protect DIMATIKAN (persis yang dilakukan XCPE)</string>
+    <string name="scan_pp_off_detail">package_verifier_user_consent=-1. \'Hapus ancaman\' menyalakannya kembali; Anda juga bisa melakukannya di Play Store > Play Protect.</string>
+    <string name="scan_pp_disabled_title">Pemeriksaan aplikasi Play Protect dinonaktifkan (package_verifier_enable=0)</string>
+    <string name="scan_pp_disabled_detail">\'Hapus ancaman\' menyalakannya kembali; Anda juga bisa melakukannya di Play Store > Play Protect.</string>
+    <string name="scan_pp_ok">Pemeriksaan aplikasi Play Protect tidak dimatikan</string>
+
+    <!-- 7. Accessibility. 1 = service id (app/class) -->
+    <string name="scan_acc_none">Tidak ada layanan aksesibilitas yang aktif</string>
+    <string name="scan_acc_bad_title">Ada layanan aksesibilitas milik XCPE: %1$s</string>
+    <string name="scan_acc_bad_detail">XCPE memakainya untuk mengawasi apa yang Anda tekan di remote. Layanan ini mati saat aplikasinya dihapus.</string>
+    <string name="scan_acc_other">Layanan aksesibilitas aktif: %1$s (bukan XCPE)</string>
+
+    <!-- 10. Reference list. 1 = count; scan_user_app_off: 1 = app name; scan_more: 1 = how many were left out -->
+    <string name="scan_user_apps">%1$d aplikasi yang diinstal pengguna di TV box ini (sebagai referensi)</string>
+    <string name="scan_user_app_off">"%1$s  (dinonaktifkan)"</string>
+    <string name="scan_more">... (%1$d lagi)</string>
+
+    <!-- Detail lines under an app finding -->
+    <!-- 1 = version name, 2 = version number -->
+    <string name="scan_detail_version">versi: %1$s (%2$d)</string>
+    <!-- 1 = file path -->
+    <string name="scan_detail_apk">apk: %1$s</string>
+    <!-- 1 = name of the app that installed it -->
+    <string name="scan_detail_installer">diinstal oleh: %1$s</string>
+    <string name="scan_detail_installer_none">diinstal oleh: tidak tercatat (dipasang manual atau bagian dari firmware)</string>
+    <!-- 1 = first install date, 2 = last update date -->
+    <string name="scan_detail_times">"pertama diinstal: %1$s   terakhir diupdate: %2$s"</string>
+    <string name="scan_detail_type_updated_system">jenis: aplikasi firmware dengan update di atasnya: uninstal menghapus update-nya, salinan firmware hanya bisa dinonaktifkan</string>
+    <string name="scan_detail_type_system">jenis: aplikasi firmware (sistem): tanpa root hanya bisa dinonaktifkan, tidak bisa dihapus</string>
+    <string name="scan_detail_type_user">jenis: aplikasi yang diinstal pengguna: bisa di-uninstal</string>
+    <string name="scan_detail_state_off">status: dinonaktifkan</string>
+    <string name="scan_detail_state_off_by_user">status: dinonaktifkan oleh pengguna</string>
+    <!-- 1 = the error -->
+    <string name="scan_detail_unavailable">(detail tidak tersedia: %1$s)</string>
+</resources>

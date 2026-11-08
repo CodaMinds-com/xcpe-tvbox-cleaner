@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Русский: тексты удаления (лестница удаления, глубокая очистка). Пути «Настройки > Приложения > ...» используют названия, которые показывает Android на русском. -->
+<resources>
+    <!-- Живой статус во время удаления -->
+    <string name="rm_status_connecting">Подключаемся к службе отладки этой приставки...</string>
+    <string name="rm_status_adb_failed">Не удалось воспользоваться отладочным подключением: %1$s</string>
+    <string name="rm_status_removing">Удаляем %1$s (%2$d из %3$d)...</string>
+    <string name="rm_status_play_protect">Снова включаем Google Play Protect...</string>
+    <string name="rm_status_done">Готово.</string>
+    <string name="rm_status_guided">Следуйте шагам на экране, чтобы удалить каждое приложение вручную.</string>
+    <string name="rm_status_deep_no_root">Глубокая очистка без root невозможна.</string>
+    <string name="rm_status_deep_looking">Ищем запасные копии в прошивке...</string>
+    <string name="rm_status_deep_none">Запасных копий в прошивке не найдено.</string>
+    <string name="rm_status_deep_unlocking">Открываем %1$s для записи...</string>
+    <string name="rm_status_deep_deleting">Удаляем %1$s...</string>
+    <string name="rm_status_deep_done">Глубокая очистка выполнена.</string>
+    <string name="rm_status_deep_partial">Глубокая очистка завершена; некоторые копии удалить не удалось.</string>
+
+    <!-- Журнал: каким путём шло удаление -->
+    <string name="rm_log_nothing_to_remove">Удалять нечего; проверяем только защиту.</string>
+    <string name="rm_log_to_remove">К удалению: %1$s</string>
+    <string name="rm_log_path_adb">Путь: ADB (%1$s:%2$d)</string>
+    <string name="rm_log_path_root">Путь: ROOT (su)</string>
+    <string name="rm_log_path_guided">Путь: ВРУЧНУЮ - нет отладочного подключения и нет root, поэтому эти шаги выполняются вручную:</string>
+    <string name="rm_log_path_deep">Путь: глубокая очистка через ROOT (su)</string>
+    <string name="rm_log_adb_failed">Отладочное подключение не удалось: %1$s</string>
+    <string name="rm_log_port_closed">Порт отладки %1$s:%2$d закрыт.</string>
+    <string name="rm_log_no_root">На этой приставке нет root (su).</string>
+    <string name="rm_log_unexpected">Непредвиденная проблема: %1$s</string>
+    <string name="rm_log_stopped">Остановлено вами. Больше ничего не изменено.</string>
+    <string name="rm_log_busy">На этой приставке ещё идёт другая очистка. Попробуйте ещё раз чуть позже.</string>
+    <string name="rm_log_grant_ok">теперь приложение может само выключать и включать отладку</string>
+    <string name="rm_log_grant_ineffective">разрешение не подействовало; отладка остаётся такой, как вы её настроили</string>
+    <string name="rm_log_grant_failed">не удалось получить разрешение: %1$s</string>
+    <string name="rm_log_door_opened">Отладка включена для этой очистки.</string>
+    <string name="rm_log_door_failed">Не удалось включить отладку для этой очистки.</string>
+
+    <!-- Журнал: результат для одного приложения -->
+    <string name="rm_log_result_unknown">не удалось проверить результат (нет ответа от менеджера пакетов); считается всё ещё активным</string>
+    <string name="rm_log_disabled">ОТКЛЮЧЕНО (удалить не удалось; оно выключено и не может запускаться)</string>
+    <string name="rm_log_failed">НЕ УДАЛОСЬ - всё ещё активно. Этой приставке нужна новая прошивка или замена.</string>
+    <string name="rm_log_removed_fw_unknown">УДАЛЕНО для этой приставки (не удалось проверить, осталась ли копия в прошивке; считайте, что осталась)</string>
+    <string name="rm_log_removed_fw">УДАЛЕНО для этой приставки (спящая копия остаётся в защищённой от записи прошивке)</string>
+    <string name="rm_log_removed">УДАЛЕНО полностью</string>
+
+    <!-- Журнал: защита -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">Специальные возможности</string>
+    <string name="rm_log_pp_on">Проверка приложений Play Protect: ВКЛ (consent=%1$s enable=%2$s)</string>
+    <string name="rm_log_pp_failed">Play Protect: не удалось изменить настройку (consent=%1$s enable=%2$s). Включите её в Play Маркет > Play Protect > настройки.</string>
+    <string name="rm_log_acc_removed">убрана привязка к специальным возможностям: %1$s</string>
+
+    <!-- Журнал: общий результат -->
+    <string name="rm_log_result_partial">РЕЗУЛЬТАТ ОЧИСТКИ: ЧАСТИЧНО - не удалось удалить: %1$s. Замените эту приставку или попросите у продавца чистую прошивку.</string>
+    <string name="rm_log_result_done">РЕЗУЛЬТАТ ОЧИСТКИ: ГОТОВО - удалено/отключено: %1$s</string>
+    <string name="rm_log_result_next">ДАЛЕЕ: перезагрузите приставку, затем проверьте снова. Если после перезагрузки приложение вернётся, его переустанавливает прошивка: замените приставку.</string>
+    <string name="rm_log_result_nothing">РЕЗУЛЬТАТ ОЧИСТКИ: удалять было нечего.</string>
+
+    <!-- Журнал: шаги вручную (нет отладочного подключения, нет root) -->
+    <string name="rm_log_guided_step">Настройки > Приложения > %1$s > Удалить (или «Удалить обновления», затем «Отключить»), затем Остановить</string>
+    <string name="rm_log_guided_pp">Play Protect: откройте Play Маркет > ваш профиль > Play Protect > настройки (шестерёнка) > включите «Проверять приложения с помощью Play Protect»</string>
+    <string name="rm_log_guided_acc">Настройки > Специальные возможности: отключите %1$s</string>
+    <string name="rm_log_guided_nothing">Вручную делать нечего.</string>
+
+    <!-- Журнал: глубокая очистка (только root) -->
+    <string name="rm_log_deep_no_root">Для глубокой очистки нужен root (su), а на этой приставке его нет. Запасная копия в прошивке остаётся безвредной, пока приложение удалено или отключено.</string>
+    <string name="rm_log_deep_root_check_failed">Не удалось проверить наличие root: %1$s</string>
+    <string name="rm_log_deep_shared_perm_file">%1$s также выдаёт права другим приложениям; не тронут</string>
+    <string name="rm_log_deep_unverified">%1$s: не удалось прочитать, какое приложение внутри, поэтому не тронут.</string>
+    <string name="rm_log_deep_not_xcpe">%1$s содержит приложение %2$s, которое не относится к XCPE; не тронут.</string>
+    <string name="rm_log_deep_skipped_unusual">пропущено (необычный путь): %1$s</string>
+    <string name="rm_log_deep_skipped_outside">пропущено (вне папок прошивки): %1$s</string>
+    <string name="rm_log_deep_nothing">В папках прошивки ничего похожего на XCPE не найдено.</string>
+    <string name="rm_log_deep_targets">Копии в прошивке к удалению: %1$s</string>
+    <string name="rm_log_deep_write_protected">%1$s: прошивка этой приставки защищена от записи; запасная копия остаётся безвредной</string>
+    <string name="rm_log_deep_deleted">удалено %1$s</string>
+    <string name="rm_log_deep_still_there_ro">%1$s всё ещё на месте: прошивка этой приставки защищена от записи; запасная копия остаётся безвредной</string>
+    <string name="rm_log_deep_still_there">%1$s всё ещё на месте (удалить не удалось)</string>
+    <string name="rm_log_deep_result_done">РЕЗУЛЬТАТ ГЛУБОКОЙ ОЧИСТКИ: ГОТОВО - удалено элементов прошивки: %1$d</string>
+    <string name="rm_log_deep_result_partial">РЕЗУЛЬТАТ ГЛУБОКОЙ ОЧИСТКИ: ЧАСТИЧНО - всё ещё в прошивке: %1$s</string>
+    <string name="rm_log_deep_unexpected">Непредвиденная проблема во время глубокой очистки: %1$s</string>
+</resources>

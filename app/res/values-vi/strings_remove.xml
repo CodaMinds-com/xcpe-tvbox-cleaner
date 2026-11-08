@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tiếng Việt. Văn bản của trình gỡ bỏ: dòng trạng thái trực tiếp (rm_status_*) và tóm tắt nhật ký (rm_log_*). Giữ nguyên "ADB", "su", "root". -->
+<resources>
+    <!-- Live status while removing -->
+    <string name="rm_status_connecting">Đang kết nối với dịch vụ gỡ lỗi của TV box này...</string>
+    <!-- 1 = the reason, a plain-language sentence from the debugging client -->
+    <string name="rm_status_adb_failed">Không dùng được kết nối gỡ lỗi: %1$s</string>
+    <!-- 1 = app name, 2 = this one's number, 3 = total -->
+    <string name="rm_status_removing">Đang gỡ bỏ %1$s (%2$d trên %3$d)...</string>
+    <string name="rm_status_play_protect">Đang bật lại Google Play Protect...</string>
+    <string name="rm_status_done">Xong.</string>
+    <string name="rm_status_guided">Làm theo các bước trên màn hình để gỡ bỏ thủ công từng ứng dụng.</string>
+    <string name="rm_status_deep_no_root">Không thể dọn sâu khi không có root.</string>
+    <string name="rm_status_deep_looking">Đang tìm bản sao dự phòng trong firmware...</string>
+    <string name="rm_status_deep_none">Không tìm thấy bản sao dự phòng trong firmware.</string>
+    <!-- 1 = partition such as /oem or /system -->
+    <string name="rm_status_deep_unlocking">Đang mở khóa %1$s để ghi...</string>
+    <!-- 1 = file or folder path -->
+    <string name="rm_status_deep_deleting">Đang xóa %1$s...</string>
+    <string name="rm_status_deep_done">Dọn sâu xong.</string>
+    <string name="rm_status_deep_partial">Dọn sâu đã kết thúc; một số bản sao không xóa được.</string>
+
+    <!-- Log: which way the removal went -->
+    <string name="rm_log_nothing_to_remove">Không có gì để gỡ bỏ; chỉ kiểm tra các lớp bảo vệ.</string>
+    <!-- 1 = comma-separated app names -->
+    <string name="rm_log_to_remove">Sẽ gỡ bỏ: %1$s</string>
+    <!-- 1 = host, 2 = port -->
+    <string name="rm_log_path_adb">Cách làm: ADB (%1$s:%2$d)</string>
+    <string name="rm_log_path_root">Cách làm: ROOT (su)</string>
+    <string name="rm_log_path_guided">Cách làm: HƯỚNG DẪN - không có kết nối gỡ lỗi và không có root, nên các bước sau được làm thủ công:</string>
+    <string name="rm_log_path_deep">Cách làm: dọn sâu bằng ROOT (su)</string>
+    <!-- 1 = the reason -->
+    <string name="rm_log_adb_failed">Kết nối gỡ lỗi thất bại: %1$s</string>
+    <!-- 1 = host, 2 = port -->
+    <string name="rm_log_port_closed">Cổng gỡ lỗi %1$s:%2$d đang đóng.</string>
+    <string name="rm_log_no_root">TV box này không có root (su).</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_unexpected">Sự cố bất ngờ: %1$s</string>
+    <string name="rm_log_stopped">Bạn đã dừng. Không có gì khác bị thay đổi.</string>
+    <string name="rm_log_busy">Một lần dọn dẹp khác vẫn đang chạy trên TV box này. Hãy thử lại sau giây lát.</string>
+    <string name="rm_log_grant_ok">ứng dụng giờ có thể tự tắt và bật gỡ lỗi</string>
+    <string name="rm_log_grant_ineffective">cấp quyền không có tác dụng; gỡ lỗi giữ nguyên như bạn đã đặt</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_grant_failed">cấp quyền thất bại: %1$s</string>
+    <string name="rm_log_door_opened">Gỡ lỗi đã được bật cho lần dọn dẹp này.</string>
+    <string name="rm_log_door_failed">Không bật được gỡ lỗi cho lần dọn dẹp này.</string>
+
+    <!-- Log: result for one app -->
+    <string name="rm_log_result_unknown">không kiểm tra được kết quả (trình quản lý gói không trả lời); coi như vẫn đang hoạt động</string>
+    <string name="rm_log_disabled">ĐÃ TẮT (không gỡ cài đặt được; đã tắt và không thể chạy)</string>
+    <string name="rm_log_failed">THẤT BẠI - vẫn hoạt động. TV box này cần firmware mới hoặc phải thay.</string>
+    <string name="rm_log_removed_fw_unknown">ĐÃ GỠ BỎ khỏi TV box này (không kiểm tra được bản firmware còn hay không; cứ coi là còn)</string>
+    <string name="rm_log_removed_fw">ĐÃ GỠ BỎ khỏi TV box này (một bản sao không hoạt động vẫn nằm trong firmware chỉ đọc)</string>
+    <string name="rm_log_removed">ĐÃ GỠ BỎ hoàn toàn</string>
+
+    <!-- Log: protections -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">Hỗ trợ tiếp cận</string>
+    <!-- 1 and 2 = the two setting values read back -->
+    <string name="rm_log_pp_on">Xác minh ứng dụng của Play Protect: BẬT (consent=%1$s enable=%2$s)</string>
+    <string name="rm_log_pp_failed">Play Protect: không thay đổi được cài đặt (consent=%1$s enable=%2$s). Hãy bật trong Cửa hàng Play > Play Protect > cài đặt.</string>
+    <!-- 1 = accessibility service id -->
+    <string name="rm_log_acc_removed">đã gỡ dịch vụ hỗ trợ tiếp cận của XCPE: %1$s</string>
+
+    <!-- Log: overall result -->
+    <!-- 1 = space-separated app names -->
+    <string name="rm_log_result_partial">KẾT QUẢ DỌN DẸP: MỘT PHẦN - không gỡ bỏ được: %1$s. Hãy thay TV box này hoặc hỏi người bán xin firmware sạch.</string>
+    <string name="rm_log_result_done">KẾT QUẢ DỌN DẸP: XONG - đã gỡ bỏ/tắt: %1$s</string>
+    <string name="rm_log_result_next">TIẾP THEO: khởi động lại TV box, rồi quét lại. Nếu một ứng dụng quay lại sau khi khởi động lại, tức là firmware cài lại nó: hãy thay TV box.</string>
+    <string name="rm_log_result_nothing">KẾT QUẢ DỌN DẸP: không có gì cần gỡ bỏ.</string>
+
+    <!-- Log: steps to do by hand (no debugging connection, no root) -->
+    <!-- 1 = app name -->
+    <string name="rm_log_guided_step">Cài đặt > Ứng dụng > %1$s > Gỡ cài đặt (hoặc \'Gỡ cài đặt bản cập nhật\', rồi \'Tắt\'), rồi Buộc dừng</string>
+    <string name="rm_log_guided_pp">Play Protect: mở Cửa hàng Play > hồ sơ của bạn > Play Protect > cài đặt (bánh răng) > bật \'Quét ứng dụng bằng Play Protect\'</string>
+    <!-- 1 = comma-separated accessibility service ids -->
+    <string name="rm_log_guided_acc">Cài đặt > Hỗ trợ tiếp cận: tắt %1$s</string>
+    <string name="rm_log_guided_nothing">Không có gì cần làm thủ công.</string>
+
+    <!-- Log: deep clean (root only) -->
+    <string name="rm_log_deep_no_root">Dọn sâu cần root (su) và TV box này không có. Bản sao dự phòng trong firmware vẫn không hoạt động miễn là ứng dụng đã bị gỡ bỏ hoặc tắt.</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_deep_root_check_failed">Không kiểm tra được root: %1$s</string>
+    <!-- 1 = file path -->
+    <string name="rm_log_deep_shared_perm_file">%1$s cũng cấp quyền cho các ứng dụng khác; để nguyên</string>
+    <!-- 1 = file path, 2 = package name -->
+    <string name="rm_log_deep_unverified">%1$s: không đọc được bên trong là ứng dụng nào, nên để nguyên.</string>
+    <string name="rm_log_deep_not_xcpe">%1$s chứa ứng dụng %2$s, không thuộc XCPE; để nguyên.</string>
+    <string name="rm_log_deep_skipped_unusual">bỏ qua (đường dẫn bất thường): %1$s</string>
+    <string name="rm_log_deep_skipped_outside">bỏ qua (ngoài các thư mục firmware): %1$s</string>
+    <string name="rm_log_deep_nothing">Không tìm thấy gì giống XCPE trong các thư mục firmware.</string>
+    <!-- 1 = comma-separated paths -->
+    <string name="rm_log_deep_targets">Các bản firmware cần xóa: %1$s</string>
+    <!-- 1 = partition such as /oem -->
+    <string name="rm_log_deep_write_protected">%1$s: firmware của TV box này được chống ghi; bản sao dự phòng vẫn không hoạt động</string>
+    <!-- 1 = file or folder path -->
+    <string name="rm_log_deep_deleted">đã xóa %1$s</string>
+    <string name="rm_log_deep_still_there_ro">%1$s vẫn còn: firmware của TV box này được chống ghi; bản sao dự phòng vẫn không hoạt động</string>
+    <string name="rm_log_deep_still_there">%1$s vẫn còn (không xóa được)</string>
+    <!-- 1 = count -->
+    <string name="rm_log_deep_result_done">KẾT QUẢ DỌN SÂU: XONG - đã xóa %1$d mục trong firmware</string>
+    <!-- 1 = comma-separated paths -->
+    <string name="rm_log_deep_result_partial">KẾT QUẢ DỌN SÂU: MỘT PHẦN - vẫn còn trong firmware: %1$s</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_deep_unexpected">Sự cố bất ngờ khi dọn sâu: %1$s</string>
+</resources>

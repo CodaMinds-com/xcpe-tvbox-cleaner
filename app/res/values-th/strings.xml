@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ภาษาไทย เขียนสำหรับคนที่ไม่มีพื้นฐานด้านเทคนิค อ่านจากหน้าจอทีวีบนโซฟา: บอกว่าเกิดอะไรขึ้น แล้วบอกว่าต้องทำอะไรต่อ -->
+<resources>
+    <string name="app_name">XCPE Cleaner</string>
+    <string name="title">XCPE Cleaner</string>
+    <string name="subtitle">ค้นหาแบ็กดอร์ XCPE ในกล่องนี้และลบออก ไม่มีข้อมูลใดถูกส่งออกจากอุปกรณ์นี้</string>
+
+    <!-- Buttons -->
+    <string name="btn_scan">สแกน</string>
+    <string name="btn_remove">ลบภัยคุกคาม</string>
+    <string name="btn_devopts">เปิดตัวเลือกสำหรับนักพัฒนาแอป</string>
+    <string name="btn_deepclean">ล้างขั้นลึก (root)</string>
+    <string name="btn_help">วิธีการทำงาน</string>
+    <string name="btn_details_show">แสดงรายละเอียด</string>
+    <string name="btn_details_hide">ซ่อนรายละเอียด</string>
+    <string name="report_frame_desc">รายงานการตรวจสอบ กดปุ่มลงและขึ้นเพื่อเลื่อนดู</string>
+
+    <!-- Formatting pieces -->
+    <string name="app_label_fmt">\'%1$s\' (%2$s)</string>
+    <string name="name_quoted">\'%s\'</string>
+    <string name="list_separator">", "</string>
+    <string name="bullet_line">  - %s</string>
+    <string name="join_sentences">%1$s %2$s</string>
+    <string name="progress_line">- %s</string>
+    <string name="progress_block">%1$s\n%2$s</string>
+    <string name="progress_step_start">%s…</string>
+    <string name="progress_step_done">%s… เสร็จแล้ว</string>
+    <string name="progress_scan_header">กำลังตรวจสอบ:</string>
+
+    <!-- Start screen -->
+    <string name="status_idle">กด สแกน เพื่อตรวจสอบกล่องนี้</string>
+    <string name="report_intro">สิ่งที่ สแกน จะตรวจดู:\n\n  - แอป 8 ตัวที่ทราบว่าเป็นส่วนหนึ่งของ XCPE\n  - แอปที่แอบอ้างว่าเป็นส่วนหนึ่งของ Android\n  - ช่องทางข้อมูลลับที่ XCPE ใช้\n  - สำเนาสำรองที่เก็บอยู่ในเฟิร์มแวร์ของกล่อง\n  - Google Play Protect ถูกปิดไว้หรือไม่\n  - XCPE ฝังตัวเข้าไปในการช่วยเหลือพิเศษหรือไม่\n\nการตรวจสอบใช้เวลาไม่กี่วินาทีและไม่เปลี่ยนแปลงอะไร\nไม่มีการส่งข้อมูลไปที่ใดทั้งสิ้น\n\nหลังตรวจสอบ กล่องนี้จะบอกคุณอย่างใดอย่างหนึ่งจากสามอย่าง:\n  สะอาด น่าสงสัย หรือ ติดมัลแวร์\nหากไม่สะอาด ให้กด ลบภัยคุกคาม</string>
+    <string name="last_check_none">ตรวจสอบล่าสุด: ยังไม่เคย</string>
+    <!-- 1 = date and time, 2 = result words, 3 = who checked -->
+    <string name="last_check_fmt">ตรวจสอบล่าสุด: %1$s · %2$s (%3$s)</string>
+    <string name="src_manual">คุณตรวจสอบเอง</string>
+    <string name="src_auto">ตรวจสอบอัตโนมัติหลังรีสตาร์ท</string>
+    <string name="check_clean">สะอาด</string>
+    <string name="check_suspicious">น่าสงสัย</string>
+    <string name="check_infected">ติดมัลแวร์</string>
+    <string name="check_removed_again">XCPE กลับมาอีกและถูกลบออกอีกครั้ง</string>
+    <string name="check_failed">XCPE กลับมาอีกและลบออกไม่ได้</string>
+    <string name="check_debug_opened">เปิดการแก้ไขข้อบกพร่องไว้เพื่อการลบ</string>
+    <string name="check_debug_open_failed">เปิดการแก้ไขข้อบกพร่องไม่ได้</string>
+    <string name="check_debug_closed">ปิดการแก้ไขข้อบกพร่องกลับแล้ว</string>
+    <string name="check_debug_close_failed">การแก้ไขข้อบกพร่องยังเปิดอยู่</string>
+    <string name="check_summary_join">%1$s; %2$s</string>
+
+    <!-- Scan -->
+    <string name="status_scanning">กำลังตรวจสอบกล่องนี้… ใช้เวลาไม่กี่วินาที</string>
+    <string name="status_scan_failed">การตรวจสอบทำไม่สำเร็จ กด สแกน เพื่อลองอีกครั้ง</string>
+    <plurals name="status_infected">
+        <item quantity="other">ติดมัลแวร์: มีส่วนประกอบของ XCPE %d รายการกำลังทำงานอยู่ในกล่องนี้ กด ลบภัยคุกคาม</item>
+    </plurals>
+    <string name="status_suspicious">น่าสงสัย: ไม่พบแอป XCPE ที่ยืนยันแล้วกำลังทำงาน แต่กล่องนี้มีสัญญาณเตือน กด ลบภัยคุกคาม เพื่อแก้ไขสิ่งที่แก้ได้ หรือกดปุ่มลงเพื่ออ่านรายงาน</string>
+    <string name="status_clean">สะอาด: ไม่พบสิ่งใดจาก XCPE ในกล่องนี้ คุณใช้งานต่อได้</string>
+
+    <!-- Remove: the one question -->
+    <string name="dlg_review_title">ตรวจทานก่อนลบ</string>
+    <plurals name="dlg_review_msg_confirmed">
+        <item quantity="other">จะลบส่วนประกอบของ XCPE ที่ยืนยันแล้ว %1$d รายการ ด้านล่างคือแอปอื่นๆ ที่ควรดู ติ๊กไว้ล่วงหน้าเฉพาะเมื่อมีหลักฐานมากกว่าแค่ชื่อ กด ตกลง ที่แถวนั้นเพื่อเปลี่ยน</item>
+    </plurals>
+    <string name="dlg_review_msg_only">ไม่พบแอป XCPE ที่ยืนยันแล้วกำลังทำงาน ด้านล่างคือแอปที่ควรดู ติ๊กไว้ล่วงหน้าเฉพาะเมื่อมีหลักฐานมากกว่าแค่ชื่อ กด ตกลง ที่แถวนั้นเพื่อเปลี่ยน</string>
+    <string name="dlg_review_remove">ลบที่เลือก</string>
+    <string name="status_review_kept">ไม่ได้ลบอย่างอื่น กล่องไม่มีการเปลี่ยนแปลง</string>
+    <string name="scan_reason_vendor_warning">อาจเป็นส่วนหนึ่งของสโตร์หรือบริการทีวีของกล่องเอง การลบอาจทำให้บริการนั้นใช้งานไม่ได้</string>
+    <string name="dlg_suspects_title">ลบแอปที่น่าสงสัยด้วยไหม</string>
+    <string name="dlg_suspects_msg">นอกจากส่วนประกอบของ XCPE ที่ยืนยันแล้ว กล่องนี้ยังมีแอปที่มักมาพร้อมกัน:\n\n%s\n\nกล่องทีวีไม่จำเป็นต้องใช้แอปเหล่านี้เลย</string>
+    <string name="dlg_suspects_yes">ใช่ ลบด้วย</string>
+    <string name="dlg_suspects_no">ไม่ ลบเฉพาะที่ยืนยันแล้ว</string>
+    <string name="dlg_suspects_only_title">ลบแอปที่น่าสงสัยไหม</string>
+    <string name="dlg_suspects_only_msg">ไม่พบแอป XCPE ที่ยืนยันแล้วกำลังทำงาน แต่แอปเหล่านี้มักมาพร้อมกับมัน:\n\n%s\n\nกล่องทีวีไม่จำเป็นต้องใช้แอปเหล่านี้เลย</string>
+    <string name="dlg_remove">ลบออก</string>
+    <string name="dlg_keep">เก็บไว้</string>
+    <string name="status_kept">ไม่มีการเปลี่ยนแปลงใดๆ กด สแกน ได้ทุกเมื่อเพื่อตรวจสอบอีกครั้ง</string>
+
+    <!-- Remove: while it runs -->
+    <string name="status_removing">กำลังลบ… อย่าปิดกล่อง หากทีวีถามคำถามเกี่ยวกับการแก้ไขข้อบกพร่อง ให้ติ๊ก \'อนุญาตจากคอมพิวเตอร์เครื่องนี้เสมอ\' แล้วกด อนุญาต</string>
+    <string name="report_remove_live">กำลังดำเนินการ:</string>
+    <string name="report_remove_log">รายละเอียด:</string>
+    <string name="report_remove_crashed">ตัวลบหยุดทำงานเพราะเกิดข้อผิดพลาด: %s</string>
+
+    <!-- Remove: outcome -->
+    <string name="outcome_removed">ลบออกแล้ว: %s</string>
+    <string name="outcome_disabled">ปิดใช้แล้ว (ลบออกทั้งหมดไม่ได้ แต่ทำงานไม่ได้): %s</string>
+    <string name="outcome_failed">ยังทำงานอยู่ (ลบออกไม่ได้): %s</string>
+    <string name="outcome_firmware_remain">ยังมีสำเนาสำรองอยู่ในเฟิร์มแวร์ของกล่องนี้ มันทำงานไม่ได้ตราบใดที่แอปด้านบนถูกลบออกหรือปิดใช้อยู่ มีเพียงการล้างขั้นลึกด้วย root หรือเฟิร์มแวร์ใหม่จากผู้ผลิตเท่านั้นที่ลบมันได้</string>
+    <string name="outcome_pp_on">Google Play Protect: เปิดกลับแล้ว</string>
+    <string name="outcome_pp_off">Google Play Protect: ยังปิดอยู่ เปิดแอป Google Play กดรูปโปรไฟล์ของคุณ เลือก Play Protect กดไอคอนรูปเฟือง แล้วเปิด \'สแกนแอปด้วย Play Protect\'</string>
+    <string name="outcome_pp_fine">Google Play Protect: เปิดอยู่แล้ว</string>
+    <string name="status_outcome_done">เสร็จแล้ว: ลบส่วนประกอบของ XCPE ออกแล้ว รีสตาร์ทกล่อง แล้วกด สแกน อีกครั้งเพื่อให้แน่ใจว่ามันไม่กลับมา</string>
+    <string name="status_outcome_partial">บางส่วนลบออกไม่ได้ กดปุ่มลงเพื่ออ่านรายละเอียด หากหลังรีสตาร์ทแล้วยังอยู่ ให้เปลี่ยนกล่องใหม่</string>
+    <string name="status_outcome_nothing">ไม่มีอะไรต้องลบ กด สแกน ได้ทุกเมื่อเพื่อตรวจสอบอีกครั้ง</string>
+    <string name="status_outcome_pp_only">เสร็จแล้ว: เปิด Google Play Protect กลับแล้ว กด สแกน เพื่อตรวจสอบอีกครั้ง</string>
+    <string name="status_outcome_none">ครั้งนี้ไม่มีการเปลี่ยนแปลงใดๆ กด เปิดตัวเลือกสำหรับนักพัฒนาแอป เพื่อให้แอปลบสิ่งต่างๆ ได้เอง แล้วกด ลบภัยคุกคาม อีกครั้ง</string>
+
+    <!-- Restart -->
+    <string name="dlg_restart_title">รีสตาร์ทกล่องตอนนี้ไหม</string>
+    <string name="dlg_restart_msg_adb">การรีสตาร์ทจะทำให้การล้างเสร็จสมบูรณ์ หน้าจอจะดับไปประมาณหนึ่งนาที หลังจากนั้นแอปนี้จะตรวจสอบกล่องอีกครั้งเองและบอกคุณหากมีอะไรกลับมา</string>
+    <string name="dlg_restart_msg_manual">การรีสตาร์ทจะทำให้การล้างเสร็จสมบูรณ์ ถอดสายไฟของกล่องออก รอสิบวินาที แล้วเสียบกลับ จากนั้นเปิดแอปนี้แล้วกด สแกน</string>
+    <string name="dlg_restart_now">รีสตาร์ทเลย</string>
+    <string name="dlg_restart_later">ไว้ทีหลัง</string>
+    <string name="dlg_ok">ตกลง</string>
+    <string name="btn_debugoff">ปิดการแก้ไขข้อบกพร่อง</string>
+    <string name="dlg_debugoff_title">ปิดการแก้ไขข้อบกพร่องไหม</string>
+    <string name="dlg_debugoff_msg">การแก้ไขข้อบกพร่องคือสิ่งที่ทำให้แอปนี้ล้างกล่องและตรวจสอบกล่องได้หลังรีสตาร์ททุกครั้ง หากคุณปิดมัน แอปจะทดสอบก่อนว่าสามารถเปิดมันกลับได้เองสำหรับการตรวจสอบเหล่านั้นหรือไม่ ขั้นตอนนี้ใช้เวลาไม่เกินหนึ่งนาที และยังใช้กล่องได้ตามปกติ</string>
+    <string name="dlg_debugoff_yes">ทดสอบแล้วปิด</string>
+    <string name="status_debug_kept">การแก้ไขข้อบกพร่องยังเปิดอยู่เพื่อให้แอปนี้ตรวจสอบกล่องได้หลังรีสตาร์ททุกครั้ง หากคุณต้องการปิด ให้กด \'ปิดการแก้ไขข้อบกพร่อง\'</string>
+    <string name="status_debug_probe">กำลังทดสอบว่ากล่องนี้เปิดการแก้ไขข้อบกพร่องกลับได้เองหรือไม่…</string>
+    <string name="status_debug_probe_ok">การแก้ไขข้อบกพร่องปิดอยู่ สำหรับการตรวจสอบอัตโนมัติ แอปจะเปิดมันชั่วครู่แล้วปิดอีกครั้ง</string>
+    <string name="status_debug_probe_failed">กล่องนี้เปิดการแก้ไขข้อบกพร่องกลับเองไม่ได้ จึงยังเปิดอยู่ หากโหมดอัตโนมัติหยุดทำงาน ให้รีสตาร์ทกล่อง</string>
+    <string name="status_debug_reclosed">เปิดการแก้ไขข้อบกพร่องไว้สำหรับการล้างครั้งนี้ และปิดกลับแล้ว</string>
+    <string name="status_auto_report">นี่คือรายงานการตรวจสอบอัตโนมัติหลังรีสตาร์ทครั้งล่าสุด กด สแกน เพื่อตรวจสอบใหม่</string>
+    <string name="status_clean_dormant">สะอาด: ไม่มีสิ่งใดจาก XCPE กำลังทำงาน ยังมีส่วนที่ถูกปิดใช้เหลืออยู่ในเฟิร์มแวร์ ซึ่งไม่เป็นอันตรายตราบใดที่ปิดอยู่</string>
+    <string name="status_outcome_done_mixed">เสร็จแล้ว: ลบหรือปิดใช้ส่วนประกอบของ XCPE แล้ว รีสตาร์ทกล่อง แล้วกด สแกน อีกครั้งเพื่อให้แน่ใจว่ามันไม่กลับมา</string>
+    <string name="dlg_stop_title">หยุดการล้างไหม</string>
+    <string name="dlg_stop_msg">แอปยังทำงานกับกล่องอยู่ หากหยุดตอนนี้ สิ่งที่ยังไม่ได้ลบจะยังคงอยู่ คุณกด ลบภัยคุกคาม อีกครั้งได้ในภายหลัง</string>
+    <string name="dlg_stop_yes">หยุด</string>
+    <string name="status_stopping">กำลังหยุด…</string>
+    <string name="result_infected">ผลลัพธ์: ติดมัลแวร์ - แบ็กดอร์ XCPE กำลังทำงานในกล่องนี้: %1$s</string>
+    <string name="result_suspicious">ผลลัพธ์: น่าสงสัย - ไม่มีแอป XCPE ที่ยืนยันแล้วกำลังทำงาน แต่โปรดดูคำเตือนด้านบน</string>
+    <string name="result_clean">ผลลัพธ์: สะอาด - ไม่พบสิ่งใดจาก XCPE</string>
+    <string name="adb_status_connecting">กำลังเชื่อมต่อกับบริการแก้ไขข้อบกพร่องของกล่อง…</string>
+    <string name="adb_status_look_at_tv">ดูที่ทีวี: ติ๊ก \'อนุญาตจากคอมพิวเตอร์เครื่องนี้เสมอ\' แล้วกด อนุญาต</string>
+    <string name="adb_status_connected">เชื่อมต่อแล้ว: กล่องรับคำสั่งจากแอปนี้</string>
+    <string name="adb_err_denied">กล่องไม่อนุญาตแอปนี้ (มีการกด ปฏิเสธ หรือคำถามหมดเวลา) ลองอีกครั้ง และเมื่อทีวีถาม ให้ติ๊ก \'อนุญาตเสมอ\' แล้วกด อนุญาต</string>
+    <string name="adb_err_pairing_only">กล่องนี้มีเพียงการจับคู่แบบการแก้ไขข้อบกพร่องแบบไร้สาย ซึ่งแอปนี้ใช้ไม่ได้ ให้ทำตามขั้นตอนที่แนะนำแทน</string>
+    <string name="adb_err_not_allowed">แอปนี้ยังไม่ได้รับอนุญาตจากบริการแก้ไขข้อบกพร่องของกล่อง กด ลบภัยคุกคาม หนึ่งครั้ง แล้วทีวีจะถามให้คุณอนุญาต</string>
+    <string name="adb_err_lost">การเชื่อมต่อกับบริการแก้ไขข้อบกพร่องของกล่องขาดหาย ลองอีกครั้ง</string>
+    <string name="adb_err_no_answer">บริการแก้ไขข้อบกพร่องของกล่องไม่ตอบทันเวลา ลองใหม่อีกครั้งในอีกสักครู่</string>
+    <string name="adb_err_generic">ปัญหาการเชื่อมต่อแก้ไขข้อบกพร่อง: %1$s</string>
+    <string name="status_debug_opening">กำลังเปิดช่องทางแก้ไขข้อบกพร่องเพื่อรีสตาร์ท…</string>
+    <string name="status_debug_opening_clean">กำลังเปิดช่องทางแก้ไขข้อบกพร่องเพื่อการล้างครั้งนี้…</string>
+    <string name="status_rebooting">กำลังรีสตาร์ท… หน้าจอจะดับไปประมาณหนึ่งนาที หากไม่ดับ ให้ถอดสายไฟออก รอสิบวินาที แล้วเสียบกลับ</string>
+    <string name="status_reboot_failed">กล่องไม่รีสตาร์ทเอง ถอดสายไฟออก รอสิบวินาที แล้วเสียบกลับ จากนั้นเปิดแอปนี้แล้วกด สแกน</string>
+
+    <!-- Guided removal -->
+    <string name="dlg_guided_title">ลบด้วยตนเองทีละขั้นตอน</string>
+    <string name="dlg_guided_msg">กล่องนี้ไม่ให้แอปลบสิ่งต่างๆ ได้เอง เราจึงต้องทำด้วยกัน แอปจะเปิดหน้าการตั้งค่าของแอปที่เป็นปัญหาให้คุณทีละตัว (เหลืออีก %d ตัว) และบอกว่าต้องกดปุ่มไหนก่อนเข้าแต่ละหน้า เมื่อเสร็จหน้านั้นแล้วให้กดปุ่มย้อนกลับบนรีโมต</string>
+    <string name="dlg_guided_start">เริ่ม</string>
+    <string name="dlg_guided_later">ไม่ใช่ตอนนี้</string>
+    <string name="status_guided_later">ยังไม่ได้เริ่มการลบ กด ลบภัยคุกคาม เมื่อคุณพร้อม หรือกด เปิดตัวเลือกสำหรับนักพัฒนาแอป เพื่อให้แอปทำเอง</string>
+    <!-- 1 = step, 2 = total, 3 = app name -->
+    <string name="guide_step_uninstall">ขั้นตอนที่ %1$d จาก %2$d: จะมีคำถามเรื่องการลบ %3$s ปรากฏขึ้น กด ตกลง หรือ ถอนการติดตั้ง</string>
+    <string name="dlg_guide_step_title">ขั้นตอนที่ %1$d จาก %2$d: %3$s</string>
+    <string name="dlg_guide_step_msg">ในหน้าถัดไป กด ถอนการติดตั้ง\n\nหากไม่มีปุ่ม ถอนการติดตั้ง: กด ถอนการติดตั้งการอัปเดต หากเห็น จากนั้นกด ปิดใช้ แล้วกด บังคับหยุด\n\nเมื่อเสร็จแล้ว กดปุ่มย้อนกลับบนรีโมตเพื่อกลับมาที่นี่</string>
+    <string name="dlg_guide_open">เปิดหน้านั้น</string>
+    <string name="dlg_guide_skip">ข้ามแอปนี้</string>
+    <string name="guide_step_appinfo">ขั้นตอนที่ %1$d จาก %2$d: ในหน้าของ %3$s กด ถอนการติดตั้ง หากไม่มี: ถอนการติดตั้งการอัปเดต จากนั้น ปิดใช้ แล้ว บังคับหยุด เสร็จแล้วกดย้อนกลับ</string>
+    <string name="status_guided_checking">กำลังตรวจสอบว่ามีอะไรเปลี่ยนไป…</string>
+    <string name="status_guide_cannot_open">เปิดหน้าการตั้งค่าของ %s ในกล่องนี้ไม่ได้ ข้ามไปรายการถัดไป</string>
+    <string name="guide_still_active_title">%s ยังทำงานอยู่</string>
+    <string name="guide_still_active_msg">มันยังไม่หายไป คุณสามารถเปิดหน้าของมันอีกครั้ง ข้ามแอปนี้ หรือหยุดตรงนี้</string>
+    <string name="guide_try_again">ลองอีกครั้ง</string>
+    <string name="guide_skip">ข้าม</string>
+    <string name="guide_stop">หยุด</string>
+    <string name="guide_pp_title">เปิด Google Play Protect กลับ</string>
+    <string name="guide_pp_msg">XCPE ปิดการตรวจสอบแอปของ Google ไว้ ในหน้าถัดไปให้เปิด \'สแกนแอปด้วย Play Protect\' แล้วกดย้อนกลับ</string>
+    <string name="guide_pp_fallback">กล่องนี้ไม่มีหน้าสำหรับเรื่องนี้โดยตรง เปิดแอป Google Play กดรูปโปรไฟล์ของคุณที่มุมขวาบน เลือก Play Protect กดไอคอนรูปเฟือง แล้วเปิด \'สแกนแอปด้วย Play Protect\'</string>
+    <string name="status_guide_pp">เปิด \'สแกนแอปด้วย Play Protect\' ในหน้าถัดไป แล้วกดย้อนกลับ</string>
+    <string name="dlg_guide_skip_step">ข้ามขั้นตอนนี้</string>
+    <string name="guide_acc_title">ปิดการเชื่อมต่อของ XCPE ในการช่วยเหลือพิเศษ</string>
+    <string name="guide_acc_msg">XCPE ฝังตัวเข้าไปในการตั้งค่าการช่วยเหลือพิเศษของกล่องนี้ ในหน้าถัดไปให้หา %s แล้วปิด จากนั้นกดย้อนกลับ</string>
+    <string name="status_guide_acc">ปิด %s ในหน้าถัดไป แล้วกดย้อนกลับ</string>
+    <string name="guided_tail_acc">การช่วยเหลือพิเศษ: %s ยังเปิดอยู่ ปิดได้ที่ การตั้งค่า > การช่วยเหลือพิเศษ</string>
+    <!-- 1 = handled, 2 = still active, 3 = what to do next -->
+    <string name="status_guided_done">ทำด้วยตนเองเสร็จแล้ว: ลบหรือปิดใช้แล้ว %1$d รายการ ยังทำงานอยู่ %2$d รายการ %3$s</string>
+    <string name="guided_tail_restart">ตอนนี้ให้รีสตาร์ทกล่อง (ถอดสายไฟออกแล้วเสียบกลับ) เปิดแอปนี้ แล้วกด สแกน อีกครั้ง</string>
+    <string name="guided_tail_replace">หากหลังรีสตาร์ทแล้วยังทำงานอยู่ กล่องนี้ล้างไม่ได้: ให้เปลี่ยนกล่องใหม่</string>
+
+    <!-- Developer options -->
+    <string name="status_devopts_hint">ในหน้าถัดไปให้เปิด \'การแก้ไขข้อบกพร่อง USB\' ในบางกล่องอาจใช้ชื่อว่า \'การแก้ไขข้อบกพร่องผ่านเครือข่าย\', \'การแก้ไขข้อบกพร่อง ADB\' หรือ \'ADB over network\' ให้เปิดอันนั้นด้วย หากมีคำถามปรากฏขึ้น ให้ติ๊ก \'อนุญาตจากคอมพิวเตอร์เครื่องนี้เสมอ\' แล้วกด อนุญาต จากนั้นกดย้อนกลับ</string>
+    <string name="status_devopts_hidden">ตัวเลือกสำหรับนักพัฒนาแอปถูกซ่อนอยู่ในกล่องนี้ ในหน้าถัดไปให้หา \'หมายเลขบิลด์\' (หรือ \'บิลด์\') แล้วกด ตกลง ที่รายการนั้นเจ็ดครั้ง จากนั้นกดย้อนกลับแล้วกด เปิดตัวเลือกสำหรับนักพัฒนาแอป อีกครั้ง</string>
+    <string name="status_devopts_missing">กล่องนี้ไม่ให้แอปเปิดการตั้งค่าของมัน เปิด การตั้งค่า ด้วยตนเอง: ค่ากำหนดของอุปกรณ์, เกี่ยวกับ, กด \'บิลด์\' เจ็ดครั้ง จากนั้นไปที่ ตัวเลือกสำหรับนักพัฒนาแอป แล้วเปิด การแก้ไขข้อบกพร่อง USB</string>
+    <string name="status_port_open">ดีแล้ว: ช่องทางแก้ไขข้อบกพร่องเปิดอยู่ กด ลบภัยคุกคาม แล้วแอปจะลบทุกอย่างให้เอง</string>
+    <string name="status_port_closed_usb_only">การแก้ไขข้อบกพร่อง USB เปิดอยู่ แต่ช่องทางผ่านเครือข่ายยังปิดอยู่ ในตัวเลือกสำหรับนักพัฒนาแอป ให้หา \'การแก้ไขข้อบกพร่องผ่านเครือข่าย\', \'ADB over network\' หรือ \'การแก้ไขข้อบกพร่องแบบไร้สาย\' แล้วเปิดด้วย หากกล่องนี้ไม่มีตัวเลือกเหล่านี้เลย ลบภัยคุกคาม จะแนะนำคุณทีละขั้นตอนแทน</string>
+    <string name="status_port_closed_after">ช่องทางแก้ไขข้อบกพร่องยังปิดอยู่ ลอง เปิดตัวเลือกสำหรับนักพัฒนาแอป อีกครั้ง หรือกด ลบภัยคุกคาม แล้วแอปจะแนะนำคุณทีละขั้นตอนแทน</string>
+
+    <!-- Deep clean -->
+    <string name="dlg_deep_title">ล้างเฟิร์มแวร์ขั้นลึกไหม</string>
+    <string name="dlg_deep_msg">การทำเช่นนี้จะลบสำเนาสำรองของแบ็กดอร์ที่เก็บอยู่ในเฟิร์มแวร์ของกล่องนี้ ใช้ได้เฉพาะกล่องที่มีสิทธิ์ root และแตะต้องเฉพาะไฟล์ที่เป็นของ XCPE เท่านั้น</string>
+    <string name="dlg_deep_yes">ลบสำเนาสำรอง</string>
+    <string name="dlg_cancel">ยกเลิก</string>
+    <string name="status_deep_running">กำลังล้างขั้นลึก… อย่าปิดกล่อง</string>
+    <string name="status_deep_done">ล้างขั้นลึกเสร็จแล้ว กดปุ่มลงเพื่ออ่านว่าเกิดอะไรขึ้น แล้วกด สแกน เพื่อตรวจสอบอีกครั้ง</string>
+    <string name="report_deep_header">ล้างขั้นลึก:</string>
+
+    <!-- How it works -->
+    <string name="help_title">วิธีการทำงานของแอปนี้ กดปุ่มลงเพื่ออ่าน กดขึ้นเพื่อกลับ</string>
+    <string name="help_text">XCPE คืออะไร\nXCPE คือแบ็กดอร์ (ช่องทางลับ) ที่ฝังอยู่ในเฟิร์มแวร์ของกล่อง Android TV ราคาถูกหลายรุ่น (MECOOL, Videostrong และกล่องที่ขายภายใต้ชื่ออื่นๆ) มันเปิดทางให้คนแปลกหน้าสั่งงานกล่องของคุณได้ เช่น คลิกโฆษณาปลอม แอบส่งข้อมูลผ่านอินเทอร์เน็ตของคุณ และอะไรก็ตามที่พวกเขาส่งมา\n\nสแกน ทำอะไร\nสแกน จะดูแอปในกล่องนี้ Google Play Protect และการตั้งค่าการช่วยเหลือพิเศษ แล้วเทียบกับรายชื่อส่วนประกอบของ XCPE ที่เผยแพร่ไว้ มันไม่เปลี่ยนแปลงอะไรและไม่ส่งข้อมูลไปที่ใด\n\nลบภัยคุกคาม ทำอะไร\nมันลบแอป XCPE ออกจากกล่องนี้และเปิด Google Play Protect กลับ หากแอปใดลบไม่ได้ จะปิดใช้แอปนั้นเพื่อไม่ให้ทำงาน แอปจะลองทำเองก่อน ซึ่งทำได้เมื่อช่องทางแก้ไขข้อบกพร่องของกล่องเปิดอยู่ (ตัวเลือกสำหรับนักพัฒนาแอป) ไม่เช่นนั้นจะเปิดหน้าการตั้งค่าที่ถูกต้องให้คุณและบอกว่าต้องกดปุ่มไหน\n\nสิ่งที่ยังคงอยู่\nกล่องหลายรุ่นเก็บสำเนาสำรองของแบ็กดอร์ไว้ในส่วนของเฟิร์มแวร์ที่อ่านได้อย่างเดียว แอปนี้ลบสำเนานั้นไม่ได้หากไม่มีสิทธิ์ root แต่สำเนานั้นจะทำงานไม่ได้ตราบใดที่แอปถูกลบออกหรือปิดใช้อยู่ หาก XCPE กลับมาหลังรีสตาร์ท แอปนี้จะรู้ ลบมันออกอีกครั้ง และบอกคุณ\n\nคำแนะนำอย่างตรงไปตรงมา\nกล่องที่มาพร้อมแบ็กดอร์ตั้งแต่โรงงานไม่เคยเป็นของคุณคนเดียว หากทำได้ ให้เปลี่ยนเป็นกล่องจากแบรนด์ที่รู้จัก (Google TV Streamer, Apple TV, Fire TV, Nvidia Shield) หากยังใช้ต่อ อย่าล็อกอินธนาคารหรืออีเมลบนกล่องนี้\n\nเปลี่ยนรหัสผ่านของคุณ\nหากคุณเคยพิมพ์รหัสผ่านบนกล่องนี้ ให้เปลี่ยนจากอุปกรณ์อื่น: บัญชี Google, Netflix, Wi-Fi และอะไรก็ตามที่คุณเคยใช้ที่นี่\n\nหลังการล้าง\nรีสตาร์ทกล่อง เปิดแอปนี้ แล้วกด สแกน อีกครั้ง แอปจะตรวจสอบเองทุกครั้งหลังรีสตาร์ทและแสดงผลไว้ใต้ \'ตรวจสอบล่าสุด\'\n\nกด สแกน เพื่อดูผลการตรวจสอบอีกครั้ง</string>
+
+    <!-- Notifications from the check after a restart -->
+    <string name="notif_channel">การตรวจสอบหลังรีสตาร์ท</string>
+    <string name="notif_channel_desc">แจ้งให้คุณทราบเมื่อ XCPE กลับมาหลังรีสตาร์ท</string>
+    <string name="notif_removed_again_title">XCPE กลับมาหลังรีสตาร์ทและถูกลบออกอีกครั้ง</string>
+    <string name="notif_removed_again_text">เปิด XCPE Cleaner เพื่อดูรายละเอียด หากเกิดขึ้นซ้ำๆ ให้เปลี่ยนกล่องใหม่</string>
+    <string name="notif_failed_title">XCPE กลับมาและลบออกไม่ได้: ให้เปลี่ยนกล่องนี้</string>
+    <string name="notif_failed_text">เปิด XCPE Cleaner แล้วกด ลบภัยคุกคาม เพื่อลองอีกครั้ง</string>
+    <string name="notif_failed_text_port_closed">แอปลบเองไม่ได้เพราะช่องทางแก้ไขข้อบกพร่องปิดอยู่ เปิด XCPE Cleaner แล้วกด ลบภัยคุกคาม</string>
+    <string name="notif_suspicious_title">กล่องนี้มีสัญญาณเตือน</string>
+    <string name="notif_suspicious_text">เปิด XCPE Cleaner แล้วกด สแกน เพื่ออ่านรายละเอียด</string>
+    <string name="report_auto_remove_header">การลบอัตโนมัติหลังรีสตาร์ท:</string>
+</resources>

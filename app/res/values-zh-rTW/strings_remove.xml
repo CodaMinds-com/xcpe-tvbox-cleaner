@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  清除文案（繁體中文）：清除流程和深度清理。兩類：
+    rm_status_*  清除執行時推送到畫面的即時狀態行
+    rm_log_*     結果記錄中的白話摘要行（指令記錄本身保持英文）
+  保留 %1$s / %2$d 預留位置、套件名稱、"XCPE"、"Play Protect"、"ADB"、"su"、"root"。
+  "設定 > 應用程式 > ..." 路徑使用 Android 在本語言中顯示的名稱。
+-->
+<resources>
+    <!-- 清除時的即時狀態 -->
+    <string name="rm_status_connecting">正在連線到這台電視盒的偵錯服務...</string>
+    <!-- 1 = 原因，來自偵錯用戶端的一句白話說明 -->
+    <string name="rm_status_adb_failed">無法使用偵錯連線：%1$s</string>
+    <!-- 1 = 應用程式名稱，2 = 目前序號，3 = 總數 -->
+    <string name="rm_status_removing">正在清除 %1$s（第 %2$d 個，共 %3$d 個）...</string>
+    <string name="rm_status_play_protect">正在重新開啟 Google Play Protect...</string>
+    <string name="rm_status_done">完成。</string>
+    <string name="rm_status_guided">請依照畫面上的步驟手動清除每個應用程式。</string>
+    <string name="rm_status_deep_no_root">沒有 root 就無法進行深度清理。</string>
+    <string name="rm_status_deep_looking">正在韌體中尋找備用副本...</string>
+    <string name="rm_status_deep_none">韌體中沒有找到備用副本。</string>
+    <!-- 1 = 分割區，例如 /oem 或 /system -->
+    <string name="rm_status_deep_unlocking">正在解鎖 %1$s 以便寫入...</string>
+    <!-- 1 = 檔案或資料夾路徑 -->
+    <string name="rm_status_deep_deleting">正在刪除 %1$s...</string>
+    <string name="rm_status_deep_done">深度清理完成。</string>
+    <string name="rm_status_deep_partial">深度清理已結束；有些副本無法刪除。</string>
+
+    <!-- 記錄：清除走了哪條路 -->
+    <string name="rm_log_nothing_to_remove">沒有需要清除的內容；只檢查防護設定。</string>
+    <!-- 1 = 以逗號分隔的應用程式名稱 -->
+    <string name="rm_log_to_remove">待清除：%1$s</string>
+    <!-- 1 = 主機，2 = 連接埠 -->
+    <string name="rm_log_path_adb">方式：ADB（%1$s:%2$d）</string>
+    <string name="rm_log_path_root">方式：ROOT（su）</string>
+    <string name="rm_log_path_guided">方式：引導手動操作 - 沒有偵錯連線也沒有 root，因此以下步驟需要手動完成：</string>
+    <string name="rm_log_path_deep">方式：ROOT（su）深度清理</string>
+    <!-- 1 = 原因 -->
+    <string name="rm_log_adb_failed">偵錯連線失敗：%1$s</string>
+    <!-- 1 = 主機，2 = 連接埠 -->
+    <string name="rm_log_port_closed">偵錯連接埠 %1$s:%2$d 已關閉。</string>
+    <string name="rm_log_no_root">這台電視盒沒有 root（su）。</string>
+    <!-- 1 = 錯誤訊息 -->
+    <string name="rm_log_unexpected">意外的問題：%1$s</string>
+    <string name="rm_log_stopped">已由您停止。沒有再做其他更動。</string>
+    <string name="rm_log_busy">這台電視盒上還有另一次清理正在進行。請稍後再試。</string>
+    <string name="rm_log_grant_ok">本應用程式現在可以自行開關偵錯了</string>
+    <string name="rm_log_grant_ineffective">授權未生效；偵錯保持您設定的狀態</string>
+    <!-- 1 = 錯誤訊息 -->
+    <string name="rm_log_grant_failed">授權失敗：%1$s</string>
+    <string name="rm_log_door_opened">為了這次清理，偵錯已開啟。</string>
+    <string name="rm_log_door_failed">無法為這次清理開啟偵錯。</string>
+
+    <!-- 記錄：單一應用程式的結果 -->
+    <string name="rm_log_result_unknown">無法檢查結果（系統的套件管理員沒有回應）；視為仍在執行</string>
+    <string name="rm_log_disabled">已停用（無法解除安裝；已停用且無法執行）</string>
+    <string name="rm_log_failed">失敗 - 仍在執行。這台電視盒需要新韌體或更換。</string>
+    <string name="rm_log_removed_fw_unknown">已為這台電視盒清除（無法檢查韌體裡是否還有副本；假定有）</string>
+    <string name="rm_log_removed_fw">已為這台電視盒清除（唯讀韌體裡還留有一份休眠副本）</string>
+    <string name="rm_log_removed">已完全清除</string>
+
+    <!-- 記錄：防護 -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">協助工具</string>
+    <!-- 1 和 2 = 讀回的兩個設定值 -->
+    <string name="rm_log_pp_on">Play Protect 應用程式驗證：已開啟（consent=%1$s enable=%2$s）</string>
+    <string name="rm_log_pp_failed">Play Protect：無法變更設定（consent=%1$s enable=%2$s）。請在 Play 商店 > Play Protect（Play 安全防護）> 設定中開啟。</string>
+    <!-- 1 = 協助工具服務 ID -->
+    <string name="rm_log_acc_removed">已移除接入協助工具的服務：%1$s</string>
+
+    <!-- 記錄：整體結果 -->
+    <!-- 1 = 以空格分隔的應用程式名稱 -->
+    <string name="rm_log_result_partial">清理結果：部分完成 - 無法清除：%1$s。請更換這台電視盒，或向賣家索取乾淨的韌體。</string>
+    <string name="rm_log_result_done">清理結果：完成 - 已清除/停用：%1$s</string>
+    <string name="rm_log_result_next">下一步：重新啟動電視盒，然後再次掃描。如果某個應用程式在重新啟動後又出現，表示韌體會重新安裝它：請更換電視盒。</string>
+    <string name="rm_log_result_nothing">清理結果：沒有需要清除的內容。</string>
+
+    <!-- 記錄：需要手動完成的步驟（沒有偵錯連線，沒有 root） -->
+    <!-- 1 = 應用程式名稱 -->
+    <string name="rm_log_guided_step">設定 > 應用程式 > %1$s > 解除安裝（或「解除安裝更新」，然後「停用」），再按「強制停止」</string>
+    <string name="rm_log_guided_pp">Play Protect：開啟 Play 商店 > 您的個人資料 > Play Protect（Play 安全防護）> 設定（齒輪）> 開啟「使用 Play 安全防護掃描應用程式」</string>
+    <!-- 1 = 以逗號分隔的協助工具服務 ID -->
+    <string name="rm_log_guided_acc">設定 > 協助工具：關閉 %1$s</string>
+    <string name="rm_log_guided_nothing">沒有需要手動完成的步驟。</string>
+
+    <!-- 記錄：深度清理（僅限 root） -->
+    <string name="rm_log_deep_no_root">深度清理需要 root（su），而這台電視盒沒有。只要應用程式已被清除或停用，韌體裡的備用副本就不起作用。</string>
+    <!-- 1 = 錯誤訊息 -->
+    <string name="rm_log_deep_root_check_failed">無法檢查是否有 root：%1$s</string>
+    <!-- 1 = 檔案路徑 -->
+    <string name="rm_log_deep_shared_perm_file">%1$s 也為其他應用程式授予權限；保持原樣</string>
+    <!-- 1 = 檔案路徑，2 = 套件名稱 -->
+    <string name="rm_log_deep_unverified">%1$s：無法讀出裡面是哪個應用程式，因此保持原樣。</string>
+    <string name="rm_log_deep_not_xcpe">%1$s 裡包含應用程式 %2$s，它不屬於 XCPE；保持原樣。</string>
+    <string name="rm_log_deep_skipped_unusual">已略過（路徑不尋常）：%1$s</string>
+    <string name="rm_log_deep_skipped_outside">已略過（不在韌體目錄內）：%1$s</string>
+    <string name="rm_log_deep_nothing">韌體目錄中沒有發現類似 XCPE 的內容。</string>
+    <!-- 1 = 以逗號分隔的路徑 -->
+    <string name="rm_log_deep_targets">要刪除的韌體副本：%1$s</string>
+    <!-- 1 = 分割區，例如 /oem -->
+    <string name="rm_log_deep_write_protected">%1$s：這台電視盒的韌體有防寫保護；備用副本保持不起作用</string>
+    <!-- 1 = 檔案或資料夾路徑 -->
+    <string name="rm_log_deep_deleted">已刪除 %1$s</string>
+    <string name="rm_log_deep_still_there_ro">%1$s 仍然存在：這台電視盒的韌體有防寫保護；備用副本保持不起作用</string>
+    <string name="rm_log_deep_still_there">%1$s 仍然存在（無法刪除）</string>
+    <!-- 1 = 數量 -->
+    <string name="rm_log_deep_result_done">深度清理結果：完成 - 已刪除 %1$d 個韌體項目</string>
+    <!-- 1 = 以逗號分隔的路徑 -->
+    <string name="rm_log_deep_result_partial">深度清理結果：部分完成 - 韌體中仍有：%1$s</string>
+    <!-- 1 = 錯誤訊息 -->
+    <string name="rm_log_deep_unexpected">深度清理期間發生意外的問題：%1$s</string>
+</resources>

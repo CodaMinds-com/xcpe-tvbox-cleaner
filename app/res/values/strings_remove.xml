@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Remover texts (removal ladder, deep clean). Two kinds:
+    rm_status_*  live status lines pushed to the screen while removal runs (Remover.Listener)
+    rm_log_*     the plain-language summary lines of Outcome.log (the command transcript itself stays English)
+  Translators: keep %1$s / %2$d placeholders, package names, "XCPE", "Play Protect", "ADB", "su", "root" as they are.
+  "Settings > Apps > ..." paths use the names Android shows in this language.
+-->
+<resources>
+    <!-- Live status while removing -->
+    <string name="rm_status_connecting">Connecting to this box\'s debugging service...</string>
+    <!-- 1 = the reason, a plain-language sentence from the debugging client -->
+    <string name="rm_status_adb_failed">Could not use the debugging connection: %1$s</string>
+    <!-- 1 = app name, 2 = this one's number, 3 = total -->
+    <string name="rm_status_removing">Removing %1$s (%2$d of %3$d)...</string>
+    <string name="rm_status_play_protect">Switching Google Play Protect back on...</string>
+    <string name="rm_status_done">Done.</string>
+    <string name="rm_status_guided">Follow the on-screen steps to remove each app by hand.</string>
+    <string name="rm_status_deep_no_root">Deep clean is not possible without root.</string>
+    <string name="rm_status_deep_looking">Looking for spare copies in the firmware...</string>
+    <string name="rm_status_deep_none">No spare copy found in the firmware.</string>
+    <!-- 1 = partition such as /oem or /system -->
+    <string name="rm_status_deep_unlocking">Unlocking %1$s for writing...</string>
+    <!-- 1 = file or folder path -->
+    <string name="rm_status_deep_deleting">Deleting %1$s...</string>
+    <string name="rm_status_deep_done">Deep clean done.</string>
+    <string name="rm_status_deep_partial">Deep clean finished; some copies could not be deleted.</string>
+
+    <!-- Log: which way the removal went -->
+    <string name="rm_log_nothing_to_remove">Nothing to remove; checking protections only.</string>
+    <!-- 1 = comma-separated app names -->
+    <string name="rm_log_to_remove">To remove: %1$s</string>
+    <!-- 1 = host, 2 = port -->
+    <string name="rm_log_path_adb">Path: ADB (%1$s:%2$d)</string>
+    <string name="rm_log_path_root">Path: ROOT (su)</string>
+    <string name="rm_log_path_guided">Path: GUIDED - no debugging connection and no root, so these steps are done by hand:</string>
+    <string name="rm_log_path_deep">Path: ROOT (su) deep clean</string>
+    <!-- 1 = the reason -->
+    <string name="rm_log_adb_failed">Debugging connection failed: %1$s</string>
+    <!-- 1 = host, 2 = port -->
+    <string name="rm_log_port_closed">Debugging port %1$s:%2$d is closed.</string>
+    <string name="rm_log_no_root">No root (su) on this box.</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_unexpected">Unexpected problem: %1$s</string>
+    <string name="rm_log_grant_ok">the app can now switch debugging off and on by itself</string>
+    <string name="rm_log_grant_ineffective">grant not effective; debugging stays as you set it</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_grant_failed">grant failed: %1$s</string>
+    <!-- Log: the app opened the debugging door itself for this run (the user had chosen "debugging off" earlier) -->
+    <string name="rm_log_door_opened">Debugging switched on for this clean-up.</string>
+    <string name="rm_log_door_failed">Could not switch debugging on for this clean-up.</string>
+
+    <!-- Log: result for one app -->
+    <string name="rm_log_result_unknown">could not check the result (no answer from the package manager); treated as still active</string>
+    <string name="rm_log_disabled">DISABLED (could not be uninstalled; it is switched off and cannot run)</string>
+    <string name="rm_log_failed">FAILED - still active. This box needs new firmware or replacement.</string>
+    <string name="rm_log_removed_fw_unknown">REMOVED for this box (could not check whether a firmware copy remains; assume it does)</string>
+    <string name="rm_log_removed_fw">REMOVED for this box (a dormant copy stays in the read-only firmware)</string>
+    <string name="rm_log_removed">REMOVED completely</string>
+
+    <!-- Log: protections -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">Accessibility</string>
+    <!-- 1 and 2 = the two setting values read back -->
+    <string name="rm_log_pp_on">Play Protect app verification: ON (consent=%1$s enable=%2$s)</string>
+    <string name="rm_log_pp_failed">Play Protect: could not change the setting (consent=%1$s enable=%2$s). Switch it on in Play Store > Play Protect > settings.</string>
+    <!-- 1 = accessibility service id -->
+    <string name="rm_log_acc_removed">removed accessibility hook: %1$s</string>
+
+    <!-- Log: overall result -->
+    <!-- 1 = space-separated app names -->
+    <string name="rm_log_result_partial">CLEAN RESULT: PARTIAL - could not remove: %1$s. Replace this box or ask the seller for clean firmware.</string>
+    <string name="rm_log_result_done">CLEAN RESULT: DONE - removed/disabled: %1$s</string>
+    <string name="rm_log_result_next">NEXT: restart the box, then scan again. If an app comes back after the restart, the firmware re-installs it: replace the box.</string>
+    <string name="rm_log_result_nothing">CLEAN RESULT: nothing needed removing.</string>
+
+    <!-- Log: steps to do by hand (no debugging connection, no root) -->
+    <!-- 1 = app name -->
+    <string name="rm_log_guided_step">Settings > Apps > %1$s > Uninstall (or \'Uninstall updates\', then \'Disable\'), then Force stop</string>
+    <string name="rm_log_guided_pp">Play Protect: open Play Store > your profile > Play Protect > settings (gear) > switch on \'Scan apps with Play Protect\'</string>
+    <!-- 1 = comma-separated accessibility service ids -->
+    <string name="rm_log_guided_acc">Settings > Accessibility: switch off %1$s</string>
+    <string name="rm_log_guided_nothing">Nothing to do by hand.</string>
+
+    <!-- Log: deep clean (root only) -->
+    <string name="rm_log_deep_no_root">Deep clean needs root (su) and this box has none. A spare copy in the firmware stays inert as long as the app is removed or disabled.</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_deep_root_check_failed">Could not check for root: %1$s</string>
+    <!-- 1 = file path -->
+    <string name="rm_log_deep_shared_perm_file">%1$s also grants rights to other apps; left alone</string>
+    <string name="rm_log_deep_skipped_unusual">skipped (unusual path): %1$s</string>
+    <string name="rm_log_deep_skipped_outside">skipped (outside the firmware dirs): %1$s</string>
+    <string name="rm_log_deep_nothing">Nothing XCPE-like found in the firmware directories.</string>
+    <!-- 1 = comma-separated paths -->
+    <string name="rm_log_deep_targets">Firmware copies to delete: %1$s</string>
+    <!-- 1 = partition such as /oem -->
+    <string name="rm_log_deep_write_protected">%1$s: this box\'s firmware is write-protected; the spare copy stays inert</string>
+    <!-- 1 = file or folder path -->
+    <string name="rm_log_deep_deleted">deleted %1$s</string>
+    <string name="rm_log_deep_still_there_ro">%1$s still there: this box\'s firmware is write-protected; the spare copy stays inert</string>
+    <string name="rm_log_deep_still_there">%1$s still there (could not delete)</string>
+    <!-- 1 = count -->
+    <string name="rm_log_deep_result_done">DEEP CLEAN RESULT: DONE - %1$d firmware item(s) deleted</string>
+    <!-- 1 = comma-separated paths -->
+    <string name="rm_log_deep_result_partial">DEEP CLEAN RESULT: PARTIAL - still in the firmware: %1$s</string>
+    <!-- 1 = the error -->
+    <string name="rm_log_stopped">Stopped by you. Nothing else was changed.</string>
+    <string name="rm_log_busy">Another clean-up is still running on this box. Try again in a moment.</string>
+    <string name="rm_log_deep_unverified">%1$s: could not read which app is inside, so it was left alone.</string>
+    <string name="rm_log_deep_not_xcpe">%1$s contains the app %2$s, which is not part of XCPE; left alone.</string>
+    <string name="rm_log_deep_unexpected">Unexpected problem during deep clean: %1$s</string>
+</resources>

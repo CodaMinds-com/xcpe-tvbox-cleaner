@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- हिन्दी। हटाने की प्रक्रिया के टेक्स्ट: चलते समय की स्थिति और जानकारी (लॉग) की सादी भाषा वाली पंक्तियां। -->
+<resources>
+    <!-- हटाते समय की स्थिति -->
+    <string name="rm_status_connecting">इस बॉक्स की डीबगिंग सेवा से जुड़ा जा रहा है...</string>
+    <!-- 1 = कारण, डीबगिंग क्लाइंट का सादी भाषा वाला वाक्य -->
+    <string name="rm_status_adb_failed">डीबगिंग कनेक्शन इस्तेमाल नहीं किया जा सका: %1$s</string>
+    <!-- 1 = ऐप्लिकेशन का नाम, 2 = इसका नंबर, 3 = कुल -->
+    <string name="rm_status_removing">%1$s हटाया जा रहा है (%3$d में से %2$d)...</string>
+    <string name="rm_status_play_protect">Google Play Protect फिर से चालू किया जा रहा है...</string>
+    <string name="rm_status_done">हो गया।</string>
+    <string name="rm_status_guided">हर ऐप्लिकेशन को हाथ से हटाने के लिए स्क्रीन पर दिए कदमों का पालन करें।</string>
+    <string name="rm_status_deep_no_root">बिना root के डीप क्लीन संभव नहीं है।</string>
+    <string name="rm_status_deep_looking">फ़र्मवेयर में अतिरिक्त कॉपियां ढूंढी जा रही हैं...</string>
+    <string name="rm_status_deep_none">फ़र्मवेयर में कोई अतिरिक्त कॉपी नहीं मिली।</string>
+    <!-- 1 = पार्टीशन, जैसे /oem या /system -->
+    <string name="rm_status_deep_unlocking">%1$s को लिखने के लिए अनलॉक किया जा रहा है...</string>
+    <!-- 1 = फ़ाइल या फ़ोल्डर का पाथ -->
+    <string name="rm_status_deep_deleting">%1$s मिटाया जा रहा है...</string>
+    <string name="rm_status_deep_done">डीप क्लीन पूरा हुआ।</string>
+    <string name="rm_status_deep_partial">डीप क्लीन पूरा हुआ; कुछ कॉपियां मिटाई नहीं जा सकीं।</string>
+
+    <!-- लॉग: हटाने का कौन सा तरीका चुना गया -->
+    <string name="rm_log_nothing_to_remove">हटाने के लिए कुछ नहीं; सिर्फ़ सुरक्षा सेटिंग की जांच हो रही है।</string>
+    <!-- 1 = कॉमा से अलग किए गए ऐप्लिकेशन के नाम -->
+    <string name="rm_log_to_remove">हटाने हैं: %1$s</string>
+    <!-- 1 = होस्ट, 2 = पोर्ट -->
+    <string name="rm_log_path_adb">तरीका: ADB (%1$s:%2$d)</string>
+    <string name="rm_log_path_root">तरीका: ROOT (su)</string>
+    <string name="rm_log_path_guided">तरीका: हाथ से - न डीबगिंग कनेक्शन है और न root, इसलिए ये कदम हाथ से किए जाते हैं:</string>
+    <string name="rm_log_path_deep">तरीका: ROOT (su) डीप क्लीन</string>
+    <!-- 1 = कारण -->
+    <string name="rm_log_adb_failed">डीबगिंग कनेक्शन नहीं हो सका: %1$s</string>
+    <!-- 1 = होस्ट, 2 = पोर्ट -->
+    <string name="rm_log_port_closed">डीबगिंग पोर्ट %1$s:%2$d बंद है।</string>
+    <string name="rm_log_no_root">इस बॉक्स में root (su) नहीं है।</string>
+    <!-- 1 = गड़बड़ी -->
+    <string name="rm_log_unexpected">अनपेक्षित समस्या: %1$s</string>
+    <string name="rm_log_stopped">आपने रोक दिया। और कुछ नहीं बदला गया।</string>
+    <string name="rm_log_busy">इस बॉक्स पर एक और सफ़ाई अभी चल रही है। थोड़ी देर बाद फिर से कोशिश करें।</string>
+    <string name="rm_log_grant_ok">ऐप्लिकेशन अब डीबगिंग को खुद बंद और चालू कर सकता है</string>
+    <string name="rm_log_grant_ineffective">अनुमति का असर नहीं हुआ; डीबगिंग वैसी ही रहेगी जैसी आपने सेट की है</string>
+    <!-- 1 = गड़बड़ी -->
+    <string name="rm_log_grant_failed">अनुमति नहीं मिली: %1$s</string>
+    <string name="rm_log_door_opened">इस सफ़ाई के लिए डीबगिंग चालू की गई।</string>
+    <string name="rm_log_door_failed">इस सफ़ाई के लिए डीबगिंग चालू नहीं की जा सकी।</string>
+
+    <!-- लॉग: एक ऐप्लिकेशन का नतीजा -->
+    <string name="rm_log_result_unknown">नतीजा जांचा नहीं जा सका (पैकेज मैनेजर से कोई जवाब नहीं); इसे अब भी सक्रिय माना गया</string>
+    <string name="rm_log_disabled">बंद किया गया (अनइंस्टॉल नहीं हो सका; यह बंद है और चल नहीं सकता)</string>
+    <string name="rm_log_failed">असफल - अब भी सक्रिय। इस बॉक्स को नया फ़र्मवेयर चाहिए या इसे बदलना होगा।</string>
+    <string name="rm_log_removed_fw_unknown">इस बॉक्स के लिए हटाया गया (यह जांचा नहीं जा सका कि फ़र्मवेयर में कोई कॉपी बची है या नहीं; मान लें कि बची है)</string>
+    <string name="rm_log_removed_fw">इस बॉक्स के लिए हटाया गया (फ़र्मवेयर के सिर्फ़-पढ़ने वाले हिस्से में एक निष्क्रिय कॉपी बची रहती है)</string>
+    <string name="rm_log_removed">पूरी तरह हटाया गया</string>
+
+    <!-- लॉग: सुरक्षा -->
+    <string name="rm_log_head_play_protect">Play Protect</string>
+    <string name="rm_log_head_accessibility">सुलभता</string>
+    <!-- 1 और 2 = वापस पढ़ी गई दोनों सेटिंग वैल्यू -->
+    <string name="rm_log_pp_on">Play Protect की ऐप्लिकेशन जांच: चालू (consent=%1$s enable=%2$s)</string>
+    <string name="rm_log_pp_failed">Play Protect: सेटिंग बदली नहीं जा सकी (consent=%1$s enable=%2$s)। इसे Play Store > Play Protect > सेटिंग में चालू करें।</string>
+    <!-- 1 = सुलभता सेवा की आईडी -->
+    <string name="rm_log_acc_removed">सुलभता की पकड़ हटाई गई: %1$s</string>
+
+    <!-- लॉग: कुल नतीजा -->
+    <!-- 1 = स्पेस से अलग किए गए ऐप्लिकेशन के नाम -->
+    <string name="rm_log_result_partial">सफ़ाई का नतीजा: आंशिक - हटाए नहीं जा सके: %1$s। यह बॉक्स बदल दें या विक्रेता से साफ़ फ़र्मवेयर मांगें।</string>
+    <string name="rm_log_result_done">सफ़ाई का नतीजा: पूरा - हटाए/बंद किए गए: %1$s</string>
+    <string name="rm_log_result_next">आगे: बॉक्स रीस्टार्ट करें, फिर दोबारा स्कैन करें। अगर रीस्टार्ट के बाद कोई ऐप्लिकेशन वापस आ जाए, तो फ़र्मवेयर उसे फिर से इंस्टॉल कर रहा है: बॉक्स बदल दें।</string>
+    <string name="rm_log_result_nothing">सफ़ाई का नतीजा: कुछ भी हटाने की ज़रूरत नहीं थी।</string>
+
+    <!-- लॉग: हाथ से करने के कदम (न डीबगिंग कनेक्शन, न root) -->
+    <!-- 1 = ऐप्लिकेशन का नाम -->
+    <string name="rm_log_guided_step">सेटिंग > ऐप्लिकेशन > %1$s > अनइंस्टॉल करें (या ‘अपडेट अनइंस्टॉल करें’, फिर ‘बंद करें’), फिर ज़बरदस्ती बंद करें</string>
+    <string name="rm_log_guided_pp">Play Protect: Play Store खोलें > अपनी प्रोफ़ाइल > Play Protect > सेटिंग (गियर) > ‘Play Protect की मदद से ऐप्लिकेशन स्कैन करें’ चालू करें</string>
+    <!-- 1 = कॉमा से अलग की गई सुलभता सेवाओं की आईडी -->
+    <string name="rm_log_guided_acc">सेटिंग > सुलभता: %1$s बंद करें</string>
+    <string name="rm_log_guided_nothing">हाथ से करने के लिए कुछ नहीं।</string>
+
+    <!-- लॉग: डीप क्लीन (सिर्फ़ root) -->
+    <string name="rm_log_deep_no_root">डीप क्लीन के लिए root (su) चाहिए और इस बॉक्स में वह नहीं है। जब तक ऐप्लिकेशन हटा हुआ या बंद है, फ़र्मवेयर में रखी अतिरिक्त कॉपी बेअसर रहती है।</string>
+    <!-- 1 = गड़बड़ी -->
+    <string name="rm_log_deep_root_check_failed">root की जांच नहीं हो सकी: %1$s</string>
+    <!-- 1 = फ़ाइल का पाथ -->
+    <string name="rm_log_deep_shared_perm_file">%1$s दूसरे ऐप्लिकेशन को भी अधिकार देती है; इसे छोड़ दिया गया</string>
+    <!-- 1 = फ़ाइल का पाथ, 2 = पैकेज का नाम -->
+    <string name="rm_log_deep_unverified">%1$s: यह पढ़ा नहीं जा सका कि इसके अंदर कौन सा ऐप्लिकेशन है, इसलिए इसे छोड़ दिया गया।</string>
+    <string name="rm_log_deep_not_xcpe">%1$s में ऐप्लिकेशन %2$s है, जो XCPE का हिस्सा नहीं है; इसे छोड़ दिया गया।</string>
+    <string name="rm_log_deep_skipped_unusual">छोड़ा गया (असामान्य जगह पर): %1$s</string>
+    <string name="rm_log_deep_skipped_outside">छोड़ा गया (फ़र्मवेयर फ़ोल्डरों के बाहर): %1$s</string>
+    <string name="rm_log_deep_nothing">फ़र्मवेयर के फ़ोल्डरों में XCPE जैसा कुछ नहीं मिला।</string>
+    <!-- 1 = कॉमा से अलग किए गए पाथ -->
+    <string name="rm_log_deep_targets">मिटाने के लिए फ़र्मवेयर कॉपियां: %1$s</string>
+    <!-- 1 = पार्टीशन, जैसे /oem -->
+    <string name="rm_log_deep_write_protected">%1$s: इस बॉक्स का फ़र्मवेयर बदलाव से सुरक्षित है; अतिरिक्त कॉपी बेअसर रहती है</string>
+    <!-- 1 = फ़ाइल या फ़ोल्डर का पाथ -->
+    <string name="rm_log_deep_deleted">%1$s मिटाया गया</string>
+    <string name="rm_log_deep_still_there_ro">%1$s अब भी मौजूद है: इस बॉक्स का फ़र्मवेयर बदलाव से सुरक्षित है; अतिरिक्त कॉपी बेअसर रहती है</string>
+    <string name="rm_log_deep_still_there">%1$s अब भी मौजूद है (मिटाया नहीं जा सका)</string>
+    <!-- 1 = संख्या -->
+    <string name="rm_log_deep_result_done">डीप क्लीन का नतीजा: पूरा - फ़र्मवेयर से %1$d आइटम मिटाए गए</string>
+    <!-- 1 = कॉमा से अलग किए गए पाथ -->
+    <string name="rm_log_deep_result_partial">डीप क्लीन का नतीजा: आंशिक - फ़र्मवेयर में अब भी मौजूद: %1$s</string>
+    <!-- 1 = गड़बड़ी -->
+    <string name="rm_log_deep_unexpected">डीप क्लीन के दौरान अनपेक्षित समस्या: %1$s</string>
+</resources>
